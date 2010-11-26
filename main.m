@@ -3,7 +3,7 @@
 //  TUGuide
 //
 //  Created by Adrian Djokic on 11/3/10.
-//  Copyright 2010 TuWien. All rights reserved.
+//  Copyright 2010 TU WIEN. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

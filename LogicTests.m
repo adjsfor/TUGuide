@@ -4,7 +4,6 @@
 //
 //  Created by Jakub Kolesik on 26.11.10.
 //  Copyright 2010 TU WIEN. All rights reserved.
-//
 
 #import "LogicTests.h"
 

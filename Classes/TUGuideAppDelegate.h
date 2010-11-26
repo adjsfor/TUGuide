@@ -8,12 +8,15 @@
 // bla bla balb la
 
 #import <UIKit/UIKit.h>
+#import "LoginViewController.h"
 
 @interface TUGuideAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
+	LoginViewController *loginViewController;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) LoginViewController *loginViewController;
 
 @end
 

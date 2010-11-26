@@ -11,6 +11,7 @@
 @implementation TUGuideAppDelegate
 
 @synthesize window;
+@synthesize loginViewController;
 
 
 #pragma mark -
@@ -19,7 +20,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
     // Override point for customization after application launch.
-    
+	window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    if (!window) 
+    {
+        [self release];
+        return;
+    }
+	loginViewController = [[LoginViewController alloc]init];
+    [window addSubview:loginViewController.view];
     [window makeKeyAndVisible];
     
     return YES;
@@ -75,6 +83,7 @@
 
 
 - (void)dealloc {
+	[loginViewController release];
     [window release];
     [super dealloc];
 }

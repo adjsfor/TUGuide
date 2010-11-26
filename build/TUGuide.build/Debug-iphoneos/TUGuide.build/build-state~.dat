@@ -1,0 +1,191 @@
+TTUGuide
+v7
+r1
+cCheck dependencies
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk
+c000000004CB05A750000000000000110
+t1286625909
+s272
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist
+c000000004CABEFF700000000000001E5
+t1286336503
+s485
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004CAC027A00000000003532B0
+t1286341242
+s3486384
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004CAC039400000000003E1F20
+t1286341524
+s4071200
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004CAC037B0000000000001466
+t1286341499
+s5222
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004CAC135C0000000000000AA1
+t1286345564
+s2721
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004CAC160A0000000000C743B0
+t1286346250
+s13058992
+
+N/Users/MacBook/Documents/xCodeWorkspace/TUGuide/Classes/TUGuideAppDelegate.h
+c000000004CEFCBD30000000000000179
+t1290783699
+s377
+i<UIKit/UIKit.h>
+
+N/Users/MacBook/Documents/xCodeWorkspace/TUGuide/Classes/TUGuideAppDelegate.m
+c000000004CEFCBEE00000000000009C0
+t1290783726
+s2496
+i"TUGuideAppDelegate.h"
+
+N/Users/MacBook/Documents/xCodeWorkspace/TUGuide/MainWindow.xib
+c000000004CEFCBD30000000000002108
+t1290783699
+s8456
+
+N/Users/MacBook/Documents/xCodeWorkspace/TUGuide/TUGuide_Prefix.pch
+c000000004CEFCBD300000000000000B7
+t1290783699
+s183
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/Debug-iphoneos/TUGuide.app
+t2
+s0
+
+N/Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/Debug-iphoneos/TUGuide.app.dSYM
+t2
+s0
+
+N/Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/Debug-iphoneos/TUGuide.app/Info.plist
+t2
+s0
+
+N/Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/Debug-iphoneos/TUGuide.app/MainWindow.nib
+t2
+s0
+
+N/Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/Debug-iphoneos/TUGuide.app/PkgInfo
+t2
+s0
+
+N/Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/Debug-iphoneos/TUGuide.app/ResourceRules.plist
+t2
+s0
+
+N/Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/Debug-iphoneos/TUGuide.app/TUGuide
+t2
+s0
+
+N/Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/TUGuide.build/Debug-iphoneos/TUGuide.build/Objects-normal/armv6/TUGuide
+t2
+s0
+
+N/Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/TUGuide.build/Debug-iphoneos/TUGuide.build/Objects-normal/armv6/TUGuide.LinkFileList
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/TUGuide.build/Debug-iphoneos/TUGuide.build/Objects-normal/armv6/TUGuideAppDelegate.o
+t2
+s0
+
+N/Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/TUGuide.build/Debug-iphoneos/TUGuide.build/Objects-normal/armv6/main.o
+t2
+s0
+
+N/Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/TUGuide.build/Debug-iphoneos/TUGuide.build/Objects-normal/armv7/TUGuide
+t2
+s0
+
+N/Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/TUGuide.build/Debug-iphoneos/TUGuide.build/Objects-normal/armv7/TUGuide.LinkFileList
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/TUGuide.build/Debug-iphoneos/TUGuide.build/Objects-normal/armv7/TUGuideAppDelegate.o
+t2
+s0
+
+N/Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/TUGuide.build/Debug-iphoneos/TUGuide.build/Objects-normal/armv7/main.o
+t2
+s0
+
+N/Users/MacBook/Documents/xCodeWorkspace/TUGuide/main.m
+c000000004CEFCBD3000000000000015F
+t1290783699
+s351
+i<UIKit/UIKit.h>
+
+N/var/folders/IK/IKNGXcXrHy43zT5HQ3QXZU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-bttgsghnzvssqlhhnnluzgujzmpf/TUGuide_Prefix.pch.gch
+t2
+s0
+
+N/var/folders/IK/IKNGXcXrHy43zT5HQ3QXZU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-fhjukmaurnyabvefcrceyluxqfkb/TUGuide_Prefix.pch.gch
+t2
+s0
+
+NTUGuide-Info.plist
+c000000004CEFCBD3000000000000038D
+t1290783699
+s909
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies312476766#312476766#0(133"[BEROR]Code Sign error: The identity 'iPhone Developer' doesn't match any valid certificate/private key pair in the default keychain1(4@125"Code Sign error: The identity 'iPhone Developer' doesn't match any valid certificate/private key pair in the default keychain312476766#18446744073709551615#0#0(1@0"0(0#1#0"3343187568374212096#0"0#
+
+CCompileC build/TUGuide.build/Debug-iphoneos/TUGuide.build/Objects-normal/armv6/TUGuideAppDelegate.o /Users/MacBook/Documents/xCodeWorkspace/TUGuide/Classes/TUGuideAppDelegate.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/TUGuide.build/Debug-iphoneos/TUGuide.build/Objects-normal/armv6/main.o /Users/MacBook/Documents/xCodeWorkspace/TUGuide/main.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/TUGuide.build/Debug-iphoneos/TUGuide.build/Objects-normal/armv7/TUGuideAppDelegate.o /Users/MacBook/Documents/xCodeWorkspace/TUGuide/Classes/TUGuideAppDelegate.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/TUGuide.build/Debug-iphoneos/TUGuide.build/Objects-normal/armv7/main.o /Users/MacBook/Documents/xCodeWorkspace/TUGuide/main.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileXIB /Users/MacBook/Documents/xCodeWorkspace/TUGuide/MainWindow.xib
+r0
+
+CCpResource build/Debug-iphoneos/TUGuide.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist
+r0
+
+CCreateUniversalBinary /Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/Debug-iphoneos/TUGuide.app/TUGuide normal "armv6 armv7"
+r0
+
+CGenerateDSYMFile /Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/Debug-iphoneos/TUGuide.app.dSYM /Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/Debug-iphoneos/TUGuide.app/TUGuide
+r0
+
+CLd /Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/TUGuide.build/Debug-iphoneos/TUGuide.build/Objects-normal/armv6/TUGuide normal armv6
+r0
+
+CLd /Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/TUGuide.build/Debug-iphoneos/TUGuide.build/Objects-normal/armv7/TUGuide normal armv7
+r0
+
+CProcessInfoPlistFile /Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/Debug-iphoneos/TUGuide.app/Info.plist TUGuide-Info.plist
+r0
+
+CProcessPCH /var/folders/IK/IKNGXcXrHy43zT5HQ3QXZU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-bttgsghnzvssqlhhnnluzgujzmpf/TUGuide_Prefix.pch.gch TUGuide_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CProcessPCH /var/folders/IK/IKNGXcXrHy43zT5HQ3QXZU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-fhjukmaurnyabvefcrceyluxqfkb/TUGuide_Prefix.pch.gch TUGuide_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CTouch /Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/Debug-iphoneos/TUGuide.app
+r0
+

@@ -67,7 +67,7 @@
 					20,
 					771,
 					20,
-					48.16259765625,
+					48,
 					43,
 					43,
 					20,
@@ -82,21 +82,22 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 312476740;
-			PBXWorkspaceStateSaveDate = 312476740;
+			PBXPerProjectTemplateStateSaveDate = 312480640;
+			PBXWorkspaceStateSaveDate = 312480640;
 		};
 		perUserProjectItems = {
-			FA381CBF12A00B05008E06D0 /* PBXTextBookmark */ = FA381CBF12A00B05008E06D0 /* PBXTextBookmark */;
-			FA381CC012A00B05008E06D0 /* PBXTextBookmark */ = FA381CC012A00B05008E06D0 /* PBXTextBookmark */;
-			FA381CC112A00B05008E06D0 /* PBXTextBookmark */ = FA381CC112A00B05008E06D0 /* PBXTextBookmark */;
-			FA381CF212A00CB0008E06D0 /* PBXTextBookmark */ = FA381CF212A00CB0008E06D0 /* PBXTextBookmark */;
-			FA381CF412A00CB0008E06D0 /* PBXTextBookmark */ = FA381CF412A00CB0008E06D0 /* PBXTextBookmark */;
-			FA381D1112A00E3E008E06D0 /* PBXTextBookmark */ = FA381D1112A00E3E008E06D0 /* PBXTextBookmark */;
-			FA381D1C12A00E98008E06D0 /* PBXTextBookmark */ = FA381D1C12A00E98008E06D0 /* PBXTextBookmark */;
-			FA381D3B12A00FCC008E06D0 /* PBXTextBookmark */ = FA381D3B12A00FCC008E06D0 /* PBXTextBookmark */;
-			FA381D3C12A00FCC008E06D0 /* PBXTextBookmark */ = FA381D3C12A00FCC008E06D0 /* PBXTextBookmark */;
-			FA381D3D12A00FCC008E06D0 /* PBXTextBookmark */ = FA381D3D12A00FCC008E06D0 /* PBXTextBookmark */;
-			FA381D4012A01080008E06D0 /* PBXTextBookmark */ = FA381D4012A01080008E06D0 /* PBXTextBookmark */;
+			FA381CBF12A00B05008E06D0 = FA381CBF12A00B05008E06D0 /* PBXTextBookmark */;
+			FA381CC012A00B05008E06D0 = FA381CC012A00B05008E06D0 /* PBXTextBookmark */;
+			FA381CC112A00B05008E06D0 = FA381CC112A00B05008E06D0 /* PBXTextBookmark */;
+			FA381CF212A00CB0008E06D0 = FA381CF212A00CB0008E06D0 /* PBXTextBookmark */;
+			FA381CF412A00CB0008E06D0 = FA381CF412A00CB0008E06D0 /* PBXTextBookmark */;
+			FA381D1112A00E3E008E06D0 = FA381D1112A00E3E008E06D0 /* PBXTextBookmark */;
+			FA381D1C12A00E98008E06D0 = FA381D1C12A00E98008E06D0 /* PBXTextBookmark */;
+			FA381D3B12A00FCC008E06D0 = FA381D3B12A00FCC008E06D0 /* PBXTextBookmark */;
+			FA381D3C12A00FCC008E06D0 = FA381D3C12A00FCC008E06D0 /* PBXTextBookmark */;
+			FA381D3D12A00FCC008E06D0 = FA381D3D12A00FCC008E06D0 /* PBXTextBookmark */;
+			FA381D4012A01080008E06D0 = FA381D4012A01080008E06D0 /* PBXTextBookmark */;
+			FA381D6412A0138B008E06D0 /* PBXTextBookmark */ = FA381D6412A0138B008E06D0 /* PBXTextBookmark */;
 		};
 		sourceControlManager = FA381C9412A00479008E06D0 /* Source Control */;
 		userBuildSettings = {
@@ -172,9 +173,9 @@
 	};
 	FA381CA112A00563008E06D0 /* LoginViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1139, 923}}";
-			sepNavSelRange = "{799, 0}";
-			sepNavVisRange = "{432, 576}";
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 858}}";
+			sepNavSelRange = "{903, 0}";
+			sepNavVisRange = "{0, 1376}";
 		};
 	};
 	FA381CA312A0057A008E06D0 /* RegisterLoginView.h */ = {
@@ -289,7 +290,7 @@
 		ignoreCount = 0;
 		lineNumber = 23;
 		location = TUGuide;
-		modificationTime = 312479469.56672;
+		modificationTime = 312479469.5667201;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -324,6 +325,16 @@
 		vrLoc = 0;
 	};
 	FA381D4012A01080008E06D0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA381CA112A00563008E06D0 /* LoginViewController.m */;
+		name = "LoginViewController.m: 32";
+		rLen = 0;
+		rLoc = 903;
+		rType = 0;
+		vrLen = 1376;
+		vrLoc = 0;
+	};
+	FA381D6412A0138B008E06D0 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = FA381CA112A00563008E06D0 /* LoginViewController.m */;
 		name = "LoginViewController.m: 32";

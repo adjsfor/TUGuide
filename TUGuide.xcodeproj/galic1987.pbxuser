@@ -52,16 +52,18 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 312481937;
-			PBXWorkspaceStateSaveDate = 312481937;
+			PBXPerProjectTemplateStateSaveDate = 312482389;
+			PBXWorkspaceStateSaveDate = 312482389;
 		};
 		perUserProjectItems = {
-			4B54C4D312A018AF00091F5A /* PBXTextBookmark */ = 4B54C4D312A018AF00091F5A /* PBXTextBookmark */;
-			4B54C4D412A018AF00091F5A /* PBXTextBookmark */ = 4B54C4D412A018AF00091F5A /* PBXTextBookmark */;
-			4B54C4D512A018AF00091F5A /* PBXTextBookmark */ = 4B54C4D512A018AF00091F5A /* PBXTextBookmark */;
-			4B54C4D612A018AF00091F5A /* PBXTextBookmark */ = 4B54C4D612A018AF00091F5A /* PBXTextBookmark */;
-			4B54C4D712A018AF00091F5A /* PBXBookmark */ = 4B54C4D712A018AF00091F5A /* PBXBookmark */;
-			4B54C4D812A018AF00091F5A /* PlistBookmark */ = 4B54C4D812A018AF00091F5A /* PlistBookmark */;
+			4B54C4D312A018AF00091F5A = 4B54C4D312A018AF00091F5A /* PBXTextBookmark */;
+			4B54C4D412A018AF00091F5A = 4B54C4D412A018AF00091F5A /* PBXTextBookmark */;
+			4B54C4D512A018AF00091F5A = 4B54C4D512A018AF00091F5A /* PBXTextBookmark */;
+			4B54C4D612A018AF00091F5A = 4B54C4D612A018AF00091F5A /* PBXTextBookmark */;
+			4B54C4D712A018AF00091F5A = 4B54C4D712A018AF00091F5A /* PBXBookmark */;
+			4B54C4D812A018AF00091F5A = 4B54C4D812A018AF00091F5A /* PlistBookmark */;
+			4B54C4F612A01A1C00091F5A = 4B54C4F612A01A1C00091F5A /* PBXBookmark */;
+			4B54C4F712A01A1C00091F5A = 4B54C4F712A01A1C00091F5A /* PBXTextBookmark */;
 		};
 		sourceControlManager = 4BC70616129FE39D0086FBC8 /* Source Control */;
 		userBuildSettings = {
@@ -134,7 +136,21 @@
 		);
 		name = "/Users/galic1987/Documents/TuGuide/TUGuide-Info.plist";
 		rLen = 0;
-		rLoc = 9223372036854775807;
+		rLoc = 9223372036854775808;
+	};
+	4B54C4F612A01A1C00091F5A /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 8EB2B45312A0069B006F4544 /* Xcode324iOS41TestSuiteWorkaround.m */;
+	};
+	4B54C4F712A01A1C00091F5A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8EB2B45312A0069B006F4544 /* Xcode324iOS41TestSuiteWorkaround.m */;
+		name = "Xcode324iOS41TestSuiteWorkaround.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1360;
+		vrLoc = 0;
 	};
 	4BC70607129FE3920086FBC8 /* TUGuide */ = {
 		isa = PBXExecutable;
@@ -179,5 +195,12 @@
 	};
 	8EAFF11012A0054D00C9BCA3 /* Tests */ = {
 		activeExec = 0;
+	};
+	8EB2B45312A0069B006F4544 /* Xcode324iOS41TestSuiteWorkaround.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 1885}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1360}";
+		};
 	};
 }

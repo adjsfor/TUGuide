@@ -12,11 +12,11 @@
 @interface RegisterLoginView : UIView {
 	UIButton *registerButton;
 	UIButton *loginButton;
-	UIImage *bigLogo;
+	UIImageView *bigLogo;
 }
 
 @property (nonatomic, retain) UIButton *registerButton;
 @property (nonatomic, retain) UIButton *loginButton;
-@property (nonatomic, retain) UIImage *bigLogo;
+@property (nonatomic, retain) UIImageView *bigLogo;
 
 @end

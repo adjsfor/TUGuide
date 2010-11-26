@@ -18,6 +18,8 @@
 		FA381CA512A0057A008E06D0 /* RegisterLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA381CA412A0057A008E06D0 /* RegisterLoginView.m */; };
 		FA381CAB12A00593008E06D0 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA381CAA12A00593008E06D0 /* LoginView.m */; };
 		FA381CB112A005D2008E06D0 /* RegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA381CB012A005D2008E06D0 /* RegisterView.m */; };
+		FAD1DB0312A0390500F782A0 /* TUGuideLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD1DB0212A0390500F782A0 /* TUGuideLogo.png */; };
+		FAD1DB2D12A0410000F782A0 /* ButtonBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD1DB2C12A0410000F782A0 /* ButtonBackground.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		FA381CAA12A00593008E06D0 /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
 		FA381CAF12A005D2008E06D0 /* RegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterView.h; sourceTree = "<group>"; };
 		FA381CB012A005D2008E06D0 /* RegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterView.m; sourceTree = "<group>"; };
+		FAD1DB0212A0390500F782A0 /* TUGuideLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TUGuideLogo.png; sourceTree = "<group>"; };
+		FAD1DB2C12A0410000F782A0 /* ButtonBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonBackground.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FAD1DB0712A0391800F782A0 /* Images */,
 				8D1107310486CEB800E47090 /* TUGuide-Info.plist */,
 			);
 			name = Resources;
@@ -158,6 +163,15 @@
 				FA381CB012A005D2008E06D0 /* RegisterView.m */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		FAD1DB0712A0391800F782A0 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FAD1DB2C12A0410000F782A0 /* ButtonBackground.png */,
+				FAD1DB0212A0390500F782A0 /* TUGuideLogo.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +242,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD1DB0312A0390500F782A0 /* TUGuideLogo.png in Resources */,
+				FAD1DB2D12A0410000F782A0 /* ButtonBackground.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

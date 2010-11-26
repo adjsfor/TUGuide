@@ -1,179 +1,0 @@
-TTests
-v7
-r0
-t312477425.428859
-cCheck dependencies
-cProcessInfoPlistFile /Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest/Info.plist Tests-Info.plist
-cCompileC build/TUGuide.build/Debug-iphonesimulator/Tests.build/Objects-normal/i386/LogicTests.o /Users/Takarashy/Desktop/Tu_Guide/LogicTests.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/TUGuide.build/Debug-iphonesimulator/Tests.build/Objects-normal/i386/Xcode324iOS41TestSuiteWorkaround.o /Users/Takarashy/Desktop/Tu_Guide/Xcode324iOS41TestSuiteWorkaround.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cLd /Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest/Tests normal i386
-cGenerateDSYMFile /Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest.dSYM /Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest/Tests
-cPhaseScriptExecution "Run Script" /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/Script-8EAFF10F12A0054D00C9BCA3.sh
-cTouch /Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest
-
-N/Developer/Library/Frameworks/SenTestingKit.framework/SenTestingKit
-c000000004C46C3F00000000000044BD0
-t1279706096
-s281552
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk
-c000000004C6C30170000000000000110
-t1282158615
-s272
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/Developer/Library/Frameworks/SenTestingKit.framework/Headers/SenTestingKit.h
-c000000004C5A5D4300000000000008A5
-t1280990531
-s2213
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
-c000000004C6241ED00000000000009CD
-t1281507821
-s2509
-
-N/Users/Takarashy/Desktop/Tu_Guide/LogicTests.h
-c000000004CEFCEA300000000000003AA
-t1290784419
-s938
-i<SenTestingKit/SenTestingKit.h>
-i<UIKit/UIKit.h>
-
-N/Users/Takarashy/Desktop/Tu_Guide/LogicTests.m
-c000000004CEFCF7800000000000002F2
-t1290784632
-s754
-i"LogicTests.h"
-
-N/Users/Takarashy/Desktop/Tu_Guide/Xcode324iOS41TestSuiteWorkaround.m
-c000000004CEFCF2900000000000017F1
-t1290784553
-s6129
-
-N/Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest
-t1290784625
-s136
-
-N/Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest.dSYM
-t1290784625
-s102
-
-N/Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest/Info.plist
-t1290784386
-s463
-
-N/Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest/Tests
-t1290784625
-s16572
-
-N/Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/Objects-normal/i386/LogicTests.o
-t1290784621
-s9196
-
-N/Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/Objects-normal/i386/Tests.LinkFileList
-c000000004CEFCF2D0000000000000108
-t1290784557
-s264
-
-N/Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/Objects-normal/i386/Xcode324iOS41TestSuiteWorkaround.o
-t1290784553
-s14892
-
-N/Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/Script-8EAFF10F12A0054D00C9BCA3.sh
-c000000004CEFCE820000000000000062
-t1290784386
-s98
-
-NTests-Info.plist
-c000000004CEFCDCD0000000000000281
-t1290784205
-s641
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies312477425#312477425#0(0"0(0#1#0"8607292832#0"0#
-
-CCompileC build/TUGuide.build/Debug-iphonesimulator/Tests.build/Objects-normal/i386/LogicTests.o /Users/Takarashy/Desktop/Tu_Guide/LogicTests.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s312477425.175735
-e312477425.176895
-r1
-xCompileC
-xbuild/TUGuide.build/Debug-iphonesimulator/Tests.build/Objects-normal/i386/LogicTests.o
-x/Users/Takarashy/Desktop/Tu_Guide/LogicTests.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@54"Compile /Users/Takarashy/Desktop/Tu_Guide/LogicTests.m312477425#312477425#0(0"0(0#0#46"/Users/Takarashy/Desktop/Tu_Guide/LogicTests.m8606882176#1889"    cd /Users/Takarashy/Desktop/Tu_Guide    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/Tests-generated-files.hmap -I/Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/Tests-own-target-headers.hmap -I/Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/Tests-all-target-headers.hmap -iquote /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/Tests-project-headers.hmap -F/Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/Developer/Library/Frameworks -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/Developer/Library/Frameworks -I/Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/include -I/Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/DerivedSources/i386 -I/Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/DerivedSources -c /Users/Takarashy/Desktop/Tu_Guide/LogicTests.m -o /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/Objects-normal/i386/LogicTests.o0#
-
-CCompileC build/TUGuide.build/Debug-iphonesimulator/Tests.build/Objects-normal/i386/Xcode324iOS41TestSuiteWorkaround.o /Users/Takarashy/Desktop/Tu_Guide/Xcode324iOS41TestSuiteWorkaround.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s312477357.795358
-e312477357.796484
-r1
-xCompileC
-xbuild/TUGuide.build/Debug-iphonesimulator/Tests.build/Objects-normal/i386/Xcode324iOS41TestSuiteWorkaround.o
-x/Users/Takarashy/Desktop/Tu_Guide/Xcode324iOS41TestSuiteWorkaround.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@76"Compile /Users/Takarashy/Desktop/Tu_Guide/Xcode324iOS41TestSuiteWorkaround.m312477357#312477357#0(0"0(0#0#68"/Users/Takarashy/Desktop/Tu_Guide/Xcode324iOS41TestSuiteWorkaround.m8610438368#1933"    cd /Users/Takarashy/Desktop/Tu_Guide    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -fexceptions -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40100 -iquote /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/Tests-generated-files.hmap -I/Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/Tests-own-target-headers.hmap -I/Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/Tests-all-target-headers.hmap -iquote /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/Tests-project-headers.hmap -F/Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/Developer/Library/Frameworks -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/Developer/Library/Frameworks -I/Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/include -I/Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/DerivedSources/i386 -I/Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/DerivedSources -c /Users/Takarashy/Desktop/Tu_Guide/Xcode324iOS41TestSuiteWorkaround.m -o /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/Objects-normal/i386/Xcode324iOS41TestSuiteWorkaround.o0#
-
-CGenerateDSYMFile /Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest.dSYM /Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest/Tests
-s312477425.201522
-e312477425.212726
-r1
-xGenerateDSYMFile
-x/Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest.dSYM
-x/Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest/Tests
-lSLF07#2@109"GenerateDSYMFile build/Debug-iphonesimulator/Tests.octest.dSYM build/Debug-iphonesimulator/Tests.octest/Tests312477425#312477425#0(0"0(0#0#80"/Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest/Tests8604234592#368"    cd /Users/Takarashy/Desktop/Tu_Guide    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest/Tests -o /Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest.dSYM0#
-
-CLd /Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest/Tests normal i386
-s312477425.177044
-e312477425.201410
-r1
-xLd
-x/Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest/Tests
-xnormal
-xi386
-lSLF07#2@85"Link /Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest/Tests312477425#312477425#0(0"0(0#0#0"8606831136#1134"    cd /Users/Takarashy/Desktop/Tu_Guide    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -bundle -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk -L/Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator -F/Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/Developer/Library/Frameworks -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/Developer/Library/Frameworks -filelist /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/Objects-normal/i386/Tests.LinkFileList -mmacosx-version-min=10.6 -framework Foundation -framework SenTestingKit -framework UIKit -Xlinker -objc_abi_version -Xlinker 2 -framework SenTestingKit -o /Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest/Tests0#
-
-CPhaseScriptExecution "Run Script" /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/Script-8EAFF10F12A0054D00C9BCA3.sh
-s312477425.212830
-e312477425.425676
-r1
-xPhaseScriptExecution
-xRun Script
-x/Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/Script-8EAFF10F12A0054D00C9BCA3.sh
-o/Developer/Tools/RunPlatformUnitTests.include:412: note: Started tests for architectures 'i386'
-o/Developer/Tools/RunPlatformUnitTests.include:419: note: Running tests for architecture 'i386' (GC OFF)
-oTest Suite '/Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest(Tests)' started at 2010-11-26 15:17:05 GMT 0000
-oTest Suite 'LogicTests' started at 2010-11-26 15:17:05 GMT 0000
-oTest Case '-[LogicTests testPass]' started.
-oTest Case '-[LogicTests testPass]' passed (0.000 seconds).
-oTest Suite 'LogicTests' finished at 2010-11-26 15:17:05 GMT 0000.
-oExecuted 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
-o
-oTest Suite '/Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest(Tests)' finished at 2010-11-26 15:17:05 GMT 0000.
-oExecuted 1 test, with 0 failures (0 unexpected) in 0.000 (0.002) seconds
-o
-o/Developer/Tools/RunPlatformUnitTests.include:446: note: Passed tests for architecture 'i386' (GC OFF)
-o/Developer/Tools/RunPlatformUnitTests.include:462: note: Completed tests for architectures 'i386'
-lSLF07#2@36"Run custom shell script 'Run Script'312477425#312477425#1(20@47"Run unit tests for architecture 'i386' (GC OFF)312477425#312477425#1(20@96"Run test suite /Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest(Tests)312477425#312477425#1(20@25"Run test suite LogicTests312477425#312477425#1(20@22"Run test case testPass312477425#312477425#0(103"Test Case '-[LogicTests testPass]' started.Test Case '-[LogicTests testPass]' passed (0.000 seconds).0(0#0#0"13"0.000 seconds58"Test Case '-[LogicTests testPass]' passed (0.000 seconds).8"testPass306"Test Suite 'LogicTests' started at 2010-11-26 15:17:05 GMT 0000Test Case '-[LogicTests testPass]' started.Test Case '-[LogicTests testPass]' passed (0.000 seconds).Test Suite 'LogicTests' finished at 2010-11-26 15:17:05 GMT 0000.Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds0(0#0#22"1 out of 1 test passed13"0.000 seconds72"Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds10"LogicTests652"Test Suite '/Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest(Tests)' started at 2010-11-26 15:17:05 GMT 0000Test Suite 'LogicTests' started at 2010-11-26 15:17:05 GMT 0000Test Case '-[LogicTests testPass]' started.Test Case '-[LogicTests testPass]' passed (0.000 seconds).Test Suite 'LogicTests' finished at 2010-11-26 15:17:05 GMT 0000.Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) secondsTest Suite '/Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest(Tests)' finished at 2010-11-26 15:17:05 GMT 0000.Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.002) seconds0(0#0#22"1 out of 1 test passed13"0.002 seconds72"Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.002) seconds81"/Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest(Tests)860"/Developer/Tools/RunPlatformUnitTests.include:419: note: Running tests for architecture 'i386' (GC OFF)Test Suite '/Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest(Tests)' started at 2010-11-26 15:17:05 GMT 0000Test Suite 'LogicTests' started at 2010-11-26 15:17:05 GMT 0000Test Case '-[LogicTests testPass]' started.Test Case '-[LogicTests testPass]' passed (0.000 seconds).Test Suite 'LogicTests' finished at 2010-11-26 15:17:05 GMT 0000.Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) secondsTest Suite '/Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest(Tests)' finished at 2010-11-26 15:17:05 GMT 0000.Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.002) seconds/Developer/Tools/RunPlatformUnitTests.include:446: note: Passed tests for architecture 'i386' (GC OFF)0(0#0#0"0"102"/Developer/Tools/RunPlatformUnitTests.include:446: note: Passed tests for architecture 'i386' (GC OFF)0"1054"/Developer/Tools/RunPlatformUnitTests.include:412: note: Started tests for architectures 'i386'/Developer/Tools/RunPlatformUnitTests.include:419: note: Running tests for architecture 'i386' (GC OFF)Test Suite '/Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest(Tests)' started at 2010-11-26 15:17:05 GMT 0000Test Suite 'LogicTests' started at 2010-11-26 15:17:05 GMT 0000Test Case '-[LogicTests testPass]' started.Test Case '-[LogicTests testPass]' passed (0.000 seconds).Test Suite 'LogicTests' finished at 2010-11-26 15:17:05 GMT 0000.Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) secondsTest Suite '/Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest(Tests)' finished at 2010-11-26 15:17:05 GMT 0000.Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.002) seconds/Developer/Tools/RunPlatformUnitTests.include:446: note: Passed tests for architecture 'i386' (GC OFF)/Developer/Tools/RunPlatformUnitTests.include:462: note: Completed tests for architectures 'i386'0(0#0#0"8610810048#16837"    cd /Users/Takarashy/Desktop/Tu_Guide    setenv ACTION build    setenv ALTERNATE_GROUP staff    setenv ALTERNATE_MODE u+w,go-w,a+rX    setenv ALTERNATE_OWNER Takarashy    setenv ALWAYS_SEARCH_USER_PATHS NO    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer    setenv APPLE_INTERNAL_DIR /AppleInternal    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools    setenv APPLY_RULES_IN_COPY_FILES NO    setenv ARCHS i386    setenv ARCHS_STANDARD_32_BIT i386    setenv ARCHS_UNIVERSAL_IPHONE_OS i386    setenv BUILD_COMPONENTS "headers build"    setenv BUILD_DIR /Users/Takarashy/Desktop/Tu_Guide/build    setenv BUILD_ROOT /Users/Takarashy/Desktop/Tu_Guide/build    setenv BUILD_STYLE Debug    setenv BUILD_VARIANTS normal    setenv BUILT_PRODUCTS_DIR /Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator    setenv CACHE_ROOT /var/folders/62/62pehcVCEwu7pJ4CW3C92E+++TI/-Caches-/com.apple.Xcode.501    setenv CCHROOT /var/folders/62/62pehcVCEwu7pJ4CW3C92E+++TI/-Caches-/com.apple.Xcode.501    setenv CHMOD /bin/chmod    setenv CHOWN /usr/sbin/chown    setenv CLASS_FILE_DIR /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/JavaClasses    setenv CLEAN_PRECOMPS YES    setenv CLONE_HEADERS NO    setenv CODESIGNING_FOLDER_PATH /Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest    setenv CODE_SIGN_CONTEXT_CLASS XCCodeSignContext    setenv COMMAND_MODE legacy    setenv COMPOSITE_SDK_DIRS /var/folders/62/62pehcVCEwu7pJ4CW3C92E+++TI/-Caches-/com.apple.Xcode.501/CompositeSDKs    setenv COMPRESS_PNG_FILES YES    setenv CONFIGURATION Debug    setenv CONFIGURATION_BUILD_DIR /Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator    setenv CONFIGURATION_TEMP_DIR /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator    setenv CONTENTS_FOLDER_PATH Tests.octest    setenv COPYING_PRESERVES_HFS_DATA NO    setenv COPY_PHASE_STRIP NO    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES    setenv CP /bin/cp    setenv CURRENT_ARCH i386    setenv CURRENT_VARIANT normal    setenv DEAD_CODE_STRIPPING NO    setenv DEBUGGING_SYMBOLS YES    setenv DEBUG_INFORMATION_FORMAT dwarf-with-dsym    setenv DEPLOYMENT_LOCATION NO    setenv DEPLOYMENT_POSTPROCESSING NO    setenv DERIVED_FILES_DIR /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/DerivedSources    setenv DERIVED_FILE_DIR /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/DerivedSources    setenv DERIVED_SOURCES_DIR /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/DerivedSources    setenv DEVELOPER_APPLICATIONS_DIR /Developer/Applications    setenv DEVELOPER_BIN_DIR /Developer/usr/bin    setenv DEVELOPER_DIR /Developer    setenv DEVELOPER_FRAMEWORKS_DIR /Developer/Library/Frameworks    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Developer/Library/Frameworks\""    setenv DEVELOPER_LIBRARY_DIR /Developer/Library    setenv DEVELOPER_SDK_DIR /Developer/SDKs    setenv DEVELOPER_TOOLS_DIR /Developer/Tools    setenv DEVELOPER_USR_DIR /Developer/usr    setenv DEVELOPMENT_LANGUAGE English    setenv DOCUMENTATION_FOLDER_PATH Tests.octest/English.lproj/Documentation    setenv DO_HEADER_SCANNING_IN_JAM NO    setenv DSTROOT /tmp/TUGuide.dst    setenv DWARF_DSYM_FILE_NAME Tests.octest.dSYM    setenv DWARF_DSYM_FOLDER_PATH /Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator    setenv EFFECTIVE_PLATFORM_NAME -iphonesimulator    setenv ENABLE_HEADER_DEPENDENCIES YES    setenv ENABLE_OPENMP_SUPPORT NO    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".svn CVS"    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) CVS .svn *.xcodeproj *.xcode *.pbproj *.pbxproj"    setenv EXECUTABLES_FOLDER_PATH Tests.octest/Executables    setenv EXECUTABLE_FOLDER_PATH Tests.octest    setenv EXECUTABLE_NAME Tests    setenv EXECUTABLE_PATH Tests.octest/Tests    setenv FILE_LIST /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/Objects/LinkFileList    setenv FIXED_FILES_DIR /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/FixedFiles    setenv FRAMEWORKS_FOLDER_PATH Tests.octest/Frameworks    setenv FRAMEWORK_FLAG_PREFIX -framework    setenv FRAMEWORK_SEARCH_PATHS "/Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/Developer/Library/Frameworks /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk/Developer/Library/Frameworks"    setenv FRAMEWORK_VERSION A    setenv FULL_PRODUCT_NAME Tests.octest    setenv GCC3_VERSION 3.3    setenv GCC_C_LANGUAGE_STANDARD c99    setenv GCC_DYNAMIC_NO_PIC NO    setenv GCC_ENABLE_FIX_AND_CONTINUE NO    setenv GCC_ENABLE_OBJC_EXCEPTIONS YES    setenv GCC_INLINES_ARE_PRIVATE_EXTERN YES    setenv GCC_OBJC_LEGACY_DISPATCH YES    setenv GCC_OPTIMIZATION_LEVEL 0    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO    setenv GCC_VERSION 4.2    setenv GCC_VERSION_IDENTIFIER __2    setenv GCC_WARN_ABOUT_RETURN_TYPE YES    setenv GCC_WARN_UNUSED_VARIABLE YES    setenv GENERATE_MASTER_OBJECT_FILE NO    setenv GENERATE_PKGINFO_FILE NO    setenv GENERATE_PROFILING_CODE NO    setenv GID 20    setenv GROUP staff    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES    setenv HEADER_SEARCH_PATHS "\"/Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/include\" "    setenv ICONV /usr/bin/iconv    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES    setenv INFOPLIST_FILE Tests-Info.plist    setenv INFOPLIST_OUTPUT_FORMAT binary    setenv INFOPLIST_PATH Tests.octest/Info.plist    setenv INFOPLIST_PREPROCESS NO    setenv INFOSTRINGS_PATH Tests.octest/English.lproj/InfoPlist.strings    setenv INSTALL_DIR /tmp/TUGuide.dst    setenv INSTALL_GROUP staff    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX    setenv INSTALL_OWNER Takarashy    setenv INSTALL_ROOT /tmp/TUGuide.dst    setenv IPHONEOS_DEPLOYMENT_TARGET 4.1    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub    setenv JAVA_ARCHIVE_CLASSES YES    setenv JAVA_ARCHIVE_TYPE JAR    setenv JAVA_COMPILER /usr/bin/javac    setenv JAVA_FOLDER_PATH Tests.octest/Java    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources    setenv JAVA_JAR_FLAGS cv    setenv JAVA_SOURCE_SUBDIR .    setenv JAVA_USE_DEPENDENCIES YES    setenv JAVA_ZIP_FLAGS -urg    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"    setenv KEEP_PRIVATE_EXTERNS NO    setenv LD_GENERATE_MAP_FILE NO    setenv LD_MAP_FILE_PATH /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/Tests-LinkMap-normal-i386.txt    setenv LD_OPENMP_FLAGS -fopenmp    setenv LEX /Developer/usr/bin/lex    setenv LIBRARY_FLAG_NOSPACE YES    setenv LIBRARY_FLAG_PREFIX -l    setenv LIBRARY_SEARCH_PATHS "\"/Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator\" "    setenv LINKER_DISPLAYS_MANGLED_NAMES NO    setenv LINK_FILE_LIST_normal_i386 /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/Objects-normal/i386/Tests.LinkFileList    setenv LINK_WITH_STANDARD_LIBRARIES YES    setenv LOCALIZED_RESOURCES_FOLDER_PATH Tests.octest/English.lproj    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities    setenv LOCAL_APPS_DIR /Applications    setenv LOCAL_DEVELOPER_DIR /Library/Developer    setenv LOCAL_LIBRARY_DIR /Library    setenv MACH_O_TYPE mh_bundle    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv MAC_OS_X_VERSION_ACTUAL 1065    setenv MAC_OS_X_VERSION_MAJOR 1060    setenv MAC_OS_X_VERSION_MINOR 0605    setenv NATIVE_ARCH i386    setenv NATIVE_ARCH_32_BIT i386    setenv NATIVE_ARCH_64_BIT x86_64    setenv NATIVE_ARCH_ACTUAL x86_64    setenv NO_COMMON YES    setenv OBJC_ABI_VERSION 2    setenv OBJECT_FILE_DIR /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/Objects    setenv OBJECT_FILE_DIR_normal /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/Objects-normal    setenv OBJROOT /Users/Takarashy/Desktop/Tu_Guide/build    setenv ONLY_ACTIVE_ARCH NO    setenv OPTIMIZATION_LEVEL 0    setenv OS MACOS    setenv OSAC /usr/bin/osacompile    setenv OTHER_LDFLAGS "-framework Foundation -framework SenTestingKit -framework UIKit"    setenv PACKAGE_TYPE com.apple.package-type.wrapper    setenv PASCAL_STRINGS YES    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Developer/Headers /Developer/SDKs /Developer/Platforms"    setenv PBDEVELOPMENTPLIST_PATH Tests.octest/pbdevelopment.plist    setenv PFE_FILE_C_DIALECTS objective-c    setenv PKGINFO_FILE_PATH /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/PkgInfo    setenv PKGINFO_PATH Tests.octest/PkgInfo    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/Applications    setenv PLATFORM_DEVELOPER_BIN_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/Library    setenv PLATFORM_DEVELOPER_SDK_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/Tools    setenv PLATFORM_DEVELOPER_USR_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/usr    setenv PLATFORM_DIR /Developer/Platforms/iPhoneSimulator.platform    setenv PLATFORM_NAME iphonesimulator    setenv PLIST_FILE_OUTPUT_FORMAT binary    setenv PLUGINS_FOLDER_PATH Tests.octest/PlugIns    setenv PREBINDING NO    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES    setenv PRECOMP_DESTINATION_DIR /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/PrefixHeaders    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO    setenv PRIVATE_HEADERS_FOLDER_PATH Tests.octest/PrivateHeaders    setenv PRODUCT_NAME Tests    setenv PRODUCT_SETTINGS_PATH /Users/Takarashy/Desktop/Tu_Guide/Tests-Info.plist    setenv PRODUCT_TYPE com.apple.product-type.bundle    setenv PROFILING_CODE NO    setenv PROJECT TUGuide    setenv PROJECT_DERIVED_FILE_DIR /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/DerivedSources    setenv PROJECT_DIR /Users/Takarashy/Desktop/Tu_Guide    setenv PROJECT_FILE_PATH /Users/Takarashy/Desktop/Tu_Guide/TUGuide.xcodeproj    setenv PROJECT_NAME TUGuide    setenv PROJECT_TEMP_DIR /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build    setenv PUBLIC_HEADERS_FOLDER_PATH Tests.octest/Headers    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES    setenv REMOVE_CVS_FROM_RESOURCES YES    setenv REMOVE_SVN_FROM_RESOURCES YES    setenv REZ_COLLECTOR_DIR /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/ResourceManagerResources    setenv REZ_OBJECTS_DIR /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/ResourceManagerResources/Objects    setenv REZ_SEARCH_PATHS "\"/Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator\" "    setenv RUN_CLANG_STATIC_ANALYZER NO    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO    setenv SCRIPTS_FOLDER_PATH Tests.octest/Scripts    setenv SCRIPT_INPUT_FILE_COUNT 0    setenv SCRIPT_OUTPUT_FILE_COUNT 0    setenv SDKROOT /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk    setenv SDK_DIR /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.1.sdk    setenv SDK_NAME iphonesimulator4.1    setenv SED /usr/bin/sed    setenv SEPARATE_STRIP NO    setenv SEPARATE_SYMBOL_EDIT NO    setenv SET_DIR_MODE_OWNER_GROUP YES    setenv SET_FILE_MODE_OWNER_GROUP NO    setenv SHALLOW_BUNDLE YES    setenv SHARED_DERIVED_FILE_DIR /Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/DerivedSources    setenv SHARED_FRAMEWORKS_FOLDER_PATH Tests.octest/SharedFrameworks    setenv SHARED_PRECOMPS_DIR /var/folders/62/62pehcVCEwu7pJ4CW3C92E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders    setenv SHARED_SUPPORT_FOLDER_PATH Tests.octest/SharedSupport    setenv SKIP_INSTALL YES    setenv SOURCE_ROOT /Users/Takarashy/Desktop/Tu_Guide    setenv SRCROOT /Users/Takarashy/Desktop/Tu_Guide    setenv STANDARD_C_PLUS_PLUS_LIBRARY_TYPE dynamic    setenv STRINGS_FILE_OUTPUT_ENCODING binary    setenv STRIP_INSTALLED_PRODUCT YES    setenv STRIP_STYLE non-global    setenv SUPPORTED_DEVICE_FAMILIES 1    setenv SYMBOL_REPOSITORY_DIR /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/SymbolRepositories    setenv SYMROOT /Users/Takarashy/Desktop/Tu_Guide/build    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities    setenv SYSTEM_APPS_DIR /Applications    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices    setenv SYSTEM_DEMOS_DIR /Applications/Extras    setenv SYSTEM_DEVELOPER_APPS_DIR /Developer/Applications    setenv SYSTEM_DEVELOPER_BIN_DIR /Developer/usr/bin    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Developer/Applications/Utilities/Built Examples"    setenv SYSTEM_DEVELOPER_DIR /Developer    setenv SYSTEM_DEVELOPER_DOC_DIR "/Developer/ADC Reference Library"    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Developer/Applications/Graphics Tools"    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Developer/Applications/Java Tools"    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Developer/Applications/Performance Tools"    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes"    setenv SYSTEM_DEVELOPER_TOOLS /Developer/Tools    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Developer/ADC Reference Library/documentation/DeveloperTools"    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Developer/ADC Reference Library/releasenotes/DeveloperTools"    setenv SYSTEM_DEVELOPER_USR_DIR /Developer/usr    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Developer/Applications/Utilities    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation    setenv SYSTEM_LIBRARY_DIR /System/Library    setenv TARGETED_DEVICE_FAMILY 1    setenv TARGETNAME Tests    setenv TARGET_BUILD_DIR /Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator    setenv TARGET_NAME Tests    setenv TARGET_TEMP_DIR /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build    setenv TEMP_DIR /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build    setenv TEMP_FILES_DIR /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build    setenv TEMP_FILE_DIR /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build    setenv TEMP_ROOT /Users/Takarashy/Desktop/Tu_Guide/build    setenv UID 501    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH Tests.octest    setenv UNSTRIPPED_PRODUCT NO    setenv USER Takarashy    setenv USER_APPS_DIR /Users/Takarashy/Applications    setenv USER_LIBRARY_DIR /Users/Takarashy/Library    setenv USE_DYNAMIC_NO_PIC YES    setenv USE_HEADERMAP YES    setenv USE_HEADER_SYMLINKS NO    setenv VALIDATE_PRODUCT NO    setenv VALID_ARCHS i386    setenv VERBOSE_PBXCP NO    setenv VERSIONPLIST_PATH Tests.octest/version.plist    setenv VERSION_INFO_BUILDER Takarashy    setenv VERSION_INFO_FILE Tests_vers.c    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:Tests  PROJECT:TUGuide-\""    setenv WRAPPER_EXTENSION octest    setenv WRAPPER_NAME Tests.octest    setenv WRAPPER_SUFFIX .octest    setenv XCODE_APP_SUPPORT_DIR /Developer/Library/Xcode    setenv XCODE_VERSION_ACTUAL 0324    setenv XCODE_VERSION_MAJOR 0300    setenv XCODE_VERSION_MINOR 0320    setenv YACC /Developer/usr/bin/yacc    /bin/sh -c /Users/Takarashy/Desktop/Tu_Guide/build/TUGuide.build/Debug-iphonesimulator/Tests.build/Script-8EAFF10F12A0054D00C9BCA3.sh0#
-
-CProcessInfoPlistFile /Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest/Info.plist Tests-Info.plist
-s312477186.572745
-e312477186.600466
-r1
-xProcessInfoPlistFile
-x/Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest/Info.plist
-xTests-Info.plist
-lSLF07#2@24"Process Tests-Info.plist312477186#312477186#0(0"0(0#0#50"/Users/Takarashy/Desktop/Tu_Guide/Tests-Info.plist30681223440564324#369"    cd /Users/Takarashy/Desktop/Tu_Guide    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Tests-Info.plist -expandbuildsettings -format binary -platform iphonesimulator -o /Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest/Info.plist0#
-
-CTouch /Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest
-s312477425.425748
-e312477425.428816
-r1
-xTouch
-x/Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest
-lSLF07#2@80"Touch /Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest312477425#312477425#0(0"0(0#0#0"8611933280#269"    cd /Users/Takarashy/Desktop/Tu_Guide    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/Takarashy/Desktop/Tu_Guide/build/Debug-iphonesimulator/Tests.octest0#
-

@@ -82,8 +82,8 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 312480640;
-			PBXWorkspaceStateSaveDate = 312480640;
+			PBXPerProjectTemplateStateSaveDate = 312481596;
+			PBXWorkspaceStateSaveDate = 312481596;
 		};
 		perUserProjectItems = {
 			FA381CBF12A00B05008E06D0 = FA381CBF12A00B05008E06D0 /* PBXTextBookmark */;
@@ -97,7 +97,7 @@
 			FA381D3C12A00FCC008E06D0 = FA381D3C12A00FCC008E06D0 /* PBXTextBookmark */;
 			FA381D3D12A00FCC008E06D0 = FA381D3D12A00FCC008E06D0 /* PBXTextBookmark */;
 			FA381D4012A01080008E06D0 = FA381D4012A01080008E06D0 /* PBXTextBookmark */;
-			FA381D6412A0138B008E06D0 /* PBXTextBookmark */ = FA381D6412A0138B008E06D0 /* PBXTextBookmark */;
+			FA381D6412A0138B008E06D0 = FA381D6412A0138B008E06D0 /* PBXTextBookmark */;
 		};
 		sourceControlManager = FA381C9412A00479008E06D0 /* Source Control */;
 		userBuildSettings = {
@@ -116,7 +116,11 @@
 			sepNavIntBoundsRect = "{{0, 0}, {949, 641}}";
 			sepNavSelRange = "{836, 0}";
 			sepNavVisRange = "{0, 854}";
+			sepNavWindowFrame = "{{107, 131}, {750, 558}}";
 		};
+	};
+	8EAFF11012A0054D00C9BCA3 /* Tests */ = {
+		activeExec = 0;
 	};
 	FA381C7D12A00444008E06D0 /* TUGuide */ = {
 		isa = PBXExecutable;

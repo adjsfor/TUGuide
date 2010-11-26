@@ -134,15 +134,15 @@ i<Foundation/Foundation.h>
 i<UIKit/UIKit.h>
 
 N/Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/Debug-iphonesimulator/TUGuide.app
-t1290786890
-s204
+t1290787831
+s408
 
 N/Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/Debug-iphonesimulator/TUGuide.app.dSYM
 t1290786890
 s102
 
 N/Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/Debug-iphonesimulator/TUGuide.app/Info.plist
-t1290784583
+t1290787831
 s558
 
 N/Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/Debug-iphonesimulator/TUGuide.app/MainWindow.nib
@@ -154,7 +154,7 @@ t1290784583
 s8
 
 N/Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/Debug-iphonesimulator/TUGuide.app/TUGuide
-t1290786890
+t1290787606
 s21208
 
 N/Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/LoginView.o
@@ -178,16 +178,16 @@ t1290784583
 s37056
 
 N/Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/TUGuide.LinkFileList
-c000000004CEFCF470000000000000349
-t1290784583
+c000000004CEFDBF70000000000000349
+t1290787831
 s841
 
 N/Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/TUGuideAppDelegate.o
-t1290786665
+t1290787637
 s52688
 
 N/Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/main.o
-t1290784583
+t1290787649
 s6504
 
 N/Users/MacBook/Documents/xCodeWorkspace/TUGuide/main.m

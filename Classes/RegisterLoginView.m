@@ -11,13 +11,23 @@
 
 @implementation RegisterLoginView
 
+@synthesize registerButton;
+@synthesize loginButton;
+@synthesize bigLogo;
+
 
 - (id)initWithFrame:(CGRect)frame {
     
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code.
-		self.backgroundColor = [UIColor redColor];
+		self.backgroundColor = [UIColor whiteColor];
+		registerButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+		registerButton.frame = CGRectMake(100, 170, 100, 30);
+		[registerButton setTitle:@"test" forState:UIControlStateNormal];
+		[self addSubview:registerButton];
+		[registerButton release];
+
     }
     return self;
 }

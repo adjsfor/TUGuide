@@ -20,6 +20,7 @@
 		8E8D59DF12A14C900096E52C /* Lecture.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D59DE12A14C900096E52C /* Lecture.m */; };
 		8E8D59E812A151820096E52C /* Classroom.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D59E712A151820096E52C /* Classroom.m */; };
 		8E8D5A1212A15AB00096E52C /* Eatery.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D5A1112A15AB00096E52C /* Eatery.m */; };
+		8E8D5A1512A15C450096E52C /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D5A1412A15C450096E52C /* Restaurant.m */; };
 		8EAFF11A12A0057300C9BCA3 /* LogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAFF11912A0057300C9BCA3 /* LogicTests.m */; };
 		8EAFF15012A0059E00C9BCA3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EAFF11B12A0058300C9BCA3 /* SenTestingKit.framework */; };
 		FA381CA212A00563008E06D0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA381CA112A00563008E06D0 /* LoginViewController.m */; };
@@ -59,6 +60,8 @@
 		8E8D59E712A151820096E52C /* Classroom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Classroom.m; sourceTree = "<group>"; };
 		8E8D5A1012A15AB00096E52C /* Eatery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Eatery.h; sourceTree = "<group>"; };
 		8E8D5A1112A15AB00096E52C /* Eatery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Eatery.m; sourceTree = "<group>"; };
+		8E8D5A1312A15C450096E52C /* Restaurant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Restaurant.h; sourceTree = "<group>"; };
+		8E8D5A1412A15C450096E52C /* Restaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Restaurant.m; sourceTree = "<group>"; };
 		8EAFF11112A0054D00C9BCA3 /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EAFF11212A0054D00C9BCA3 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		8EAFF11812A0057300C9BCA3 /* LogicTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogicTests.h; sourceTree = "<group>"; };
@@ -229,6 +232,8 @@
 				8E8D5A1112A15AB00096E52C /* Eatery.m */,
 				4BA645FC12A15B7F00B03B82 /* Mensa.h */,
 				4BA645FD12A15B7F00B03B82 /* Mensa.m */,
+				8E8D5A1312A15C450096E52C /* Restaurant.h */,
+				8E8D5A1412A15C450096E52C /* Restaurant.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -353,6 +358,7 @@
 				8E8D59E812A151820096E52C /* Classroom.m in Sources */,
 				8E8D5A1212A15AB00096E52C /* Eatery.m in Sources */,
 				4BA645FE12A15B7F00B03B82 /* Mensa.m in Sources */,
+				8E8D5A1512A15C450096E52C /* Restaurant.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

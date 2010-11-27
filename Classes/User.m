@@ -2,7 +2,7 @@
 //  User.m
 //  TUGuide
 //
-//  Created by Martin Langeder on 27.11.10.
+//  Created by Ivo Galic on 27.11.10.
 //  Copyright 2010 7359. All rights reserved.
 //
 
@@ -11,32 +11,42 @@
 
 @implementation User
 
+@synthesize userId;
 @synthesize screenName;
 @synthesize email;
 @synthesize password;
+@synthesize coordinates;
+@synthesize verificationString;
+@synthesize activated;
+@synthesize sessionId;
+@synthesize lastLogin;
 
 
--(id)initWithEmailPasswordAndScreenName:(NSString *)em password:(NSString *)pw screenName:(NSString *)u{
+-(id)initWithArguments:(NSString *)em withPassword:(NSString *)pw withScreenName:(NSString *)u{
 	if (self = [super init]) {
 		[self setEmail:em];
 		[self setPassword:pw];
 		[self setScreenName:u];
 	}
-	return self;
+	return self;	
 }
 
--(id)initWithEmailAndPassword:(NSString *)em password:(NSString *)pw{
-	return [self initWithEmailPasswordAndUsername:em password:pw screenName:nil];
+-(id)initWithEmailAndPassword:(NSString *)em withPassword:(NSString *)pw{
+	return [self initWithArguments:em withPassword:pw withScreenName:nil];
 }
 
 -(id)init{
-	return [self initWithEmailPasswordAndUsername:nil password:nil screenName:nil];
+	return [self initWithArguments:nil withPassword:nil withScreenName:nil];
 }
 
 -(void)dealloc{
+	[screenName release];
 	[email release];
 	[password release];
-	[screenName release]
+	[coordinates release];
+	[verificationString release];
+	[sessionId release];
+	[lastLogin release];
 	[super dealloc];
 }
 

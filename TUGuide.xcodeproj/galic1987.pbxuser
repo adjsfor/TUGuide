@@ -67,6 +67,16 @@
 			4B54C4D812A018AF00091F5A = 4B54C4D812A018AF00091F5A /* PlistBookmark */;
 			4B54C4F612A01A1C00091F5A = 4B54C4F612A01A1C00091F5A /* PBXBookmark */;
 			4B54C4F712A01A1C00091F5A = 4B54C4F712A01A1C00091F5A /* PBXTextBookmark */;
+			4BA6457F12A1498700B03B82 /* XCBuildMessageTextBookmark */ = 4BA6457F12A1498700B03B82 /* XCBuildMessageTextBookmark */;
+			4BA6458012A1498700B03B82 /* PBXTextBookmark */ = 4BA6458012A1498700B03B82 /* PBXTextBookmark */;
+			4BA6458A12A14B6700B03B82 /* PBXTextBookmark */ = 4BA6458A12A14B6700B03B82 /* PBXTextBookmark */;
+			4BA6458B12A14B6700B03B82 /* PBXTextBookmark */ = 4BA6458B12A14B6700B03B82 /* PBXTextBookmark */;
+			4BA6458C12A14B6700B03B82 /* PBXTextBookmark */ = 4BA6458C12A14B6700B03B82 /* PBXTextBookmark */;
+			4BA6458D12A14B6700B03B82 /* PBXTextBookmark */ = 4BA6458D12A14B6700B03B82 /* PBXTextBookmark */;
+			4BA6458E12A14B6700B03B82 /* PBXTextBookmark */ = 4BA6458E12A14B6700B03B82 /* PBXTextBookmark */;
+			4BA6458F12A14B6700B03B82 /* PBXTextBookmark */ = 4BA6458F12A14B6700B03B82 /* PBXTextBookmark */;
+			4BA6459012A14B6700B03B82 /* PBXTextBookmark */ = 4BA6459012A14B6700B03B82 /* PBXTextBookmark */;
+			4BA6459112A14B6700B03B82 /* PBXTextBookmark */ = 4BA6459112A14B6700B03B82 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 4BC70616129FE39D0086FBC8 /* Source Control */;
 		userBuildSettings = {
@@ -153,6 +163,119 @@
 		vrLen = 1360;
 		vrLoc = 0;
 	};
+	4BA6453F12A13F5400B03B82 /* Course.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 599}}";
+			sepNavSelRange = "{368, 0}";
+			sepNavVisRange = "{0, 402}";
+		};
+	};
+	4BA6454012A13F5400B03B82 /* Course.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 599}}";
+			sepNavSelRange = "{352, 0}";
+			sepNavVisRange = "{0, 358}";
+		};
+	};
+	4BA6457F12A1498700B03B82 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Incomplete implementation of class 'Course'";
+		fRef = 4BA6454012A13F5400B03B82 /* Course.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 31;
+		rType = 1;
+	};
+	4BA6458012A1498700B03B82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4BA6454012A13F5400B03B82 /* Course.m */;
+		name = "Course.m: 19";
+		rLen = 0;
+		rLoc = 353;
+		rType = 0;
+		vrLen = 209;
+		vrLoc = 31;
+	};
+	4BA6458A12A14B6700B03B82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA381CA312A0057A008E06D0 /* RegisterLoginView.h */;
+		name = "RegisterLoginView.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 561;
+		vrLoc = 0;
+	};
+	4BA6458B12A14B6700B03B82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA381CA912A00593008E06D0 /* LoginView.h */;
+		name = "LoginView.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 851;
+		vrLoc = 0;
+	};
+	4BA6458C12A14B6700B03B82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA381CAA12A00593008E06D0 /* LoginView.m */;
+		name = "LoginView.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1321;
+		vrLoc = 19;
+	};
+	4BA6458D12A14B6700B03B82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4BA6453F12A13F5400B03B82 /* Course.h */;
+		name = "Course.h: 20";
+		rLen = 0;
+		rLoc = 368;
+		rType = 0;
+		vrLen = 402;
+		vrLoc = 0;
+	};
+	4BA6458E12A14B6700B03B82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAD4AAA512A0CCD000817DCA /* User.h */;
+		name = "User.h: 35";
+		rLen = 11;
+		rLoc = 804;
+		rType = 0;
+		vrLen = 995;
+		vrLoc = 0;
+	};
+	4BA6458F12A14B6700B03B82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FAD4AAA612A0CCD000817DCA /* User.m */;
+		name = "User.m: 29";
+		rLen = 0;
+		rLoc = 567;
+		rType = 0;
+		vrLen = 959;
+		vrLoc = 0;
+	};
+	4BA6459012A14B6700B03B82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4BA6454012A13F5400B03B82 /* Course.m */;
+		name = "Course.m: 21";
+		rLen = 0;
+		rLoc = 246;
+		rType = 0;
+		vrLen = 412;
+		vrLoc = 0;
+	};
+	4BA6459112A14B6700B03B82 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4BA6454012A13F5400B03B82 /* Course.m */;
+		name = "Course.m: 31";
+		rLen = 0;
+		rLoc = 352;
+		rType = 0;
+		vrLen = 358;
+		vrLoc = 0;
+	};
 	4BC70607129FE3920086FBC8 /* TUGuide */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
@@ -220,16 +343,16 @@
 	};
 	FAD4AAA512A0CCD000817DCA /* User.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1011, 416}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 586}";
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 599}}";
+			sepNavSelRange = "{804, 11}";
+			sepNavVisRange = "{0, 995}";
 		};
 	};
 	FAD4AAA612A0CCD000817DCA /* User.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1011, 509}}";
-			sepNavSelRange = "{444, 0}";
-			sepNavVisRange = "{0, 687}";
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 728}}";
+			sepNavSelRange = "{567, 0}";
+			sepNavVisRange = "{0, 959}";
 		};
 	};
 }

@@ -2,7 +2,7 @@
 //  User.h
 //  TUGuide
 //
-//  Created by Martin Langeder on 27.11.10.
+//  Created by Ivo Galic on 27.11.10.
 //  Copyright 2010 7359. All rights reserved.
 //
 
@@ -22,18 +22,18 @@
 	
 }
 
-@property (nonatomic) int *userId;
-@property (nonatomic) NSString *screenName;
-@property (nonatomic) NSString *email;
-@property (nonatomic) NSString *password;
-@property (nonatomic) NSString *coordinates;
-@property (nonatomic) NSString *verificationString;
+@property (nonatomic) int userId;
+@property (nonatomic,assign) NSString *screenName;
+@property (nonatomic,assign) NSString *email;
+@property (nonatomic,assign) NSString *password;
+@property (nonatomic,assign) NSString *coordinates;
+@property (nonatomic,assign) NSString *verificationString;
 @property (nonatomic) bool activated;
-@property (nonatomic) NSString *sessionId;
-@property (nonatomic) NSDate *lastLogin;
+@property (nonatomic,assign) NSString *sessionId;
+@property (nonatomic,assign) NSDate *lastLogin;
 
 -(id)init;
--(id)initWithEmailAndPassword: (NSString *)em password:(NSString *)pw;
--(id)initWithEmailPasswordAndScreenName:(NSString *)em password:(NSString *)pw user:(NSString *)u;
+-(id)initWithEmailAndPassword: (NSString *)em withPassword:(NSString *)pw;
+-(id)initWithArguments:(NSString *)email withPassword:(NSString *)pw withScreenName:(NSString *)u;
 
 @end

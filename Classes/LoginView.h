@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
 
 
 @interface LoginView : UIView {
@@ -18,6 +19,7 @@
 	UILabel *textLabel;
 	UILabel *textLabel2;
 	UISwitch *saveLogin;
+	User *user;
 	
 }
 
@@ -28,6 +30,9 @@
 @property (nonatomic, retain) UILabel *textLabel;
 @property (nonatomic, retain) UILabel *textLabel2;
 @property (nonatomic, retain) UISwitch *saveLogin;
+@property (nonatomic, retain) User *user;
+
+-(IBAction)sendButtonAction:(id)sender;
 
 
 @end

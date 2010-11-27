@@ -11,14 +11,15 @@
 
 @implementation RegisterView
 
-@synthesize sendButton;
+@synthesize usernameField;
 @synthesize bigLogo;
 @synthesize emailField;
 @synthesize passwordField;
-@synthesize textLabel;
-@synthesize usernameField;
 @synthesize passwordField2;
+@synthesize sendButton;
+@synthesize textLabel;
 @synthesize textLabel2;
+@synthesize user;
 
 
 - (id)initWithFrame:(CGRect)frame {
@@ -58,6 +59,7 @@
 		passwordField2 =[[UITextField alloc]initWithFrame:CGRectMake(20, 345, 280, 30)];
 		passwordField2.borderStyle = UITextBorderStyleRoundedRect;
 		passwordField2.placeholder = @"Retype Password";
+		[passwordField setText:@"h"];
 		[self addSubview:passwordField2];
 		
 		sendButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -78,15 +80,28 @@
 }
 
 - (IBAction)sendButtonAction:(id)sender{
-	LoginView *loginView = [[LoginView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
 	
-	[loginView setFrame:CGRectMake( 0.0f, 480.0f, 320.0f, 480.0f)]; //notice this is OFF screen!
-	[UIView beginAnimations:@"animatedLoginView" context:nil];
-	[UIView setAnimationDuration:0.5];
-	[loginView setFrame:CGRectMake( 0.0f, 0.0f, 320.0f, 480.0f)]; //notice this is ON screen!
-	[UIView commitAnimations];
+	if ([[passwordField text]isEqualToString:[passwordField2 text]]) {
+		user = [[User alloc]initWithEmailPasswordAndUsername:[emailField text] password:[passwordField text] user:[usernameField text]];
+		LoginView *loginView = [[LoginView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
+		
+		[loginView setFrame:CGRectMake( 0.0f, 480.0f, 320.0f, 480.0f)]; //notice this is OFF screen!
+		[UIView beginAnimations:@"animatedLoginView" context:nil];
+		[UIView setAnimationDuration:0.5];
+		[loginView setFrame:CGRectMake( 0.0f, 0.0f, 320.0f, 480.0f)]; //notice this is ON screen!
+		[UIView commitAnimations];
+		
+		[self addSubview:loginView];
+	}else {
+		UIAlertView *someError = [[UIAlertView alloc] initWithTitle: @"Error" message: @"Passwords need to match!" delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
+		[someError show];
+		[someError release];
+		[passwordField setText:@"t"];
+		[passwordField2 setText:@"t"];
+	}
+
 	
-	[self addSubview:loginView];
+	
 }
 
 /*
@@ -98,6 +113,14 @@
 */
 
 - (void)dealloc {
+	[usernameField release];
+	[bigLogo release];
+	[emailField release];
+	[passwordField release];
+	[passwordField2 release];
+	[sendButton release];
+	[textLabel release];
+	[textLabel2 release];
     [super dealloc];
 }
 

@@ -20,6 +20,9 @@
 		FA381CB112A005D2008E06D0 /* RegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA381CB012A005D2008E06D0 /* RegisterView.m */; };
 		FA67286612A099010049DBD8 /* ButtonDark.png in Resources */ = {isa = PBXBuildFile; fileRef = FA67286512A099010049DBD8 /* ButtonDark.png */; };
 		FAD1DB0312A0390500F782A0 /* TUGuideLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD1DB0212A0390500F782A0 /* TUGuideLogo.png */; };
+		FAD4AAA712A0CCD000817DCA /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD4AAA612A0CCD000817DCA /* User.m */; };
+		FAD4AB2412A0D8F500817DCA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FAD4AB2312A0D8F500817DCA /* Settings.bundle */; };
+		FAD4AB3412A0DA1800817DCA /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD4AB3312A0DA1800817DCA /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +50,10 @@
 		FA381CB012A005D2008E06D0 /* RegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterView.m; sourceTree = "<group>"; };
 		FA67286512A099010049DBD8 /* ButtonDark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonDark.png; sourceTree = "<group>"; };
 		FAD1DB0212A0390500F782A0 /* TUGuideLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TUGuideLogo.png; sourceTree = "<group>"; };
+		FAD4AAA512A0CCD000817DCA /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		FAD4AAA612A0CCD000817DCA /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		FAD4AB2312A0D8F500817DCA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		FAD4AB3312A0DA1800817DCA /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +81,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FAD4AAA312A0CCBC00817DCA /* Core */,
 				FA381C9E12A0053F008E06D0 /* View */,
 				FA381C9D12A00532008E06D0 /* ViewController */,
 				1D3623240D0F684500981E51 /* TUGuideAppDelegate.h */,
@@ -101,6 +109,7 @@
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				8EAFF11212A0054D00C9BCA3 /* Tests-Info.plist */,
+				FAD4AB2312A0D8F500817DCA /* Settings.bundle */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -168,10 +177,20 @@
 		FAD1DB0712A0391800F782A0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				FAD4AB3312A0DA1800817DCA /* icon.png */,
 				FA67286512A099010049DBD8 /* ButtonDark.png */,
 				FAD1DB0212A0390500F782A0 /* TUGuideLogo.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		FAD4AAA312A0CCBC00817DCA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FAD4AAA512A0CCD000817DCA /* User.h */,
+				FAD4AAA612A0CCD000817DCA /* User.m */,
+			);
+			name = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +263,8 @@
 			files = (
 				FAD1DB0312A0390500F782A0 /* TUGuideLogo.png in Resources */,
 				FA67286612A099010049DBD8 /* ButtonDark.png in Resources */,
+				FAD4AB2412A0D8F500817DCA /* Settings.bundle in Resources */,
+				FAD4AB3412A0DA1800817DCA /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +304,7 @@
 				FA381CA512A0057A008E06D0 /* RegisterLoginView.m in Sources */,
 				FA381CAB12A00593008E06D0 /* LoginView.m in Sources */,
 				FA381CB112A005D2008E06D0 /* RegisterView.m in Sources */,
+				FAD4AAA712A0CCD000817DCA /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

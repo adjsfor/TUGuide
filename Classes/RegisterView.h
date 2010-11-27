@@ -20,6 +20,7 @@
 	UITextField *usernameField;
 	UILabel *textLabel;
 	UILabel *textLabel2;
+	User *user;
 	
 }
 
@@ -31,8 +32,9 @@
 @property (nonatomic, retain) UITextField *passwordField2;
 @property (nonatomic, retain) UILabel *textLabel;
 @property (nonatomic, retain) UILabel *textLabel2;
+@property (nonatomic, retain) User *user;
 
--(IBAction)sendButtonAction;
+-(IBAction)sendButtonAction:(id)sender;
 
 
 @end

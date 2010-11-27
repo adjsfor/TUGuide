@@ -19,6 +19,7 @@
 	bool activated;
 	NSString *sessionId;
 	NSDate *lastLogin;
+	NSMutableArray *friendList;
 	
 }
 
@@ -31,6 +32,7 @@
 @property (nonatomic) bool activated;
 @property (nonatomic,assign) NSString *sessionId;
 @property (nonatomic,assign) NSDate *lastLogin;
+@property (nonatomic,assign) NSMutableArray *friendList;
 
 -(id)init;
 -(id)initWithEmailAndPassword: (NSString *)em withPassword:(NSString *)pw;

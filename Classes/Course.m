@@ -18,7 +18,10 @@
 
 
 -(id)init{
-	return [self super];
+	if (self = [super init]) {
+		//dosomething
+	}
+	return self;
 }
 
 -(void)dealloc{

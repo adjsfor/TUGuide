@@ -20,6 +20,7 @@
 @synthesize activated;
 @synthesize sessionId;
 @synthesize lastLogin;
+@synthesize friendList;
 
 
 -(id)initWithArguments:(NSString *)em withPassword:(NSString *)pw withScreenName:(NSString *)u{
@@ -47,6 +48,7 @@
 	[verificationString release];
 	[sessionId release];
 	[lastLogin release];
+	[friendList release];
 	[super dealloc];
 }
 

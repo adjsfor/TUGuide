@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "LoginView.h"
+#import "RegisterView.h"
 
 @interface RegisterLoginView : UIView {
 	UIButton *registerButton;
@@ -18,5 +19,8 @@
 @property (nonatomic, retain) UIButton *registerButton;
 @property (nonatomic, retain) UIButton *loginButton;
 @property (nonatomic, retain) UIImageView *bigLogo;
+
+-(IBAction)loginButtonPressed;
+-(IBAction)registerButtonPressed;
 
 @end

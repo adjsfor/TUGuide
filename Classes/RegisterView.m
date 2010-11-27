@@ -11,14 +11,82 @@
 
 @implementation RegisterView
 
+@synthesize sendButton;
+@synthesize bigLogo;
+@synthesize emailField;
+@synthesize passwordField;
+@synthesize textLabel;
+@synthesize usernameField;
+@synthesize passwordField2;
+@synthesize textLabel2;
+
 
 - (id)initWithFrame:(CGRect)frame {
     
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code.
+		
+		self.backgroundColor = [UIColor whiteColor];
+		
+		UIImage *img = [UIImage imageNamed: @"TUGuideLogo.png"];
+		bigLogo = [[UIImageView alloc] initWithFrame:CGRectMake(85,30, 150, 150)];
+		bigLogo.image = img;
+		[img release];
+		[self addSubview:bigLogo];
+		
+		textLabel = [[UILabel alloc]initWithFrame:CGRectMake(55,185, 220, 30)];
+		textLabel.font = [UIFont fontWithName:@"Helvetica" size:11];  
+		[textLabel setText:@"Register for the Services of TUGuide"];
+		[self addSubview:textLabel];
+		
+		usernameField =[[UITextField alloc]initWithFrame:CGRectMake(20, 225, 280, 30)];
+		usernameField.borderStyle = UITextBorderStyleRoundedRect;
+		usernameField.placeholder = @"Username";
+		[self addSubview:usernameField];
+		
+		emailField =[[UITextField alloc]initWithFrame:CGRectMake(20, 265, 280, 30)];
+		emailField.borderStyle = UITextBorderStyleRoundedRect;
+		emailField.placeholder = @"Email has to end on @*tuwien.ac.at";
+		[self addSubview:emailField];
+		
+		passwordField =[[UITextField alloc]initWithFrame:CGRectMake(20, 305, 280, 30)];
+		passwordField.borderStyle = UITextBorderStyleRoundedRect;
+		passwordField.placeholder = @"Password";
+		[self addSubview:passwordField];
+		
+		passwordField2 =[[UITextField alloc]initWithFrame:CGRectMake(20, 345, 280, 30)];
+		passwordField2.borderStyle = UITextBorderStyleRoundedRect;
+		passwordField2.placeholder = @"Retype Password";
+		[self addSubview:passwordField2];
+		
+		sendButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+		[sendButton setFrame:CGRectMake(85, 390, 150, 30)];
+		[sendButton setTitle:@"Send" forState:UIControlStateNormal];
+		[sendButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+		[sendButton setBackgroundImage:[UIImage imageNamed: @"ButtonDark.png"] forState:UIControlStateNormal];
+		[sendButton addTarget:self action:@selector(sendButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+		[self addSubview:sendButton];
+		
+		textLabel2 = [[UILabel alloc]initWithFrame:CGRectMake(35,440, 250, 30)];
+		textLabel2.font = [UIFont fontWithName:@"Helvetica" size:11];  
+		[textLabel2 setText:@"Your Username and Email Address will be public"];
+		[self addSubview:textLabel2];
     }
     return self;
+	
+}
+
+- (IBAction)sendButtonAction:(id)sender{
+	LoginView *loginView = [[LoginView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
+	
+	[loginView setFrame:CGRectMake( 0.0f, 480.0f, 320.0f, 480.0f)]; //notice this is OFF screen!
+	[UIView beginAnimations:@"animatedLoginView" context:nil];
+	[UIView setAnimationDuration:0.5];
+	[loginView setFrame:CGRectMake( 0.0f, 0.0f, 320.0f, 480.0f)]; //notice this is ON screen!
+	[UIView commitAnimations];
+	
+	[self addSubview:loginView];
 }
 
 /*

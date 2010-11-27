@@ -17,11 +17,16 @@
 	RegisterLoginView *registerLoginView;
 	RegisterView *registerView;
 	LoginView *loginView;
-
+	UIScrollView *scrollView;
+	UITextField *activeField;
+	Boolean keyboardIsShown;
 }
 
 @property (nonatomic, retain) RegisterLoginView *registerLoginView;
 @property (nonatomic, retain) RegisterView *registerView;
 @property (nonatomic, retain) LoginView *loginView;
+@property (nonatomic, retain) UIScrollView *scrollView;
+@property (nonatomic, retain) UITextField *activeField;
+
 
 @end

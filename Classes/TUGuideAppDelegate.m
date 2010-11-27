@@ -24,7 +24,7 @@
     if (!window) 
     {
         [self release];
-        return;
+        return NO;
     }
 	loginViewController = [[LoginViewController alloc]init];
     [window addSubview:loginViewController.view];

@@ -20,7 +20,7 @@
 
 -(id)initWithArguments:(int)announcementId2
 		 withAnnounced:(bool)announced2
-		 withLectureId:(NSString *)lectureId2
+		 withLectureId:(Lecture *)lectureId2
 			withUserId:(int)userId2
 		   withMessage:(NSString *)message2
 			withReport:(NSString *)report2{

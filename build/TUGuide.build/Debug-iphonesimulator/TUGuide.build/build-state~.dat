@@ -1,0 +1,575 @@
+TTUGuide
+v7
+r0
+t312561815.122166
+cCheck dependencies
+cProcessInfoPlistFile /Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/TUGuide.app/Info.plist TUGuide-Info.plist
+cCpResource build/Debug-iphonesimulator/TUGuide.app/TUGuideLogo.png TUGuideLogo.png
+cCpResource build/Debug-iphonesimulator/TUGuide.app/ButtonDark.png ButtonDark.png
+cCpResource build/Debug-iphonesimulator/TUGuide.app/Settings.bundle Settings.bundle
+cCpResource build/Debug-iphonesimulator/TUGuide.app/icon.png icon.png
+cProcessPCH /var/folders/62/62pehcVCEwu7pJ4CW3C92E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-hkdyvoeclepugzeyufmrvfqhzbie/TUGuide_Prefix.pch.gch TUGuide_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/main.o /Users/Takarashy/Desktop/TUGuide/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/TUGuideAppDelegate.o /Users/Takarashy/Desktop/TUGuide/Classes/TUGuideAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/LoginViewController.o /Users/Takarashy/Desktop/TUGuide/Classes/LoginViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/RegisterLoginView.o /Users/Takarashy/Desktop/TUGuide/Classes/RegisterLoginView.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/LoginView.o /Users/Takarashy/Desktop/TUGuide/Classes/LoginView.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/RegisterView.o /Users/Takarashy/Desktop/TUGuide/Classes/RegisterView.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/User.o /Users/Takarashy/Desktop/TUGuide/Classes/User.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Course.o /Users/Takarashy/Desktop/TUGuide/Classes/Course.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Announcement.o /Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Friend.o /Users/Takarashy/Desktop/TUGuide/Classes/Friend.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Lecture.o /Users/Takarashy/Desktop/TUGuide/Classes/Lecture.m normal i386 objective-c com.apple.compilers.gcc.4_2
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk
+c000000004CC128950000000000000110
+t1287727253
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004CC12246000000000029B310
+t1287725638
+s2732816
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004CC1226D000000000029D5D0
+t1287725677
+s2741712
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004CC1225F0000000000001466
+t1287725663
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004CC1281F0000000000000AA1
+t1287727135
+s2721
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004CC12883000000000074D7B0
+t1287727235
+s7657392
+
+N/Users/Takarashy/Desktop/TUGuide/ButtonDark.png
+c000000004CF0D1350000000000001A4C
+t1290850613
+s6732
+
+N/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.h
+c000000004CF11881000000000000033B
+t1290868865
+s827
+i<Foundation/Foundation.h>
+
+N/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m
+c000000004CF1189500000000000003ED
+t1290868885
+s1005
+i"Announcement.h"
+
+N/Users/Takarashy/Desktop/TUGuide/Classes/Course.h
+c000000004CF1144C0000000000000192
+t1290867788
+s402
+i<Foundation/Foundation.h>
+
+N/Users/Takarashy/Desktop/TUGuide/Classes/Course.m
+c000000004CF1144C0000000000000166
+t1290867788
+s358
+i"Course.h"
+
+N/Users/Takarashy/Desktop/TUGuide/Classes/Friend.h
+c000000004CF1140200000000000000CA
+t1290867714
+s202
+i<Foundation/Foundation.h>
+
+N/Users/Takarashy/Desktop/TUGuide/Classes/Friend.m
+c000000004CF1140200000000000000B0
+t1290867714
+s176
+i"Friend.h"
+
+N/Users/Takarashy/Desktop/TUGuide/Classes/Lecture.h
+c000000004CF118000000000000000354
+t1290868736
+s852
+i<Foundation/Foundation.h>
+
+N/Users/Takarashy/Desktop/TUGuide/Classes/Lecture.m
+c000000004CF1190500000000000003EB
+t1290868997
+s1003
+i"Lecture.h"
+
+N/Users/Takarashy/Desktop/TUGuide/Classes/LoginView.h
+c000000004CF0D1350000000000000353
+t1290850613
+s851
+i<UIKit/UIKit.h>
+i"User.h"
+
+N/Users/Takarashy/Desktop/TUGuide/Classes/LoginView.m
+c000000004CF0D1350000000000000CC7
+t1290850613
+s3271
+i"LoginView.h"
+
+N/Users/Takarashy/Desktop/TUGuide/Classes/LoginViewController.h
+c000000004CF0D13500000000000002FE
+t1290850613
+s766
+i<UIKit/UIKit.h>
+i"RegisterView.h"
+i"LoginView.h"
+i"RegisterLoginView.h"
+
+N/Users/Takarashy/Desktop/TUGuide/Classes/LoginViewController.m
+c000000004CF0D1350000000000001141
+t1290850613
+s4417
+i"LoginViewController.h"
+
+N/Users/Takarashy/Desktop/TUGuide/Classes/RegisterLoginView.h
+c000000004CF0D1350000000000000231
+t1290850613
+s561
+i<UIKit/UIKit.h>
+i"LoginView.h"
+i"RegisterView.h"
+
+N/Users/Takarashy/Desktop/TUGuide/Classes/RegisterLoginView.m
+c000000004CF0D1350000000000000BFC
+t1290850613
+s3068
+i"RegisterLoginView.h"
+
+N/Users/Takarashy/Desktop/TUGuide/Classes/RegisterView.h
+c000000004CF0D13500000000000003C5
+t1290850613
+s965
+i<UIKit/UIKit.h>
+i"LoginView.h"
+
+N/Users/Takarashy/Desktop/TUGuide/Classes/RegisterView.m
+c000000004CF0D1350000000000001061
+t1290850613
+s4193
+i"RegisterView.h"
+
+N/Users/Takarashy/Desktop/TUGuide/Classes/TUGuideAppDelegate.h
+c000000004CEFED2A0000000000000200
+t1290792234
+s512
+i<UIKit/UIKit.h>
+i"LoginViewController.h"
+
+N/Users/Takarashy/Desktop/TUGuide/Classes/TUGuideAppDelegate.m
+c000000004CF0D1350000000000000AFC
+t1290850613
+s2812
+i"TUGuideAppDelegate.h"
+
+N/Users/Takarashy/Desktop/TUGuide/Classes/User.h
+c000000004CF1144C00000000000003E3
+t1290867788
+s995
+i<Foundation/Foundation.h>
+
+N/Users/Takarashy/Desktop/TUGuide/Classes/User.m
+c000000004CF1144C0000000000000407
+t1290867788
+s1031
+i"User.h"
+
+N/Users/Takarashy/Desktop/TUGuide/Settings.bundle
+c000000004CF0D1350000000000000088
+t1290850613
+s136
+
+N/Users/Takarashy/Desktop/TUGuide/TUGuideLogo.png
+c000000004CF00BD0000000000000F47F
+t1290800080
+s62591
+
+N/Users/Takarashy/Desktop/TUGuide/TUGuide_Prefix.pch
+c000000004CEFEC0C00000000000000B7
+t1290791948
+s183
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/TUGuide.app
+t2
+s0
+
+N/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/TUGuide.app.dSYM
+t2
+s0
+
+N/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/TUGuide.app/ButtonDark.png
+t1290869014
+s6732
+
+N/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/TUGuide.app/Info.plist
+t1290869014
+s558
+
+N/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/TUGuide.app/PkgInfo
+t1290869014
+s8
+
+N/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/TUGuide.app/Settings.bundle
+t1290869014
+s136
+
+N/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/TUGuide.app/TUGuide
+t2
+s0
+
+N/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/TUGuide.app/TUGuideLogo.png
+t1290869014
+s62591
+
+N/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/TUGuide.app/icon.png
+t1290869014
+s5661
+
+N/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Announcement.o
+t2
+s0
+
+N/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Course.o
+t1290869014
+s9872
+
+N/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Friend.o
+t1290869014
+s5016
+
+N/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Lecture.o
+t2
+s0
+
+N/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/LoginView.o
+t1290869014
+s57740
+
+N/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/LoginViewController.o
+t1290869014
+s52452
+
+N/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/RegisterLoginView.o
+t1290869014
+s51752
+
+N/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/RegisterView.o
+t1290869014
+s66964
+
+N/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/TUGuide.LinkFileList
+c000000004CF119160000000000000542
+t1290869014
+s1346
+
+N/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/TUGuideAppDelegate.o
+t1290869014
+s53544
+
+N/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/User.o
+t1290869014
+s17264
+
+N/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/main.o
+t1290869014
+s6472
+
+N/Users/Takarashy/Desktop/TUGuide/icon.png
+c000000004CF0D135000000000000161D
+t1290850613
+s5661
+
+N/Users/Takarashy/Desktop/TUGuide/main.m
+c000000004CEFED550000000000000172
+t1290792277
+s370
+i<UIKit/UIKit.h>
+
+N/var/folders/62/62pehcVCEwu7pJ4CW3C92E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-hkdyvoeclepugzeyufmrvfqhzbie/TUGuide_Prefix.pch.gch
+t1290796100
+s15453392
+
+NTUGuide-Info.plist
+c000000004CEFEC0C0000000000000356
+t1290791948
+s854
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies312561814#312561814#0(0"0(0#1#0"8609066528#0"0#
+
+CCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Announcement.o /Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s312561814.832806
+e312561815.065584
+r0
+xCompileC
+xbuild/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Announcement.o
+x/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+oIn file included from /Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m:9:
+o/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.h:15: error: expected specifier-qualifier-list before 'Lecture'
+o/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.h:23: error: expected specifier-qualifier-list before 'Lecture'
+o/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.h:32: error: expected ')' before 'Lecture'
+o/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m:16: error: no declaration of property 'lectureId' found in the interface
+o/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m:23: error: expected ')' before 'Lecture'
+o/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m: In function '-[Announcement initWithArguments:withAnnounced:withLectureId:withUserId:withMessage:withReport:]':
+o/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m:31: error: request for member 'lectureId' in something not a structure or union
+o/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m: In function '-[Announcement dealloc]':
+o/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m:44: error: 'lectureId' undeclared (first use in this function)
+o/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m:44: error: (Each undeclared identifier is reported only once
+o/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m:44: error: for each function it appears in.)
+lSLF07#2@63"Compile /Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m312561814#312561815#0(1378"In file included from /Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m:9:/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.h:15: error: expected specifier-qualifier-list before 'Lecture'/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.h:23: error: expected specifier-qualifier-list before 'Lecture'/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.h:32: error: expected ')' before 'Lecture'/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m:16: error: no declaration of property 'lectureId' found in the interface/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m:23: error: expected ')' before 'Lecture'/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m: In function '-[Announcement initWithArguments:withAnnounced:withLectureId:withUserId:withMessage:withReport:]':/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m:31: error: request for member 'lectureId' in something not a structure or union/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m: In function '-[Announcement dealloc]':/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m:44: error: 'lectureId' undeclared (first use in this function)/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m:44: error: (Each undeclared identifier is reported only once/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m:44: error: for each function it appears in.)7(4@50"Expected specifier-qualifier-list before 'Lecture'312561814#81#118#2(7@77"In file included from /Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m312561814#18446744073709551615#0#0(6@55"/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m312561685#9#0#9#0#0"0(13@109"Expected specifier-qualifier-list before 'Lecture' in /Users/Takarashy/Desktop/TUGuide/Classes/Announcement.h312561814#18446744073709551615#0#0(6@55"/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.h312561665#15#0#15#0#0"0(6@55"/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.h312561665#15#0#15#0#19"expected * before *0(4@50"Expected specifier-qualifier-list before 'Lecture'312561814#199#118#2(7@77"In file included from /Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m312561814#18446744073709551615#0#0(6@55"/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m312561685#9#0#9#0#0"0(13@109"Expected specifier-qualifier-list before 'Lecture' in /Users/Takarashy/Desktop/TUGuide/Classes/Announcement.h312561814#18446744073709551615#0#0(6@55"/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.h312561665#23#0#23#0#0"0(6@55"/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.h312561665#23#0#23#0#19"expected * before *0(4@29"Expected ')' before 'Lecture'312561814#317#97#2(7@77"In file included from /Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m312561814#18446744073709551615#0#0(6@55"/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m312561685#9#0#9#0#0"0(13@88"Expected ')' before 'Lecture' in /Users/Takarashy/Desktop/TUGuide/Classes/Announcement.h312561814#18446744073709551615#0#0(6@55"/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.h312561665#32#0#32#0#0"0(6@55"/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.h312561665#32#0#32#0#19"expected * before *0(4@61"No declaration of property 'lectureId' found in the interface312561814#414#129#0(6@55"/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m312561685#16#0#16#0#0"0(4@29"Expected ')' before 'Lecture'312561814#543#97#0(6@55"/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m312561685#23#0#23#0#19"expected * before *0(4@68"Request for member 'lectureId' in something not a structure or union312561814#809#136#0(6@55"/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m312561685#31#0#31#0#0"0(4@51"'lectureId' undeclared (first use in this function)312561814#1041#119#0(6@55"/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m312561685#44#0#44#0#43"'*' undeclared (first use in this function)0(0#0#55"/Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m8615616384#1987"    cd /Users/Takarashy/Desktop/TUGuide    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-generated-files.hmap -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-own-target-headers.hmap -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-all-target-headers.hmap -iquote /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-project-headers.hmap -F/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/Developer/Library/Frameworks -I/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/include -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources/i386 -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources -include /var/folders/62/62pehcVCEwu7pJ4CW3C92E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-hkdyvoeclepugzeyufmrvfqhzbie/TUGuide_Prefix.pch -c /Users/Takarashy/Desktop/TUGuide/Classes/Announcement.m -o /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Announcement.o1#
+
+CCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Course.o /Users/Takarashy/Desktop/TUGuide/Classes/Course.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s312561814.802778
+e312561814.912311
+r1
+xCompileC
+xbuild/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Course.o
+x/Users/Takarashy/Desktop/TUGuide/Classes/Course.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/Takarashy/Desktop/TUGuide/Classes/Course.m: In function '-[Course init]':
+o/Users/Takarashy/Desktop/TUGuide/Classes/Course.m:21: warning: 'Course' may not respond to '-super'
+o/Users/Takarashy/Desktop/TUGuide/Classes/Course.m:21: warning: (Messages without a matching method signature
+o/Users/Takarashy/Desktop/TUGuide/Classes/Course.m:21: warning: will be assumed to return 'id' and accept
+o/Users/Takarashy/Desktop/TUGuide/Classes/Course.m:21: warning: '...' as arguments.)
+lSLF07#2@57"Compile /Users/Takarashy/Desktop/TUGuide/Classes/Course.m312561814#312561814#0(479"/Users/Takarashy/Desktop/TUGuide/Classes/Course.m: In function '-[Course init]':/Users/Takarashy/Desktop/TUGuide/Classes/Course.m:21: warning: 'Course' may not respond to '-super'/Users/Takarashy/Desktop/TUGuide/Classes/Course.m:21: warning: (Messages without a matching method signature/Users/Takarashy/Desktop/TUGuide/Classes/Course.m:21: warning: will be assumed to return 'id' and accept/Users/Takarashy/Desktop/TUGuide/Classes/Course.m:21: warning: '...' as arguments.)2(22@36"'Course' may not respond to '-super'312561814#81#100#0(6@49"/Users/Takarashy/Desktop/TUGuide/Classes/Course.m312560588#21#0#21#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)312561814#181#109#0(6@49"/Users/Takarashy/Desktop/TUGuide/Classes/Course.m312560588#21#0#21#0#0"0(0#0#49"/Users/Takarashy/Desktop/TUGuide/Classes/Course.m8615700608#1975"    cd /Users/Takarashy/Desktop/TUGuide    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-generated-files.hmap -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-own-target-headers.hmap -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-all-target-headers.hmap -iquote /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-project-headers.hmap -F/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/Developer/Library/Frameworks -I/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/include -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources/i386 -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources -include /var/folders/62/62pehcVCEwu7pJ4CW3C92E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-hkdyvoeclepugzeyufmrvfqhzbie/TUGuide_Prefix.pch -c /Users/Takarashy/Desktop/TUGuide/Classes/Course.m -o /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Course.o0#
+
+CCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Friend.o /Users/Takarashy/Desktop/TUGuide/Classes/Friend.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s312561814.912400
+e312561814.973829
+r1
+xCompileC
+xbuild/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Friend.o
+x/Users/Takarashy/Desktop/TUGuide/Classes/Friend.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@57"Compile /Users/Takarashy/Desktop/TUGuide/Classes/Friend.m312561814#312561814#0(0"0(0#0#49"/Users/Takarashy/Desktop/TUGuide/Classes/Friend.m8615496416#1975"    cd /Users/Takarashy/Desktop/TUGuide    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-generated-files.hmap -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-own-target-headers.hmap -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-all-target-headers.hmap -iquote /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-project-headers.hmap -F/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/Developer/Library/Frameworks -I/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/include -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources/i386 -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources -include /var/folders/62/62pehcVCEwu7pJ4CW3C92E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-hkdyvoeclepugzeyufmrvfqhzbie/TUGuide_Prefix.pch -c /Users/Takarashy/Desktop/TUGuide/Classes/Friend.m -o /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Friend.o0#
+
+CCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Lecture.o /Users/Takarashy/Desktop/TUGuide/Classes/Lecture.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s312561814.974111
+e312561815.122086
+r0
+xCompileC
+xbuild/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Lecture.o
+x/Users/Takarashy/Desktop/TUGuide/Classes/Lecture.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/Takarashy/Desktop/TUGuide/Classes/Lecture.m: In function '-[Lecture dealloc]':
+o/Users/Takarashy/Desktop/TUGuide/Classes/Lecture.m:45: error: 'message' undeclared (first use in this function)
+o/Users/Takarashy/Desktop/TUGuide/Classes/Lecture.m:45: error: (Each undeclared identifier is reported only once
+o/Users/Takarashy/Desktop/TUGuide/Classes/Lecture.m:45: error: for each function it appears in.)
+o/Users/Takarashy/Desktop/TUGuide/Classes/Lecture.m:46: error: 'report' undeclared (first use in this function)
+o{standard input}:146:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_7" minus "L00000000002$pb"
+o{standard input}:146:symbol: "L_OBJC_SELECTOR_REFERENCES_7" can't be undefined in a subtraction expression
+o{standard input}:112:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_6" minus "L00000000001$pb"
+o{standard input}:112:symbol: "L_OBJC_SELECTOR_REFERENCES_6" can't be undefined in a subtraction expression
+o{standard input}:103:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_5" minus "L00000000001$pb"
+o{standard input}:103:symbol: "L_OBJC_SELECTOR_REFERENCES_5" can't be undefined in a subtraction expression
+o{standard input}:94:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_4" minus "L00000000001$pb"
+o{standard input}:94:symbol: "L_OBJC_SELECTOR_REFERENCES_4" can't be undefined in a subtraction expression
+o{standard input}:85:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_3" minus "L00000000001$pb"
+o{standard input}:85:symbol: "L_OBJC_SELECTOR_REFERENCES_3" can't be undefined in a subtraction expression
+o{standard input}:76:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_2" minus "L00000000001$pb"
+o{standard input}:76:symbol: "L_OBJC_SELECTOR_REFERENCES_2" can't be undefined in a subtraction expression
+o{standard input}:67:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_1" minus "L00000000001$pb"
+o{standard input}:67:symbol: "L_OBJC_SELECTOR_REFERENCES_1" can't be undefined in a subtraction expression
+o{standard input}:57:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_0" minus "L00000000001$pb"
+o{standard input}:57:symbol: "L_OBJC_SELECTOR_REFERENCES_0" can't be undefined in a subtraction expression
+o{standard input}:53:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_0" minus "L00000000001$pb"
+o{standard input}:53:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_0" can't be undefined in a subtraction expression
+o{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_SUP_REFS_$_0
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_0
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_1
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_2
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_3
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_4
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_5
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_6
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_7
+lSLF07#2@58"Compile /Users/Takarashy/Desktop/TUGuide/Classes/Lecture.m312561814#312561815#0(3208"/Users/Takarashy/Desktop/TUGuide/Classes/Lecture.m: In function '-[Lecture dealloc]':/Users/Takarashy/Desktop/TUGuide/Classes/Lecture.m:45: error: 'message' undeclared (first use in this function)/Users/Takarashy/Desktop/TUGuide/Classes/Lecture.m:45: error: (Each undeclared identifier is reported only once/Users/Takarashy/Desktop/TUGuide/Classes/Lecture.m:45: error: for each function it appears in.)/Users/Takarashy/Desktop/TUGuide/Classes/Lecture.m:46: error: 'report' undeclared (first use in this function){standard input}:146:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_7" minus "L00000000002$pb"{standard input}:146:symbol: "L_OBJC_SELECTOR_REFERENCES_7" can't be undefined in a subtraction expression{standard input}:112:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_6" minus "L00000000001$pb"{standard input}:112:symbol: "L_OBJC_SELECTOR_REFERENCES_6" can't be undefined in a subtraction expression{standard input}:103:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_5" minus "L00000000001$pb"{standard input}:103:symbol: "L_OBJC_SELECTOR_REFERENCES_5" can't be undefined in a subtraction expression{standard input}:94:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_4" minus "L00000000001$pb"{standard input}:94:symbol: "L_OBJC_SELECTOR_REFERENCES_4" can't be undefined in a subtraction expression{standard input}:85:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_3" minus "L00000000001$pb"{standard input}:85:symbol: "L_OBJC_SELECTOR_REFERENCES_3" can't be undefined in a subtraction expression{standard input}:76:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_2" minus "L00000000001$pb"{standard input}:76:symbol: "L_OBJC_SELECTOR_REFERENCES_2" can't be undefined in a subtraction expression{standard input}:67:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_1" minus "L00000000001$pb"{standard input}:67:symbol: "L_OBJC_SELECTOR_REFERENCES_1" can't be undefined in a subtraction expression{standard input}:57:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_0" minus "L00000000001$pb"{standard input}:57:symbol: "L_OBJC_SELECTOR_REFERENCES_0" can't be undefined in a subtraction expression{standard input}:53:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_0" minus "L00000000001$pb"{standard input}:53:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_0" can't be undefined in a subtraction expression{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_SUP_REFS_$_0{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_0{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_1{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_2{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_3{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_4{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_5{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_6{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_72(4@49"'message' undeclared (first use in this function)312561815#86#112#0(6@50"/Users/Takarashy/Desktop/TUGuide/Classes/Lecture.m312561797#45#0#45#0#43"'*' undeclared (first use in this function)0(4@48"'report' undeclared (first use in this function)312561815#406#111#0(6@50"/Users/Takarashy/Desktop/TUGuide/Classes/Lecture.m312561797#46#0#46#0#43"'*' undeclared (first use in this function)0(0#0#50"/Users/Takarashy/Desktop/TUGuide/Classes/Lecture.m8615336640#1977"    cd /Users/Takarashy/Desktop/TUGuide    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-generated-files.hmap -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-own-target-headers.hmap -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-all-target-headers.hmap -iquote /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-project-headers.hmap -F/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/Developer/Library/Frameworks -I/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/include -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources/i386 -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources -include /var/folders/62/62pehcVCEwu7pJ4CW3C92E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-hkdyvoeclepugzeyufmrvfqhzbie/TUGuide_Prefix.pch -c /Users/Takarashy/Desktop/TUGuide/Classes/Lecture.m -o /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Lecture.o1#
+
+CCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/LoginView.o /Users/Takarashy/Desktop/TUGuide/Classes/LoginView.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s312561814.603429
+e312561814.747979
+r1
+xCompileC
+xbuild/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/LoginView.o
+x/Users/Takarashy/Desktop/TUGuide/Classes/LoginView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/Takarashy/Desktop/TUGuide/Classes/LoginView.m: In function '-[LoginView sendButtonAction:]':
+o/Users/Takarashy/Desktop/TUGuide/Classes/LoginView.m:77: warning: no '-initWithEmailAndPassword:password:' method found
+o/Users/Takarashy/Desktop/TUGuide/Classes/LoginView.m:77: warning: (Messages without a matching method signature
+o/Users/Takarashy/Desktop/TUGuide/Classes/LoginView.m:77: warning: will be assumed to return 'id' and accept
+o/Users/Takarashy/Desktop/TUGuide/Classes/LoginView.m:77: warning: '...' as arguments.)
+o/Users/Takarashy/Desktop/TUGuide/Classes/LoginView.m:86: warning: format not a string literal and no format arguments
+lSLF07#2@60"Compile /Users/Takarashy/Desktop/TUGuide/Classes/LoginView.m312561814#312561814#0(645"/Users/Takarashy/Desktop/TUGuide/Classes/LoginView.m: In function '-[LoginView sendButtonAction:]':/Users/Takarashy/Desktop/TUGuide/Classes/LoginView.m:77: warning: no '-initWithEmailAndPassword:password:' method found/Users/Takarashy/Desktop/TUGuide/Classes/LoginView.m:77: warning: (Messages without a matching method signature/Users/Takarashy/Desktop/TUGuide/Classes/LoginView.m:77: warning: will be assumed to return 'id' and accept/Users/Takarashy/Desktop/TUGuide/Classes/LoginView.m:77: warning: '...' as arguments.)/Users/Takarashy/Desktop/TUGuide/Classes/LoginView.m:86: warning: format not a string literal and no format arguments3(22@53"No '-initWithEmailAndPassword:password:' method found312561814#100#120#0(6@52"/Users/Takarashy/Desktop/TUGuide/Classes/LoginView.m312543413#77#0#77#0#19"no '*' method found0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)312561814#220#112#0(6@52"/Users/Takarashy/Desktop/TUGuide/Classes/LoginView.m312543413#77#0#77#0#0"0(22@51"Format not a string literal and no format arguments312561814#527#118#0(6@52"/Users/Takarashy/Desktop/TUGuide/Classes/LoginView.m312543413#86#0#86#0#51"format not a string literal and no format arguments0(0#0#52"/Users/Takarashy/Desktop/TUGuide/Classes/LoginView.m8614727040#1981"    cd /Users/Takarashy/Desktop/TUGuide    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-generated-files.hmap -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-own-target-headers.hmap -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-all-target-headers.hmap -iquote /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-project-headers.hmap -F/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/Developer/Library/Frameworks -I/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/include -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources/i386 -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources -include /var/folders/62/62pehcVCEwu7pJ4CW3C92E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-hkdyvoeclepugzeyufmrvfqhzbie/TUGuide_Prefix.pch -c /Users/Takarashy/Desktop/TUGuide/Classes/LoginView.m -o /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/LoginView.o0#
+
+CCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/LoginViewController.o /Users/Takarashy/Desktop/TUGuide/Classes/LoginViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s312561814.488578
+e312561814.603321
+r1
+xCompileC
+xbuild/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/LoginViewController.o
+x/Users/Takarashy/Desktop/TUGuide/Classes/LoginViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@70"Compile /Users/Takarashy/Desktop/TUGuide/Classes/LoginViewController.m312561814#312561814#0(0"0(0#0#62"/Users/Takarashy/Desktop/TUGuide/Classes/LoginViewController.m8614958304#2001"    cd /Users/Takarashy/Desktop/TUGuide    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-generated-files.hmap -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-own-target-headers.hmap -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-all-target-headers.hmap -iquote /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-project-headers.hmap -F/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/Developer/Library/Frameworks -I/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/include -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources/i386 -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources -include /var/folders/62/62pehcVCEwu7pJ4CW3C92E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-hkdyvoeclepugzeyufmrvfqhzbie/TUGuide_Prefix.pch -c /Users/Takarashy/Desktop/TUGuide/Classes/LoginViewController.m -o /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/LoginViewController.o0#
+
+CCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/RegisterLoginView.o /Users/Takarashy/Desktop/TUGuide/Classes/RegisterLoginView.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s312561814.530462
+e312561814.643752
+r1
+xCompileC
+xbuild/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/RegisterLoginView.o
+x/Users/Takarashy/Desktop/TUGuide/Classes/RegisterLoginView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/Takarashy/Desktop/TUGuide/Classes/RegisterLoginView.m:95: warning: incomplete implementation of class 'RegisterLoginView'
+o/Users/Takarashy/Desktop/TUGuide/Classes/RegisterLoginView.m:95: warning: method definition for '-registerButtonPressed' not found
+o/Users/Takarashy/Desktop/TUGuide/Classes/RegisterLoginView.m:95: warning: method definition for '-loginButtonPressed' not found
+lSLF07#2@68"Compile /Users/Takarashy/Desktop/TUGuide/Classes/RegisterLoginView.m312561814#312561814#0(388"/Users/Takarashy/Desktop/TUGuide/Classes/RegisterLoginView.m:95: warning: incomplete implementation of class 'RegisterLoginView'/Users/Takarashy/Desktop/TUGuide/Classes/RegisterLoginView.m:95: warning: method definition for '-registerButtonPressed' not found/Users/Takarashy/Desktop/TUGuide/Classes/RegisterLoginView.m:95: warning: method definition for '-loginButtonPressed' not found3(22@54"Incomplete implementation of class 'RegisterLoginView'312561814#0#129#0(6@60"/Users/Takarashy/Desktop/TUGuide/Classes/RegisterLoginView.m312543413#95#0#95#0#38"incomplete implementation of class '*'0(22@56"Method definition for '-registerButtonPressed' not found312561814#129#131#0(6@60"/Users/Takarashy/Desktop/TUGuide/Classes/RegisterLoginView.m312543413#95#0#95#0#35"method definition for '*' not found0(22@53"Method definition for '-loginButtonPressed' not found312561814#260#128#0(6@60"/Users/Takarashy/Desktop/TUGuide/Classes/RegisterLoginView.m312543413#95#0#95#0#35"method definition for '*' not found0(0#0#60"/Users/Takarashy/Desktop/TUGuide/Classes/RegisterLoginView.m8614802688#1997"    cd /Users/Takarashy/Desktop/TUGuide    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-generated-files.hmap -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-own-target-headers.hmap -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-all-target-headers.hmap -iquote /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-project-headers.hmap -F/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/Developer/Library/Frameworks -I/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/include -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources/i386 -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources -include /var/folders/62/62pehcVCEwu7pJ4CW3C92E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-hkdyvoeclepugzeyufmrvfqhzbie/TUGuide_Prefix.pch -c /Users/Takarashy/Desktop/TUGuide/Classes/RegisterLoginView.m -o /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/RegisterLoginView.o0#
+
+CCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/RegisterView.o /Users/Takarashy/Desktop/TUGuide/Classes/RegisterView.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s312561814.643839
+e312561814.802667
+r1
+xCompileC
+xbuild/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/RegisterView.o
+x/Users/Takarashy/Desktop/TUGuide/Classes/RegisterView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/Takarashy/Desktop/TUGuide/Classes/RegisterView.m: In function '-[RegisterView sendButtonAction:]':
+o/Users/Takarashy/Desktop/TUGuide/Classes/RegisterView.m:85: warning: no '-initWithEmailPasswordAndUsername:password:user:' method found
+o/Users/Takarashy/Desktop/TUGuide/Classes/RegisterView.m:85: warning: (Messages without a matching method signature
+o/Users/Takarashy/Desktop/TUGuide/Classes/RegisterView.m:85: warning: will be assumed to return 'id' and accept
+o/Users/Takarashy/Desktop/TUGuide/Classes/RegisterView.m:85: warning: '...' as arguments.)
+lSLF07#2@63"Compile /Users/Takarashy/Desktop/TUGuide/Classes/RegisterView.m312561814#312561814#0(558"/Users/Takarashy/Desktop/TUGuide/Classes/RegisterView.m: In function '-[RegisterView sendButtonAction:]':/Users/Takarashy/Desktop/TUGuide/Classes/RegisterView.m:85: warning: no '-initWithEmailPasswordAndUsername:password:user:' method found/Users/Takarashy/Desktop/TUGuide/Classes/RegisterView.m:85: warning: (Messages without a matching method signature/Users/Takarashy/Desktop/TUGuide/Classes/RegisterView.m:85: warning: will be assumed to return 'id' and accept/Users/Takarashy/Desktop/TUGuide/Classes/RegisterView.m:85: warning: '...' as arguments.)2(22@66"No '-initWithEmailPasswordAndUsername:password:user:' method found312561814#106#136#0(6@55"/Users/Takarashy/Desktop/TUGuide/Classes/RegisterView.m312543413#85#0#85#0#19"no '*' method found0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)312561814#242#115#0(6@55"/Users/Takarashy/Desktop/TUGuide/Classes/RegisterView.m312543413#85#0#85#0#0"0(0#0#55"/Users/Takarashy/Desktop/TUGuide/Classes/RegisterView.m8614567104#1987"    cd /Users/Takarashy/Desktop/TUGuide    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-generated-files.hmap -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-own-target-headers.hmap -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-all-target-headers.hmap -iquote /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-project-headers.hmap -F/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/Developer/Library/Frameworks -I/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/include -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources/i386 -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources -include /var/folders/62/62pehcVCEwu7pJ4CW3C92E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-hkdyvoeclepugzeyufmrvfqhzbie/TUGuide_Prefix.pch -c /Users/Takarashy/Desktop/TUGuide/Classes/RegisterView.m -o /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/RegisterView.o0#
+
+CCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/TUGuideAppDelegate.o /Users/Takarashy/Desktop/TUGuide/Classes/TUGuideAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s312561814.424205
+e312561814.530360
+r1
+xCompileC
+xbuild/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/TUGuideAppDelegate.o
+x/Users/Takarashy/Desktop/TUGuide/Classes/TUGuideAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@69"Compile /Users/Takarashy/Desktop/TUGuide/Classes/TUGuideAppDelegate.m312561814#312561814#0(0"0(0#0#61"/Users/Takarashy/Desktop/TUGuide/Classes/TUGuideAppDelegate.m8615046272#1999"    cd /Users/Takarashy/Desktop/TUGuide    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-generated-files.hmap -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-own-target-headers.hmap -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-all-target-headers.hmap -iquote /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-project-headers.hmap -F/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/Developer/Library/Frameworks -I/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/include -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources/i386 -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources -include /var/folders/62/62pehcVCEwu7pJ4CW3C92E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-hkdyvoeclepugzeyufmrvfqhzbie/TUGuide_Prefix.pch -c /Users/Takarashy/Desktop/TUGuide/Classes/TUGuideAppDelegate.m -o /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/TUGuideAppDelegate.o0#
+
+CCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/User.o /Users/Takarashy/Desktop/TUGuide/Classes/User.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s312561814.748087
+e312561814.832702
+r1
+xCompileC
+xbuild/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/User.o
+x/Users/Takarashy/Desktop/TUGuide/Classes/User.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@55"Compile /Users/Takarashy/Desktop/TUGuide/Classes/User.m312561814#312561814#0(0"0(0#0#47"/Users/Takarashy/Desktop/TUGuide/Classes/User.m8616072576#1971"    cd /Users/Takarashy/Desktop/TUGuide    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-generated-files.hmap -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-own-target-headers.hmap -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-all-target-headers.hmap -iquote /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-project-headers.hmap -F/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/Developer/Library/Frameworks -I/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/include -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources/i386 -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources -include /var/folders/62/62pehcVCEwu7pJ4CW3C92E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-hkdyvoeclepugzeyufmrvfqhzbie/TUGuide_Prefix.pch -c /Users/Takarashy/Desktop/TUGuide/Classes/User.m -o /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/User.o0#
+
+CCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/main.o /Users/Takarashy/Desktop/TUGuide/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s312561814.423229
+e312561814.488470
+r1
+xCompileC
+xbuild/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/main.o
+x/Users/Takarashy/Desktop/TUGuide/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@47"Compile /Users/Takarashy/Desktop/TUGuide/main.m312561814#312561814#0(0"0(0#0#39"/Users/Takarashy/Desktop/TUGuide/main.m8615210752#1963"    cd /Users/Takarashy/Desktop/TUGuide    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-generated-files.hmap -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-own-target-headers.hmap -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-all-target-headers.hmap -iquote /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-project-headers.hmap -F/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/Developer/Library/Frameworks -I/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/include -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources/i386 -I/Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources -include /var/folders/62/62pehcVCEwu7pJ4CW3C92E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-hkdyvoeclepugzeyufmrvfqhzbie/TUGuide_Prefix.pch -c /Users/Takarashy/Desktop/TUGuide/main.m -o /Users/Takarashy/Desktop/TUGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/main.o0#
+
+CCpResource build/Debug-iphonesimulator/TUGuide.app/ButtonDark.png ButtonDark.png
+s312561814.411604
+e312561814.417944
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/TUGuide.app/ButtonDark.png
+xButtonDark.png
+lSLF07#2@19"Copy ButtonDark.png312561814#312561814#0(0"0(0#0#47"/Users/Takarashy/Desktop/TUGuide/ButtonDark.png8615871456#454"    cd /Users/Takarashy/Desktop/TUGuide    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/Takarashy/Desktop/TUGuide/ButtonDark.png /Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/TUGuide.app0#
+
+CCpResource build/Debug-iphonesimulator/TUGuide.app/Settings.bundle Settings.bundle
+s312561814.412296
+e312561814.423074
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/TUGuide.app/Settings.bundle
+xSettings.bundle
+lSLF07#2@20"Copy Settings.bundle312561814#312561814#0(0"0(0#0#48"/Users/Takarashy/Desktop/TUGuide/Settings.bundle8615677568#455"    cd /Users/Takarashy/Desktop/TUGuide    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/Takarashy/Desktop/TUGuide/Settings.bundle /Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/TUGuide.app0#
+
+CCpResource build/Debug-iphonesimulator/TUGuide.app/TUGuideLogo.png TUGuideLogo.png
+s312561814.410803
+e312561814.417829
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/TUGuide.app/TUGuideLogo.png
+xTUGuideLogo.png
+lSLF07#2@20"Copy TUGuideLogo.png312561814#312561814#0(0"0(0#0#48"/Users/Takarashy/Desktop/TUGuide/TUGuideLogo.png8615957440#455"    cd /Users/Takarashy/Desktop/TUGuide    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/Takarashy/Desktop/TUGuide/TUGuideLogo.png /Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/TUGuide.app0#
+
+CCpResource build/Debug-iphonesimulator/TUGuide.app/icon.png icon.png
+s312561814.415660
+e312561814.421798
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/TUGuide.app/icon.png
+xicon.png
+lSLF07#2@13"Copy icon.png312561814#312561814#0(0"0(0#0#41"/Users/Takarashy/Desktop/TUGuide/icon.png8615536800#448"    cd /Users/Takarashy/Desktop/TUGuide    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/Takarashy/Desktop/TUGuide/icon.png /Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/TUGuide.app0#
+
+CGenerateDSYMFile /Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/TUGuide.app.dSYM /Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/TUGuide.app/TUGuide
+r0
+
+CLd /Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/TUGuide.app/TUGuide normal i386
+r0
+
+CProcessInfoPlistFile /Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/TUGuide.app/Info.plist TUGuide-Info.plist
+s312561814.385226
+e312561814.410704
+r1
+xProcessInfoPlistFile
+x/Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/TUGuide.app/Info.plist
+xTUGuide-Info.plist
+lSLF07#2@26"Process TUGuide-Info.plist312561814#312561814#0(0"0(0#0#51"/Users/Takarashy/Desktop/TUGuide/TUGuide-Info.plist8599778624#461"    cd /Users/Takarashy/Desktop/TUGuide    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility TUGuide-Info.plist -genpkginfo /Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/TUGuide.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/TUGuide.app/Info.plist0#
+
+CProcessPCH /var/folders/62/62pehcVCEwu7pJ4CW3C92E+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-hkdyvoeclepugzeyufmrvfqhzbie/TUGuide_Prefix.pch.gch TUGuide_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CTouch /Users/Takarashy/Desktop/TUGuide/build/Debug-iphonesimulator/TUGuide.app
+r0
+

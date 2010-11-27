@@ -18,7 +18,7 @@
 	NSString *openingHours;
 }
 
-@property (nonatomic,assign) int restaurantId;
+@property (nonatomic) int restaurantId;
 @property (nonatomic,assign) NSString *name;
 @property (nonatomic,assign) NSString *coordinates;
 @property (nonatomic,assign) NSString *address;

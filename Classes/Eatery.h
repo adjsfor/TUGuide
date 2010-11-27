@@ -14,7 +14,7 @@
 	NSString *eateryType;
 }
 
-@property (nonatomic,assign) int eateryId;
+@property (nonatomic) int eateryId;
 @property (nonatomic,assign) NSString *eateryType;
 
 -(id)init;

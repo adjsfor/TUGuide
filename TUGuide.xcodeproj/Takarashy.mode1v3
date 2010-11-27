@@ -280,7 +280,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>18</integer>
+									<integer>10</integer>
 									<integer>5</integer>
 									<integer>4</integer>
 									<integer>0</integer>
@@ -322,7 +322,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Classroom.h</string>
+								<string>Announcement.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -330,11 +330,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Classroom.h</string>
+										<string>Announcement.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>8E8D5A0512A1586A0096E52C</string>
+										<string>8E8D5A2C12A162C80096E52C</string>
 										<key>history</key>
 										<array>
 											<string>8E5C5C2E12A0011400674B01</string>
@@ -342,9 +342,20 @@
 											<string>8EAFF15512A005B900C9BCA3</string>
 											<string>8EAFF15612A005B900C9BCA3</string>
 											<string>8EAFF16C12A0064A00C9BCA3</string>
-											<string>8E8D5A0212A1586A0096E52C</string>
-											<string>8E8D5A0312A1586A0096E52C</string>
-											<string>8E8D5A0412A1586A0096E52C</string>
+											<string>8E8D5A1E12A162C80096E52C</string>
+											<string>8E8D5A1F12A162C80096E52C</string>
+											<string>8E8D5A2012A162C80096E52C</string>
+											<string>8E8D5A2112A162C80096E52C</string>
+											<string>8E8D5A2212A162C80096E52C</string>
+											<string>8E8D5A2312A162C80096E52C</string>
+											<string>8E8D5A2412A162C80096E52C</string>
+											<string>8E8D5A2512A162C80096E52C</string>
+											<string>8E8D5A2612A162C80096E52C</string>
+											<string>8E8D5A2712A162C80096E52C</string>
+											<string>8E8D5A2812A162C80096E52C</string>
+											<string>8E8D5A2912A162C80096E52C</string>
+											<string>8E8D5A2A12A162C80096E52C</string>
+											<string>8E8D5A2B12A162C80096E52C</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

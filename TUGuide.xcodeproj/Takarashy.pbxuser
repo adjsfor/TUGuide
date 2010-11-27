@@ -242,6 +242,13 @@
 		vrLen = 423;
 		vrLoc = 386;
 	};
+	8E8D59DA12A14B820096E52C /* Friend.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 490}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 202}";
+		};
+	};
 	8E8F5FBD12A06407002423C3 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 8EAFF11912A0057300C9BCA3 /* LogicTests.m */;

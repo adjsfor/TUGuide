@@ -290,15 +290,15 @@
 	8E8D59E612A151820096E52C /* Classroom.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1139, 483}}";
-			sepNavSelRange = "{419, 11}";
+			sepNavSelRange = "{419, 117}";
 			sepNavVisRange = "{0, 543}";
 		};
 	};
 	8E8D59E712A151820096E52C /* Classroom.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1139, 559}}";
-			sepNavSelRange = "{371, 0}";
-			sepNavVisRange = "{0, 640}";
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 546}}";
+			sepNavSelRange = "{246, 402}";
+			sepNavVisRange = "{34, 621}";
 		};
 	};
 	8E8D5A0212A1586A0096E52C /* PBXTextBookmark */ = {
@@ -340,6 +340,20 @@
 		rType = 0;
 		vrLen = 543;
 		vrLoc = 0;
+	};
+	8E8D5A1012A15AB00096E52C /* Eatery.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 483}}";
+			sepNavSelRange = "{234, 181}";
+			sepNavVisRange = "{0, 422}";
+		};
+	};
+	8E8D5A1112A15AB00096E52C /* Eatery.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 483}}";
+			sepNavSelRange = "{471, 0}";
+			sepNavVisRange = "{0, 542}";
+		};
 	};
 	8E8F5FBD12A06407002423C3 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;

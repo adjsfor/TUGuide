@@ -10,7 +10,14 @@
 
 
 @interface Eatery : NSObject {
-
+	int eateryId;
+	NSString *eateryType;
 }
+
+@property (nonatomic,assign) int eateryId;
+@property (nonatomic,assign) NSString *eateryType;
+
+-(id)init;
+-(id)initWithArguments:(int)eateryId withEateryType:(NSString *)eateryType;
 
 @end

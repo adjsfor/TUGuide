@@ -15,7 +15,6 @@
 @synthesize name;
 @synthesize building;
 
--(id)init;
 -(id)initWithArguments:(int)classroomId2
 			  withName:(NSString *)name2
 		  withBuilding:(Building *)building2{

@@ -211,16 +211,16 @@
 	};
 	8E8D59BF12A143C40096E52C /* Announcement.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1139, 490}}";
-			sepNavSelRange = "{497, 0}";
-			sepNavVisRange = "{0, 830}";
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 494}}";
+			sepNavSelRange = "{184, 0}";
+			sepNavVisRange = "{0, 847}";
 		};
 	};
 	8E8D59C012A143C40096E52C /* Announcement.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1139, 663}}";
-			sepNavSelRange = "{323, 0}";
-			sepNavVisRange = "{189, 817}";
+			sepNavSelRange = "{428, 0}";
+			sepNavVisRange = "{188, 817}";
 		};
 	};
 	8E8D59CB12A148820096E52C /* XCBuildMessageTextBookmark */ = {
@@ -247,6 +247,27 @@
 			sepNavIntBoundsRect = "{{0, 0}, {1139, 490}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 202}";
+		};
+	};
+	8E8D59DB12A14B820096E52C /* Friend.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 490}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 176}";
+		};
+	};
+	8E8D59DD12A14C900096E52C /* Lecture.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 494}}";
+			sepNavSelRange = "{309, 0}";
+			sepNavVisRange = "{0, 852}";
+		};
+	};
+	8E8D59DE12A14C900096E52C /* Lecture.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 715}}";
+			sepNavSelRange = "{1029, 0}";
+			sepNavVisRange = "{197, 864}";
 		};
 	};
 	8E8F5FBD12A06407002423C3 /* PBXTextBookmark */ = {

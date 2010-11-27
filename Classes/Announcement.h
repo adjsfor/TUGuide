@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Lecture.h"
 
 
 @interface Announcement : NSObject {
 	int announcementId;
 	bool announced;
-	NSString *lectureId;
+	Lecture *lectureId;
 	int userId;
 	NSString *message;
 	NSString *report;
@@ -20,7 +21,7 @@
 
 @property (nonatomic,assign) int announcementId;
 @property (nonatomic,assign) bool announced;
-@property (nonatomic,assign) NSString *lectureId;
+@property (nonatomic,assign) Lecture *lectureId;
 @property (nonatomic,assign) int userId;
 @property (nonatomic,assign) NSString *message;
 @property (nonatomic,assign) NSString *report;
@@ -29,7 +30,7 @@
 -(id)init;
 -(id)initWithArguments:(int)announcementId
 		 withAnnounced:(bool)announced
-		 withLectureId:(NSString *)lectureId
+		 withLectureId:(Lecture *)lectureId
 			withUserId:(int)userId
 		   withMessage:(NSString *)message
 			withReport:(NSString *)report;

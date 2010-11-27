@@ -10,7 +10,14 @@
 
 
 @interface Friend : NSObject {
-
+	int beFriendId;
+	int friendId;
+	bool approved;
 }
+
+@property (nonatomic) int beFriendId;
+@property (nonatomic) int  friendId;
+@property (nonatomic) bool approved;
+
 
 @end

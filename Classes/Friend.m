@@ -11,4 +11,20 @@
 
 @implementation Friend
 
+@synthesize beFriendId;
+@synthesize friendId;
+@synthesize approved;
+
+
+-(id)init{
+	if (self = [super init]) {
+		//dosomething
+	}
+	return self;
+}
+
+-(void)dealloc{
+	[super dealloc];
+}
+
 @end

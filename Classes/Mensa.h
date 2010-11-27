@@ -15,6 +15,7 @@
 	NSString *coordinates;
 	NSString *address;
 	NSString *openingHours;
+	NSArray *mensaMenu;
 }
 
 @property (nonatomic,assign) int mensaId;
@@ -22,7 +23,16 @@
 @property (nonatomic,assign) NSString *coordinates;
 @property (nonatomic,assign) NSString *address;
 @property (nonatomic,assign) NSString *openingHours;
+@property (nonatomic,assign) NSArray *mensaMenu;
 
+
+-(id)initWithArguments:(int)eateryId 
+		withEateryType:(NSString *)eateryType 
+		   withMensaId:(int)mensaId 
+			  withName:(NSString *)name 
+	   withCoordinates:(NSString *)coordinates 
+		   withAddress:(NSString *)address 
+	  withOpeningHours:(NSString *)openingHours;
 
 
 @end

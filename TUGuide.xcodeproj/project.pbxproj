@@ -15,6 +15,7 @@
 		4BA6454112A13F5400B03B82 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA6454012A13F5400B03B82 /* Course.m */; };
 		4BA645BE12A154B600B03B82 /* Building.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA645BD12A154B600B03B82 /* Building.m */; };
 		4BA645FE12A15B7F00B03B82 /* Mensa.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA645FD12A15B7F00B03B82 /* Mensa.m */; };
+		4BA6462512A1633E00B03B82 /* MensaMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA6462412A1633E00B03B82 /* MensaMenu.m */; };
 		8E8D59C112A143C40096E52C /* Announcement.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D59C012A143C40096E52C /* Announcement.m */; };
 		8E8D59DC12A14B820096E52C /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D59DB12A14B820096E52C /* Friend.m */; };
 		8E8D59DF12A14C900096E52C /* Lecture.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D59DE12A14C900096E52C /* Lecture.m */; };
@@ -49,6 +50,8 @@
 		4BA645BD12A154B600B03B82 /* Building.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Building.m; sourceTree = "<group>"; };
 		4BA645FC12A15B7F00B03B82 /* Mensa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mensa.h; sourceTree = "<group>"; };
 		4BA645FD12A15B7F00B03B82 /* Mensa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mensa.m; sourceTree = "<group>"; };
+		4BA6462312A1633E00B03B82 /* MensaMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaMenu.h; sourceTree = "<group>"; };
+		4BA6462412A1633E00B03B82 /* MensaMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaMenu.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* TUGuide-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TUGuide-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		8E8D59BF12A143C40096E52C /* Announcement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Announcement.h; sourceTree = "<group>"; };
 		8E8D59C012A143C40096E52C /* Announcement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Announcement.m; sourceTree = "<group>"; };
@@ -234,6 +237,8 @@
 				4BA645FD12A15B7F00B03B82 /* Mensa.m */,
 				8E8D5A1312A15C450096E52C /* Restaurant.h */,
 				8E8D5A1412A15C450096E52C /* Restaurant.m */,
+				4BA6462312A1633E00B03B82 /* MensaMenu.h */,
+				4BA6462412A1633E00B03B82 /* MensaMenu.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -359,6 +364,7 @@
 				8E8D5A1212A15AB00096E52C /* Eatery.m in Sources */,
 				4BA645FE12A15B7F00B03B82 /* Mensa.m in Sources */,
 				8E8D5A1512A15C450096E52C /* Restaurant.m in Sources */,
+				4BA6462512A1633E00B03B82 /* MensaMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

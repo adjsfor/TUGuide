@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Eatery.h"
 
 
 @interface Restaurant : Eatery {
@@ -26,7 +27,7 @@
 -(id)init;
 -(id)initWithArguments:(int)eateryId 
 		withEateryType:(NSString *)eateryType 
-	  withRestaurantId:(NSString *)restaurantId 
+	  withRestaurantId:(int)restaurantId 
 			  withName:(NSString *)name 
 	   withCoordinates:(NSString *)coordinates 
 		   withAddress:(NSString *)address 

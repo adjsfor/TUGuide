@@ -278,7 +278,6 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>9</integer>
 									<integer>5</integer>
 									<integer>4</integer>
 									<integer>0</integer>
@@ -320,7 +319,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Course.m</string>
+								<string>Classroom.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -328,11 +327,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Course.m</string>
+										<string>Classroom.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>4BA645DF12A1571F00B03B82</string>
+										<string>4BA645F412A15AFC00B03B82</string>
 										<key>history</key>
 										<array>
 											<string>4B54C4D312A018AF00091F5A</string>
@@ -345,17 +344,17 @@
 											<string>4BA6458B12A14B6700B03B82</string>
 											<string>4BA6458C12A14B6700B03B82</string>
 											<string>4BA645A312A14D9A00B03B82</string>
-											<string>4BA645D412A1571F00B03B82</string>
-											<string>4BA645D512A1571F00B03B82</string>
-											<string>4BA645D612A1571F00B03B82</string>
-											<string>4BA645D712A1571F00B03B82</string>
-											<string>4BA645D812A1571F00B03B82</string>
-											<string>4BA645D912A1571F00B03B82</string>
-											<string>4BA645DA12A1571F00B03B82</string>
-											<string>4BA645DB12A1571F00B03B82</string>
-											<string>4BA645DC12A1571F00B03B82</string>
-											<string>4BA645DD12A1571F00B03B82</string>
-											<string>4BA645DE12A1571F00B03B82</string>
+											<string>4BA645E712A1596100B03B82</string>
+											<string>4BA645E812A1596100B03B82</string>
+											<string>4BA645E912A1596100B03B82</string>
+											<string>4BA645EA12A1596100B03B82</string>
+											<string>4BA645EB12A1596100B03B82</string>
+											<string>4BA645EC12A1596100B03B82</string>
+											<string>4BA645ED12A1596100B03B82</string>
+											<string>4BA645EE12A1596100B03B82</string>
+											<string>4BA645EF12A1596100B03B82</string>
+											<string>4BA645F012A1596100B03B82</string>
+											<string>4BA645F112A1596100B03B82</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

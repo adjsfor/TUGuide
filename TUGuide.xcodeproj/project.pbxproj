@@ -13,6 +13,8 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		4BA6454112A13F5400B03B82 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA6454012A13F5400B03B82 /* Course.m */; };
+		8E8D59C112A143C40096E52C /* Announcement.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D59C012A143C40096E52C /* Announcement.m */; };
+		8E8D59DC12A14B820096E52C /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D59DB12A14B820096E52C /* Friend.m */; };
 		8EAFF11A12A0057300C9BCA3 /* LogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAFF11912A0057300C9BCA3 /* LogicTests.m */; };
 		8EAFF15012A0059E00C9BCA3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EAFF11B12A0058300C9BCA3 /* SenTestingKit.framework */; };
 		FA381CA212A00563008E06D0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA381CA112A00563008E06D0 /* LoginViewController.m */; };
@@ -38,6 +40,10 @@
 		4BA6453F12A13F5400B03B82 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
 		4BA6454012A13F5400B03B82 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* TUGuide-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TUGuide-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		8E8D59BF12A143C40096E52C /* Announcement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Announcement.h; sourceTree = "<group>"; };
+		8E8D59C012A143C40096E52C /* Announcement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Announcement.m; sourceTree = "<group>"; };
+		8E8D59DA12A14B820096E52C /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friend.h; sourceTree = "<group>"; };
+		8E8D59DB12A14B820096E52C /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Friend.m; sourceTree = "<group>"; };
 		8EAFF11112A0054D00C9BCA3 /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EAFF11212A0054D00C9BCA3 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		8EAFF11812A0057300C9BCA3 /* LogicTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogicTests.h; sourceTree = "<group>"; };
@@ -194,6 +200,10 @@
 				FAD4AAA612A0CCD000817DCA /* User.m */,
 				4BA6453F12A13F5400B03B82 /* Course.h */,
 				4BA6454012A13F5400B03B82 /* Course.m */,
+				8E8D59BF12A143C40096E52C /* Announcement.h */,
+				8E8D59C012A143C40096E52C /* Announcement.m */,
+				8E8D59DA12A14B820096E52C /* Friend.h */,
+				8E8D59DB12A14B820096E52C /* Friend.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -311,6 +321,8 @@
 				FA381CB112A005D2008E06D0 /* RegisterView.m in Sources */,
 				FAD4AAA712A0CCD000817DCA /* User.m in Sources */,
 				4BA6454112A13F5400B03B82 /* Course.m in Sources */,
+				8E8D59C112A143C40096E52C /* Announcement.m in Sources */,
+				8E8D59DC12A14B820096E52C /* Friend.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

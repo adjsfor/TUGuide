@@ -1,2 +1,0 @@
-/Users/MacBook/Documents/xCodeWorkspace/TUGuide/Classes/TUGuideAppDelegate.m: In function '-[TUGuideAppDelegate application:didFinishLaunchingWithOptions:]':
-/Users/MacBook/Documents/xCodeWorkspace/TUGuide/Classes/TUGuideAppDelegate.m:27: warning: 'return' with no value, in function returning non-void

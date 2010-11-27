@@ -10,18 +10,30 @@
 
 
 @interface User : NSObject {
-	
-	NSString *username;
-	NSString *password;
+	int userId;
+	NSString *screenName;
 	NSString *email;
+	NSString *password;
+	NSString *coordinates;
+	NSString *verificationString;
+	bool activated;
+	NSString *sessionId;
+	NSDate *lastLogin;
+	
 }
 
-@property (nonatomic, retain) NSString *username;
-@property (nonatomic, retain) NSString *password;
-@property (nonatomic, retain) NSString *email;
+@property (nonatomic) int *userId;
+@property (nonatomic) NSString *screenName;
+@property (nonatomic) NSString *email;
+@property (nonatomic) NSString *password;
+@property (nonatomic) NSString *coordinates;
+@property (nonatomic) NSString *verificationString;
+@property (nonatomic) bool activated;
+@property (nonatomic) NSString *sessionId;
+@property (nonatomic) NSDate *lastLogin;
 
 -(id)init;
 -(id)initWithEmailAndPassword: (NSString *)em password:(NSString *)pw;
--(id)initWithEmailPasswordAndUsername:(NSString *)em password:(NSString *)pw user:(NSString *)u;
+-(id)initWithEmailPasswordAndScreenName:(NSString *)em password:(NSString *)pw user:(NSString *)u;
 
 @end

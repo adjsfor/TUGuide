@@ -11,26 +11,33 @@
 
 @implementation User
 
-@synthesize username;
+@synthesize screenName;
 @synthesize email;
 @synthesize password;
 
 
--(id)initWithEmailPasswordAndUsername:(NSString *)em password:(NSString *)pw user:(NSString *)u{
+-(id)initWithEmailPasswordAndScreenName:(NSString *)em password:(NSString *)pw screenName:(NSString *)u{
 	if (self = [super init]) {
 		[self setEmail:em];
 		[self setPassword:pw];
-		[self setUsername:u];
+		[self setScreenName:u];
 	}
 	return self;
 }
 
 -(id)initWithEmailAndPassword:(NSString *)em password:(NSString *)pw{
-	return [self initWithEmailPasswordAndUsername:em password:pw user:nil];
+	return [self initWithEmailPasswordAndUsername:em password:pw screenName:nil];
 }
 
 -(id)init{
-	return [self initWithEmailPasswordAndUsername:nil password:nil user:nil];
+	return [self initWithEmailPasswordAndUsername:nil password:nil screenName:nil];
+}
+
+-(void)dealloc{
+	[email release];
+	[password release];
+	[screenName release]
+	[super dealloc];
 }
 
 

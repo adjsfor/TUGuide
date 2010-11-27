@@ -12,6 +12,7 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		4BA6454112A13F5400B03B82 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA6454012A13F5400B03B82 /* Course.m */; };
 		8EAFF11A12A0057300C9BCA3 /* LogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAFF11912A0057300C9BCA3 /* LogicTests.m */; };
 		8EAFF15012A0059E00C9BCA3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EAFF11B12A0058300C9BCA3 /* SenTestingKit.framework */; };
 		FA381CA212A00563008E06D0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA381CA112A00563008E06D0 /* LoginViewController.m */; };
@@ -34,6 +35,8 @@
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* TUGuide_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUGuide_Prefix.pch; sourceTree = "<group>"; };
+		4BA6453F12A13F5400B03B82 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
+		4BA6454012A13F5400B03B82 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* TUGuide-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TUGuide-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		8EAFF11112A0054D00C9BCA3 /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EAFF11212A0054D00C9BCA3 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
@@ -81,7 +84,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				FAD4AAA312A0CCBC00817DCA /* Core */,
+				FAD4AAA312A0CCBC00817DCA /* Models */,
 				FA381C9E12A0053F008E06D0 /* View */,
 				FA381C9D12A00532008E06D0 /* ViewController */,
 				1D3623240D0F684500981E51 /* TUGuideAppDelegate.h */,
@@ -184,13 +187,15 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
-		FAD4AAA312A0CCBC00817DCA /* Core */ = {
+		FAD4AAA312A0CCBC00817DCA /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				FAD4AAA512A0CCD000817DCA /* User.h */,
 				FAD4AAA612A0CCD000817DCA /* User.m */,
+				4BA6453F12A13F5400B03B82 /* Course.h */,
+				4BA6454012A13F5400B03B82 /* Course.m */,
 			);
-			name = Core;
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +310,7 @@
 				FA381CAB12A00593008E06D0 /* LoginView.m in Sources */,
 				FA381CB112A005D2008E06D0 /* RegisterView.m in Sources */,
 				FAD4AAA712A0CCD000817DCA /* User.m in Sources */,
+				4BA6454112A13F5400B03B82 /* Course.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,6 +1,0 @@
-In file included from /Users/Takarashy/Desktop/TUGuide/Classes/Lecture.h:11,
-                 from /Users/Takarashy/Desktop/TUGuide/Classes/Lecture.m:9:
-/Users/Takarashy/Desktop/TUGuide/Classes/Classroom.h:15: error: expected specifier-qualifier-list before 'Building'
-/Users/Takarashy/Desktop/TUGuide/Classes/Lecture.m:14: error: type of property 'lectureId' does not match type of ivar 'lectureId'
-/Users/Takarashy/Desktop/TUGuide/Classes/Lecture.m:53: warning: incomplete implementation of class 'Lecture'
-/Users/Takarashy/Desktop/TUGuide/Classes/Lecture.m:53: warning: method definition for '-initWithArguments:withCourseId:withStartTime:withEndTime:withUId:withClassroomId:' not found

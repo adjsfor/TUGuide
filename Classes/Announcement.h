@@ -19,10 +19,10 @@
 	NSString *report;
 }
 
-@property (nonatomic,assign) int announcementId;
-@property (nonatomic,assign) bool announced;
+@property (nonatomic) int announcementId;
+@property (nonatomic) bool announced;
 @property (nonatomic,assign) Lecture *lectureId;
-@property (nonatomic,assign) int userId;
+@property (nonatomic) int userId;
 @property (nonatomic,assign) NSString *message;
 @property (nonatomic,assign) NSString *report;
 

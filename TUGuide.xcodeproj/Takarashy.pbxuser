@@ -90,8 +90,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 312566472;
-			PBXWorkspaceStateSaveDate = 312566472;
+			PBXPerProjectTemplateStateSaveDate = 312567495;
+			PBXWorkspaceStateSaveDate = 312567495;
 		};
 		perUserProjectItems = {
 			8E5C5C2E12A0011400674B01 = 8E5C5C2E12A0011400674B01 /* PBXTextBookmark */;
@@ -153,6 +153,34 @@
 			sepNavIntBoundsRect = "{{0, 0}, {1139, 483}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 407}";
+		};
+	};
+	4BA645FC12A15B7F00B03B82 /* Mensa.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 507}}";
+			sepNavSelRange = "{352, 0}";
+			sepNavVisRange = "{0, 889}";
+		};
+	};
+	4BA645FD12A15B7F00B03B82 /* Mensa.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 676}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 748}";
+		};
+	};
+	4BA6462312A1633E00B03B82 /* MensaMenu.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 469}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 515}";
+		};
+	};
+	4BA6462412A1633E00B03B82 /* MensaMenu.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 469}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 424}";
 		};
 	};
 	8E4CD762129FFF3F009A85C3 /* TUGuide */ = {
@@ -289,16 +317,16 @@
 	};
 	8E8D59E612A151820096E52C /* Classroom.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1139, 483}}";
-			sepNavSelRange = "{419, 117}";
-			sepNavVisRange = "{0, 543}";
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 469}}";
+			sepNavSelRange = "{298, 0}";
+			sepNavVisRange = "{0, 536}";
 		};
 	};
 	8E8D59E712A151820096E52C /* Classroom.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1139, 546}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 559}}";
 			sepNavSelRange = "{246, 402}";
-			sepNavVisRange = "{34, 621}";
+			sepNavVisRange = "{34, 617}";
 		};
 	};
 	8E8D5A0212A1586A0096E52C /* PBXTextBookmark */ = {
@@ -343,14 +371,14 @@
 	};
 	8E8D5A1012A15AB00096E52C /* Eatery.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1139, 483}}";
-			sepNavSelRange = "{234, 181}";
-			sepNavVisRange = "{0, 422}";
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 469}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 415}";
 		};
 	};
 	8E8D5A1112A15AB00096E52C /* Eatery.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1139, 483}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 469}}";
 			sepNavSelRange = "{471, 0}";
 			sepNavVisRange = "{0, 542}";
 		};
@@ -359,12 +387,12 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1139, 481}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 868}";
+			sepNavVisRange = "{0, 861}";
 		};
 	};
 	8E8D5A1412A15C450096E52C /* Restaurant.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1139, 637}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 715}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 852}";
 		};

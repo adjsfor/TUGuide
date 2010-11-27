@@ -18,7 +18,7 @@
 	NSArray *mensaMenu;
 }
 
-@property (nonatomic,assign) int mensaId;
+@property (nonatomic) int mensaId;
 @property (nonatomic,assign) NSString *name;
 @property (nonatomic,assign) NSString *coordinates;
 @property (nonatomic,assign) NSString *address;

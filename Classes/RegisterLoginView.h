@@ -10,7 +10,7 @@
 #import "LoginView.h"
 #import "RegisterView.h"
 
-@interface RegisterLoginView : UIView {
+@interface RegisterLoginView : UIScrollView {
 	UIButton *registerButton;
 	UIButton *loginButton;
 	UIImageView *bigLogo;
@@ -20,7 +20,7 @@
 @property (nonatomic, retain) UIButton *loginButton;
 @property (nonatomic, retain) UIImageView *bigLogo;
 
--(IBAction)loginButtonPressed;
--(IBAction)registerButtonPressed;
+-(IBAction)loginButtonPressed:(id)sender;
+- (IBAction)registerButtonPressed:(id)sender;
 
 @end

@@ -23,6 +23,7 @@
 	
 	registerLoginView = [[RegisterLoginView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
 	self.view = registerLoginView;
+	self.view.userInteractionEnabled = YES;
 	
 	/*
 	loginView = [[LoginView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -59,12 +60,13 @@
     [UIView commitAnimations];
 	keyboardIsShown = YES;
 	
-	/*
+	
     CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
 	
     UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0);
     scrollView.contentInset = contentInsets;
     scrollView.scrollIndicatorInsets = contentInsets;
+	
 	
     // If active text field is hidden by keyboard, scroll it so it's visible
     // Your application might not need or want this behavior.
@@ -73,7 +75,7 @@
     if (!CGRectContainsPoint(aRect, activeField.frame.origin) ) {
 	 CGPoint scrollPoint = CGPointMake(0.0, activeField.frame.origin.y-kbSize.height);
 	 [scrollView setContentOffset:scrollPoint animated:YES];
-	 }*/
+	 }
 }
 
 // Called when the UIKeyboardWillHideNotification is sent
@@ -83,8 +85,8 @@
     scrollView.contentInset = contentInsets;
     scrollView.scrollIndicatorInsets = contentInsets;
 	keyboardIsShown = NO;
+	[activeField resignFirstResponder];
 }
-
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
@@ -104,6 +106,7 @@
     CGSize scrollContentSize = CGSizeMake(320, 430);
     self.scrollView.contentSize = scrollContentSize;
 }
+
 
 /*
 // Override to allow orientations other than the default portrait orientation.

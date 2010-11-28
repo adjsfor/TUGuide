@@ -21,7 +21,7 @@
 
 }
 
-@property (nonatomic,assign) int lectureId;
+@property (nonatomic) int lectureId;
 @property (nonatomic,assign) Course *course;
 @property (nonatomic,assign) NSDate *startTime;
 @property (nonatomic,assign) NSDate *endTime;

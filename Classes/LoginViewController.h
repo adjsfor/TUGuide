@@ -12,7 +12,7 @@
 #import "RegisterLoginView.h"
 
 
-@interface LoginViewController : UIViewController {
+@interface LoginViewController : UIViewController <UITextFieldDelegate>{
 	
 	RegisterLoginView *registerLoginView;
 	RegisterView *registerView;

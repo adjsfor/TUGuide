@@ -15,7 +15,7 @@
 	Building *building;
 }
 
-@property (nonatomic,assign) int classroomId;
+@property (nonatomic) int classroomId;
 @property (nonatomic,assign) NSString *name;
 @property (nonatomic,assign) Building *building;
 

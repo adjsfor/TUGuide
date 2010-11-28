@@ -23,6 +23,7 @@
         // Initialization code.
 	
 		self.backgroundColor = [UIColor whiteColor];
+		self.userInteractionEnabled = YES;
 		
 		UIImage *img = [UIImage imageNamed: @"TUGuideLogo.png"];
 		bigLogo = [[UIImageView alloc] initWithFrame:CGRectMake(15,30, 290, 290)];
@@ -50,6 +51,8 @@
     return self;
 }
 
+
+
 - (IBAction)loginButtonPressed:(id)sender{
 	LoginView *loginView = [[LoginView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
 	
@@ -74,7 +77,6 @@
 	
 	[self addSubview:registerView];
 }
-
 
 /*
 // Only override drawRect: if you perform custom drawing.

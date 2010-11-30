@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "LoginView.h"
 #import "RegisterView.h"
+#import "UIViewDelegate.h"
+
 
 @interface RegisterLoginView : UIScrollView {
+	id <UIViewDelegate> delegate;
 	UIButton *registerButton;
 	UIButton *loginButton;
 	UIImageView *bigLogo;
@@ -19,8 +22,11 @@
 @property (nonatomic, retain) UIButton *registerButton;
 @property (nonatomic, retain) UIButton *loginButton;
 @property (nonatomic, retain) UIImageView *bigLogo;
+// to be onwned by someone else
+@property (assign) id <UIViewDelegate> delegate;
+
 
 -(IBAction)loginButtonPressed:(id)sender;
-- (IBAction)registerButtonPressed:(id)sender;
+-(IBAction)registerButtonPressed:(id)sender;
 
 @end

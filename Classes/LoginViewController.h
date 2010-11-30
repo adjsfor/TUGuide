@@ -10,6 +10,7 @@
 #import "RegisterView.h"
 #import "LoginView.h"
 #import "RegisterLoginView.h"
+#import "Wizard.h"
 
 
 @interface LoginViewController : UIViewController <UITextFieldDelegate>{
@@ -20,6 +21,7 @@
 	UIScrollView *scrollView;
 	UITextField *activeField;
 	Boolean keyboardIsShown;
+	Wizard * wizard;
 }
 
 @property (nonatomic, retain) RegisterLoginView *registerLoginView;
@@ -27,6 +29,7 @@
 @property (nonatomic, retain) LoginView *loginView;
 @property (nonatomic, retain) UIScrollView *scrollView;
 @property (nonatomic, retain) UITextField *activeField;
+@property (nonatomic, retain) Wizard *wizard;
 
 
 @end

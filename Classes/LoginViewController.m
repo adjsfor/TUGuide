@@ -16,6 +16,7 @@
 @synthesize loginView;
 @synthesize scrollView;
 @synthesize activeField;
+@synthesize wizard;
 
 
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
@@ -23,6 +24,9 @@
 	
 	registerLoginView = [[RegisterLoginView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
 	self.view = registerLoginView;
+	//wizard = [[Wizard alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
+	//self.view = wizard;
+	
 	self.view.userInteractionEnabled = YES;
 	
 	/*

@@ -36,7 +36,7 @@
 	registerLoginView = [[RegisterLoginView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
 	self.view = registerLoginView;
 	
-	[self.navigationController setNavigationBarHidden:YES];
+	[self.navigationController setNavigationBarHidden:NO];
 	self.registerLoginView.delegate = self; // set the delegation
 	
 	
@@ -153,10 +153,6 @@
 - (void)dealloc {
     [super dealloc];
 }
-
-
-@end
-
 
 
 @end

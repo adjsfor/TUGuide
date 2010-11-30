@@ -14,7 +14,6 @@
 	
 	int keyboardHight;
 	UIButton *sendButton;
-	UIButton *backButton;
 	UIImageView *bigLogo;
 	UITextField *emailField;
 	UITextField *passwordField;
@@ -36,7 +35,6 @@
 @property (nonatomic, retain) User *user;
 
 - (IBAction)sendButtonAction:(id)sender;
-- (IBAction)backButtonPressed:(id)sender;
 - (IBAction)userDoneEnteringText:(id)sender;
 
 

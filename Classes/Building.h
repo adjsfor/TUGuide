@@ -24,7 +24,4 @@
 @property (nonatomic,assign) NSString *coordinates;
 
 
-
-
-
 @end

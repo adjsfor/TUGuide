@@ -279,14 +279,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>34</integer>
+									<integer>37</integer>
 									<integer>33</integer>
 									<integer>4</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {240, 760}}</string>
+							<string>{{0, 233}, {240, 760}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -323,7 +323,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>RegisterLoginView.h</string>
+								<string>LoginView.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -331,11 +331,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>RegisterLoginView.h</string>
+										<string>LoginView.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>8ED0D60612A5AACE00B3F33D</string>
+										<string>8ED0D65712A5B3CB00B3F33D</string>
 										<key>history</key>
 										<array>
 											<string>8EAFF15512A005B900C9BCA3</string>
@@ -349,7 +349,6 @@
 											<string>8ED0D5BB12A5A4EA00B3F33D</string>
 											<string>8ED0D5C812A5A8CD00B3F33D</string>
 											<string>8ED0D5E812A5AACE00B3F33D</string>
-											<string>8ED0D5E912A5AACE00B3F33D</string>
 											<string>8ED0D5EA12A5AACE00B3F33D</string>
 											<string>8ED0D5EB12A5AACE00B3F33D</string>
 											<string>8ED0D5EC12A5AACE00B3F33D</string>
@@ -359,7 +358,6 @@
 											<string>8ED0D5F012A5AACE00B3F33D</string>
 											<string>8ED0D5F112A5AACE00B3F33D</string>
 											<string>8ED0D5F212A5AACE00B3F33D</string>
-											<string>8ED0D5F312A5AACE00B3F33D</string>
 											<string>8ED0D5F412A5AACE00B3F33D</string>
 											<string>8ED0D5F512A5AACE00B3F33D</string>
 											<string>8ED0D5F612A5AACE00B3F33D</string>
@@ -372,12 +370,18 @@
 											<string>8ED0D5FD12A5AACE00B3F33D</string>
 											<string>8ED0D5FE12A5AACE00B3F33D</string>
 											<string>8ED0D5FF12A5AACE00B3F33D</string>
-											<string>8ED0D60012A5AACE00B3F33D</string>
-											<string>8ED0D60112A5AACE00B3F33D</string>
-											<string>8ED0D60212A5AACE00B3F33D</string>
-											<string>8ED0D60312A5AACE00B3F33D</string>
-											<string>8ED0D60412A5AACE00B3F33D</string>
-											<string>8ED0D60512A5AACE00B3F33D</string>
+											<string>8ED0D62312A5B10D00B3F33D</string>
+											<string>8ED0D62412A5B10D00B3F33D</string>
+											<string>8ED0D62512A5B10D00B3F33D</string>
+											<string>8ED0D62612A5B10D00B3F33D</string>
+											<string>8ED0D62812A5B10D00B3F33D</string>
+											<string>8ED0D62912A5B10D00B3F33D</string>
+											<string>8ED0D63712A5B1D500B3F33D</string>
+											<string>8ED0D64412A5B2AE00B3F33D</string>
+											<string>8ED0D64512A5B2AE00B3F33D</string>
+											<string>8ED0D64612A5B2AE00B3F33D</string>
+											<string>8ED0D64C12A5B34A00B3F33D</string>
+											<string>8ED0D64D12A5B34A00B3F33D</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -575,10 +579,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C78EAAD065D492600B07095</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>8E4CD76B129FFF4D009A85C3</string>
 		<string>/Users/Takarashy/Desktop/TUGuide/TUGuide.xcodeproj</string>
+		<string>1C78EAAD065D492600B07095</string>
+		<string>1CD10A99069EF8BA00B06720</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 59 1440 819 0 0 1440 878 </string>
@@ -602,7 +606,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>MainNavigationController.m</string>
+								<string>RegisterLoginViewController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -797,7 +801,7 @@
 			<key>WindowToolGUID</key>
 			<string>1CD10A99069EF8BA00B06720</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -954,7 +958,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

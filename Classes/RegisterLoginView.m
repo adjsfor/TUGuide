@@ -26,13 +26,13 @@
 		self.userInteractionEnabled = YES;
 		
 		UIImage *img = [UIImage imageNamed: @"TUGuideLogo.png"];
-		bigLogo = [[UIImageView alloc] initWithFrame:CGRectMake(15,30, 290, 290)];
+		bigLogo = [[UIImageView alloc] initWithFrame:CGRectMake(15,0, 290, 290)];
 		bigLogo.image = img;
 		[img release];
 		[self addSubview:bigLogo];
 		
 		registerButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-		[registerButton setFrame:CGRectMake(85, 350, 150, 30)];
+		[registerButton setFrame:CGRectMake(85, 320, 150, 30)];
 		[registerButton setTitle:@"Register" forState:UIControlStateNormal];
 		[registerButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[registerButton setBackgroundImage:[UIImage imageNamed: @"ButtonDark.png"] forState:UIControlStateNormal];
@@ -42,7 +42,7 @@
 		
 		
 		loginButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-		[loginButton setFrame:CGRectMake(85, 400, 150, 30)];
+		[loginButton setFrame:CGRectMake(85, 370, 150, 30)];
 		[loginButton setTitle:@"Login" forState:UIControlStateNormal];
 		[loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[loginButton setBackgroundImage:[UIImage imageNamed: @"ButtonDark.png"] forState:UIControlStateNormal];

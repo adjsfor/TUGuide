@@ -13,7 +13,6 @@
 
 @synthesize usernameField;
 @synthesize keyboardHight;
-@synthesize backButton;
 @synthesize bigLogo;
 @synthesize emailField;
 @synthesize passwordField;
@@ -34,39 +33,31 @@
 		self.userInteractionEnabled = YES;
 		
 		UIImage *img = [UIImage imageNamed: @"TUGuideLogo.png"];
-		bigLogo = [[UIImageView alloc] initWithFrame:CGRectMake(85,30, 150, 150)];
+		bigLogo = [[UIImageView alloc] initWithFrame:CGRectMake(85,0, 150, 150)];
 		bigLogo.image = img;
 		[img release];
 		[self addSubview:bigLogo];
 		
-		backButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-		[backButton setFrame:CGRectMake(1, 21, 20, 20)];
-		[backButton setTitle:@"<" forState:UIControlStateNormal];
-		[backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-		[backButton setBackgroundImage:[UIImage imageNamed: @"ButtonDark.png"] forState:UIControlStateNormal];
-		[backButton addTarget:self action:@selector(backButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-		[self addSubview:backButton];
-		
-		textLabel = [[UILabel alloc]initWithFrame:CGRectMake(55,185, 220, 30)];
+		textLabel = [[UILabel alloc]initWithFrame:CGRectMake(55,155, 220, 30)];
 		textLabel.font = [UIFont fontWithName:@"Helvetica" size:11];  
 		[textLabel setText:@"Register for the Services of TUGuide"];
 		[self addSubview:textLabel];
 		
-		usernameField =[[UITextField alloc]initWithFrame:CGRectMake(20, 225, 280, 30)];
+		usernameField =[[UITextField alloc]initWithFrame:CGRectMake(20, 195, 280, 30)];
 		usernameField.borderStyle = UITextBorderStyleRoundedRect;
 		[usernameField addTarget:self action:@selector(enterTextField:) forControlEvents:UIControlEventEditingDidBegin];
 		[usernameField addTarget:self action:@selector(exitTextField:) forControlEvents:UIControlEventEditingDidEndOnExit];
 		usernameField.placeholder = @"Username";
 		[self addSubview:usernameField];
 		
-		emailField =[[UITextField alloc]initWithFrame:CGRectMake(20, 265, 280, 30)];
+		emailField =[[UITextField alloc]initWithFrame:CGRectMake(20, 235, 280, 30)];
 		emailField.borderStyle = UITextBorderStyleRoundedRect;
 		emailField.placeholder = @"ends with @*tuwien.ac.at";
 		[emailField addTarget:self action:@selector(enterTextField:) forControlEvents:UIControlEventEditingDidBegin];
 		[emailField addTarget:self action:@selector(exitTextField:) forControlEvents:UIControlEventEditingDidEndOnExit];
 		[self addSubview:emailField];
 		
-		passwordField =[[UITextField alloc]initWithFrame:CGRectMake(20, 305, 280, 30)];
+		passwordField =[[UITextField alloc]initWithFrame:CGRectMake(20, 275, 280, 30)];
 		passwordField.borderStyle = UITextBorderStyleRoundedRect;
 		passwordField.placeholder = @"Password";
 		passwordField.secureTextEntry = YES;
@@ -74,7 +65,7 @@
 		[passwordField addTarget:self action:@selector(exitTextField:) forControlEvents:UIControlEventEditingDidEndOnExit];
 		[self addSubview:passwordField];
 		
-		passwordField2 =[[UITextField alloc]initWithFrame:CGRectMake(20, 345, 280, 30)];
+		passwordField2 =[[UITextField alloc]initWithFrame:CGRectMake(20, 315, 280, 30)];
 		passwordField2.borderStyle = UITextBorderStyleRoundedRect;
 		passwordField2.placeholder = @"Retype Password";
 		[passwordField2 addTarget:self action:@selector(enterTextField:) forControlEvents:UIControlEventEditingDidBegin];
@@ -84,14 +75,14 @@
 		[self addSubview:passwordField2];
 		
 		sendButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-		[sendButton setFrame:CGRectMake(85, 390, 150, 30)];
+		[sendButton setFrame:CGRectMake(85, 360, 150, 30)];
 		[sendButton setTitle:@"Send" forState:UIControlStateNormal];
 		[sendButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[sendButton setBackgroundImage:[UIImage imageNamed: @"ButtonDark.png"] forState:UIControlStateNormal];
 		[sendButton addTarget:self action:@selector(sendButtonAction:) forControlEvents:UIControlEventTouchUpInside];
 		[self addSubview:sendButton];
 		
-		textLabel2 = [[UILabel alloc]initWithFrame:CGRectMake(35,440, 250, 30)];
+		textLabel2 = [[UILabel alloc]initWithFrame:CGRectMake(35,410, 250, 30)];
 		textLabel2.font = [UIFont fontWithName:@"Helvetica" size:11];  
 		[textLabel2 setText:@"Your Username and Email Address will be public"];
 		[self addSubview:textLabel2];
@@ -145,20 +136,6 @@
 		CGPoint scrollPoint = CGPointMake(0.0, sender.frame.origin.y-keybordSize);
 		[self setContentOffset:scrollPoint animated:YES];
 	}
-}
-
-- (IBAction)backButtonPressed:(id)sender{
-	
-	[self setFrame:CGRectMake( 0.0f, 0.0f, 320.0f, 480.0f)];
-	[UIView beginAnimations:@"animatedLoginView" context:nil];
-	[UIView setAnimationDuration:0.5];
-	[self setFrame:CGRectMake( 320.0f, 0.0f, 320.0f, 480.0f)];
-	[UIView commitAnimations];
-	[usernameField resignFirstResponder];
-	[emailField resignFirstResponder];
-	[passwordField resignFirstResponder];
-	[passwordField2 resignFirstResponder];
-	//self.dealloc;
 }
 
 - (void)setKeybordHight:(NSNotification*)aNotification

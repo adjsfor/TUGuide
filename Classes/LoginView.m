@@ -32,25 +32,17 @@
 		self.userInteractionEnabled = YES;
 		
 		UIImage *img = [UIImage imageNamed: @"TUGuideLogo.png"];
-		bigLogo = [[UIImageView alloc] initWithFrame:CGRectMake(30,20, 260, 260)];
+		bigLogo = [[UIImageView alloc] initWithFrame:CGRectMake(30,0, 240, 240)];
 		bigLogo.image = img;
 		[img release];
 		[self addSubview:bigLogo];
 		
-		backButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-		[backButton setFrame:CGRectMake(1, 21, 20, 20)];
-		[backButton setTitle:@"<" forState:UIControlStateNormal];
-		[backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-		[backButton setBackgroundImage:[UIImage imageNamed: @"ButtonDark.png"] forState:UIControlStateNormal];
-		[backButton addTarget:self action:@selector(backButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-		[self addSubview:backButton];
-		
-		textLabel = [[UILabel alloc]initWithFrame:CGRectMake(55,280, 220, 30)];
+		textLabel = [[UILabel alloc]initWithFrame:CGRectMake(55,240, 220, 30)];
 		textLabel.font = [UIFont fontWithName:@"Helvetica" size:11];  
 		[textLabel setText:@"Please login to use the services of TUGuide"];
 		[self addSubview:textLabel];
 		
-		emailField =[[UITextField alloc]initWithFrame:CGRectMake(20, 310, 280, 30)];
+		emailField =[[UITextField alloc]initWithFrame:CGRectMake(20, 260, 280, 30)];
 		emailField.borderStyle = UITextBorderStyleRoundedRect;
 		emailField.placeholder = @"email";
 		[emailField addTarget:self action:@selector(enterTextField:) forControlEvents:UIControlEventEditingDidBegin];
@@ -59,7 +51,7 @@
 		//emailField.text = @"martinlangeder@gmail.com";
 		[self addSubview:emailField];
 		
-		passwordField =[[UITextField alloc]initWithFrame:CGRectMake(20, 345, 280, 30)];
+		passwordField =[[UITextField alloc]initWithFrame:CGRectMake(20, 295, 280, 30)];
 		passwordField.borderStyle = UITextBorderStyleRoundedRect;
 		passwordField.placeholder = @"password";
 		[passwordField addTarget:self action:@selector(enterTextField:) forControlEvents:UIControlEventEditingDidBegin];
@@ -69,19 +61,19 @@
 		[self addSubview:passwordField];
 		
 		sendButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-		[sendButton setFrame:CGRectMake(85, 430, 150, 30)];
+		[sendButton setFrame:CGRectMake(85, 370, 150, 30)];
 		[sendButton setTitle:@"Send" forState:UIControlStateNormal];
 		[sendButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[sendButton setBackgroundImage:[UIImage imageNamed: @"ButtonDark.png"] forState:UIControlStateNormal];
 		[sendButton addTarget:self action:@selector(sendButtonAction:) forControlEvents:UIControlEventTouchUpInside];
 		[self addSubview:sendButton];
 		
-		textLabel2 = [[UILabel alloc]initWithFrame:CGRectMake(70,380, 150, 30)];
+		textLabel2 = [[UILabel alloc]initWithFrame:CGRectMake(70,330, 150, 30)];
 		textLabel2.font = [UIFont fontWithName:@"Helvetica" size:11];  
 		[textLabel2 setText:@"Save Login Data"];
 		[self addSubview:textLabel2];
 		
-		saveLogin = [[UISwitch alloc]initWithFrame:CGRectMake(170, 380, 30, 30)];
+		saveLogin = [[UISwitch alloc]initWithFrame:CGRectMake(170, 330, 30, 30)];
 		[self addSubview:saveLogin];
     }
 	
@@ -126,18 +118,6 @@
 		NSString *strUserName = [prefs stringForKey:@"name_preference"];
 		NSLog(@"Username :%s", strUserName);
 	}
-}
-
-- (IBAction)backButtonPressed:(id)sender{
-	
-	[self setFrame:CGRectMake( 0.0f, 0.0f, 320.0f, 480.0f)];
-	[UIView beginAnimations:@"animatedLoginView" context:nil];
-	[UIView setAnimationDuration:0.5];
-	[self setFrame:CGRectMake( 0.0f, 480.0f, 320.0f, 480.0f)];
-	[UIView commitAnimations];
-	[emailField resignFirstResponder];
-	[passwordField resignFirstResponder];
-	//self.dealloc;
 }
 
 - (void)setKeybordHight:(NSNotification*)aNotification

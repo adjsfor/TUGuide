@@ -14,6 +14,7 @@
 
 @synthesize loginViewController;
 @synthesize registerLoginViewController;
+@synthesize registerViewController;
 
 -(void)passTo:(UIViewController *)requestor command:(NSString *)cmd message:(NSString *)msg{
 	// change 

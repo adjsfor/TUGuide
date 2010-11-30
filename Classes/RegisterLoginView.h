@@ -23,7 +23,7 @@
 @property (nonatomic, retain) UIButton *loginButton;
 @property (nonatomic, retain) UIImageView *bigLogo;
 // to be onwned by someone else
-@property (assign) id <UIViewDelegate> delegate;
+@property (nonatomic,assign) id <UIViewDelegate> delegate;
 
 
 -(IBAction)loginButtonPressed:(id)sender;

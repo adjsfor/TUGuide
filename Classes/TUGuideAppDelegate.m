@@ -12,6 +12,7 @@
 
 @synthesize window;
 @synthesize loginViewController;
+@synthesize mainNavigationController;
 
 
 #pragma mark -
@@ -26,8 +27,14 @@
         [self release];
         return NO;
     }
-	loginViewController = [[LoginViewController alloc]init];
-    [window addSubview:loginViewController.view];
+	
+	//NSLog([NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask,YES));
+	
+	//loginViewController = [[LoginViewController alloc]init];
+	
+	mainNavigationController = [[MainNavigationController alloc]init];
+	
+    [window addSubview:mainNavigationController.view];
     [window makeKeyAndVisible];
     
     return YES;

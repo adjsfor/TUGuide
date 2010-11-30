@@ -12,11 +12,12 @@
 
 @interface TUGuideAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
-	LoginViewController *loginViewController;
+	MainNavigationController *mainNavigationController;
 }
 
-@property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) LoginViewController *loginViewController;
+@property (nonatomic, retain) UIWindow *window;
+@property (nonatomic, retain) MainNavigationController *mainNavigationController;
+
 
 @end
 

@@ -11,12 +11,25 @@
 @implementation TUGuideAppDelegate
 
 @synthesize window;
-@synthesize loginViewController;
+
 @synthesize mainNavigationController;
 
 
 #pragma mark -
 #pragma mark Application lifecycle
+
+
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
+	NSLog(@"APPDELEGATE: about to switch to view");
+	
+}
+
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
+	NSLog(@"APPDELEGATE: switched views: message from the nav controller delegate");
+}
+
+
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
@@ -33,6 +46,7 @@
 	//loginViewController = [[LoginViewController alloc]init];
 	
 	mainNavigationController = [[MainNavigationController alloc]init];
+	mainNavigationController.delegate = self;
 	
     [window addSubview:mainNavigationController.view];
     [window makeKeyAndVisible];
@@ -90,8 +104,9 @@
 
 
 - (void)dealloc {
-	[loginViewController release];
-    [window release];
+	[mainNavigationController release];
+
+	    [window release];
     [super dealloc];
 }
 

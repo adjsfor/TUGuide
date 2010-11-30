@@ -7,11 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LoginViewController.h"
+#import "RegisterLoginViewController.h"
+#import "UIViewControllerDelegate.h"
+#import "RegisterViewController.h"
 
 
-@interface MainNavigationController : UINavigationController {
+@interface MainNavigationController : UINavigationController <UIViewControllerDelegate> {
 	LoginViewController *loginViewController;
+	RegisterLoginViewController *registerLoginViewController;
+	RegisterViewController *registerViewController;
 }
 @property (nonatomic, retain) LoginViewController *loginViewController;
+@property (nonatomic, retain) RegisterLoginViewController *registerLoginViewController;
+@property (nonatomic, retain) RegisterViewController *registerViewController;
+
+
+-(void)switchToController:(NSString *)controller animated:(BOOL)animated;
+-(void)passTo:(UIViewController *)requestor command:(NSString *)cmd message:(NSString *)msg; // delegate
 
 @end

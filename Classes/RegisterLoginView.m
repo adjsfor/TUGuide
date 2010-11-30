@@ -14,7 +14,7 @@
 @synthesize registerButton;
 @synthesize loginButton;
 @synthesize bigLogo;
-
+@synthesize delegate;
 
 - (id)initWithFrame:(CGRect)frame {
     
@@ -37,7 +37,9 @@
 		[registerButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[registerButton setBackgroundImage:[UIImage imageNamed: @"ButtonDark.png"] forState:UIControlStateNormal];
 		[registerButton addTarget:self action:@selector(registerButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+		
 		[self addSubview:registerButton];
+		
 		
 		loginButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 		[loginButton setFrame:CGRectMake(85, 400, 150, 30)];
@@ -54,28 +56,33 @@
 
 
 - (IBAction)loginButtonPressed:(id)sender{
-	LoginView *loginView = [[LoginView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
+	[delegate actionButton:self command:@"Login" message:@"Switch me to Login View"];
 	
-	[loginView setFrame:CGRectMake( 0.0f, 480.0f, 320.0f, 480.0f)]; //notice this is OFF screen!
-	[UIView beginAnimations:@"animatedLoginView" context:nil];
-	[UIView setAnimationDuration:0.5];
-	[loginView setFrame:CGRectMake( 0.0f, 0.0f, 320.0f, 480.0f)]; //notice this is ON screen!
-	[UIView commitAnimations];
+//	LoginView *loginView = [[LoginView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
 	
-	[self addSubview:loginView];
+//	[loginView setFrame:CGRectMake( 0.0f, 480.0f, 320.0f, 480.0f)]; //notice this is OFF screen!
+//	[UIView beginAnimations:@"animatedLoginView" context:nil];
+//	[UIView setAnimationDuration:0.5];
+//	[loginView setFrame:CGRectMake( 0.0f, 0.0f, 320.0f, 480.0f)]; //notice this is ON screen!
+//	[UIView commitAnimations];
+//	
+//	[self addSubview:loginView];
 	
 }
 
 - (IBAction)registerButtonPressed:(id)sender{
-	RegisterView *registerView = [[RegisterView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
 	
-	[registerView setFrame:CGRectMake( 320.0f, 0.0f, 320.0f, 480.0f)]; //notice this is OFF screen!
-	[UIView beginAnimations:@"animatedLoginView" context:nil];
-	[UIView setAnimationDuration:0.5];
-	[registerView setFrame:CGRectMake( 0.0f, 0.0f, 320.0f, 480.0f)]; //notice this is ON screen!
-	[UIView commitAnimations];
-	
-	[self addSubview:registerView];
+	[delegate actionButton:self command:@"Register" message:@"Switch me to Register View"];
+	 
+//	RegisterView *registerView = [[RegisterView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
+//	
+//	[registerView setFrame:CGRectMake( 320.0f, 0.0f, 320.0f, 480.0f)]; //notice this is OFF screen!
+//	[UIView beginAnimations:@"animatedLoginView" context:nil];
+//	[UIView setAnimationDuration:0.5];
+//	[registerView setFrame:CGRectMake( 0.0f, 0.0f, 320.0f, 480.0f)]; //notice this is ON screen!
+//	[UIView commitAnimations];
+//	
+//	[self addSubview:registerView];
 }
 
 /*

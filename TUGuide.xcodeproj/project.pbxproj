@@ -14,6 +14,8 @@
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		4B819D1B12A561FE005C740F /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B819D1A12A561FE005C740F /* MainNavigationController.m */; };
 		4B819D2012A564C2005C740F /* ServerLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B819D1F12A564C2005C740F /* ServerLogin.m */; };
+		4B819D4A12A5706E005C740F /* RegisterLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B819D4912A5706E005C740F /* RegisterLoginViewController.m */; };
+		4B819E9512A59E55005C740F /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B819E9412A59E55005C740F /* RegisterViewController.m */; };
 		4BA6454112A13F5400B03B82 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA6454012A13F5400B03B82 /* Course.m */; };
 		4BA645BE12A154B600B03B82 /* Building.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA645BD12A154B600B03B82 /* Building.m */; };
 		4BA645FE12A15B7F00B03B82 /* Mensa.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA645FD12A15B7F00B03B82 /* Mensa.m */; };
@@ -59,6 +61,12 @@
 		4B819D1A12A561FE005C740F /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
 		4B819D1E12A564C2005C740F /* ServerLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerLogin.h; sourceTree = "<group>"; };
 		4B819D1F12A564C2005C740F /* ServerLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerLogin.m; sourceTree = "<group>"; };
+		4B819D4812A5706E005C740F /* RegisterLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterLoginViewController.h; sourceTree = "<group>"; };
+		4B819D4912A5706E005C740F /* RegisterLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterLoginViewController.m; sourceTree = "<group>"; };
+		4B819E4612A5932D005C740F /* UIViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewDelegate.h; sourceTree = "<group>"; };
+		4B819E4712A593D7005C740F /* UIViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewControllerDelegate.h; sourceTree = "<group>"; };
+		4B819E9312A59E55005C740F /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		4B819E9412A59E55005C740F /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		4BA6453F12A13F5400B03B82 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
 		4BA6454012A13F5400B03B82 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
 		4BA645BC12A154B600B03B82 /* Building.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Building.h; sourceTree = "<group>"; };
@@ -131,6 +139,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4B819E4512A59054005C740F /* Delegate Protocols */,
 				4B819D1D12A56433005C740F /* Server Access */,
 				4B819D1C12A56208005C740F /* NavigationControllers */,
 				FAD4AAA312A0CCBC00817DCA /* Models */,
@@ -213,6 +222,15 @@
 			name = "Server Access";
 			sourceTree = "<group>";
 		};
+		4B819E4512A59054005C740F /* Delegate Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4B819E4612A5932D005C740F /* UIViewDelegate.h */,
+				4B819E4712A593D7005C740F /* UIViewControllerDelegate.h */,
+			);
+			name = "Delegate Protocols";
+			sourceTree = "<group>";
+		};
 		8EAFF11712A0055900C9BCA3 /* LogicTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +245,10 @@
 			children = (
 				FA381CA012A00563008E06D0 /* LoginViewController.h */,
 				FA381CA112A00563008E06D0 /* LoginViewController.m */,
+				4B819D4812A5706E005C740F /* RegisterLoginViewController.h */,
+				4B819D4912A5706E005C740F /* RegisterLoginViewController.m */,
+				4B819E9312A59E55005C740F /* RegisterViewController.h */,
+				4B819E9412A59E55005C740F /* RegisterViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -410,6 +432,8 @@
 				8EBD4CEB12A47164008D9B56 /* Wizard.m in Sources */,
 				4B819D1B12A561FE005C740F /* MainNavigationController.m in Sources */,
 				4B819D2012A564C2005C740F /* ServerLogin.m in Sources */,
+				4B819D4A12A5706E005C740F /* RegisterLoginViewController.m in Sources */,
+				4B819E9512A59E55005C740F /* RegisterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

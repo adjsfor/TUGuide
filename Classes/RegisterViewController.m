@@ -1,15 +1,15 @@
     //
-//  LoginViewController.m
+//  RegisterViewController.m
 //  TUGuide
 //
-//  Created by Martin Langeder on 26.11.10.
-//  Copyright 2010 7359. All rights reserved.
+//  Created by Ivo Galic on 11/30/10.
+//  Copyright 2010 Galic Design. All rights reserved.
 //
 
-#import "LoginViewController.h"
+#import "RegisterViewController.h"
 
 
-@implementation LoginViewController
+@implementation RegisterViewController
 
 @synthesize registerLoginView;
 @synthesize registerView;
@@ -17,28 +17,44 @@
 @synthesize scrollView;
 @synthesize activeField;
 @synthesize wizard;
+@synthesize delegate;
+
+
+// RegisterLoginView delegation
+-(void)actionButton:(UIView *)requestor command:(NSString *)cmd message:(NSString *)msg; 
+{
+	NSLog(@"RegisterLoginViewController: actionButton %@  %@  %@", requestor,cmd,msg);
+	[delegate passTo:self command:cmd message:msg]; //say to mainna
+}
+
+
 
 
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
 	self.title =@"TuGuide Start";
-	loginView = [[LoginView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
-	self.view = loginView;
+	registerView = [[RegisterView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
+	self.view = registerView;
+	
+	[self.navigationController setNavigationBarHidden:YES];
+	self.registerView.delegate = self; // set the delegation
+	
+	
 	//wizard = [[Wizard alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
 	//self.view = wizard;
 	
 	self.view.userInteractionEnabled = YES;
 	
 	/*
-	loginView = [[LoginView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
-	scrollView = [[UIScrollView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
-	self.view = scrollView;
-	[scrollView addSubview:loginView];
+	 loginView = [[LoginView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
+	 scrollView = [[UIScrollView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
+	 self.view = scrollView;
+	 [scrollView addSubview:loginView];
 	 */
 	/*
-	registerView = [[RegisterView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
-	self.view = registerView;
-	*/
+	 registerView = [[RegisterView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
+	 self.view = registerView;
+	 */
 }
 
 // Called when the UIKeyboardDidShowNotification is sent.
@@ -77,9 +93,9 @@
     CGRect aRect = self.view.frame;
     aRect.size.height -= kbSize.height;
     if (!CGRectContainsPoint(aRect, activeField.frame.origin) ) {
-	 CGPoint scrollPoint = CGPointMake(0.0, activeField.frame.origin.y-kbSize.height);
-	 [scrollView setContentOffset:scrollPoint animated:YES];
-	 }
+		CGPoint scrollPoint = CGPointMake(0.0, activeField.frame.origin.y-kbSize.height);
+		[scrollView setContentOffset:scrollPoint animated:YES];
+	}
 }
 
 // Called when the UIKeyboardWillHideNotification is sent
@@ -113,12 +129,12 @@
 
 
 /*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations.
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
+ // Override to allow orientations other than the default portrait orientation.
+ - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+ // Return YES for supported orientations.
+ return (interfaceOrientation == UIInterfaceOrientationPortrait);
+ }
+ */
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.

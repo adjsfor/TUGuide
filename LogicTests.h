@@ -14,19 +14,12 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 #import <UIKit/UIKit.h>
-//#import "application_headers" as required
+#import "RegisterLoginView.h"
+
 
 @interface LogicTests : SenTestCase {
-}
-/*
-@interface LogicTests : SenTestCase {
-
+	RegisterLoginView *registerLoginView;
 }
 
-#if USE_APPLICATION_UNIT_TEST
-- (void) testAppDelegate;       // simple test on application
-#else
-- (void) testMath;              // simple standalone test
-#endif
-*/
+@property (nonatomic, retain) RegisterLoginView *registerLoginView;
 @end

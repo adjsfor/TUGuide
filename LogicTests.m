@@ -11,15 +11,35 @@
 @implementation LogicTests
 
 @synthesize registerLoginView;
+@synthesize registerView;
+@synthesize loginView;
+@synthesize wizard;
 
-
-- (void) setUp {
+- (void) setUpRegisterLoginView {
 	registerLoginView = [[[RegisterLoginView alloc] init] retain];
 	STAssertNotNil(registerLoginView, @"Could not create RegisterLoginView!");
 }
 
+- (void) setUpRegisterView {
+	registerView = [[[RegisterView alloc] init] retain];
+	STAssertNotNil(registerView, @"Could not create RegisterView!");
+}
+
+- (void) setUpLoginView {
+	loginView = [[[LoginView alloc] init] retain];
+	STAssertNotNil(loginView, @"Could not create LoginView!");
+}
+
+- (void) setUpWizardView {
+	wizard = [[[RegisterLoginView alloc] init] retain];
+	STAssertNotNil(wizard, @"Could not create Wizard!");
+}
+
 - (void) tearDown {
 	[registerLoginView release];
+	[registerView release];
+	[loginView release];
+	[wizard release];
 }
 
 @end

@@ -15,11 +15,20 @@
 #import <SenTestingKit/SenTestingKit.h>
 #import <UIKit/UIKit.h>
 #import "RegisterLoginView.h"
+#import "RegisterView.h"
+#import "LoginView.h"
+#import "Wizard.h"
 
 
 @interface LogicTests : SenTestCase {
 	RegisterLoginView *registerLoginView;
+	RegisterView *registerView;
+	LoginView *loginView;
+	Wizard *wizard;
 }
 
 @property (nonatomic, retain) RegisterLoginView *registerLoginView;
+@property (nonatomic, retain) RegisterView *registerView;
+@property (nonatomic, retain) LoginView *loginView;
+@property (nonatomic, retain) Wizard *wizard;
 @end

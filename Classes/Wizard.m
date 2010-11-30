@@ -25,7 +25,7 @@
 		[skip addTarget:self action:@selector(skipWizard:) forControlEvents:UIControlEventTouchUpInside];
 		[self addSubview:skip];
     }
-	NSURL *url=[NSURL URLWithString:@"http://hgmm.webhop.net:56789/pdf/test.pdf"];
+	NSURL *url=[NSURL URLWithString:@"http://hgmm.webhop.net:56789/help/wizard.jpg"];
 	[self loadRequest:[NSURLRequest requestWithURL:url]];
     return self;
 }

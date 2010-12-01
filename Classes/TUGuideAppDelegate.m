@@ -28,7 +28,23 @@
 	NSLog(@"APPDELEGATE: switched views: message from the nav controller delegate");
 }
 
-
+-(void)passing:(NSObject *)requestor command:(NSString *)cmd message:(NSString *)msg{
+	
+	if ([cmd isEqual:@"goRegister"]) {
+		// startRegisterEvent in ServerLogin, with data from fields
+		self.mainNavigationController.registerViewController.registerView.passwordField.text;
+	}
+	
+	if ([cmd isEqual:@"goLogin"]) {
+		// startLoginEvent in ServerLogin with params
+	}
+	
+	if ([cmd isEqual:@"registerFail"]) {
+		// startRegisterEvent
+	}
+	
+	NSLog(@"@%", requestor);
+}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
@@ -47,6 +63,7 @@
 	
 	mainNavigationController = [[MainNavigationController alloc]init];
 	mainNavigationController.delegate = self;
+	mainNavigationController.delegate2 = self;
 	
     [window addSubview:mainNavigationController.view];
     [window makeKeyAndVisible];

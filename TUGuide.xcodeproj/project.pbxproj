@@ -69,6 +69,7 @@
 		4B819E4712A593D7005C740F /* UIViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewControllerDelegate.h; sourceTree = "<group>"; };
 		4B819E9312A59E55005C740F /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		4B819E9412A59E55005C740F /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		4B819F5612A6A4D3005C740F /* MessagePassProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagePassProtocol.h; sourceTree = "<group>"; };
 		4BA6453F12A13F5400B03B82 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
 		4BA6454012A13F5400B03B82 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
 		4BA645BC12A154B600B03B82 /* Building.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Building.h; sourceTree = "<group>"; };
@@ -231,6 +232,7 @@
 			children = (
 				4B819E4612A5932D005C740F /* UIViewDelegate.h */,
 				4B819E4712A593D7005C740F /* UIViewControllerDelegate.h */,
+				4B819F5612A6A4D3005C740F /* MessagePassProtocol.h */,
 			);
 			name = "Delegate Protocols";
 			sourceTree = "<group>";

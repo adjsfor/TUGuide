@@ -19,6 +19,6 @@
 @property (nonatomic, retain) UIWindow *window;
 @property (nonatomic, retain) MainNavigationController *mainNavigationController;
 
-
+-(void)passing:(NSObject *)requestor command:(NSString *)cmd message:(NSString *)msg; 
 @end
 

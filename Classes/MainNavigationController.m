@@ -15,11 +15,13 @@
 @synthesize loginViewController;
 @synthesize registerLoginViewController;
 @synthesize registerViewController;
+@synthesize delegate2;
 
 -(void)passTo:(UIViewController *)requestor command:(NSString *)cmd message:(NSString *)msg{
 	// change 
 	NSLog(@"MainNavigationController: switching to controller %@", cmd);
 	[self switchToController:cmd animated:YES];
+	[delegate2 passing:self command:cmd message:msg];// send to father 
 }
 
 

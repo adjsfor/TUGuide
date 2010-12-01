@@ -57,41 +57,11 @@
 
 - (IBAction)loginButtonPressed:(id)sender{
 	[delegate actionButton:self command:@"Login" message:@"Switch me to Login View"];
-	
-//	LoginView *loginView = [[LoginView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
-	
-//	[loginView setFrame:CGRectMake( 0.0f, 480.0f, 320.0f, 480.0f)]; //notice this is OFF screen!
-//	[UIView beginAnimations:@"animatedLoginView" context:nil];
-//	[UIView setAnimationDuration:0.5];
-//	[loginView setFrame:CGRectMake( 0.0f, 0.0f, 320.0f, 480.0f)]; //notice this is ON screen!
-//	[UIView commitAnimations];
-//	
-//	[self addSubview:loginView];
-	
 }
 
 - (IBAction)registerButtonPressed:(id)sender{
-	
 	[delegate actionButton:self command:@"Register" message:@"Switch me to Register View"];
-	 
-//	RegisterView *registerView = [[RegisterView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
-//	
-//	[registerView setFrame:CGRectMake( 320.0f, 0.0f, 320.0f, 480.0f)]; //notice this is OFF screen!
-//	[UIView beginAnimations:@"animatedLoginView" context:nil];
-//	[UIView setAnimationDuration:0.5];
-//	[registerView setFrame:CGRectMake( 0.0f, 0.0f, 320.0f, 480.0f)]; //notice this is ON screen!
-//	[UIView commitAnimations];
-//	
-//	[self addSubview:registerView];
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code.
-}
-*/
 
 - (void)dealloc {
 	[bigLogo release];

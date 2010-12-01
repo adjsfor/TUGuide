@@ -77,6 +77,10 @@
     NSLog(@"connection finished loading");
 }
 
+-(void) dealloc{
+	[dataConnection release];
+	[super dealloc];
+}
 
 
 @end

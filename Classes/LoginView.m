@@ -21,6 +21,7 @@
 @synthesize saveLogin;
 @synthesize user;
 @synthesize server;
+@synthesize delegate;
 
 
 - (id)initWithFrame:(CGRect)frame {
@@ -94,7 +95,8 @@
 }
 
 - (IBAction)enterTextField:(UITextField *)sender{
-	// get the size of the keyboard
+	[delegate actionButton:self command:@"enterTextField" message:@"textfiel entered"];
+	/*
 	int keybordSize = keyboardHight;
 	if(!keybordSize) keybordSize=216;
 	
@@ -106,6 +108,7 @@
 		CGPoint scrollPoint = CGPointMake(0.0, sender.frame.origin.y-keybordSize);
 		[self setContentOffset:scrollPoint animated:YES];
 	}
+	 */
 }
 
 -(IBAction)sendButtonAction:(id)sender{

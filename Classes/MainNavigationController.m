@@ -22,6 +22,9 @@
 	[self switchToController:cmd animated:YES];
 }
 
+
+
+
 -(void)switchToController:(NSString *)controller animated:(BOOL)animated{
 	
 	// check if not null then initialize
@@ -67,8 +70,10 @@
 	
 	//[self pushViewController:loginViewController animated:YES];
     registerLoginViewController.delegate = self;
+	loginViewController.delegate = self;
 	[self pushViewController:registerLoginViewController animated:YES];
     [super viewDidLoad];
+	
 }
 
 

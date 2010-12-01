@@ -13,7 +13,7 @@
 #import "Wizard.h"
 
 
-@interface LoginViewController : UIViewController <UITextFieldDelegate>{
+@interface LoginViewController : UIViewController <UITextFieldDelegate,UIViewDelegate>{
 	
 	RegisterLoginView *registerLoginView;
 	RegisterView *registerView;
@@ -30,6 +30,8 @@
 @property (nonatomic, retain) UIScrollView *scrollView;
 @property (nonatomic, retain) UITextField *activeField;
 @property (nonatomic, retain) Wizard *wizard;
+
+-(void)actionButton:(UIView *)requestor command:(NSString *)cmd message:(NSString *)msg; 
 
 
 @end

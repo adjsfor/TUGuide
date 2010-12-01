@@ -214,37 +214,37 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1139, 1365}}";
 			sepNavSelRange = "{969, 0}";
-			sepNavVisRange = "{1526, 1289}";
+			sepNavVisRange = "{50, 1356}";
 		};
 	};
 	4B819D1E12A564C2005C740F /* ServerLogin.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {943, 746}}";
-			sepNavSelRange = "{357, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1117, 613}}";
+			sepNavSelRange = "{497, 4}";
 			sepNavVisRange = "{0, 733}";
 			sepNavWindowFrame = "{{197, -19}, {1002, 874}}";
 		};
 	};
 	4B819D1F12A564C2005C740F /* ServerLogin.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1125, 1079}}";
-			sepNavSelRange = "{2634, 0}";
-			sepNavVisRange = "{1132, 1820}";
+			sepNavIntBoundsRect = "{{0, 0}, {1125, 1118}}";
+			sepNavSelRange = "{2952, 4}";
+			sepNavVisRange = "{1305, 1698}";
 			sepNavWindowFrame = "{{15, 20}, {803, 853}}";
 		};
 	};
 	4B819D4812A5706E005C740F /* RegisterLoginViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1117, 616}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1117, 613}}";
 			sepNavSelRange = "{332, 0}";
 			sepNavVisRange = "{0, 1171}";
 		};
 	};
 	4B819D4912A5706E005C740F /* RegisterLoginViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1117, 2184}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1489, 2041}}";
 			sepNavSelRange = "{1071, 0}";
-			sepNavVisRange = "{0, 1299}";
+			sepNavVisRange = "{49, 1396}";
 		};
 	};
 	4B819E4612A5932D005C740F /* UIViewDelegate.h */ = {
@@ -340,7 +340,7 @@
 	};
 	8E30CB4A12A5C43100BCA1B9 /* LoginTests.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1117, 593}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1117, 613}}";
 			sepNavSelRange = "{227, 36}";
 			sepNavVisRange = "{0, 362}";
 			sepNavWindowFrame = "{{15, 20}, {803, 853}}";
@@ -744,7 +744,7 @@
 	8EBD4CEA12A47164008D9B56 /* Wizard.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1117, 689}}";
-			sepNavSelRange = "{847, 53}";
+			sepNavSelRange = "{1196, 16}";
 			sepNavVisRange = "{73, 1149}";
 		};
 	};
@@ -1051,9 +1051,9 @@
 	};
 	FA381CA412A0057A008E06D0 /* RegisterLoginView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1117, 1300}}";
-			sepNavSelRange = "{1396, 0}";
-			sepNavVisRange = "{171, 1794}";
+			sepNavIntBoundsRect = "{{0, 0}, {1117, 1365}}";
+			sepNavSelRange = "{3033, 0}";
+			sepNavVisRange = "{1839, 1506}";
 		};
 	};
 	FA381CA912A00593008E06D0 /* LoginView.h */ = {
@@ -1067,7 +1067,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1117, 2106}}";
 			sepNavSelRange = "{3064, 36}";
-			sepNavVisRange = "{1652, 2006}";
+			sepNavVisRange = "{3216, 1638}";
 		};
 	};
 	FA381CAF12A005D2008E06D0 /* RegisterView.h */ = {

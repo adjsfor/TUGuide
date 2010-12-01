@@ -21,9 +21,9 @@
 
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
-	self.title =@"TuGuide Start";
 	loginView = [[LoginView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
 	self.view = loginView;
+	self.loginView.delegate = self;
 	//wizard = [[Wizard alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
 	//self.view = wizard;
 	
@@ -115,6 +115,10 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+}
+
+-(void)actionButton:(UIView *)requestor command:(NSString *)cmd message:(NSString *)msg{
+	[delegate passTo:self command:cmd message:msg];
 }
 
 

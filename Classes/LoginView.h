@@ -13,6 +13,7 @@
 
 @interface LoginView : UIScrollView {
 	
+	id <UIViewDelegate> delegate;
 	int keyboardHight;
 	UIButton *sendButton;
 	UIImageView *bigLogo;
@@ -36,6 +37,7 @@
 @property (nonatomic, retain) UISwitch *saveLogin;
 @property (nonatomic, retain) User *user;
 @property (nonatomic, retain) ServerLogin *server;
+@property (nonatomic,assign) id <UIViewDelegate> delegate;
 
 - (IBAction)sendButtonAction:(id)sender;
 - (IBAction)userDoneEnteringText:(id)sender;

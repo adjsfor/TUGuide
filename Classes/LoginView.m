@@ -89,26 +89,11 @@
 }
 
 - (IBAction)exitTextField:(UITextField *)sender{
-	[sender resignFirstResponder];
-	CGPoint scrollPoint = CGPointMake(0.0f, 0.0f);
-	[self setContentOffset:scrollPoint animated:YES];
+	[delegate actionButton:self command:@"enterTextField" message:@"textfiel entered"];
 }
 
 - (IBAction)enterTextField:(UITextField *)sender{
-	[delegate actionButton:self command:@"enterTextField" message:@"textfiel entered"];
-	/*
-	int keybordSize = keyboardHight;
-	if(!keybordSize) keybordSize=216;
-	
-    // If active text field is hidden by keyboard, scroll it so it's visible
-    // Your application might not need or want this behavior.
-    CGRect aRect = self.frame;
-    aRect.size.height -= keybordSize;
-    if (!CGRectContainsPoint(aRect, sender.frame.origin) ) {
-		CGPoint scrollPoint = CGPointMake(0.0, sender.frame.origin.y-keybordSize);
-		[self setContentOffset:scrollPoint animated:YES];
-	}
-	 */
+	[delegate actionButton:self command:@"exitTextField" message:@"textfiel exited"];
 }
 
 -(IBAction)sendButtonAction:(id)sender{

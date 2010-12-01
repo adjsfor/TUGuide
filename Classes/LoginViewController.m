@@ -17,6 +17,7 @@
 @synthesize scrollView;
 @synthesize activeField;
 @synthesize wizard;
+@synthesize delegate;
 
 
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
@@ -118,7 +119,17 @@
 }
 
 -(void)actionButton:(UIView *)requestor command:(NSString *)cmd message:(NSString *)msg{
-	[delegate passTo:self command:cmd message:msg];
+	if ([cmd isEqual:@"enterTextField"]) {
+		 CGPoint scrollPoint = CGPointMake(0.0, 150.0);
+		 [self.loginView setContentOffset:scrollPoint animated:YES];
+	}else if ([cmd isEqual:@"exitTextField"]) {
+		[self.loginView.emailField resignFirstResponder];
+		[self.loginView.passwordField resignFirstResponder];
+		CGPoint scrollPoint = CGPointMake(0.0f, 0.0f);
+		[self.loginView setContentOffset:scrollPoint animated:YES];
+	}else {
+		[delegate passTo:self command:cmd message:msg];
+	}
 }
 
 

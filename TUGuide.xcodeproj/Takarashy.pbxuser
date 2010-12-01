@@ -2,16 +2,16 @@
 {
 	1D3623240D0F684500981E51 /* TUGuideAppDelegate.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1117, 593}}";
-			sepNavSelRange = "{0, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1098, 588}}";
+			sepNavSelRange = "{310, 30}";
 			sepNavVisRange = "{0, 562}";
 		};
 	};
 	1D3623250D0F684500981E51 /* TUGuideAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1965, 1378}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1266}";
+			sepNavIntBoundsRect = "{{0, 0}, {1118, 1573}}";
+			sepNavSelRange = "{774, 0}";
+			sepNavVisRange = "{43, 1338}";
 		};
 	};
 	1D6058900D05DD3D006BFB54 /* TUGuide */ = {
@@ -28,6 +28,8 @@
 			8EAFF11012A0054D00C9BCA3 /* Tests */,
 		);
 		breakpoints = (
+			8EA6C87412A6A42C00E0C43B /* LoginView.m:92 */,
+			8EA6C87612A6A43000E0C43B /* LoginView.m:96 */,
 		);
 		codeSenseManager = 8E4CD76E129FFF4D009A85C3 /* Code sense */;
 		executables = (
@@ -77,7 +79,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					939,
+					920,
 					20,
 					48,
 					43,
@@ -155,6 +157,40 @@
 			8E30CC7612A6885400BCA1B9 = 8E30CC7612A6885400BCA1B9 /* PBXTextBookmark */;
 			8E30CC8112A68A3900BCA1B9 = 8E30CC8112A68A3900BCA1B9 /* PBXTextBookmark */;
 			8EA6C81812A691E000E0C43B /* PBXTextBookmark */ = 8EA6C81812A691E000E0C43B /* PBXTextBookmark */;
+			8EA6C85512A6A3B500E0C43B /* XCBuildMessageTextBookmark */ = 8EA6C85512A6A3B500E0C43B /* XCBuildMessageTextBookmark */;
+			8EA6C85612A6A3B500E0C43B /* PBXTextBookmark */ = 8EA6C85612A6A3B500E0C43B /* PBXTextBookmark */;
+			8EA6C85712A6A3DE00E0C43B /* PBXTextBookmark */ = 8EA6C85712A6A3DE00E0C43B /* PBXTextBookmark */;
+			8EA6C85812A6A3DE00E0C43B /* XCBuildMessageTextBookmark */ = 8EA6C85812A6A3DE00E0C43B /* XCBuildMessageTextBookmark */;
+			8EA6C85912A6A3DE00E0C43B /* PBXTextBookmark */ = 8EA6C85912A6A3DE00E0C43B /* PBXTextBookmark */;
+			8EA6C85C12A6A3E800E0C43B /* PBXTextBookmark */ = 8EA6C85C12A6A3E800E0C43B /* PBXTextBookmark */;
+			8EA6C85D12A6A3E800E0C43B /* PBXTextBookmark */ = 8EA6C85D12A6A3E800E0C43B /* PBXTextBookmark */;
+			8EA6C85E12A6A3E800E0C43B /* PBXTextBookmark */ = 8EA6C85E12A6A3E800E0C43B /* PBXTextBookmark */;
+			8EA6C85F12A6A3E800E0C43B /* PBXTextBookmark */ = 8EA6C85F12A6A3E800E0C43B /* PBXTextBookmark */;
+			8EA6C86012A6A3E800E0C43B /* PBXTextBookmark */ = 8EA6C86012A6A3E800E0C43B /* PBXTextBookmark */;
+			8EA6C86112A6A3E800E0C43B /* PBXTextBookmark */ = 8EA6C86112A6A3E800E0C43B /* PBXTextBookmark */;
+			8EA6C86212A6A3E800E0C43B /* PBXTextBookmark */ = 8EA6C86212A6A3E800E0C43B /* PBXTextBookmark */;
+			8EA6C86312A6A3E800E0C43B /* PBXTextBookmark */ = 8EA6C86312A6A3E800E0C43B /* PBXTextBookmark */;
+			8EA6C86412A6A3E800E0C43B /* PBXTextBookmark */ = 8EA6C86412A6A3E800E0C43B /* PBXTextBookmark */;
+			8EA6C86512A6A3E800E0C43B /* PBXTextBookmark */ = 8EA6C86512A6A3E800E0C43B /* PBXTextBookmark */;
+			8EA6C86612A6A3E800E0C43B /* PBXTextBookmark */ = 8EA6C86612A6A3E800E0C43B /* PBXTextBookmark */;
+			8EA6C86712A6A3E800E0C43B /* PBXTextBookmark */ = 8EA6C86712A6A3E800E0C43B /* PBXTextBookmark */;
+			8EA6C86812A6A3E800E0C43B /* PBXTextBookmark */ = 8EA6C86812A6A3E800E0C43B /* PBXTextBookmark */;
+			8EA6C86912A6A3E800E0C43B /* PBXTextBookmark */ = 8EA6C86912A6A3E800E0C43B /* PBXTextBookmark */;
+			8EA6C86A12A6A3E800E0C43B /* PBXTextBookmark */ = 8EA6C86A12A6A3E800E0C43B /* PBXTextBookmark */;
+			8EA6C86B12A6A3E800E0C43B /* PBXTextBookmark */ = 8EA6C86B12A6A3E800E0C43B /* PBXTextBookmark */;
+			8EA6C86C12A6A3E800E0C43B /* PBXTextBookmark */ = 8EA6C86C12A6A3E800E0C43B /* PBXTextBookmark */;
+			8EA6C86D12A6A3E800E0C43B /* PBXTextBookmark */ = 8EA6C86D12A6A3E800E0C43B /* PBXTextBookmark */;
+			8EA6C86E12A6A3E800E0C43B /* PBXTextBookmark */ = 8EA6C86E12A6A3E800E0C43B /* PBXTextBookmark */;
+			8EA6C86F12A6A3E800E0C43B /* PBXTextBookmark */ = 8EA6C86F12A6A3E800E0C43B /* PBXTextBookmark */;
+			8EA6C87012A6A3E800E0C43B /* XCBuildMessageTextBookmark */ = 8EA6C87012A6A3E800E0C43B /* XCBuildMessageTextBookmark */;
+			8EA6C87112A6A3E800E0C43B /* PBXTextBookmark */ = 8EA6C87112A6A3E800E0C43B /* PBXTextBookmark */;
+			8EA6C87712A6A43000E0C43B /* PBXTextBookmark */ = 8EA6C87712A6A43000E0C43B /* PBXTextBookmark */;
+			8EA6C87912A6A43400E0C43B /* PBXTextBookmark */ = 8EA6C87912A6A43400E0C43B /* PBXTextBookmark */;
+			8EA6C87E12A6A43600E0C43B /* PBXTextBookmark */ = 8EA6C87E12A6A43600E0C43B /* PBXTextBookmark */;
+			8EA6C87F12A6A43600E0C43B /* PBXTextBookmark */ = 8EA6C87F12A6A43600E0C43B /* PBXTextBookmark */;
+			8EA6C88012A6A43600E0C43B /* PBXTextBookmark */ = 8EA6C88012A6A43600E0C43B /* PBXTextBookmark */;
+			8EA6C88212A6A44400E0C43B /* PBXTextBookmark */ = 8EA6C88212A6A44400E0C43B /* PBXTextBookmark */;
+			8EA6C88312A6A44500E0C43B /* PBXTextBookmark */ = 8EA6C88312A6A44500E0C43B /* PBXTextBookmark */;
 			8EAFF15512A005B900C9BCA3 = 8EAFF15512A005B900C9BCA3 /* PBXTextBookmark */;
 			8ED0D55912A55CFD00B3F33D = 8ED0D55912A55CFD00B3F33D /* PBXTextBookmark */;
 			8ED0D5E812A5AACE00B3F33D = 8ED0D5E812A5AACE00B3F33D /* PBXTextBookmark */;
@@ -205,16 +241,16 @@
 	};
 	4B819D1912A561FE005C740F /* MainNavigationController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1117, 619}}";
-			sepNavSelRange = "{718, 77}";
+			sepNavIntBoundsRect = "{{0, 0}, {1098, 588}}";
+			sepNavSelRange = "{983, 0}";
 			sepNavVisRange = "{0, 983}";
 		};
 	};
 	4B819D1A12A561FE005C740F /* MainNavigationController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1139, 1365}}";
-			sepNavSelRange = "{969, 0}";
-			sepNavVisRange = "{50, 1356}";
+			sepNavIntBoundsRect = "{{0, 0}, {1139, 1430}}";
+			sepNavSelRange = "{687, 32}";
+			sepNavVisRange = "{50, 1284}";
 		};
 	};
 	4B819D1E12A564C2005C740F /* ServerLogin.h */ = {
@@ -227,36 +263,36 @@
 	};
 	4B819D1F12A564C2005C740F /* ServerLogin.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1125, 1118}}";
-			sepNavSelRange = "{2952, 4}";
-			sepNavVisRange = "{1305, 1698}";
+			sepNavIntBoundsRect = "{{0, 0}, {1125, 1131}}";
+			sepNavSelRange = "{1131, 0}";
+			sepNavVisRange = "{874, 1963}";
 			sepNavWindowFrame = "{{15, 20}, {803, 853}}";
 		};
 	};
 	4B819D4812A5706E005C740F /* RegisterLoginViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1117, 613}}";
-			sepNavSelRange = "{332, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1098, 588}}";
+			sepNavSelRange = "{278, 24}";
 			sepNavVisRange = "{0, 1171}";
 		};
 	};
 	4B819D4912A5706E005C740F /* RegisterLoginViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1489, 2041}}";
-			sepNavSelRange = "{1071, 0}";
-			sepNavVisRange = "{49, 1396}";
+			sepNavIntBoundsRect = "{{0, 0}, {1489, 2054}}";
+			sepNavSelRange = "{617, 47}";
+			sepNavVisRange = "{0, 1216}";
 		};
 	};
 	4B819E4612A5932D005C740F /* UIViewDelegate.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1117, 619}}";
-			sepNavSelRange = "{0, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1098, 588}}";
+			sepNavSelRange = "{240, 89}";
 			sepNavVisRange = "{0, 335}";
 		};
 	};
 	4B819E4712A593D7005C740F /* UIViewControllerDelegate.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1117, 619}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1098, 588}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 359}";
 		};
@@ -270,9 +306,10 @@
 	};
 	4B819E9412A59E55005C740F /* RegisterViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1113, 2210}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1113, 2197}}";
 			sepNavSelRange = "{984, 0}";
-			sepNavVisRange = "{670, 747}";
+			sepNavVisRange = "{672, 682}";
+			sepNavWindowFrame = "{{15, 4}, {1002, 874}}";
 		};
 	};
 	4BA6453F12A13F5400B03B82 /* Course.h */ = {
@@ -471,7 +508,7 @@
 		fRef = FA381CA012A00563008E06D0 /* LoginViewController.h */;
 		name = "LoginViewController.h: 32";
 		rLen = 0;
-		rLoc = 848;
+		rLoc = 969;
 		rType = 0;
 		vrLen = 870;
 		vrLoc = 0;
@@ -481,7 +518,7 @@
 		fRef = FA381CA912A00593008E06D0 /* LoginView.h */;
 		name = "LoginView.h: 23";
 		rLen = 0;
-		rLoc = 423;
+		rLoc = 518;
 		rType = 0;
 		vrLen = 1061;
 		vrLoc = 0;
@@ -491,7 +528,7 @@
 		fRef = FA381CA112A00563008E06D0 /* LoginViewController.m */;
 		name = "LoginViewController.m: 47";
 		rLen = 86;
-		rLoc = 1215;
+		rLoc = 1239;
 		rType = 0;
 		vrLen = 1620;
 		vrLoc = 1064;
@@ -521,7 +558,7 @@
 		fRef = FA381CAA12A00593008E06D0 /* LoginView.m */;
 		name = "LoginView.m: 80";
 		rLen = 36;
-		rLoc = 3064;
+		rLoc = 3086;
 		rType = 0;
 		vrLen = 2006;
 		vrLoc = 1652;
@@ -705,6 +742,376 @@
 		rType = 0;
 		vrLen = 1820;
 		vrLoc = 1132;
+	};
+	8EA6C85512A6A3B500E0C43B /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Cannot find protocol declaration for 'UIViewDelegate'";
+		fRef = FA381CA912A00593008E06D0 /* LoginView.h */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 17;
+		rType = 1;
+	};
+	8EA6C85612A6A3B500E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA381CA912A00593008E06D0 /* LoginView.h */;
+		name = "LoginView.h: 18";
+		rLen = 0;
+		rLoc = 302;
+		rType = 0;
+		vrLen = 497;
+		vrLoc = 0;
+	};
+	8EA6C85712A6A3DE00E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA381CA912A00593008E06D0 /* LoginView.h */;
+		name = "LoginView.h: 18";
+		rLen = 0;
+		rLoc = 302;
+		rType = 0;
+		vrLen = 497;
+		vrLoc = 0;
+	};
+	8EA6C85812A6A3DE00E0C43B /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Class 'RegisterViewController' does not implement the 'UIScrollViewDelegate' protocol";
+		fRef = 4B819E9412A59E55005C740F /* RegisterViewController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 39;
+		rType = 1;
+	};
+	8EA6C85912A6A3DE00E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4B819E9412A59E55005C740F /* RegisterViewController.m */;
+		name = "RegisterViewController.m: 40";
+		rLen = 0;
+		rLoc = 984;
+		rType = 0;
+		vrLen = 750;
+		vrLoc = 672;
+	};
+	8EA6C85C12A6A3E800E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8E30CB4A12A5C43100BCA1B9 /* LoginTests.m */;
+		name = "LoginTests.m: 17";
+		rLen = 36;
+		rLoc = 227;
+		rType = 0;
+		vrLen = 362;
+		vrLoc = 0;
+	};
+	8EA6C85D12A6A3E800E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4B819D1E12A564C2005C740F /* ServerLogin.h */;
+		name = "ServerLogin.h: 25";
+		rLen = 4;
+		rLoc = 497;
+		rType = 0;
+		vrLen = 733;
+		vrLoc = 0;
+	};
+	8EA6C85E12A6A3E800E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8EBD4CEA12A47164008D9B56 /* Wizard.m */;
+		name = "Wizard.m: 48";
+		rLen = 16;
+		rLoc = 1196;
+		rType = 0;
+		vrLen = 1149;
+		vrLoc = 73;
+	};
+	8EA6C85F12A6A3E800E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4B819D1F12A564C2005C740F /* ServerLogin.m */;
+		name = "ServerLogin.m: 34";
+		rLen = 0;
+		rLoc = 1131;
+		rType = 0;
+		vrLen = 1963;
+		vrLoc = 874;
+	};
+	8EA6C86012A6A3E800E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA381CA312A0057A008E06D0 /* RegisterLoginView.h */;
+		name = "RegisterLoginView.h: 26";
+		rLen = 58;
+		rLoc = 586;
+		rType = 0;
+		vrLen = 740;
+		vrLoc = 0;
+	};
+	8EA6C86112A6A3E800E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4B819E4712A593D7005C740F /* UIViewControllerDelegate.h */;
+		name = "UIViewControllerDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 359;
+		vrLoc = 0;
+	};
+	8EA6C86212A6A3E800E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4B819E4612A5932D005C740F /* UIViewDelegate.h */;
+		name = "UIViewDelegate.h: 14";
+		rLen = 89;
+		rLoc = 240;
+		rType = 0;
+		vrLen = 335;
+		vrLoc = 0;
+	};
+	8EA6C86312A6A3E800E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4B819D1912A561FE005C740F /* MainNavigationController.h */;
+		name = "MainNavigationController.h: 30";
+		rLen = 0;
+		rLoc = 983;
+		rType = 0;
+		vrLen = 983;
+		vrLoc = 0;
+	};
+	8EA6C86412A6A3E800E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* TUGuideAppDelegate.h */;
+		name = "TUGuideAppDelegate.h: 13";
+		rLen = 30;
+		rLoc = 310;
+		rType = 0;
+		vrLen = 562;
+		vrLoc = 0;
+	};
+	8EA6C86512A6A3E800E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TUGuideAppDelegate.m */;
+		name = "TUGuideAppDelegate.m: 31";
+		rLen = 0;
+		rLoc = 774;
+		rType = 0;
+		vrLen = 1338;
+		vrLoc = 43;
+	};
+	8EA6C86612A6A3E800E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4B819D1A12A561FE005C740F /* MainNavigationController.m */;
+		name = "MainNavigationController.m: 31";
+		rLen = 32;
+		rLoc = 687;
+		rType = 0;
+		vrLen = 1284;
+		vrLoc = 50;
+	};
+	8EA6C86712A6A3E800E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA381CAA12A00593008E06D0 /* LoginView.m */;
+		name = "LoginView.m: 70";
+		rLen = 4;
+		rLoc = 2632;
+		rType = 0;
+		vrLen = 1413;
+		vrLoc = 3288;
+	};
+	8EA6C86812A6A3E800E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4B819D4912A5706E005C740F /* RegisterLoginViewController.m */;
+		name = "RegisterLoginViewController.m: 27";
+		rLen = 47;
+		rLoc = 617;
+		rType = 0;
+		vrLen = 1216;
+		vrLoc = 0;
+	};
+	8EA6C86912A6A3E800E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA381CA012A00563008E06D0 /* LoginViewController.h */;
+		name = "LoginViewController.h: 15";
+		rLen = 0;
+		rLoc = 321;
+		rType = 0;
+		vrLen = 1142;
+		vrLoc = 0;
+	};
+	8EA6C86A12A6A3E800E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4B819D4812A5706E005C740F /* RegisterLoginViewController.h */;
+		name = "RegisterLoginViewController.h: 15";
+		rLen = 24;
+		rLoc = 278;
+		rType = 0;
+		vrLen = 1171;
+		vrLoc = 0;
+	};
+	8EA6C86B12A6A3E800E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA381CA112A00563008E06D0 /* LoginViewController.m */;
+		name = "LoginViewController.m: 20";
+		rLen = 0;
+		rLoc = 383;
+		rType = 0;
+		vrLen = 1316;
+		vrLoc = 3085;
+	};
+	8EA6C86C12A6A3E800E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA381CA412A0057A008E06D0 /* RegisterLoginView.m */;
+		name = "RegisterLoginView.m: 17";
+		rLen = 21;
+		rLoc = 280;
+		rType = 0;
+		vrLen = 1474;
+		vrLoc = 0;
+	};
+	8EA6C86D12A6A3E800E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA381CB012A005D2008E06D0 /* RegisterView.m */;
+		name = "RegisterView.m: 112";
+		rLen = 0;
+		rLoc = 4685;
+		rType = 0;
+		vrLen = 1118;
+		vrLoc = 0;
+	};
+	8EA6C86E12A6A3E800E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA381CAF12A005D2008E06D0 /* RegisterView.h */;
+		name = "RegisterView.h: 15";
+		rLen = 0;
+		rLoc = 248;
+		rType = 0;
+		vrLen = 1130;
+		vrLoc = 0;
+	};
+	8EA6C86F12A6A3E800E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA381CA912A00593008E06D0 /* LoginView.h */;
+		name = "LoginView.h: 18";
+		rLen = 0;
+		rLoc = 302;
+		rType = 0;
+		vrLen = 1209;
+		vrLoc = 0;
+	};
+	8EA6C87012A6A3E800E0C43B /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Class 'RegisterViewController' does not implement the 'UIScrollViewDelegate' protocol";
+		fRef = 4B819E9412A59E55005C740F /* RegisterViewController.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 39;
+		rType = 1;
+	};
+	8EA6C87112A6A3E800E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4B819E9412A59E55005C740F /* RegisterViewController.m */;
+		name = "RegisterViewController.m: 32";
+		rLen = 0;
+		rLoc = 675;
+		rType = 0;
+		vrLen = 1179;
+		vrLoc = 7;
+	};
+	8EA6C87412A6A42C00E0C43B /* LoginView.m:92 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = FA381CAA12A00593008E06D0 /* LoginView.m */;
+		functionName = "-exitTextField:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 92;
+		location = TUGuide;
+		modificationTime = 312910904.09407;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	8EA6C87612A6A43000E0C43B /* LoginView.m:96 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = FA381CAA12A00593008E06D0 /* LoginView.m */;
+		functionName = "-enterTextField:";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 96;
+		location = TUGuide;
+		modificationTime = 312910907.297646;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	8EA6C87712A6A43000E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA381CAA12A00593008E06D0 /* LoginView.m */;
+		rLen = 1;
+		rLoc = 95;
+		rType = 1;
+	};
+	8EA6C87912A6A43400E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4B819E9412A59E55005C740F /* RegisterViewController.m */;
+		name = "RegisterViewController.m: 40";
+		rLen = 0;
+		rLoc = 984;
+		rType = 0;
+		vrLen = 750;
+		vrLoc = 672;
+	};
+	8EA6C87E12A6A43600E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4B819E9412A59E55005C740F /* RegisterViewController.m */;
+		name = "RegisterViewController.m: 32";
+		rLen = 0;
+		rLoc = 675;
+		rType = 0;
+		vrLen = 1181;
+		vrLoc = 7;
+	};
+	8EA6C87F12A6A43600E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA381CA912A00593008E06D0 /* LoginView.h */;
+		name = "LoginView.h: 18";
+		rLen = 0;
+		rLoc = 302;
+		rType = 0;
+		vrLen = 1209;
+		vrLoc = 0;
+	};
+	8EA6C88012A6A43600E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA381CAA12A00593008E06D0 /* LoginView.m */;
+		name = "LoginView.m: 96";
+		rLen = 83;
+		rLoc = 3530;
+		rType = 0;
+		vrLen = 1771;
+		vrLoc = 2305;
+	};
+	8EA6C88212A6A44400E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4B819E9412A59E55005C740F /* RegisterViewController.m */;
+		name = "RegisterViewController.m: 40";
+		rLen = 0;
+		rLoc = 984;
+		rType = 0;
+		vrLen = 682;
+		vrLoc = 672;
+	};
+	8EA6C88312A6A44500E0C43B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA381CAA12A00593008E06D0 /* LoginView.m */;
+		name = "LoginView.m: 96";
+		rLen = 83;
+		rLoc = 3530;
+		rType = 0;
+		vrLen = 1771;
+		vrLoc = 2305;
 	};
 	8EAFF11012A0054D00C9BCA3 /* Tests */ = {
 		activeExec = 0;
@@ -1013,7 +1420,7 @@
 		fRef = 4B819D1A12A561FE005C740F /* MainNavigationController.m */;
 		name = "MainNavigationController.m: 37";
 		rLen = 0;
-		rLoc = 969;
+		rLoc = 972;
 		rType = 0;
 		vrLen = 1289;
 		vrLoc = 1526;
@@ -1030,58 +1437,59 @@
 	};
 	FA381CA012A00563008E06D0 /* LoginViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1117, 616}}";
-			sepNavSelRange = "{848, 0}";
-			sepNavVisRange = "{0, 870}";
+			sepNavIntBoundsRect = "{{0, 0}, {1098, 588}}";
+			sepNavSelRange = "{321, 0}";
+			sepNavVisRange = "{0, 1142}";
 		};
 	};
 	FA381CA112A00563008E06D0 /* LoginViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1117, 1612}}";
-			sepNavSelRange = "{1215, 86}";
-			sepNavVisRange = "{1064, 1620}";
+			sepNavIntBoundsRect = "{{0, 0}, {1098, 1846}}";
+			sepNavSelRange = "{383, 0}";
+			sepNavVisRange = "{3085, 1316}";
 		};
 	};
 	FA381CA312A0057A008E06D0 /* RegisterLoginView.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1117, 594}}";
-			sepNavSelRange = "{646, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1117, 588}}";
+			sepNavSelRange = "{586, 58}";
 			sepNavVisRange = "{0, 740}";
 		};
 	};
 	FA381CA412A0057A008E06D0 /* RegisterLoginView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1117, 1365}}";
-			sepNavSelRange = "{3033, 0}";
-			sepNavVisRange = "{1839, 1506}";
+			sepNavIntBoundsRect = "{{0, 0}, {1098, 884}}";
+			sepNavSelRange = "{280, 21}";
+			sepNavVisRange = "{0, 1474}";
 		};
 	};
 	FA381CA912A00593008E06D0 /* LoginView.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1117, 616}}";
-			sepNavSelRange = "{423, 0}";
-			sepNavVisRange = "{0, 1061}";
+			sepNavIntBoundsRect = "{{0, 0}, {1098, 637}}";
+			sepNavSelRange = "{302, 0}";
+			sepNavVisRange = "{0, 1209}";
+			sepNavWindowFrame = "{{15, 4}, {1002, 874}}";
 		};
 	};
 	FA381CAA12A00593008E06D0 /* LoginView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1117, 2106}}";
-			sepNavSelRange = "{3064, 36}";
-			sepNavVisRange = "{3216, 1638}";
+			sepNavIntBoundsRect = "{{0, 0}, {1098, 1833}}";
+			sepNavSelRange = "{3530, 83}";
+			sepNavVisRange = "{2305, 1771}";
 		};
 	};
 	FA381CAF12A005D2008E06D0 /* RegisterView.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1117, 616}}";
-			sepNavSelRange = "{203, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1098, 598}}";
+			sepNavSelRange = "{248, 0}";
 			sepNavVisRange = "{0, 1130}";
 		};
 	};
 	FA381CB012A005D2008E06D0 /* RegisterView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1265, 1963}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1265, 2171}}";
 			sepNavSelRange = "{4685, 0}";
-			sepNavVisRange = "{3657, 1775}";
+			sepNavVisRange = "{0, 1118}";
 		};
 	};
 	FAD4AAA512A0CCD000817DCA /* User.h */ = {

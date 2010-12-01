@@ -11,6 +11,8 @@
 #import "LoginView.h"
 #import "RegisterLoginView.h"
 #import "Wizard.h"
+#import "UIViewControllerDelegate.h"
+#import "UIViewDelegate.h"
 
 
 @interface LoginViewController : UIViewController <UITextFieldDelegate,UIViewDelegate>{
@@ -22,6 +24,7 @@
 	UITextField *activeField;
 	Boolean keyboardIsShown;
 	Wizard * wizard;
+	id <UIViewControllerDelegate>  delegate;
 }
 
 @property (nonatomic, retain) RegisterLoginView *registerLoginView;
@@ -30,6 +33,8 @@
 @property (nonatomic, retain) UIScrollView *scrollView;
 @property (nonatomic, retain) UITextField *activeField;
 @property (nonatomic, retain) Wizard *wizard;
+
+@property (assign) id <UIViewControllerDelegate> delegate;
 
 -(void)actionButton:(UIView *)requestor command:(NSString *)cmd message:(NSString *)msg; 
 

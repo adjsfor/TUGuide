@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "User.h"
 #import "ServerLogin.h"
+#import "UIViewControllerDelegate.h"
+#import "UIViewDelegate.h"
 
 
 @interface LoginView : UIScrollView {

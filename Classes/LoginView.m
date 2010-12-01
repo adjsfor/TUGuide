@@ -89,11 +89,11 @@
 }
 
 - (IBAction)exitTextField:(UITextField *)sender{
-	[delegate actionButton:self command:@"enterTextField" message:@"textfiel entered"];
+	[delegate actionButton:self command:@"exitTextField" message:@"textfiel entered"];
 }
 
 - (IBAction)enterTextField:(UITextField *)sender{
-	[delegate actionButton:self command:@"exitTextField" message:@"textfiel exited"];
+	[delegate actionButton:self command:@"enterTextField" message:@"textfiel exited"];
 }
 
 -(IBAction)sendButtonAction:(id)sender{

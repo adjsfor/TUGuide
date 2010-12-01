@@ -50,6 +50,46 @@
 	dataConnection=[[NSURLConnection alloc] initWithRequest:request delegate:self];
 }
 
+-(void) loginUser2WithScreen_name:(NSString *)screen_name 
+					withPassword:(NSString *)password{
+	/*
+	NSString *post = (@"screen_name=%s&password=%s", screen_name, password);
+	post = [self urlEncodeValue:post];
+	NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+	
+	NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
+	
+	NSMutableURLRequest *request = [[[NSMutableURLRequest alloc] init] autorelease];
+	[request setURL:[NSURL URLWithString:@"http://hgmm.webhop.net:56789/User/login"]];
+	[request setHTTPMethod:@"POST"];
+	[request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+	[request setValue:@"plain/text" forHTTPHeaderField:@"Content-Type"];
+	[request setHTTPBody:postData];
+	*/
+	NSURL *url = [NSURL URLWithString:@"http://hgmm.webhop.net:56789/User/login"];
+	
+	NSMutableURLRequest *loginRequest = [NSMutableURLRequest requestWithURL:url];
+	
+	[loginRequest setHTTPMethod:@"POST"];
+	
+	//set headers
+	
+	[loginRequest addValue:@"Content-Type" forHTTPHeaderField:@"application/x-www-form-urlencoded"];
+	
+	[loginRequest addValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+	
+	NSString *requestBody = [[NSString alloc]
+							 
+							 initWithFormat:@"screen_name=%@&amp;password=%@",
+							 
+							 screen_name, password];
+	
+	[loginRequest setHTTPBody:[requestBody dataUsingEncoding:NSASCIIStringEncoding]];
+	
+	
+	dataConnection=[[NSURLConnection alloc] initWithRequest:loginRequest delegate:self];
+}
+
 - (NSString *)urlEncodeValue:(NSString *)str
 {
 	NSString *result = (NSString *) CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)str, NULL, CFSTR("?=&+"), kCFStringEncodingUTF8);

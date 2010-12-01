@@ -121,18 +121,8 @@
 }
 
 - (IBAction)enterTextField:(UITextField *)sender{
-	// get the size of the keyboard
-	int keybordSize = keyboardHight;
-	if(!keybordSize) keybordSize=216;
-	
-    // If active text field is hidden by keyboard, scroll it so it's visible
-    // Your application might not need or want this behavior.
-    CGRect aRect = self.frame;
-    aRect.size.height -= keybordSize;
-    if (!CGRectContainsPoint(aRect, sender.frame.origin) ) {
-		CGPoint scrollPoint = CGPointMake(0.0, sender.frame.origin.y-keybordSize);
-		[self setContentOffset:scrollPoint animated:YES];
-	}
+	CGPoint scrollPoint = CGPointMake(0.0, 190.0);
+	[self setContentOffset:scrollPoint animated:YES];
 }
 
 - (void)setKeybordHight:(NSNotification*)aNotification

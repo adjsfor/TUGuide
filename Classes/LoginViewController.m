@@ -119,8 +119,11 @@
 }
 
 -(void)actionButton:(UIView *)requestor command:(NSString *)cmd message:(NSString *)msg{
+	/*
+	 
+	 */
 	if ([cmd isEqual:@"enterTextField"]) {
-		 CGPoint scrollPoint = CGPointMake(0.0, 150.0);
+		 CGPoint scrollPoint = CGPointMake(0.0, 210.0);
 		 [self.loginView setContentOffset:scrollPoint animated:YES];
 	}else if ([cmd isEqual:@"exitTextField"]) {
 		[self.loginView.emailField resignFirstResponder];

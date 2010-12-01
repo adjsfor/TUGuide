@@ -25,6 +25,9 @@
 -(void) loginUserWithScreen_name:(NSString *)screen_name 
 					withPassword:(NSString *)password;
 
+-(void) loginUser2WithScreen_name:(NSString *)screen_name 
+					withPassword:(NSString *)password;
+
 - (NSString *)urlEncodeValue:(NSString *)str;
 
 - (void)connection:(NSURLConnection *)connection

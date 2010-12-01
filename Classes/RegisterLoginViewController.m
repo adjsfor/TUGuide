@@ -39,7 +39,6 @@
 	[self.navigationController setNavigationBarHidden:NO];
 	self.registerLoginView.delegate = self; // set the delegation
 	
-	
 	//wizard = [[Wizard alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
 	//self.view = wizard;
 	

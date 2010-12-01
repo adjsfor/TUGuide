@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "LoginView.h"
+#import "ServerLogin.h"
 
 
 @interface RegisterView : UIScrollView {
@@ -22,10 +23,12 @@
 	UILabel *textLabel;
 	UILabel *textLabel2;
 	User *user;
+	ServerLogin *server;
 	
 }
 
 @property (nonatomic) int keyboardHight;
+@property (nonatomic, retain) ServerLogin *server;
 @property (nonatomic, retain) UIButton *sendButton;
 @property (nonatomic, retain) UIImageView *bigLogo;
 @property (nonatomic, retain) UITextField *emailField;

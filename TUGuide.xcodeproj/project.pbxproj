@@ -20,6 +20,8 @@
 		4BA645BE12A154B600B03B82 /* Building.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA645BD12A154B600B03B82 /* Building.m */; };
 		4BA645FE12A15B7F00B03B82 /* Mensa.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA645FD12A15B7F00B03B82 /* Mensa.m */; };
 		4BA6462512A1633E00B03B82 /* MensaMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA6462412A1633E00B03B82 /* MensaMenu.m */; };
+		8E30CB4B12A5C43100BCA1B9 /* LoginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E30CB4A12A5C43100BCA1B9 /* LoginTests.m */; };
+		8E30CBAA12A66E9B00BCA1B9 /* ServerLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B819D1F12A564C2005C740F /* ServerLogin.m */; };
 		8E8D59C112A143C40096E52C /* Announcement.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D59C012A143C40096E52C /* Announcement.m */; };
 		8E8D59DC12A14B820096E52C /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D59DB12A14B820096E52C /* Friend.m */; };
 		8E8D59DF12A14C900096E52C /* Lecture.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D59DE12A14C900096E52C /* Lecture.m */; };
@@ -76,6 +78,8 @@
 		4BA6462312A1633E00B03B82 /* MensaMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaMenu.h; sourceTree = "<group>"; };
 		4BA6462412A1633E00B03B82 /* MensaMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaMenu.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* TUGuide-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TUGuide-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		8E30CB4912A5C43100BCA1B9 /* LoginTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginTests.h; sourceTree = "<group>"; };
+		8E30CB4A12A5C43100BCA1B9 /* LoginTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginTests.m; sourceTree = "<group>"; };
 		8E8D59BF12A143C40096E52C /* Announcement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Announcement.h; sourceTree = "<group>"; };
 		8E8D59C012A143C40096E52C /* Announcement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Announcement.m; sourceTree = "<group>"; };
 		8E8D59DA12A14B820096E52C /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friend.h; sourceTree = "<group>"; };
@@ -236,6 +240,8 @@
 			children = (
 				8EAFF11812A0057300C9BCA3 /* LogicTests.h */,
 				8EAFF11912A0057300C9BCA3 /* LogicTests.m */,
+				8E30CB4912A5C43100BCA1B9 /* LoginTests.h */,
+				8E30CB4A12A5C43100BCA1B9 /* LoginTests.m */,
 			);
 			name = LogicTests;
 			sourceTree = "<group>";
@@ -441,12 +447,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E30CBAA12A66E9B00BCA1B9 /* ServerLogin.m in Sources */,
 				8ED0D45712A55C5D00B3F33D /* LoginView.m in Sources */,
 				8ED0D45F12A55C5D00B3F33D /* RegisterLoginView.m in Sources */,
 				8ED0D46112A55C5D00B3F33D /* RegisterView.m in Sources */,
 				8ED0D46712A55C5D00B3F33D /* User.m in Sources */,
 				8ED0D46912A55C5D00B3F33D /* Wizard.m in Sources */,
 				8EAFF11A12A0057300C9BCA3 /* LogicTests.m in Sources */,
+				8E30CB4B12A5C43100BCA1B9 /* LoginTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

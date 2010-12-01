@@ -20,6 +20,7 @@
 @synthesize textLabel2;
 @synthesize saveLogin;
 @synthesize user;
+@synthesize server;
 
 
 - (id)initWithFrame:(CGRect)frame {
@@ -75,6 +76,8 @@
 		
 		saveLogin = [[UISwitch alloc]initWithFrame:CGRectMake(170, 330, 30, 30)];
 		[self addSubview:saveLogin];
+		
+		server = [[ServerLogin alloc] init];
     }
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self 
@@ -118,6 +121,9 @@
 		NSString *strUserName = [prefs stringForKey:@"name_preference"];
 		NSLog(@"Username :%s", strUserName);
 	}
+	
+	[server loginUserWithScreen_name:[emailField text] withPassword:[passwordField text]];
+	 
 }
 
 - (void)setKeybordHight:(NSNotification*)aNotification

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "User.h"
+#import "ServerLogin.h"
 
 
 @interface LoginView : UIScrollView {
@@ -21,6 +22,7 @@
 	UILabel *textLabel2;
 	UISwitch *saveLogin;
 	User *user;
+	ServerLogin *server;
 	
 }
 
@@ -33,6 +35,7 @@
 @property (nonatomic, retain) UILabel *textLabel2;
 @property (nonatomic, retain) UISwitch *saveLogin;
 @property (nonatomic, retain) User *user;
+@property (nonatomic, retain) ServerLogin *server;
 
 - (IBAction)sendButtonAction:(id)sender;
 - (IBAction)userDoneEnteringText:(id)sender;

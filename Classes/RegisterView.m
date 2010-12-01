@@ -21,6 +21,7 @@
 @synthesize textLabel;
 @synthesize textLabel2;
 @synthesize user;
+@synthesize server;
 
 
 - (id)initWithFrame:(CGRect)frame {
@@ -86,6 +87,8 @@
 		textLabel2.font = [UIFont fontWithName:@"Helvetica" size:11];  
 		[textLabel2 setText:@"Your Username and Email Address will be public"];
 		[self addSubview:textLabel2];
+		
+		server = [[ServerLogin alloc] init];
     }
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self 
@@ -102,19 +105,13 @@
 	if ([[passwordField text]isEqualToString:[passwordField2 text]]) {
 		user = [[User alloc] initWithArguments:[emailField text] withPassword:[passwordField text] withScreenName:[usernameField text]];
 		
-		[self setFrame:CGRectMake( 0.0f, 0.0f, 320.0f, 480.0f)]; //notice this is OFF screen!
-		[UIView beginAnimations:@"animatedLoginView" context:nil];
-		[UIView setAnimationDuration:0.5];
-		[self setFrame:CGRectMake( 320.0f, 0.0f, 320.0f, 480.0f)]; //notice this is ON screen!
-		[UIView commitAnimations];
-		
+		[server createUserWithScreen_name:[usernameField text] withEmail:[emailField text] withPassword:[passwordField text]];
 	}else {
 		UIAlertView *someError = [[UIAlertView alloc] initWithTitle: @"Error" message: @"Passwords need to match!" delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
 		[someError show];
 		[someError release];
-		//[passwordField setText:@"t"];
-		//[passwordField2 setText:@"t"];
 	}
+	
 }
 
 - (IBAction)exitTextField:(UITextField *)sender{

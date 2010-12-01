@@ -110,7 +110,7 @@
 		NSLog(@"Username :%s", strUserName);
 	}
 	
-	[server loginUserWithScreen_name:[emailField text] withPassword:[passwordField text]];
+	[server loginUser2WithScreen_name:[emailField text] withPassword:[passwordField text]];
 	 
 }
 

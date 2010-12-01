@@ -78,16 +78,33 @@
 	
 	[loginRequest addValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
 	
-	NSString *requestBody = [[NSString alloc]
+	/*NSString *requestBody = [[NSString alloc]
 							 
 							 initWithFormat:@"screen_name=%@&amp;password=%@",
+							 
+							 screen_name, password];
+	 */
+	NSString *requestBody = [[NSString alloc]
+							 
+							 initWithFormat:@"screen_name=%@&password=%@",
 							 
 							 screen_name, password];
 	
 	[loginRequest setHTTPBody:[requestBody dataUsingEncoding:NSASCIIStringEncoding]];
 	
 	
-	dataConnection=[[NSURLConnection alloc] initWithRequest:loginRequest delegate:self];
+	//dataConnection=[[NSURLConnection alloc] initWithRequest:loginRequest delegate:self];
+	
+	NSHTTPURLResponse *response = NULL;
+	
+	//NSData *responseData = [NSURLConnection sendSynchronousRequest:loginRequest returningResponse:response error:nil];
+	
+	NSData *responseData = [NSURLConnection sendSynchronousRequest:loginRequest returningResponse: response error:nil];
+	
+	NSString *responseDataString = [[NSString alloc] initWithData:responseData encoding:NSASCIIStringEncoding];
+	
+	NSLog(@"Response: %@", responseDataString);
+	
 }
 
 - (NSString *)urlEncodeValue:(NSString *)str

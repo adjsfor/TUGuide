@@ -32,12 +32,12 @@
 	// check if not null then initialize
 	if ([controller isEqual:@"Register"]) {
 		[self pushViewController:registerViewController animated:animated];
-		self.title = @"Register new account";
+		self.registerViewController.title = @"Register";
 	}
 	
 	if ([controller isEqual:@"Login"]) {
 		[self pushViewController:loginViewController animated:animated];
-		self.title = @"Login";
+		self.loginViewController.title = @"Login";
 	}
 	
 	[self setNavigationBarHidden:NO];

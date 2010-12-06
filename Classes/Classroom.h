@@ -16,8 +16,8 @@
 }
 
 @property (nonatomic) int classroomId;
-@property (nonatomic,assign) NSString *name;
-@property (nonatomic,assign) Building *building;
+@property (nonatomic,retain) NSString *name;
+@property (nonatomic,retain) Building *building;
 
 -(id)init;
 -(id)initWithArguments:(int)classroomId

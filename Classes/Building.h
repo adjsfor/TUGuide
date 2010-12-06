@@ -19,9 +19,9 @@
 
 
 @property (nonatomic) int buildingid;
-@property (nonatomic,assign) NSString *name;
-@property (nonatomic,assign) NSString *address;
-@property (nonatomic,assign) NSString *coordinates;
+@property (nonatomic,retain) NSString *name;
+@property (nonatomic,retain) NSString *address;
+@property (nonatomic,retain) NSString *coordinates;
 
 
 @end

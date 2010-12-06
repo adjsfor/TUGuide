@@ -16,8 +16,8 @@
 }
 
 @property (nonatomic) int courseId;
-@property (nonatomic,assign) NSString *name;
-@property (nonatomic,assign) NSString *courseNumber;
+@property (nonatomic,retain) NSString *name;
+@property (nonatomic,retain) NSString *courseNumber;
 
 -(id)init;
 

@@ -19,10 +19,10 @@
 }
 
 @property (nonatomic) int restaurantId;
-@property (nonatomic,assign) NSString *name;
-@property (nonatomic,assign) NSString *coordinates;
-@property (nonatomic,assign) NSString *address;
-@property (nonatomic,assign) NSString *openingHours;
+@property (nonatomic,retain) NSString *name;
+@property (nonatomic,retain) NSString *coordinates;
+@property (nonatomic,retain) NSString *address;
+@property (nonatomic,retain) NSString *openingHours;
 
 -(id)init;
 -(id)initWithArguments:(int)eateryId 

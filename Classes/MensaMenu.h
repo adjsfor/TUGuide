@@ -22,8 +22,8 @@
 
 @property (nonatomic) int mesnaMenuId;
 @property (nonatomic) int mensaId;
-@property (nonatomic,assign) NSDate *date;
-@property (nonatomic,assign) NSString *name;
-@property (nonatomic,assign) NSString *content;
+@property (nonatomic,retain) NSDate *date;
+@property (nonatomic,retain) NSString *name;
+@property (nonatomic,retain) NSString *content;
 
 @end

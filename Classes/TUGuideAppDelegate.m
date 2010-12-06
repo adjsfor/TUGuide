@@ -30,9 +30,13 @@
 
 -(void)passing:(NSObject *)requestor command:(NSString *)cmd message:(NSString *)msg{
 	
+	if ([cmd isEqual:@"openOrganizer"]) {
+		// only when im logged in, kill whole MainNavigationController baum, open new TabBarNavigationController
+	}
+	
 	if ([cmd isEqual:@"goRegister"]) {
 		// startRegisterEvent in ServerLogin, with data from fields
-		self.mainNavigationController.registerViewController.registerView.passwordField.text;
+		// self.mainNavigationController.registerViewController.registerView.passwordField.text; etc etc
 	}
 	
 	if ([cmd isEqual:@"goLogin"]) {
@@ -43,7 +47,7 @@
 		// startRegisterEvent
 	}
 	
-	NSLog(@"@%", requestor);
+	NSLog(@"%@", requestor);
 }
 
 

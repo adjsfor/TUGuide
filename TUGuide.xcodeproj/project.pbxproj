@@ -148,8 +148,8 @@
 				4B819D1D12A56433005C740F /* Server Access */,
 				4B819D1C12A56208005C740F /* NavigationControllers */,
 				FAD4AAA312A0CCBC00817DCA /* Models */,
-				FA381C9E12A0053F008E06D0 /* View */,
 				FA381C9D12A00532008E06D0 /* ViewController */,
+				FA381C9E12A0053F008E06D0 /* View */,
 				1D3623240D0F684500981E51 /* TUGuideAppDelegate.h */,
 				1D3623250D0F684500981E51 /* TUGuideAppDelegate.m */,
 			);
@@ -221,8 +221,8 @@
 		4B819D1D12A56433005C740F /* Server Access */ = {
 			isa = PBXGroup;
 			children = (
-				4B819D1E12A564C2005C740F /* ServerLogin.h */,
 				4B819D1F12A564C2005C740F /* ServerLogin.m */,
+				4B819D1E12A564C2005C740F /* ServerLogin.h */,
 			);
 			name = "Server Access";
 			sourceTree = "<group>";

@@ -9,8 +9,9 @@
 
 #import <UIKit/UIKit.h>
 #import "MainNavigationController.h"
+#import "MessagePassProtocol.h"
 
-@interface TUGuideAppDelegate : NSObject <UIApplicationDelegate,UINavigationControllerDelegate> {
+@interface TUGuideAppDelegate : NSObject <UIApplicationDelegate,UINavigationControllerDelegate,MessagePassProtocol> {
     UIWindow *window;
 	MainNavigationController *mainNavigationController;
 	

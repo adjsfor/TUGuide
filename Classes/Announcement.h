@@ -21,10 +21,10 @@
 
 @property (nonatomic) int announcementId;
 @property (nonatomic) bool announced;
-@property (nonatomic,assign) Lecture *lectureId;
+@property (nonatomic,retain) Lecture *lectureId;
 @property (nonatomic) int userId;
-@property (nonatomic,assign) NSString *message;
-@property (nonatomic,assign) NSString *report;
+@property (nonatomic,retain) NSString *message;
+@property (nonatomic,retain) NSString *report;
 
 
 -(id)init;

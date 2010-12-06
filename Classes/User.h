@@ -17,22 +17,22 @@
 	NSString *coordinates;
 	NSString *verificationString;
 	bool activated;
-	NSString *sessionId;
+	NSString *sessionId;retain
 	NSDate *lastLogin;
 	NSMutableArray *friendList;
 	
 }
 
 @property (nonatomic) int userId;
-@property (nonatomic,assign) NSString *screenName;
-@property (nonatomic,assign) NSString *email;
-@property (nonatomic,assign) NSString *password;
-@property (nonatomic,assign) NSString *coordinates;
-@property (nonatomic,assign) NSString *verificationString;
+@property (nonatomic,retain) NSString *screenName;
+@property (nonatomic,retain) NSString *email;
+@property (nonatomic,retain) NSString *password;
+@property (nonatomic,retain) NSString *coordinates;
+@property (nonatomic,retain) NSString *verificationString;
 @property (nonatomic) bool activated;
-@property (nonatomic,assign) NSString *sessionId;
-@property (nonatomic,assign) NSDate *lastLogin;
-@property (nonatomic,assign) NSMutableArray *friendList;
+@property (nonatomic,retain) NSString *sessionId;
+@property (nonatomic,retain) NSDate *lastLogin;
+@property (nonatomic,retain) NSMutableArray *friendList;
 
 -(id)init;
 -(id)initWithEmailAndPassword: (NSString *)em withPassword:(NSString *)pw;

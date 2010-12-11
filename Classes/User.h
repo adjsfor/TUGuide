@@ -17,7 +17,7 @@
 	NSString *coordinates;
 	NSString *verificationString;
 	bool activated;
-	NSString *sessionId;retain
+	NSString *sessionId;
 	NSDate *lastLogin;
 	NSMutableArray *friendList;
 	

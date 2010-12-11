@@ -25,6 +25,7 @@
 	loginView = [[LoginView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
 	self.view = loginView;
 	self.loginView.delegate = self;
+	[self.view.loginView.sendButton delegate:self];
 	//wizard = [[Wizard alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
 	//self.view = wizard;
 	

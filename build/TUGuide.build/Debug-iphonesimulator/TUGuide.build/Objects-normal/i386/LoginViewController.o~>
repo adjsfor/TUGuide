@@ -1,0 +1,2 @@
+/Users/MacBook/Documents/xCodeWorkspace/TUGuide/Classes/LoginViewController.m: In function '-[LoginViewController loadView]':
+/Users/MacBook/Documents/xCodeWorkspace/TUGuide/Classes/LoginViewController.m:28: error: request for member 'loginView' in something not a structure or union

@@ -334,7 +334,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>8E78163A12B911B600DF4A8B</string>
+										<string>8E78163C12B9154900DF4A8B</string>
 										<key>history</key>
 										<array>
 											<string>8EAFF15512A005B900C9BCA3</string>
@@ -588,13 +588,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>8E78163B12B911B600DF4A8B</string>
 		<string>8E7815DA12B8FF7C00DF4A8B</string>
 		<string>8E7815DB12B8FF7C00DF4A8B</string>
-		<string>8E4CD76B129FFF4D009A85C3</string>
-		<string>/Users/Takarashy/Desktop/TU-Guide/TUGuide.xcodeproj</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>8E4CD76B129FFF4D009A85C3</string>
+		<string>1CD10A99069EF8BA00B06720</string>
+		<string>/Users/Takarashy/Desktop/TU-Guide/TUGuide.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 59 1440 819 0 0 1440 878 </string>

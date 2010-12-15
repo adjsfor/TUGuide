@@ -267,10 +267,6 @@
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
-								<string>4B819E4512A59054005C740F</string>
-								<string>4B819D1D12A56433005C740F</string>
-								<string>4B819D1C12A56208005C740F</string>
-								<string>FA381C9E12A0053F008E06D0</string>
 								<string>29B97323FDCFA39411CA2CEA</string>
 								<string>19C28FACFE9D520D11CA2CBB</string>
 								<string>1C37FBAC04509CD000000102</string>
@@ -279,8 +275,6 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>8</integer>
-									<integer>7</integer>
 									<integer>2</integer>
 									<integer>0</integer>
 								</array>
@@ -321,7 +315,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ServerLogin.m</string>
+								<string>TUGuideAppDelegate.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -329,11 +323,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ServerLogin.m</string>
+										<string>TUGuideAppDelegate.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>4BC87FC412B8E74E00BDD7A2</string>
+										<string>4BC87FCF12B90F6000BDD7A2</string>
 										<key>history</key>
 										<array>
 											<string>4B54C4D712A018AF00091F5A</string>
@@ -376,12 +370,12 @@
 											<string>4BC87FA712B8E06400BDD7A2</string>
 											<string>4BC87FA812B8E06400BDD7A2</string>
 											<string>4BC87FA912B8E06400BDD7A2</string>
-											<string>4BC87FBE12B8E74E00BDD7A2</string>
-											<string>4BC87FBF12B8E74E00BDD7A2</string>
-											<string>4BC87FC012B8E74E00BDD7A2</string>
 											<string>4BC87FC112B8E74E00BDD7A2</string>
 											<string>4BC87FC212B8E74E00BDD7A2</string>
-											<string>4BC87FC312B8E74E00BDD7A2</string>
+											<string>4BC87FCB12B90F6000BDD7A2</string>
+											<string>4BC87FCC12B90F6000BDD7A2</string>
+											<string>4BC87FCD12B90F6000BDD7A2</string>
+											<string>4BC87FCE12B90F6000BDD7A2</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -580,9 +574,9 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>/Users/galic1987/Documents/TuGuide/TUGuide.xcodeproj</string>
 		<string>4BC70614129FE39C0086FBC8</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>/Users/galic1987/Documents/TuGuide/TUGuide.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 59 1280 719 0 0 1280 778 </string>
@@ -677,7 +671,7 @@
 			<key>WindowToolGUID</key>
 			<string>4BC70614129FE39C0086FBC8</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

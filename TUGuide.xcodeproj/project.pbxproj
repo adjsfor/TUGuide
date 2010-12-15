@@ -23,6 +23,7 @@
 		4BC87FD912B9103200BDD7A2 /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC87FD812B9103200BDD7A2 /* MainTabBarViewController.m */; };
 		8E30CB4B12A5C43100BCA1B9 /* LoginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E30CB4A12A5C43100BCA1B9 /* LoginTests.m */; };
 		8E30CBAA12A66E9B00BCA1B9 /* ServerLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B819D1F12A564C2005C740F /* ServerLogin.m */; };
+		8E78159612B8F69200DF4A8B /* ServerCreateUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E78159512B8F69200DF4A8B /* ServerCreateUser.m */; };
 		8E8D59C112A143C40096E52C /* Announcement.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D59C012A143C40096E52C /* Announcement.m */; };
 		8E8D59DC12A14B820096E52C /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D59DB12A14B820096E52C /* Friend.m */; };
 		8E8D59DF12A14C900096E52C /* Lecture.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D59DE12A14C900096E52C /* Lecture.m */; };
@@ -95,6 +96,9 @@
 		8D1107310486CEB800E47090 /* TUGuide-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TUGuide-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		8E30CB4912A5C43100BCA1B9 /* LoginTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginTests.h; sourceTree = "<group>"; };
 		8E30CB4A12A5C43100BCA1B9 /* LoginTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginTests.m; sourceTree = "<group>"; };
+		8E78155512B8F0C200DF4A8B /* UIElementDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIElementDelegate.h; sourceTree = "<group>"; };
+		8E78159412B8F69200DF4A8B /* ServerCreateUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerCreateUser.h; sourceTree = "<group>"; };
+		8E78159512B8F69200DF4A8B /* ServerCreateUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerCreateUser.m; sourceTree = "<group>"; };
 		8E8D59BF12A143C40096E52C /* Announcement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Announcement.h; sourceTree = "<group>"; };
 		8E8D59C012A143C40096E52C /* Announcement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Announcement.m; sourceTree = "<group>"; };
 		8E8D59DA12A14B820096E52C /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friend.h; sourceTree = "<group>"; };
@@ -265,6 +269,8 @@
 			children = (
 				4B819D1F12A564C2005C740F /* ServerLogin.m */,
 				4B819D1E12A564C2005C740F /* ServerLogin.h */,
+				8E78159412B8F69200DF4A8B /* ServerCreateUser.h */,
+				8E78159512B8F69200DF4A8B /* ServerCreateUser.m */,
 			);
 			name = "Server Access";
 			sourceTree = "<group>";
@@ -272,6 +278,7 @@
 		4B819E4512A59054005C740F /* Delegate Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				8E78155512B8F0C200DF4A8B /* UIElementDelegate.h */,
 				4B819E4612A5932D005C740F /* UIViewDelegate.h */,
 				4B819E4712A593D7005C740F /* UIViewControllerDelegate.h */,
 				4B819F5612A6A4D3005C740F /* MessagePassProtocol.h */,
@@ -509,7 +516,11 @@
 				FA6171D312B90A2300E0E2C7 /* MapViewController.m in Sources */,
 				FA61722512B90CAF00E0E2C7 /* tuAnnotation.m in Sources */,
 				FA61722612B90CAF00E0E2C7 /* annotationView.m in Sources */,
+<<<<<<< HEAD
 				4BC87FD912B9103200BDD7A2 /* MainTabBarViewController.m in Sources */,
+=======
+				8E78159612B8F69200DF4A8B /* ServerCreateUser.m in Sources */,
+>>>>>>> 0ff150118d91488e172d9b661e4254579341b2f0
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

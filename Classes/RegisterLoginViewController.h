@@ -16,7 +16,7 @@
 #import "UIViewDelegate.h"
 
 
-@interface RegisterLoginViewController : UIViewController <UIViewDelegate>{
+@interface RegisterLoginViewController : UIViewController <UIViewDelegate,UIScrollViewDelegate,UITableViewDelegate>{
 	
 	RegisterLoginView *registerLoginView;
 	RegisterView *registerView;

@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "LoginView.h"
 #import "ServerLogin.h"
-
+#import "UIViewDelegate.h"
 
 @interface RegisterView : UIScrollView {
 	
-	int keyboardHight;
+	id <UIViewDelegate> delegate;
 	UIButton *sendButton;
 	UIImageView *bigLogo;
 	UITextField *emailField;
@@ -22,13 +22,9 @@
 	UITextField *usernameField;
 	UILabel *textLabel;
 	UILabel *textLabel2;
-	User *user;
-	ServerLogin *server;
 	
 }
 
-@property (nonatomic) int keyboardHight;
-@property (nonatomic, retain) ServerLogin *server;
 @property (nonatomic, retain) UIButton *sendButton;
 @property (nonatomic, retain) UIImageView *bigLogo;
 @property (nonatomic, retain) UITextField *emailField;
@@ -37,9 +33,10 @@
 @property (nonatomic, retain) UITextField *passwordField2;
 @property (nonatomic, retain) UILabel *textLabel;
 @property (nonatomic, retain) UILabel *textLabel2;
-@property (nonatomic, retain) User *user;
+@property (nonatomic,assign) id <UIViewDelegate> delegate;
 
-- (IBAction)sendButtonAction:(id)sender;
-
+- (void)exitTextField:(UITextField *)sender;
+- (void)enterTextField:(UITextField *)sender;
+-(void)sendButtonAction:(id)sender;
 
 @end

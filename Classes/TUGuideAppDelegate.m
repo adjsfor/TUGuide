@@ -13,7 +13,8 @@
 @synthesize window;
 @synthesize mainNavigationController;
 @synthesize me;
-@synthesize server;
+@synthesize serverLogin;
+@synthesize serverCreate;
 
 
 #pragma mark -
@@ -40,16 +41,21 @@
 	
 	if ([cmd isEqual:@"registerSuccessful"]) {
 		// only when im logged in, kill whole MainNavigationController baum, open new TabBarNavigationController
+		UIAlertView *someError = [[UIAlertView alloc] initWithTitle: @"Info" message: @"Successfully registered" delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
+		[someError show];
+		[someError release];
+		[mainNavigationController switchToController:@"Login" animated:YES];
 	}
 	
 	if ([cmd isEqual:@"goRegister"]) {
 		// startRegisterEvent in ServerLogin, with data from fields
 		// self.mainNavigationController.registerViewController.registerView.passwordField.text; etc etc
+		[serverCreate createUserWithScreen_name:[mainNavigationController.registerViewController.registerView.usernameField text] withPassword:[mainNavigationController.registerViewController.registerView.passwordField text] withMail:[mainNavigationController.registerViewController.registerView.emailField text]];
 	}
 	
 	// startLoginEvent in ServerLogin with email und password
 	if ([cmd isEqual:@"goLogin"]) {
-		[server loginUserWithScreen_name:[mainNavigationController.loginViewController.loginView.emailField text] withPassword:[mainNavigationController.loginViewController.loginView.passwordField text]];
+		[serverLogin loginUserWithScreen_name:[mainNavigationController.loginViewController.loginView.emailField text] withPassword:[mainNavigationController.loginViewController.loginView.passwordField text]];
 	}
 	
 	
@@ -64,7 +70,9 @@
 	
 	// failed to register
 	if ([cmd isEqual:@"registerFail"]) {
-		// startRegisterEvent
+		UIAlertView *someError = [[UIAlertView alloc] initWithTitle: @"Error" message: @"Invalid password/username combination, please try again!" delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
+		[someError show];
+		[someError release];
 	}
 	
 	
@@ -95,8 +103,11 @@
 	//TODO: check for pre defined settings if good then log in
 	
 	
-	server = [[ServerLogin alloc] init];
-	server.delegate2 = self;
+	serverLogin = [[ServerLogin alloc] init];
+	serverLogin.delegate2 = self;
+	
+	serverCreate = [[ServerCreateUser alloc] init];
+	serverCreate.delegate2 = self;
 	
 	mainNavigationController = [[MainNavigationController alloc]init];
 	mainNavigationController.delegate = self;

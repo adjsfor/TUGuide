@@ -71,6 +71,7 @@
 	//[self pushViewController:loginViewController animated:YES];
     registerLoginViewController.delegate = self;
 	loginViewController.delegate = self;
+	registerViewController.delegate = self;
 	[self pushViewController:registerLoginViewController animated:YES];
     [super viewDidLoad];
 	

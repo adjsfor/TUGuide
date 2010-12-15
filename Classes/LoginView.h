@@ -9,14 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "User.h"
 #import "ServerLogin.h"
-#import "UIViewControllerDelegate.h"
 #import "UIViewDelegate.h"
 
 
 @interface LoginView : UIScrollView {
 	
 	id <UIViewDelegate> delegate;
-	int keyboardHight;
 	UIButton *sendButton;
 	UIImageView *bigLogo;
 	UITextField *emailField;
@@ -28,7 +26,6 @@
 	
 }
 
-@property (nonatomic) int keyboardHight;
 @property (nonatomic, retain) UIButton *sendButton;
 @property (nonatomic, retain) UIImageView *bigLogo;
 @property (nonatomic, retain) UITextField *emailField;
@@ -38,8 +35,9 @@
 @property (nonatomic, retain) UISwitch *saveLogin;
 @property (nonatomic,assign) id <UIViewDelegate> delegate;
 
-- (IBAction)sendButtonAction:(id)sender;
-- (IBAction)userDoneEnteringText:(id)sender;
+- (void)exitTextField:(UITextField *)sender;
+- (void)enterTextField:(UITextField *)sender;
+-(void)sendButtonAction:(id)sender;
 
 
 @end

@@ -17,8 +17,6 @@
 	NSString *responseData;
 }
 
-
-
 @property (nonatomic, retain) NSURLConnection *dataConnection;
 @property (nonatomic, retain) NSString *responseData;
 @property (nonatomic) int statusCode;

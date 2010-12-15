@@ -20,8 +20,6 @@
     
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code.
-	
 		self.backgroundColor = [UIColor whiteColor];
 		self.userInteractionEnabled = YES;
 		
@@ -52,8 +50,6 @@
     }
     return self;
 }
-
-
 
 - (IBAction)loginButtonPressed:(id)sender{
 	[delegate actionButton:self command:@"Login" message:@"Switch me to Login View"];

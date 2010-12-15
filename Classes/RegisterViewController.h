@@ -13,28 +13,23 @@
 #import "Wizard.h"
 #import "UIViewControllerDelegate.h"
 #import "UIViewDelegate.h"
+#import "ServerCreateUser.h"
 
 
 
-@interface RegisterViewController : UIViewController {
-	
-	RegisterLoginView *registerLoginView;
+@interface RegisterViewController : UIViewController <UITextFieldDelegate,UIViewDelegate>{
+
 	RegisterView *registerView;
-	LoginView *loginView;
-	UIScrollView *scrollView;
-	UITextField *activeField;
-	Boolean keyboardIsShown;
-	Wizard * wizard;
+	User *user;
+	ServerCreateUser *server;
 	id <UIViewControllerDelegate>  delegate;
+	int keyboardHight;
+	
 }
 
-@property (nonatomic, retain) RegisterLoginView *registerLoginView;
 @property (nonatomic, retain) RegisterView *registerView;
-@property (nonatomic, retain) LoginView *loginView;
-@property (nonatomic, retain) UIScrollView *scrollView;
-@property (nonatomic, retain) UITextField *activeField;
-@property (nonatomic, retain) Wizard *wizard;
-// to be onwned by someone else
+@property (nonatomic, retain) User *user;
+@property (nonatomic, retain) ServerCreateUser *server;
 @property (assign) id <UIViewControllerDelegate> delegate;
 
 -(void)actionButton:(UIView *)requestor command:(NSString *)cmd message:(NSString *)msg; 

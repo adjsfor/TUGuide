@@ -11,7 +11,6 @@
 
 @implementation LoginView
 
-@synthesize keyboardHight;
 @synthesize sendButton;
 @synthesize bigLogo;
 @synthesize emailField;
@@ -26,8 +25,6 @@
     
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code.
-		
 		self.backgroundColor = [UIColor whiteColor];
 		self.userInteractionEnabled = YES;
 		
@@ -36,19 +33,19 @@
 		bigLogo.image = img;
 		[img release];
 		[self addSubview:bigLogo];
+		[bigLogo release];
 		
 		textLabel = [[UILabel alloc]initWithFrame:CGRectMake(55,240, 220, 30)];
 		textLabel.font = [UIFont fontWithName:@"Helvetica" size:11];  
 		[textLabel setText:@"Please login to use the services of TUGuide"];
 		[self addSubview:textLabel];
+		[textLabel release];
 		
 		emailField =[[UITextField alloc]initWithFrame:CGRectMake(20, 260, 280, 30)];
 		emailField.borderStyle = UITextBorderStyleRoundedRect;
 		emailField.placeholder = @"email";
 		[emailField addTarget:self action:@selector(enterTextField:) forControlEvents:UIControlEventEditingDidBegin];
 		[emailField addTarget:self action:@selector(exitTextField:) forControlEvents:UIControlEventEditingDidEndOnExit];
-		[emailField addTarget:self action:@selector(userDoneEnteringText:) forControlEvents:UIControlEventTouchUpOutside];
-		//emailField.text = @"martinlangeder@gmail.com";
 		[self addSubview:emailField];
 		
 		passwordField =[[UITextField alloc]initWithFrame:CGRectMake(20, 295, 280, 30)];
@@ -56,7 +53,6 @@
 		passwordField.placeholder = @"password";
 		[passwordField addTarget:self action:@selector(enterTextField:) forControlEvents:UIControlEventEditingDidBegin];
 		[passwordField addTarget:self action:@selector(exitTextField:) forControlEvents:UIControlEventEditingDidEndOnExit];
-		//passwordField.text =@"martin";
 		passwordField.secureTextEntry = YES;
 		[self addSubview:passwordField];
 		
@@ -72,72 +68,30 @@
 		textLabel2.font = [UIFont fontWithName:@"Helvetica" size:11];  
 		[textLabel2 setText:@"Save Login Data"];
 		[self addSubview:textLabel2];
+		[textLabel2 release];
 		
 		saveLogin = [[UISwitch alloc]initWithFrame:CGRectMake(170, 330, 30, 30)];
 		[self addSubview:saveLogin];
-		
-		
     }
-	
-	[[NSNotificationCenter defaultCenter] addObserver:self 
-											 selector:@selector(setKeybordHight:) 
-												 name:UIKeyboardWillShowNotification 
-											   object:self.window];
-    return self;
+	return self;
 }
 
-- (IBAction)exitTextField:(UITextField *)sender{
+- (void)exitTextField:(UITextField *)sender{
 	[delegate actionButton:self command:@"exitTextField" message:@"textfiel entered"];
 }
 
-- (IBAction)enterTextField:(UITextField *)sender{
+- (void)enterTextField:(UITextField *)sender{
 	[delegate actionButton:self command:@"enterTextField" message:@"textfiel exited"];
 }
 
--(IBAction)sendButtonAction:(id)sender{
-	
-	
-	if (saveLogin.isOn) {
-		NSLog(@"savelogin");
-		NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-		[prefs setValue:[emailField text] forKey:@"name_preference"];
-		[prefs setValue:[passwordField text] forKey:@"password_preference"];
-
-		NSString *strUserName = [prefs stringForKey:@"name_preference"];
-		NSLog(@"Username :%s", strUserName);
-	}
-	
-	//[server loginUser2WithScreen_name:[emailField text] withPassword:[passwordField text]];
+-(void)sendButtonAction:(id)sender{
 	[delegate actionButton:self command:@"goLogin" message:@"Versuchen zu einloggen"];
-	 
 }
-
-- (void)setKeybordHight:(NSNotification*)aNotification
-{
-	NSDictionary* info = [aNotification userInfo];
-	CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-    keyboardHight = kbSize.height;
-}
-
-
--(IBAction)userDoneEnteringText:(id)sender{
-    [emailField resignFirstResponder];
-}
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code.
-}
-*/
 
 - (void)dealloc {
 	[sendButton release];
-	[bigLogo release];
 	[emailField release];
 	[passwordField release];
-	[textLabel release];
     [super dealloc];
 	
 }

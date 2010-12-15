@@ -24,4 +24,20 @@
 
 @property (nonatomic, retain) ServerLogin *server;
 
+- (void) createUser;
+- (void) createUserWithExistingMail;
+- (void) createUserWithExistingScreenName;
+- (void) createUserWithExistingMailAndScreenName;
+- (void) loginUser;
+- (void) loginUserWithFalseName;
+- (void) loginUserWithFalsePassword;
+- (void) loginUserWithFalsePasswordAndName;
+
+-(BOOL) helperCreateMethodWithName:(NSString *)name 
+						   andMail:(NSString *)mail 
+					   andPassword:(NSString *)pass;
+
+-(BOOL) helperLoginUserWithName:(NSString *)name 
+					andPassword:(NSString *)pass;
+
 @end

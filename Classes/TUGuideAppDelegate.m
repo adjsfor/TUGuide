@@ -59,7 +59,7 @@
 	}
 	
 	
-	// 
+	// komment
 	if ([cmd isEqual:@"loginFail"]) {
 		// startLoginEvent in ServerLogin with params
 		UIAlertView *someError = [[UIAlertView alloc] initWithTitle: @"Error" message: @"Invalid password/username combination, please try again!" delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];

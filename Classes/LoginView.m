@@ -19,8 +19,6 @@
 @synthesize textLabel;
 @synthesize textLabel2;
 @synthesize saveLogin;
-@synthesize user;
-@synthesize server;
 @synthesize delegate;
 
 
@@ -78,7 +76,7 @@
 		saveLogin = [[UISwitch alloc]initWithFrame:CGRectMake(170, 330, 30, 30)];
 		[self addSubview:saveLogin];
 		
-		server = [[ServerLogin alloc] init];
+		
     }
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self 
@@ -98,19 +96,19 @@
 
 -(IBAction)sendButtonAction:(id)sender{
 	
-	user = [[User alloc]initWithArguments:[emailField text] withPassword:[passwordField text] withScreenName:nil];
 	
 	if (saveLogin.isOn) {
 		NSLog(@"savelogin");
 		NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-		[prefs setValue:[user email] forKey:@"name_preference"];
-		[prefs setValue:[user password] forKey:@"password_preference"];
+		[prefs setValue:[emailField text] forKey:@"name_preference"];
+		[prefs setValue:[passwordField text] forKey:@"password_preference"];
 
 		NSString *strUserName = [prefs stringForKey:@"name_preference"];
 		NSLog(@"Username :%s", strUserName);
 	}
 	
-	[server loginUser2WithScreen_name:[emailField text] withPassword:[passwordField text]];
+	//[server loginUser2WithScreen_name:[emailField text] withPassword:[passwordField text]];
+	[delegate actionButton:self command:@"goLogin" message:@"Versuchen zu einloggen"];
 	 
 }
 
@@ -140,7 +138,6 @@
 	[emailField release];
 	[passwordField release];
 	[textLabel release];
-	[user release];
     [super dealloc];
 	
 }

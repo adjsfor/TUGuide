@@ -11,8 +11,9 @@
 @implementation TUGuideAppDelegate
 
 @synthesize window;
-
 @synthesize mainNavigationController;
+@synthesize me;
+@synthesize server;
 
 
 #pragma mark -
@@ -28,9 +29,16 @@
 	NSLog(@"APPDELEGATE: switched views: message from the nav controller delegate");
 }
 
+
+
 -(void)passing:(NSObject *)requestor command:(NSString *)cmd message:(NSString *)msg{
 	
-	if ([cmd isEqual:@"openOrganizer"]) {
+	//login successful -> switch to tabbar 
+	if ([cmd isEqual:@"loginSuccessful"]) {
+		
+	}
+	
+	if ([cmd isEqual:@"registerSuccessful"]) {
 		// only when im logged in, kill whole MainNavigationController baum, open new TabBarNavigationController
 	}
 	
@@ -39,16 +47,39 @@
 		// self.mainNavigationController.registerViewController.registerView.passwordField.text; etc etc
 	}
 	
+	// startLoginEvent in ServerLogin with email und password
 	if ([cmd isEqual:@"goLogin"]) {
-		// startLoginEvent in ServerLogin with params
+		[server loginUserWithScreen_name:[mainNavigationController.loginViewController.loginView.emailField text] withPassword:[mainNavigationController.loginViewController.loginView.passwordField text]];
 	}
 	
+	
+	// 
+	if ([cmd isEqual:@"loginFail"]) {
+		// startLoginEvent in ServerLogin with params
+		UIAlertView *someError = [[UIAlertView alloc] initWithTitle: @"Error" message: @"Invalid password/username combination, please try again!" delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
+		[someError show];
+		[someError release];
+	}
+	
+	
+	// failed to register
 	if ([cmd isEqual:@"registerFail"]) {
 		// startRegisterEvent
 	}
 	
-	NSLog(@"%@", requestor);
+	
+	// server offline
+	if ([cmd isEqual:@"serverOffline"]) {
+		UIAlertView *someError = [[UIAlertView alloc] initWithTitle: @"Server offline" message: @"We are sorry but our server is offline, please try again later!" delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
+		[someError show];
+		[someError release];
+	}
+	
+	//NSLog(@"%@", requestor);
 }
+
+
+
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
@@ -61,9 +92,11 @@
         return NO;
     }
 	
-	//NSLog([NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask,YES));
+	//TODO: check for pre defined settings if good then log in
 	
-	//loginViewController = [[LoginViewController alloc]init];
+	
+	server = [[ServerLogin alloc] init];
+	server.delegate2 = self;
 	
 	mainNavigationController = [[MainNavigationController alloc]init];
 	mainNavigationController.delegate = self;
@@ -136,7 +169,7 @@
 - (void)dealloc {
 	[mainNavigationController release];
 
-	    [window release];
+	[window release];
     [super dealloc];
 }
 

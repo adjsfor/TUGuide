@@ -20,12 +20,32 @@
 @synthesize delegate;
 
 
+
+-(void)actionButton:(UIView *)requestor command:(NSString *)cmd message:(NSString *)msg{
+	/*
+	 
+	 */
+	if ([cmd isEqual:@"enterTextField"]) {
+		CGPoint scrollPoint = CGPointMake(0.0, 210.0);
+		[self.loginView setContentOffset:scrollPoint animated:YES];
+	}else if ([cmd isEqual:@"exitTextField"]) {
+		[self.loginView.emailField resignFirstResponder];
+		[self.loginView.passwordField resignFirstResponder];
+		CGPoint scrollPoint = CGPointMake(0.0f, 0.0f);
+		[self.loginView setContentOffset:scrollPoint animated:YES];
+	}else {
+		[delegate passTo:self command:cmd message:msg]; // pass to up
+	}
+}
+
+
+
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
 	loginView = [[LoginView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
 	self.view = loginView;
 	self.loginView.delegate = self;
-	[self.view.loginView.sendButton delegate:self];
+	//[self.view.loginView.sendButton delegate:self];
 	//wizard = [[Wizard alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
 	//self.view = wizard;
 	
@@ -119,22 +139,7 @@
     // e.g. self.myOutlet = nil;
 }
 
--(void)actionButton:(UIView *)requestor command:(NSString *)cmd message:(NSString *)msg{
-	/*
-	 
-	 */
-	if ([cmd isEqual:@"enterTextField"]) {
-		 CGPoint scrollPoint = CGPointMake(0.0, 210.0);
-		 [self.loginView setContentOffset:scrollPoint animated:YES];
-	}else if ([cmd isEqual:@"exitTextField"]) {
-		[self.loginView.emailField resignFirstResponder];
-		[self.loginView.passwordField resignFirstResponder];
-		CGPoint scrollPoint = CGPointMake(0.0f, 0.0f);
-		[self.loginView setContentOffset:scrollPoint animated:YES];
-	}else {
-		[delegate passTo:self command:cmd message:msg];
-	}
-}
+
 
 
 - (void)dealloc {

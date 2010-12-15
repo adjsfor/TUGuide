@@ -25,8 +25,6 @@
 }
 
 
-
-
 -(void)switchToController:(NSString *)controller animated:(BOOL)animated{
 	
 	// check if not null then initialize

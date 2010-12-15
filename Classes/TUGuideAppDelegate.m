@@ -112,8 +112,17 @@
 	mainNavigationController = [[MainNavigationController alloc]init];
 	mainNavigationController.delegate = self;
 	mainNavigationController.delegate2 = self;
+	//[window addSubview:mainNavigationController.view];
 	
-    [window addSubview:mainNavigationController.view];
+	//OrganizerNavigationController *org = [[OrganizerNavigationController alloc] init];
+	//LecturesViewController *org = [[LecturesViewController alloc]init];
+	//[org switchToController:@"Lectures" animated:YES];
+	//[window addSubview:org.view];
+	
+	MapViewController *map = [[MapViewController alloc] init];
+	[window addSubview:map.view];
+	
+    
     [window makeKeyAndVisible];
     
     return YES;

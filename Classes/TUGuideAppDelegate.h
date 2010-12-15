@@ -10,6 +10,8 @@
 #import <UIKit/UIKit.h>
 #import "MainNavigationController.h"
 #import "MessagePassProtocol.h"
+#import "OrganizerNavigationController.h"
+#import "MapViewController.h"
 #import	"ServerLogin.h"
 #import "ServerCreateUser.h"
 

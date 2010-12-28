@@ -20,7 +20,6 @@
 		4BA645BE12A154B600B03B82 /* Building.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA645BD12A154B600B03B82 /* Building.m */; };
 		4BA645FE12A15B7F00B03B82 /* Mensa.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA645FD12A15B7F00B03B82 /* Mensa.m */; };
 		4BA6462512A1633E00B03B82 /* MensaMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA6462412A1633E00B03B82 /* MensaMenu.m */; };
-		4BC87FD912B9103200BDD7A2 /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC87FD812B9103200BDD7A2 /* MainTabBarViewController.m */; };
 		8E30CB4B12A5C43100BCA1B9 /* LoginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E30CB4A12A5C43100BCA1B9 /* LoginTests.m */; };
 		8E30CBAA12A66E9B00BCA1B9 /* ServerLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B819D1F12A564C2005C740F /* ServerLogin.m */; };
 		8E78159612B8F69200DF4A8B /* ServerCreateUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E78159512B8F69200DF4A8B /* ServerCreateUser.m */; };
@@ -91,8 +90,6 @@
 		4BA645FD12A15B7F00B03B82 /* Mensa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mensa.m; sourceTree = "<group>"; };
 		4BA6462312A1633E00B03B82 /* MensaMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaMenu.h; sourceTree = "<group>"; };
 		4BA6462412A1633E00B03B82 /* MensaMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaMenu.m; sourceTree = "<group>"; };
-		4BC87FD712B9103200BDD7A2 /* MainTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarViewController.h; sourceTree = "<group>"; };
-		4BC87FD812B9103200BDD7A2 /* MainTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarViewController.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* TUGuide-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TUGuide-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		8E30CB4912A5C43100BCA1B9 /* LoginTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginTests.h; sourceTree = "<group>"; };
 		8E30CB4A12A5C43100BCA1B9 /* LoginTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginTests.m; sourceTree = "<group>"; };
@@ -258,8 +255,6 @@
 				4B819D1A12A561FE005C740F /* MainNavigationController.m */,
 				FA616EF312B8C53500E0E2C7 /* OrganizerNavigationController.h */,
 				FA616EF412B8C53500E0E2C7 /* OrganizerNavigationController.m */,
-				4BC87FD712B9103200BDD7A2 /* MainTabBarViewController.h */,
-				4BC87FD812B9103200BDD7A2 /* MainTabBarViewController.m */,
 			);
 			name = NavigationControllers;
 			sourceTree = "<group>";
@@ -516,11 +511,7 @@
 				FA6171D312B90A2300E0E2C7 /* MapViewController.m in Sources */,
 				FA61722512B90CAF00E0E2C7 /* tuAnnotation.m in Sources */,
 				FA61722612B90CAF00E0E2C7 /* annotationView.m in Sources */,
-<<<<<<< HEAD
-				4BC87FD912B9103200BDD7A2 /* MainTabBarViewController.m in Sources */,
-=======
 				8E78159612B8F69200DF4A8B /* ServerCreateUser.m in Sources */,
->>>>>>> 0ff150118d91488e172d9b661e4254579341b2f0
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

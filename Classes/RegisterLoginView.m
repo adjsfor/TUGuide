@@ -30,7 +30,7 @@
 		[self addSubview:bigLogo];
 		
 		registerButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-		[registerButton setFrame:CGRectMake(85, 320, 150, 30)];
+		[registerButton setFrame:CGRectMake(65, 310, 190, 35)];
 		[registerButton setTitle:@"Register" forState:UIControlStateNormal];
 		[registerButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[registerButton setBackgroundImage:[UIImage imageNamed: @"ButtonDark.png"] forState:UIControlStateNormal];
@@ -40,7 +40,7 @@
 		
 		
 		loginButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-		[loginButton setFrame:CGRectMake(85, 370, 150, 30)];
+		[loginButton setFrame:CGRectMake(65, 360, 190, 35)];
 		[loginButton setTitle:@"Login" forState:UIControlStateNormal];
 		[loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[loginButton setBackgroundImage:[UIImage imageNamed: @"ButtonDark.png"] forState:UIControlStateNormal];

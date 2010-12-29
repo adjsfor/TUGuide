@@ -15,6 +15,7 @@
 @synthesize me;
 @synthesize serverLogin;
 @synthesize serverCreate;
+@synthesize tabBarController;
 
 
 #pragma mark -
@@ -101,8 +102,7 @@
     }
 	
 	//TODO: check for pre defined settings if good then log in
-	
-	
+
 	serverLogin = [[ServerLogin alloc] init];
 	serverLogin.delegate2 = self;
 	
@@ -112,12 +112,29 @@
 	mainNavigationController = [[MainNavigationController alloc]init];
 	mainNavigationController.delegate = self;
 	mainNavigationController.delegate2 = self;
-	[window addSubview:mainNavigationController.view];
+	//[window addSubview:mainNavigationController.view];
 	
-	OrganizerNavigationController *org = [[OrganizerNavigationController alloc] init];
-	//LecturesViewController *org = [[LecturesViewController alloc]init];
-	//[org switchToController:@"Lectures" animated:YES];
-	//[window addSubview:org.view];
+	//OrganizerViewController *org = [[OrganizerViewController alloc] init];
+	LecturesViewController *le = [[LecturesViewController alloc]init];
+	
+	
+	UINavigationController *org = [[UINavigationController alloc] initWithRootViewController:[[OrganizerViewController alloc] init]];
+	UINavigationController *map = [[UINavigationController alloc] initWithRootViewController:[[MapViewController alloc] init]];
+	
+	
+	NSMutableArray *controllers = [NSMutableArray array];
+	//[controllers addObject:mainNavigationController];
+	[controllers addObject:org];
+	[controllers addObject:map];
+	
+	
+	tabBarController = [[MainUITabBarController alloc] init];
+	tabBarController.viewControllers = controllers;
+	
+	//tabBarController.customizableViewControllers = controllers;
+	
+	
+	[window addSubview:tabBarController.view];
 	
 	//MapViewController *map = [[MapViewController alloc] init];
 	//[window addSubview:map.view];

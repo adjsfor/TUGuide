@@ -52,21 +52,21 @@
 
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+    //[super viewDidLoad];
 	
-	self.navigationController.delegate = self;
-	[self.navigationController setNavigationBarHidden:NO];	
-	
-	NSArray *segmentTextContent = [NSArray arrayWithObjects:@"Lectures", @"Courses", @"ToDo",nil];
-	segmentedControl = [[UISegmentedControl alloc] initWithItems:segmentTextContent];
-    segmentedControl.selectedSegmentIndex = 0;
-    segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    segmentedControl.segmentedControlStyle = UISegmentedControlStyleBar;
-    segmentedControl.frame = CGRectMake(0, 0, 300, 30);
-    [segmentedControl addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
-    
-    self.navigationItem.titleView = segmentedControl;
-    [segmentedControl release];
+	//self.navigationController.delegate = self;
+//	[self.navigationController setNavigationBarHidden:NO];	
+//	
+//	NSArray *segmentTextContent = [NSArray arrayWithObjects:@"Lectures", @"Courses", @"ToDo",nil];
+//	segmentedControl = [[UISegmentedControl alloc] initWithItems:segmentTextContent];
+//    segmentedControl.selectedSegmentIndex = 0;
+//    segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+//    segmentedControl.segmentedControlStyle = UISegmentedControlStyleBar;
+//    segmentedControl.frame = CGRectMake(0, 0, 300, 30);
+//    [segmentedControl addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
+//    
+//    self.navigationItem.titleView = segmentedControl;
+//    [segmentedControl release];
 }
 
 

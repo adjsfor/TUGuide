@@ -10,10 +10,11 @@
 #import <UIKit/UIKit.h>
 #import "MainNavigationController.h"
 #import "MessagePassProtocol.h"
-#import "OrganizerNavigationController.h"
+#import "OrganizerViewController.h"
 #import "MapViewController.h"
 #import	"ServerLogin.h"
 #import "ServerCreateUser.h"
+#import "MainUITabBarController.h"
 
 @interface TUGuideAppDelegate : NSObject <UIApplicationDelegate,UINavigationControllerDelegate,MessagePassProtocol> {
     UIWindow *window;
@@ -21,6 +22,7 @@
 	User *me;
 	ServerLogin *serverLogin;
 	ServerCreateUser *serverCreate;
+	MainUITabBarController *tabBarController;
 }
 
 @property (nonatomic, retain) UIWindow *window;
@@ -28,6 +30,7 @@
 @property (nonatomic, retain) User *me;
 @property (nonatomic, retain) ServerLogin *serverLogin;
 @property (nonatomic, retain) ServerCreateUser *serverCreate;
+@property (nonatomic, retain) MainUITabBarController *tabBarController;
 
 -(void)passing:(NSObject *)requestor command:(NSString *)cmd message:(NSString *)msg; 
 @end

@@ -12,13 +12,6 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
-		4B38C19212CA548B00E5C5D4 /* MainUITabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B38C19112CA548B00E5C5D4 /* MainUITabBarController.m */; };
-		4B38C1A812CA607900E5C5D4 /* 1map.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B38C1A712CA607900E5C5D4 /* 1map.png */; };
-		4B38C1BA12CA609A00E5C5D4 /* iMisseditIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B38C1AD12CA609A00E5C5D4 /* iMisseditIcon.png */; };
-		4B38C1C012CA609A00E5C5D4 /* 145-persondot.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B38C1B312CA609A00E5C5D4 /* 145-persondot.png */; };
-		4B38C1C112CA609A00E5C5D4 /* 48-fork-and-knife.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B38C1B412CA609A00E5C5D4 /* 48-fork-and-knife.png */; };
-		4B38C1C212CA609A00E5C5D4 /* 40-inbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B38C1B512CA609A00E5C5D4 /* 40-inbox.png */; };
-		4B38C1EC12CA946100E5C5D4 /* OrganizerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B38C1EB12CA946100E5C5D4 /* OrganizerViewController.m */; };
 		4B819D1B12A561FE005C740F /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B819D1A12A561FE005C740F /* MainNavigationController.m */; };
 		4B819D2012A564C2005C740F /* ServerLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B819D1F12A564C2005C740F /* ServerLogin.m */; };
 		4B819D4A12A5706E005C740F /* RegisterLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B819D4912A5706E005C740F /* RegisterLoginViewController.m */; };
@@ -29,7 +22,6 @@
 		4BA6462512A1633E00B03B82 /* MensaMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA6462412A1633E00B03B82 /* MensaMenu.m */; };
 		8E30CB4B12A5C43100BCA1B9 /* LoginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E30CB4A12A5C43100BCA1B9 /* LoginTests.m */; };
 		8E30CBAA12A66E9B00BCA1B9 /* ServerLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B819D1F12A564C2005C740F /* ServerLogin.m */; };
-		8E78159612B8F69200DF4A8B /* ServerCreateUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E78159512B8F69200DF4A8B /* ServerCreateUser.m */; };
 		8E8D59C112A143C40096E52C /* Announcement.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D59C012A143C40096E52C /* Announcement.m */; };
 		8E8D59DC12A14B820096E52C /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D59DB12A14B820096E52C /* Friend.m */; };
 		8E8D59DF12A14C900096E52C /* Lecture.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D59DE12A14C900096E52C /* Lecture.m */; };
@@ -78,15 +70,6 @@
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* TUGuide_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUGuide_Prefix.pch; sourceTree = "<group>"; };
-		4B38C19012CA548B00E5C5D4 /* MainUITabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainUITabBarController.h; sourceTree = "<group>"; };
-		4B38C19112CA548B00E5C5D4 /* MainUITabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainUITabBarController.m; sourceTree = "<group>"; };
-		4B38C1A712CA607900E5C5D4 /* 1map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1map.png; sourceTree = "<group>"; };
-		4B38C1AD12CA609A00E5C5D4 /* iMisseditIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iMisseditIcon.png; sourceTree = "<group>"; };
-		4B38C1B312CA609A00E5C5D4 /* 145-persondot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "145-persondot.png"; sourceTree = "<group>"; };
-		4B38C1B412CA609A00E5C5D4 /* 48-fork-and-knife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "48-fork-and-knife.png"; sourceTree = "<group>"; };
-		4B38C1B512CA609A00E5C5D4 /* 40-inbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "40-inbox.png"; sourceTree = "<group>"; };
-		4B38C1EA12CA946100E5C5D4 /* OrganizerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrganizerViewController.h; sourceTree = "<group>"; };
-		4B38C1EB12CA946100E5C5D4 /* OrganizerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrganizerViewController.m; sourceTree = "<group>"; };
 		4B819D1912A561FE005C740F /* MainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
 		4B819D1A12A561FE005C740F /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
 		4B819D1E12A564C2005C740F /* ServerLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerLogin.h; sourceTree = "<group>"; };
@@ -109,9 +92,6 @@
 		8D1107310486CEB800E47090 /* TUGuide-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TUGuide-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		8E30CB4912A5C43100BCA1B9 /* LoginTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginTests.h; sourceTree = "<group>"; };
 		8E30CB4A12A5C43100BCA1B9 /* LoginTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginTests.m; sourceTree = "<group>"; };
-		8E78155512B8F0C200DF4A8B /* UIElementDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIElementDelegate.h; sourceTree = "<group>"; };
-		8E78159412B8F69200DF4A8B /* ServerCreateUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerCreateUser.h; sourceTree = "<group>"; };
-		8E78159512B8F69200DF4A8B /* ServerCreateUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerCreateUser.m; sourceTree = "<group>"; };
 		8E8D59BF12A143C40096E52C /* Announcement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Announcement.h; sourceTree = "<group>"; };
 		8E8D59C012A143C40096E52C /* Announcement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Announcement.m; sourceTree = "<group>"; };
 		8E8D59DA12A14B820096E52C /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friend.h; sourceTree = "<group>"; };
@@ -198,7 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				4B819E4512A59054005C740F /* Delegate Protocols */,
-				4B38C1C312CA772B00E5C5D4 /* TabBarModules */,
 				4B819D1D12A56433005C740F /* Server Access */,
 				4B819D1C12A56208005C740F /* NavigationControllers */,
 				FAD4AAA312A0CCBC00817DCA /* Models */,
@@ -265,200 +244,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4B38C1C312CA772B00E5C5D4 /* TabBarModules */ = {
-			isa = PBXGroup;
-			children = (
-				4B38C1C412CA773B00E5C5D4 /* Organizer */,
-				4B38C1C812CA7AE800E5C5D4 /* Friends */,
-				4B38C1C712CA777B00E5C5D4 /* Food */,
-				4B38C1C512CA774200E5C5D4 /* Map */,
-				4B38C1C612CA775A00E5C5D4 /* iMissedIt */,
-			);
-			name = TabBarModules;
-			sourceTree = "<group>";
-		};
-		4B38C1C412CA773B00E5C5D4 /* Organizer */ = {
-			isa = PBXGroup;
-			children = (
-				4B38C1DC12CA7CE200E5C5D4 /* Misc */,
-				4B38C1DB12CA7CD500E5C5D4 /* View */,
-				4B38C1DA12CA7CCB00E5C5D4 /* ViewController */,
-			);
-			name = Organizer;
-			sourceTree = "<group>";
-		};
-		4B38C1C512CA774200E5C5D4 /* Map */ = {
-			isa = PBXGroup;
-			children = (
-				4B38C1E612CA7D9F00E5C5D4 /* Misc */,
-				4B38C1E512CA7D9900E5C5D4 /* View */,
-				4B38C1E412CA7D8F00E5C5D4 /* ViewController */,
-			);
-			name = Map;
-			sourceTree = "<group>";
-		};
-		4B38C1C612CA775A00E5C5D4 /* iMissedIt */ = {
-			isa = PBXGroup;
-			children = (
-				4B38C1E912CA7DD400E5C5D4 /* Misc */,
-				4B38C1E812CA7DD000E5C5D4 /* View */,
-				4B38C1E712CA7DC800E5C5D4 /* ViewController */,
-			);
-			name = iMissedIt;
-			sourceTree = "<group>";
-		};
-		4B38C1C712CA777B00E5C5D4 /* Food */ = {
-			isa = PBXGroup;
-			children = (
-				4B38C1E112CA7D7A00E5C5D4 /* Misc */,
-				4B38C1E212CA7D8000E5C5D4 /* View */,
-				4B38C1E312CA7D8600E5C5D4 /* ViewController */,
-			);
-			name = Food;
-			sourceTree = "<group>";
-		};
-		4B38C1C812CA7AE800E5C5D4 /* Friends */ = {
-			isa = PBXGroup;
-			children = (
-				4B38C1E012CA7D7400E5C5D4 /* Misc */,
-				4B38C1DE12CA7D0B00E5C5D4 /* View */,
-				4B38C1DD12CA7CF200E5C5D4 /* ViewController */,
-			);
-			name = Friends;
-			sourceTree = "<group>";
-		};
-		4B38C1DA12CA7CCB00E5C5D4 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				FACE15DF12B820A600637DB9 /* LecturesViewController.h */,
-				FACE15E012B820A600637DB9 /* LecturesViewController.m */,
-				FA616EAD12B8BCD100E0E2C7 /* LecturesDetailViewController.h */,
-				FA616EAE12B8BCD100E0E2C7 /* LecturesDetailViewController.m */,
-				FA616F0012B8D09500E0E2C7 /* CoursesViewController.h */,
-				FA616F0112B8D09500E0E2C7 /* CoursesViewController.m */,
-				FA616F0312B8D0AB00E0E2C7 /* ToDoViewController.h */,
-				FA616F0412B8D0AB00E0E2C7 /* ToDoViewController.m */,
-			);
-			name = ViewController;
-			sourceTree = "<group>";
-		};
-		4B38C1DB12CA7CD500E5C5D4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				FA616EB012B8BD5C00E0E2C7 /* LecturesDetailView.h */,
-				FA616EB112B8BD5C00E0E2C7 /* LecturesDetailView.m */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		4B38C1DC12CA7CE200E5C5D4 /* Misc */ = {
-			isa = PBXGroup;
-			children = (
-				4B38C1EA12CA946100E5C5D4 /* OrganizerViewController.h */,
-				4B38C1EB12CA946100E5C5D4 /* OrganizerViewController.m */,
-				FA616EF312B8C53500E0E2C7 /* OrganizerNavigationController.h */,
-				FA616EF412B8C53500E0E2C7 /* OrganizerNavigationController.m */,
-			);
-			name = Misc;
-			sourceTree = "<group>";
-		};
-		4B38C1DD12CA7CF200E5C5D4 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = ViewController;
-			sourceTree = "<group>";
-		};
-		4B38C1DE12CA7D0B00E5C5D4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		4B38C1E012CA7D7400E5C5D4 /* Misc */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Misc;
-			sourceTree = "<group>";
-		};
-		4B38C1E112CA7D7A00E5C5D4 /* Misc */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Misc;
-			sourceTree = "<group>";
-		};
-		4B38C1E212CA7D8000E5C5D4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		4B38C1E312CA7D8600E5C5D4 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = ViewController;
-			sourceTree = "<group>";
-		};
-		4B38C1E412CA7D8F00E5C5D4 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				FA6171D112B90A2300E0E2C7 /* MapViewController.h */,
-				FA6171D212B90A2300E0E2C7 /* MapViewController.m */,
-			);
-			name = ViewController;
-			sourceTree = "<group>";
-		};
-		4B38C1E512CA7D9900E5C5D4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				FA61722112B90CAF00E0E2C7 /* tuAnnotation.h */,
-				FA61722212B90CAF00E0E2C7 /* tuAnnotation.m */,
-				FA61722312B90CAF00E0E2C7 /* annotationView.h */,
-				FA61722412B90CAF00E0E2C7 /* annotationView.m */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		4B38C1E612CA7D9F00E5C5D4 /* Misc */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Misc;
-			sourceTree = "<group>";
-		};
-		4B38C1E712CA7DC800E5C5D4 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = ViewController;
-			sourceTree = "<group>";
-		};
-		4B38C1E812CA7DD000E5C5D4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		4B38C1E912CA7DD400E5C5D4 /* Misc */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Misc;
-			sourceTree = "<group>";
-		};
 		4B819D1C12A56208005C740F /* NavigationControllers */ = {
 			isa = PBXGroup;
 			children = (
 				4B819D1912A561FE005C740F /* MainNavigationController.h */,
 				4B819D1A12A561FE005C740F /* MainNavigationController.m */,
-				4B38C19012CA548B00E5C5D4 /* MainUITabBarController.h */,
-				4B38C19112CA548B00E5C5D4 /* MainUITabBarController.m */,
+				FA616EF312B8C53500E0E2C7 /* OrganizerNavigationController.h */,
+				FA616EF412B8C53500E0E2C7 /* OrganizerNavigationController.m */,
 			);
 			name = NavigationControllers;
 			sourceTree = "<group>";
@@ -468,8 +260,6 @@
 			children = (
 				4B819D1F12A564C2005C740F /* ServerLogin.m */,
 				4B819D1E12A564C2005C740F /* ServerLogin.h */,
-				8E78159412B8F69200DF4A8B /* ServerCreateUser.h */,
-				8E78159512B8F69200DF4A8B /* ServerCreateUser.m */,
 			);
 			name = "Server Access";
 			sourceTree = "<group>";
@@ -477,7 +267,6 @@
 		4B819E4512A59054005C740F /* Delegate Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				8E78155512B8F0C200DF4A8B /* UIElementDelegate.h */,
 				4B819E4612A5932D005C740F /* UIViewDelegate.h */,
 				4B819E4712A593D7005C740F /* UIViewControllerDelegate.h */,
 				4B819F5612A6A4D3005C740F /* MessagePassProtocol.h */,
@@ -505,6 +294,16 @@
 				4B819D4912A5706E005C740F /* RegisterLoginViewController.m */,
 				4B819E9312A59E55005C740F /* RegisterViewController.h */,
 				4B819E9412A59E55005C740F /* RegisterViewController.m */,
+				FACE15DF12B820A600637DB9 /* LecturesViewController.h */,
+				FACE15E012B820A600637DB9 /* LecturesViewController.m */,
+				FA616EAD12B8BCD100E0E2C7 /* LecturesDetailViewController.h */,
+				FA616EAE12B8BCD100E0E2C7 /* LecturesDetailViewController.m */,
+				FA616F0012B8D09500E0E2C7 /* CoursesViewController.h */,
+				FA616F0112B8D09500E0E2C7 /* CoursesViewController.m */,
+				FA616F0312B8D0AB00E0E2C7 /* ToDoViewController.h */,
+				FA616F0412B8D0AB00E0E2C7 /* ToDoViewController.m */,
+				FA6171D112B90A2300E0E2C7 /* MapViewController.h */,
+				FA6171D212B90A2300E0E2C7 /* MapViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -512,6 +311,10 @@
 		FA381C9E12A0053F008E06D0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FA61722112B90CAF00E0E2C7 /* tuAnnotation.h */,
+				FA61722212B90CAF00E0E2C7 /* tuAnnotation.m */,
+				FA61722312B90CAF00E0E2C7 /* annotationView.h */,
+				FA61722412B90CAF00E0E2C7 /* annotationView.m */,
 				FA381CA312A0057A008E06D0 /* RegisterLoginView.h */,
 				FA381CA412A0057A008E06D0 /* RegisterLoginView.m */,
 				FA381CA912A00593008E06D0 /* LoginView.h */,
@@ -520,6 +323,8 @@
 				FA381CB012A005D2008E06D0 /* RegisterView.m */,
 				8EBD4CE912A47164008D9B56 /* Wizard.h */,
 				8EBD4CEA12A47164008D9B56 /* Wizard.m */,
+				FA616EB012B8BD5C00E0E2C7 /* LecturesDetailView.h */,
+				FA616EB112B8BD5C00E0E2C7 /* LecturesDetailView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -527,11 +332,6 @@
 		FAD1DB0712A0391800F782A0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				4B38C1AD12CA609A00E5C5D4 /* iMisseditIcon.png */,
-				4B38C1B312CA609A00E5C5D4 /* 145-persondot.png */,
-				4B38C1B412CA609A00E5C5D4 /* 48-fork-and-knife.png */,
-				4B38C1B512CA609A00E5C5D4 /* 40-inbox.png */,
-				4B38C1A712CA607900E5C5D4 /* 1map.png */,
 				FAD4AB3312A0DA1800817DCA /* icon.png */,
 				FA67286512A099010049DBD8 /* ButtonDark.png */,
 				FAD1DB0212A0390500F782A0 /* TUGuideLogo.png */,
@@ -640,11 +440,6 @@
 				FA67286612A099010049DBD8 /* ButtonDark.png in Resources */,
 				FAD4AB2412A0D8F500817DCA /* Settings.bundle in Resources */,
 				FAD4AB3412A0DA1800817DCA /* icon.png in Resources */,
-				4B38C1A812CA607900E5C5D4 /* 1map.png in Resources */,
-				4B38C1BA12CA609A00E5C5D4 /* iMisseditIcon.png in Resources */,
-				4B38C1C012CA609A00E5C5D4 /* 145-persondot.png in Resources */,
-				4B38C1C112CA609A00E5C5D4 /* 48-fork-and-knife.png in Resources */,
-				4B38C1C212CA609A00E5C5D4 /* 40-inbox.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -709,9 +504,6 @@
 				FA6171D312B90A2300E0E2C7 /* MapViewController.m in Sources */,
 				FA61722512B90CAF00E0E2C7 /* tuAnnotation.m in Sources */,
 				FA61722612B90CAF00E0E2C7 /* annotationView.m in Sources */,
-				8E78159612B8F69200DF4A8B /* ServerCreateUser.m in Sources */,
-				4B38C19212CA548B00E5C5D4 /* MainUITabBarController.m in Sources */,
-				4B38C1EC12CA946100E5C5D4 /* OrganizerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

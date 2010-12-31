@@ -291,7 +291,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {393, 660}}</string>
+							<string>{{0, 147}, {393, 660}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -310,7 +310,7 @@
 							<real>393</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>1380 -5 1280 719 1280 -100 1440 900 </string>
+						<string>0 59 1280 719 0 0 1280 778 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -328,7 +328,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>MapViewController.m</string>
+								<string>MapViewController.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -336,11 +336,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>MapViewController.m</string>
+										<string>MapViewController.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>4B6505AD12CACFC200964F94</string>
+										<string>4B6505BA12CD4C5800964F94</string>
 										<key>history</key>
 										<array>
 											<string>4B54C4D712A018AF00091F5A</string>
@@ -422,11 +422,11 @@
 											<string>4B38C38B12CACC0100E5C5D4</string>
 											<string>4B38C39112CACC4700E5C5D4</string>
 											<string>4B65059F12CACF5100964F94</string>
-											<string>4B6505A012CACF5100964F94</string>
 											<string>4B6505A112CACF5100964F94</string>
 											<string>4B6505A212CACF5100964F94</string>
 											<string>4B6505A812CACF8600964F94</string>
-											<string>4B6505A912CACF8600964F94</string>
+											<string>4B6505B512CBEFF200964F94</string>
+											<string>4B6505A012CACF5100964F94</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -440,7 +440,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {865, 571}}</string>
 								<key>RubberWindowFrame</key>
-								<string>1380 -5 1280 719 1280 -100 1440 900 </string>
+								<string>0 59 1280 719 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -460,7 +460,7 @@
 								<key>Frame</key>
 								<string>{{0, 576}, {865, 102}}</string>
 								<key>RubberWindowFrame</key>
-								<string>1380 -5 1280 719 1280 -100 1440 900 </string>
+								<string>0 59 1280 719 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -624,13 +624,15 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>4B6505B812CBEFF200964F94</string>
+		<string>4B6505B912CBEFF200964F94</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>4BC70614129FE39C0086FBC8</string>
 		<string>/Users/galic1987/Documents/TuGuide/TUGuide.xcodeproj</string>
-		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
-	<string>1380 -5 1280 719 1280 -100 1440 900 </string>
+	<string>0 59 1280 719 0 0 1280 778 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -1009,7 +1011,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

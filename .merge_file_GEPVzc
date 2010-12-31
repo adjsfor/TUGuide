@@ -1,577 +1,0 @@
-TTUGuide
-v7
-r0
-t312562948.724453
-cCheck dependencies
-cProcessInfoPlistFile /Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app/Info.plist TUGuide-Info.plist
-cCpResource build/Debug-iphonesimulator/TUGuide.app/TUGuideLogo.png TUGuideLogo.png
-cCpResource build/Debug-iphonesimulator/TUGuide.app/ButtonDark.png ButtonDark.png
-cCpResource build/Debug-iphonesimulator/TUGuide.app/Settings.bundle Settings.bundle
-cCpResource build/Debug-iphonesimulator/TUGuide.app/icon.png icon.png
-cProcessPCH /var/folders/dO/dOboE3BRF9CdWF1Qat2zVU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-dulbiuzjtxixnfbemrbsoflvbqhu/TUGuide_Prefix.pch.gch TUGuide_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/main.o /Users/galic1987/Documents/TuGuide/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/TUGuideAppDelegate.o /Users/galic1987/Documents/TuGuide/Classes/TUGuideAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/LoginViewController.o /Users/galic1987/Documents/TuGuide/Classes/LoginViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/RegisterLoginView.o /Users/galic1987/Documents/TuGuide/Classes/RegisterLoginView.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/LoginView.o /Users/galic1987/Documents/TuGuide/Classes/LoginView.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/RegisterView.o /Users/galic1987/Documents/TuGuide/Classes/RegisterView.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/User.o /Users/galic1987/Documents/TuGuide/Classes/User.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Course.o /Users/galic1987/Documents/TuGuide/Classes/Course.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Announcement.o /Users/galic1987/Documents/TuGuide/Classes/Announcement.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Friend.o /Users/galic1987/Documents/TuGuide/Classes/Friend.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Lecture.o /Users/galic1987/Documents/TuGuide/Classes/Lecture.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Building.o /Users/galic1987/Documents/TuGuide/Classes/Building.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cLd /Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app/TUGuide normal i386
-cGenerateDSYMFile /Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app.dSYM /Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app/TUGuide
-cTouch /Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk
-c000000004CC128950000000000000110
-t1287727253
-s272
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c000000004CC12246000000000029B310
-t1287725638
-s2732816
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c000000004CC1226D000000000029D5D0
-t1287725677
-s2741712
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c000000004CC1225F0000000000001466
-t1287725663
-s5222
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
-c000000004CC1281F0000000000000AA1
-t1287727135
-s2721
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c000000004CC12883000000000074D7B0
-t1287727235
-s7657392
-
-N/Users/galic1987/Documents/TuGuide/ButtonDark.png
-c000000004CF101BC0000000000001A4C
-t1290863036
-s6732
-
-N/Users/galic1987/Documents/TuGuide/Classes/Announcement.h
-c000000004CF115DE000000000000033E
-t1290868190
-s830
-i<Foundation/Foundation.h>
-
-N/Users/galic1987/Documents/TuGuide/Classes/Announcement.m
-c000000004CF115DE00000000000003EE
-t1290868190
-s1006
-i"Announcement.h"
-
-N/Users/galic1987/Documents/TuGuide/Classes/Building.h
-c000000004CF11EBD00000000000001DB
-t1290870461
-s475
-i<Foundation/Foundation.h>
-
-N/Users/galic1987/Documents/TuGuide/Classes/Building.m
-c000000004CF11ED10000000000000197
-t1290870481
-s407
-i"Building.h"
-
-N/Users/galic1987/Documents/TuGuide/Classes/Course.h
-c000000004CF112BD0000000000000192
-t1290867389
-s402
-i<Foundation/Foundation.h>
-
-N/Users/galic1987/Documents/TuGuide/Classes/Course.m
-c000000004CF118EF000000000000018D
-t1290868975
-s397
-i"Course.h"
-
-N/Users/galic1987/Documents/TuGuide/Classes/Friend.h
-c000000004CF11D80000000000000016B
-t1290870144
-s363
-i<Foundation/Foundation.h>
-
-N/Users/galic1987/Documents/TuGuide/Classes/Friend.m
-c000000004CF11D700000000000000166
-t1290870128
-s358
-i"Friend.h"
-
-N/Users/galic1987/Documents/TuGuide/Classes/Lecture.h
-c000000004CF115DE00000000000000CC
-t1290868190
-s204
-i<Foundation/Foundation.h>
-
-N/Users/galic1987/Documents/TuGuide/Classes/Lecture.m
-c000000004CF115DE00000000000000B3
-t1290868190
-s179
-i"Lecture.h"
-
-N/Users/galic1987/Documents/TuGuide/Classes/LoginView.h
-c000000004CF101BC0000000000000353
-t1290863036
-s851
-i<UIKit/UIKit.h>
-i"User.h"
-
-N/Users/galic1987/Documents/TuGuide/Classes/LoginView.m
-c000000004CF101BC0000000000000CC7
-t1290863036
-s3271
-i"LoginView.h"
-
-N/Users/galic1987/Documents/TuGuide/Classes/LoginViewController.h
-c000000004CF101BC00000000000002FE
-t1290863036
-s766
-i<UIKit/UIKit.h>
-i"RegisterView.h"
-i"LoginView.h"
-i"RegisterLoginView.h"
-
-N/Users/galic1987/Documents/TuGuide/Classes/LoginViewController.m
-c000000004CF101BC0000000000001141
-t1290863036
-s4417
-i"LoginViewController.h"
-
-N/Users/galic1987/Documents/TuGuide/Classes/RegisterLoginView.h
-c000000004CF101BC0000000000000231
-t1290863036
-s561
-i<UIKit/UIKit.h>
-i"LoginView.h"
-i"RegisterView.h"
-
-N/Users/galic1987/Documents/TuGuide/Classes/RegisterLoginView.m
-c000000004CF101BC0000000000000BFC
-t1290863036
-s3068
-i"RegisterLoginView.h"
-
-N/Users/galic1987/Documents/TuGuide/Classes/RegisterView.h
-c000000004CF101BC00000000000003C5
-t1290863036
-s965
-i<UIKit/UIKit.h>
-i"LoginView.h"
-
-N/Users/galic1987/Documents/TuGuide/Classes/RegisterView.m
-c000000004CF101BC0000000000001061
-t1290863036
-s4193
-i"RegisterView.h"
-
-N/Users/galic1987/Documents/TuGuide/Classes/TUGuideAppDelegate.h
-c000000004CEFEDF60000000000000200
-t1290792438
-s512
-i<UIKit/UIKit.h>
-i"LoginViewController.h"
-
-N/Users/galic1987/Documents/TuGuide/Classes/TUGuideAppDelegate.m
-c000000004CF101BC0000000000000AFC
-t1290863036
-s2812
-i"TUGuideAppDelegate.h"
-
-N/Users/galic1987/Documents/TuGuide/Classes/User.h
-c000000004CF117730000000000000439
-t1290868595
-s1081
-i<Foundation/Foundation.h>
-
-N/Users/galic1987/Documents/TuGuide/Classes/User.m
-c000000004CF118240000000000000436
-t1290868772
-s1078
-i"User.h"
-
-N/Users/galic1987/Documents/TuGuide/Settings.bundle
-c000000004CF101BC0000000000000088
-t1290863036
-s136
-
-N/Users/galic1987/Documents/TuGuide/TUGuideLogo.png
-c000000004CF00BB3000000000000F47F
-t1290800051
-s62591
-
-N/Users/galic1987/Documents/TuGuide/TUGuide_Prefix.pch
-c000000004CD19F8500000000000000B7
-t1288806277
-s183
-i<Foundation/Foundation.h>
-i<UIKit/UIKit.h>
-
-N/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app
-t1290870148
-s306
-
-N/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app.dSYM
-t1290870148
-s102
-
-N/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app/ButtonDark.png
-t1290868204
-s6732
-
-N/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app/Info.plist
-t1290868204
-s558
-
-N/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app/PkgInfo
-t1290868204
-s8
-
-N/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app/Settings.bundle
-t1290868204
-s136
-
-N/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app/TUGuide
-t1290870148
-s69416
-
-N/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app/TUGuideLogo.png
-t1290868204
-s62591
-
-N/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app/icon.png
-t1290868204
-s5661
-
-N/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Announcement.o
-t1290868204
-s14516
-
-N/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Building.o
-t1290870148
-s5032
-
-N/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Course.o
-t1290869288
-s9968
-
-N/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Friend.o
-t1290870148
-s9704
-
-N/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Lecture.o
-t1290868204
-s5028
-
-N/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/LoginView.o
-t1290868939
-s57768
-
-N/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/LoginViewController.o
-t1290868939
-s52476
-
-N/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/RegisterLoginView.o
-t1290868939
-s51784
-
-N/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/RegisterView.o
-t1290868939
-s66988
-
-N/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/TUGuide.LinkFileList
-c000000004CF11D8400000000000005D2
-t1290870148
-s1490
-
-N/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/TUGuideAppDelegate.o
-t1290868939
-s53568
-
-N/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/User.o
-t1290868939
-s18404
-
-N/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/main.o
-t1290868204
-s6476
-
-N/Users/galic1987/Documents/TuGuide/icon.png
-c000000004CF101BC000000000000161D
-t1290863036
-s5661
-
-N/Users/galic1987/Documents/TuGuide/main.m
-c000000004CEFEDF60000000000000172
-t1290792438
-s370
-i<UIKit/UIKit.h>
-
-N/var/folders/dO/dOboE3BRF9CdWF1Qat2zVU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-dulbiuzjtxixnfbemrbsoflvbqhu/TUGuide_Prefix.pch.gch
-t1290790104
-s15453392
-
-NTUGuide-Info.plist
-c000000004CEFE2A40000000000000356
-t1290789540
-s854
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies312562948#312562948#0(0"0(0#1#0"8620693056#0"0#
-
-CCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Announcement.o /Users/galic1987/Documents/TuGuide/Classes/Announcement.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s312561004.772873
-e312561004.886173
-r1
-xCompileC
-xbuild/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Announcement.o
-x/Users/galic1987/Documents/TuGuide/Classes/Announcement.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@65"Compile /Users/galic1987/Documents/TuGuide/Classes/Announcement.m312561004#312561004#0(0"0(0#0#57"/Users/galic1987/Documents/TuGuide/Classes/Announcement.m8616895328#2009"    cd /Users/galic1987/Documents/TuGuide    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-generated-files.hmap -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-own-target-headers.hmap -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-all-target-headers.hmap -iquote /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-project-headers.hmap -F/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/Developer/Library/Frameworks -I/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/include -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources/i386 -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources -include /var/folders/dO/dOboE3BRF9CdWF1Qat2zVU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-dulbiuzjtxixnfbemrbsoflvbqhu/TUGuide_Prefix.pch -c /Users/galic1987/Documents/TuGuide/Classes/Announcement.m -o /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Announcement.o0#
-
-CCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Building.o /Users/galic1987/Documents/TuGuide/Classes/Building.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s312562948.513403
-e312562948.607877
-r1
-xCompileC
-xbuild/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Building.o
-x/Users/galic1987/Documents/TuGuide/Classes/Building.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@61"Compile /Users/galic1987/Documents/TuGuide/Classes/Building.m312562948#312562948#0(0"0(0#0#53"/Users/galic1987/Documents/TuGuide/Classes/Building.m8617733024#2001"    cd /Users/galic1987/Documents/TuGuide    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-generated-files.hmap -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-own-target-headers.hmap -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-all-target-headers.hmap -iquote /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-project-headers.hmap -F/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/Developer/Library/Frameworks -I/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/include -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources/i386 -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources -include /var/folders/dO/dOboE3BRF9CdWF1Qat2zVU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-dulbiuzjtxixnfbemrbsoflvbqhu/TUGuide_Prefix.pch -c /Users/galic1987/Documents/TuGuide/Classes/Building.m -o /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Building.o0#
-
-CCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Course.o /Users/galic1987/Documents/TuGuide/Classes/Course.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s312562088.423311
-e312562088.563600
-r1
-xCompileC
-xbuild/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Course.o
-x/Users/galic1987/Documents/TuGuide/Classes/Course.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@59"Compile /Users/galic1987/Documents/TuGuide/Classes/Course.m312562088#312562088#0(0"0(0#0#51"/Users/galic1987/Documents/TuGuide/Classes/Course.m8613748960#1997"    cd /Users/galic1987/Documents/TuGuide    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-generated-files.hmap -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-own-target-headers.hmap -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-all-target-headers.hmap -iquote /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-project-headers.hmap -F/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/Developer/Library/Frameworks -I/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/include -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources/i386 -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources -include /var/folders/dO/dOboE3BRF9CdWF1Qat2zVU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-dulbiuzjtxixnfbemrbsoflvbqhu/TUGuide_Prefix.pch -c /Users/galic1987/Documents/TuGuide/Classes/Course.m -o /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Course.o0#
-
-CCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Friend.o /Users/galic1987/Documents/TuGuide/Classes/Friend.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s312562948.512241
-e312562948.611540
-r1
-xCompileC
-xbuild/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Friend.o
-x/Users/galic1987/Documents/TuGuide/Classes/Friend.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@59"Compile /Users/galic1987/Documents/TuGuide/Classes/Friend.m312562948#312562948#0(0"0(0#0#51"/Users/galic1987/Documents/TuGuide/Classes/Friend.m8386658438684291072#1997"    cd /Users/galic1987/Documents/TuGuide    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-generated-files.hmap -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-own-target-headers.hmap -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-all-target-headers.hmap -iquote /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-project-headers.hmap -F/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/Developer/Library/Frameworks -I/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/include -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources/i386 -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources -include /var/folders/dO/dOboE3BRF9CdWF1Qat2zVU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-dulbiuzjtxixnfbemrbsoflvbqhu/TUGuide_Prefix.pch -c /Users/galic1987/Documents/TuGuide/Classes/Friend.m -o /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Friend.o0#
-
-CCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Lecture.o /Users/galic1987/Documents/TuGuide/Classes/Lecture.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s312561004.886276
-e312561004.943659
-r1
-xCompileC
-xbuild/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Lecture.o
-x/Users/galic1987/Documents/TuGuide/Classes/Lecture.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@60"Compile /Users/galic1987/Documents/TuGuide/Classes/Lecture.m312561004#312561004#0(0"0(0#0#52"/Users/galic1987/Documents/TuGuide/Classes/Lecture.m8612175104#1999"    cd /Users/galic1987/Documents/TuGuide    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-generated-files.hmap -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-own-target-headers.hmap -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-all-target-headers.hmap -iquote /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-project-headers.hmap -F/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/Developer/Library/Frameworks -I/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/include -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources/i386 -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources -include /var/folders/dO/dOboE3BRF9CdWF1Qat2zVU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-dulbiuzjtxixnfbemrbsoflvbqhu/TUGuide_Prefix.pch -c /Users/galic1987/Documents/TuGuide/Classes/Lecture.m -o /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Lecture.o0#
-
-CCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/LoginView.o /Users/galic1987/Documents/TuGuide/Classes/LoginView.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s312561739.333890
-e312561739.485631
-r1
-xCompileC
-xbuild/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/LoginView.o
-x/Users/galic1987/Documents/TuGuide/Classes/LoginView.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Users/galic1987/Documents/TuGuide/Classes/LoginView.m: In function '-[LoginView sendButtonAction:]':
-o/Users/galic1987/Documents/TuGuide/Classes/LoginView.m:77: warning: no '-initWithEmailAndPassword:password:' method found
-o/Users/galic1987/Documents/TuGuide/Classes/LoginView.m:77: warning: (Messages without a matching method signature
-o/Users/galic1987/Documents/TuGuide/Classes/LoginView.m:77: warning: will be assumed to return 'id' and accept
-o/Users/galic1987/Documents/TuGuide/Classes/LoginView.m:77: warning: '...' as arguments.)
-o/Users/galic1987/Documents/TuGuide/Classes/LoginView.m:86: warning: format not a string literal and no format arguments
-lSLF07#2@62"Compile /Users/galic1987/Documents/TuGuide/Classes/LoginView.m312561739#312561739#0(657"/Users/galic1987/Documents/TuGuide/Classes/LoginView.m: In function '-[LoginView sendButtonAction:]':/Users/galic1987/Documents/TuGuide/Classes/LoginView.m:77: warning: no '-initWithEmailAndPassword:password:' method found/Users/galic1987/Documents/TuGuide/Classes/LoginView.m:77: warning: (Messages without a matching method signature/Users/galic1987/Documents/TuGuide/Classes/LoginView.m:77: warning: will be assumed to return 'id' and accept/Users/galic1987/Documents/TuGuide/Classes/LoginView.m:77: warning: '...' as arguments.)/Users/galic1987/Documents/TuGuide/Classes/LoginView.m:86: warning: format not a string literal and no format arguments3(22@53"No '-initWithEmailAndPassword:password:' method found312561739#102#122#0(6@54"/Users/galic1987/Documents/TuGuide/Classes/LoginView.m312555836#77#0#77#0#19"no '*' method found0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)312561739#224#114#0(6@54"/Users/galic1987/Documents/TuGuide/Classes/LoginView.m312555836#77#0#77#0#0"0(22@51"Format not a string literal and no format arguments312561739#537#120#0(6@54"/Users/galic1987/Documents/TuGuide/Classes/LoginView.m312555836#86#0#86#0#51"format not a string literal and no format arguments0(0#0#54"/Users/galic1987/Documents/TuGuide/Classes/LoginView.m8613052416#2003"    cd /Users/galic1987/Documents/TuGuide    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-generated-files.hmap -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-own-target-headers.hmap -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-all-target-headers.hmap -iquote /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-project-headers.hmap -F/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/Developer/Library/Frameworks -I/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/include -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources/i386 -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources -include /var/folders/dO/dOboE3BRF9CdWF1Qat2zVU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-dulbiuzjtxixnfbemrbsoflvbqhu/TUGuide_Prefix.pch -c /Users/galic1987/Documents/TuGuide/Classes/LoginView.m -o /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/LoginView.o0#
-
-CCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/LoginViewController.o /Users/galic1987/Documents/TuGuide/Classes/LoginViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s312561739.212366
-e312561739.333789
-r1
-xCompileC
-xbuild/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/LoginViewController.o
-x/Users/galic1987/Documents/TuGuide/Classes/LoginViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@72"Compile /Users/galic1987/Documents/TuGuide/Classes/LoginViewController.m312561739#312561739#0(0"0(0#0#64"/Users/galic1987/Documents/TuGuide/Classes/LoginViewController.m8613786144#2023"    cd /Users/galic1987/Documents/TuGuide    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-generated-files.hmap -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-own-target-headers.hmap -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-all-target-headers.hmap -iquote /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-project-headers.hmap -F/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/Developer/Library/Frameworks -I/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/include -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources/i386 -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources -include /var/folders/dO/dOboE3BRF9CdWF1Qat2zVU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-dulbiuzjtxixnfbemrbsoflvbqhu/TUGuide_Prefix.pch -c /Users/galic1987/Documents/TuGuide/Classes/LoginViewController.m -o /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/LoginViewController.o0#
-
-CCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/RegisterLoginView.o /Users/galic1987/Documents/TuGuide/Classes/RegisterLoginView.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s312561739.314314
-e312561739.425620
-r1
-xCompileC
-xbuild/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/RegisterLoginView.o
-x/Users/galic1987/Documents/TuGuide/Classes/RegisterLoginView.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Users/galic1987/Documents/TuGuide/Classes/RegisterLoginView.m:95: warning: incomplete implementation of class 'RegisterLoginView'
-o/Users/galic1987/Documents/TuGuide/Classes/RegisterLoginView.m:95: warning: method definition for '-registerButtonPressed' not found
-o/Users/galic1987/Documents/TuGuide/Classes/RegisterLoginView.m:95: warning: method definition for '-loginButtonPressed' not found
-lSLF07#2@70"Compile /Users/galic1987/Documents/TuGuide/Classes/RegisterLoginView.m312561739#312561739#0(394"/Users/galic1987/Documents/TuGuide/Classes/RegisterLoginView.m:95: warning: incomplete implementation of class 'RegisterLoginView'/Users/galic1987/Documents/TuGuide/Classes/RegisterLoginView.m:95: warning: method definition for '-registerButtonPressed' not found/Users/galic1987/Documents/TuGuide/Classes/RegisterLoginView.m:95: warning: method definition for '-loginButtonPressed' not found3(22@54"Incomplete implementation of class 'RegisterLoginView'312561739#0#131#0(6@62"/Users/galic1987/Documents/TuGuide/Classes/RegisterLoginView.m312555836#95#0#95#0#38"incomplete implementation of class '*'0(22@56"Method definition for '-registerButtonPressed' not found312561739#131#133#0(6@62"/Users/galic1987/Documents/TuGuide/Classes/RegisterLoginView.m312555836#95#0#95#0#35"method definition for '*' not found0(22@53"Method definition for '-loginButtonPressed' not found312561739#264#130#0(6@62"/Users/galic1987/Documents/TuGuide/Classes/RegisterLoginView.m312555836#95#0#95#0#35"method definition for '*' not found0(0#0#62"/Users/galic1987/Documents/TuGuide/Classes/RegisterLoginView.m8613534336#2019"    cd /Users/galic1987/Documents/TuGuide    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-generated-files.hmap -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-own-target-headers.hmap -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-all-target-headers.hmap -iquote /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-project-headers.hmap -F/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/Developer/Library/Frameworks -I/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/include -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources/i386 -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources -include /var/folders/dO/dOboE3BRF9CdWF1Qat2zVU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-dulbiuzjtxixnfbemrbsoflvbqhu/TUGuide_Prefix.pch -c /Users/galic1987/Documents/TuGuide/Classes/RegisterLoginView.m -o /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/RegisterLoginView.o0#
-
-CCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/RegisterView.o /Users/galic1987/Documents/TuGuide/Classes/RegisterView.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s312561739.426049
-e312561739.596647
-r1
-xCompileC
-xbuild/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/RegisterView.o
-x/Users/galic1987/Documents/TuGuide/Classes/RegisterView.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Users/galic1987/Documents/TuGuide/Classes/RegisterView.m: In function '-[RegisterView sendButtonAction:]':
-o/Users/galic1987/Documents/TuGuide/Classes/RegisterView.m:85: warning: no '-initWithEmailPasswordAndUsername:password:user:' method found
-o/Users/galic1987/Documents/TuGuide/Classes/RegisterView.m:85: warning: (Messages without a matching method signature
-o/Users/galic1987/Documents/TuGuide/Classes/RegisterView.m:85: warning: will be assumed to return 'id' and accept
-o/Users/galic1987/Documents/TuGuide/Classes/RegisterView.m:85: warning: '...' as arguments.)
-lSLF07#2@65"Compile /Users/galic1987/Documents/TuGuide/Classes/RegisterView.m312561739#312561739#0(568"/Users/galic1987/Documents/TuGuide/Classes/RegisterView.m: In function '-[RegisterView sendButtonAction:]':/Users/galic1987/Documents/TuGuide/Classes/RegisterView.m:85: warning: no '-initWithEmailPasswordAndUsername:password:user:' method found/Users/galic1987/Documents/TuGuide/Classes/RegisterView.m:85: warning: (Messages without a matching method signature/Users/galic1987/Documents/TuGuide/Classes/RegisterView.m:85: warning: will be assumed to return 'id' and accept/Users/galic1987/Documents/TuGuide/Classes/RegisterView.m:85: warning: '...' as arguments.)2(22@66"No '-initWithEmailPasswordAndUsername:password:user:' method found312561739#108#138#0(6@57"/Users/galic1987/Documents/TuGuide/Classes/RegisterView.m312555836#85#0#85#0#19"no '*' method found0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)312561739#246#117#0(6@57"/Users/galic1987/Documents/TuGuide/Classes/RegisterView.m312555836#85#0#85#0#0"0(0#0#57"/Users/galic1987/Documents/TuGuide/Classes/RegisterView.m8617107680#2009"    cd /Users/galic1987/Documents/TuGuide    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-generated-files.hmap -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-own-target-headers.hmap -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-all-target-headers.hmap -iquote /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-project-headers.hmap -F/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/Developer/Library/Frameworks -I/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/include -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources/i386 -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources -include /var/folders/dO/dOboE3BRF9CdWF1Qat2zVU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-dulbiuzjtxixnfbemrbsoflvbqhu/TUGuide_Prefix.pch -c /Users/galic1987/Documents/TuGuide/Classes/RegisterView.m -o /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/RegisterView.o0#
-
-CCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/TUGuideAppDelegate.o /Users/galic1987/Documents/TuGuide/Classes/TUGuideAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s312561739.211267
-e312561739.314220
-r1
-xCompileC
-xbuild/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/TUGuideAppDelegate.o
-x/Users/galic1987/Documents/TuGuide/Classes/TUGuideAppDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@71"Compile /Users/galic1987/Documents/TuGuide/Classes/TUGuideAppDelegate.m312561739#312561739#0(0"0(0#0#63"/Users/galic1987/Documents/TuGuide/Classes/TUGuideAppDelegate.m8614561088#2021"    cd /Users/galic1987/Documents/TuGuide    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-generated-files.hmap -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-own-target-headers.hmap -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-all-target-headers.hmap -iquote /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-project-headers.hmap -F/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/Developer/Library/Frameworks -I/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/include -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources/i386 -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources -include /var/folders/dO/dOboE3BRF9CdWF1Qat2zVU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-dulbiuzjtxixnfbemrbsoflvbqhu/TUGuide_Prefix.pch -c /Users/galic1987/Documents/TuGuide/Classes/TUGuideAppDelegate.m -o /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/TUGuideAppDelegate.o0#
-
-CCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/User.o /Users/galic1987/Documents/TuGuide/Classes/User.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s312561739.485728
-e312561739.679299
-r1
-xCompileC
-xbuild/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/User.o
-x/Users/galic1987/Documents/TuGuide/Classes/User.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@57"Compile /Users/galic1987/Documents/TuGuide/Classes/User.m312561739#312561739#0(0"0(0#0#49"/Users/galic1987/Documents/TuGuide/Classes/User.m8619559456#1993"    cd /Users/galic1987/Documents/TuGuide    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-generated-files.hmap -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-own-target-headers.hmap -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-all-target-headers.hmap -iquote /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-project-headers.hmap -F/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/Developer/Library/Frameworks -I/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/include -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources/i386 -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources -include /var/folders/dO/dOboE3BRF9CdWF1Qat2zVU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-dulbiuzjtxixnfbemrbsoflvbqhu/TUGuide_Prefix.pch -c /Users/galic1987/Documents/TuGuide/Classes/User.m -o /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/User.o0#
-
-CCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/main.o /Users/galic1987/Documents/TuGuide/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s312561004.353995
-e312561004.423487
-r1
-xCompileC
-xbuild/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/main.o
-x/Users/galic1987/Documents/TuGuide/main.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@49"Compile /Users/galic1987/Documents/TuGuide/main.m312561004#312561004#0(0"0(0#0#41"/Users/galic1987/Documents/TuGuide/main.m8613762848#1985"    cd /Users/galic1987/Documents/TuGuide    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-generated-files.hmap -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-own-target-headers.hmap -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-all-target-headers.hmap -iquote /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/TUGuide-project-headers.hmap -F/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/Developer/Library/Frameworks -I/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/include -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources/i386 -I/Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/DerivedSources -include /var/folders/dO/dOboE3BRF9CdWF1Qat2zVU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-dulbiuzjtxixnfbemrbsoflvbqhu/TUGuide_Prefix.pch -c /Users/galic1987/Documents/TuGuide/main.m -o /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/main.o0#
-
-CCpResource build/Debug-iphonesimulator/TUGuide.app/ButtonDark.png ButtonDark.png
-s312561004.308766
-e312561004.343458
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/TUGuide.app/ButtonDark.png
-xButtonDark.png
-lSLF07#2@19"Copy ButtonDark.png312561004#312561004#0(0"0(0#0#49"/Users/galic1987/Documents/TuGuide/ButtonDark.png8616576000#460"    cd /Users/galic1987/Documents/TuGuide    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/galic1987/Documents/TuGuide/ButtonDark.png /Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app0#
-
-CCpResource build/Debug-iphonesimulator/TUGuide.app/Settings.bundle Settings.bundle
-s312561004.309374
-e312561004.353824
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/TUGuide.app/Settings.bundle
-xSettings.bundle
-lSLF07#2@20"Copy Settings.bundle312561004#312561004#0(0"0(0#0#50"/Users/galic1987/Documents/TuGuide/Settings.bundle8616268352#461"    cd /Users/galic1987/Documents/TuGuide    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/galic1987/Documents/TuGuide/Settings.bundle /Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app0#
-
-CCpResource build/Debug-iphonesimulator/TUGuide.app/TUGuideLogo.png TUGuideLogo.png
-s312561004.307944
-e312561004.343853
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/TUGuide.app/TUGuideLogo.png
-xTUGuideLogo.png
-lSLF07#2@20"Copy TUGuideLogo.png312561004#312561004#0(0"0(0#0#50"/Users/galic1987/Documents/TuGuide/TUGuideLogo.png8617007488#461"    cd /Users/galic1987/Documents/TuGuide    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/galic1987/Documents/TuGuide/TUGuideLogo.png /Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app0#
-
-CCpResource build/Debug-iphonesimulator/TUGuide.app/icon.png icon.png
-s312561004.309974
-e312561004.343665
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/TUGuide.app/icon.png
-xicon.png
-lSLF07#2@13"Copy icon.png312561004#312561004#0(0"0(0#0#43"/Users/galic1987/Documents/TuGuide/icon.png8614636736#454"    cd /Users/galic1987/Documents/TuGuide    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/galic1987/Documents/TuGuide/icon.png /Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app0#
-
-CGenerateDSYMFile /Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app.dSYM /Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app/TUGuide
-s312562948.665981
-e312562948.693879
-r1
-xGenerateDSYMFile
-x/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app.dSYM
-x/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app/TUGuide
-lSLF07#2@109"GenerateDSYMFile build/Debug-iphonesimulator/TUGuide.app.dSYM build/Debug-iphonesimulator/TUGuide.app/TUGuide312562948#312562948#0(0"0(0#0#82"/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app/TUGuide8619858496#371"    cd /Users/galic1987/Documents/TuGuide    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app/TUGuide -o /Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app.dSYM0#
-
-CLd /Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app/TUGuide normal i386
-s312562948.611631
-e312562948.665875
-r1
-xLd
-x/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app/TUGuide
-xnormal
-xi386
-lSLF07#2@87"Link /Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app/TUGuide312562948#312562948#0(0"0(0#0#0"8621024224#995"    cd /Users/galic1987/Documents/TuGuide    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator -F/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator -F/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/Developer/Library/Frameworks -filelist /Users/galic1987/Documents/TuGuide/build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/TUGuide.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app/TUGuide0#
-
-CProcessInfoPlistFile /Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app/Info.plist TUGuide-Info.plist
-s312561004.280842
-e312561004.307845
-r1
-xProcessInfoPlistFile
-x/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app/Info.plist
-xTUGuide-Info.plist
-lSLF07#2@26"Process TUGuide-Info.plist312561004#312561004#0(0"0(0#0#53"/Users/galic1987/Documents/TuGuide/TUGuide-Info.plist8603768096#467"    cd /Users/galic1987/Documents/TuGuide    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility TUGuide-Info.plist -genpkginfo /Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app/Info.plist0#
-
-CProcessPCH /var/folders/dO/dOboE3BRF9CdWF1Qat2zVU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TUGuide_Prefix-dulbiuzjtxixnfbemrbsoflvbqhu/TUGuide_Prefix.pch.gch TUGuide_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
-
-CTouch /Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app
-s312562948.694246
-e312562948.724402
-r1
-xTouch
-x/Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app
-lSLF07#2@80"Touch /Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app312562948#312562948#0(0"0(0#0#0"8619518272#270"    cd /Users/galic1987/Documents/TuGuide    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/galic1987/Documents/TuGuide/build/Debug-iphonesimulator/TUGuide.app0#
-

@@ -1,17 +1,18 @@
-    //
-//  OrganizerViewController.m
+//
+//  FoodViewController.m
 //  TUGuide
 //
-//  Created by Ivo Galic on 12/28/10.
-//  Copyright 2010 Galic Design. All rights reserved.
+//  Created by Ivo Galic on 1/8/11.
+//  Copyright 2011 Galic Design. All rights reserved.
 //
 
-#import "OrganizerViewController.h"
+
+#import "IMissedItViewController.h"
 
 
-@implementation OrganizerViewController
+@implementation IMissedItViewController
 
-@synthesize segmentedController, lecturesViewController, coursesViewController, todoViewController,delegate2;
+@synthesize segmentedController,stubViewController,delegate2;
 
 
 
@@ -22,23 +23,18 @@
 }
 
 
-
 -(void) segmentAction: (UISegmentedControl *) sender
 {
-	[delegate2 passing:self command:@"change organization controller" message:@"some message"];
+	[delegate2 passing:self command:@"change i missed it controller" message:@"some message"];
 	
 	switch (sender.selectedSegmentIndex) {
 		case 0:
-			XLog(@"Switch to lectures" );	
-			self.view = lecturesViewController.view;
+			XLog(@"Switch to iMissedIt" );	
+			self.view = stubViewController.view;
 			break;
 		case 1:
-			XLog(@"Switch to courses" );	
-			self.view = coursesViewController.view;
-			break;
-		case 2:
-			XLog(@"Switch to todo's" );
-			self.view = todoViewController.view;
+			XLog(@"Switch to uMissedIt" );	
+			self.view = stubViewController.view;
 			break;
 		default:
 			break;
@@ -46,32 +42,33 @@
 }
 
 
-NSArray *allSubviews(UIView *aView)
+
+NSArray *allSubviewsMiss(UIView *aView)
 {
 	NSArray *results = [aView subviews];
 	for (UIView *eachView in [aView subviews])
 	{
-		NSArray *riz = allSubviews(eachView);
+		NSArray *riz = allSubviewsMiss(eachView);
 		if (riz) results = [results arrayByAddingObjectsFromArray:riz];
 	}
 	return results;
 }
 
+
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
 	
 	// create for segmented control
-	lecturesViewController = [[LecturesViewController alloc] init];
-	coursesViewController = [[CoursesViewController alloc] init];
-	todoViewController = [[ToDoViewController alloc] init];
+	stubViewController = [[StubViewController alloc] init];
 	
-	self.view = lecturesViewController.view;
+	
+	self.view = stubViewController.view;
 	
 	self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
 	
 	
 	// Create the segmented control. Choose one of the three styles
-	NSArray *buttonNames = [NSArray arrayWithObjects:@"Lectures", @"Courses", @"Todo", nil];
+	NSArray *buttonNames = [NSArray arrayWithObjects:@"iMissedIt", @"uMissedIt", nil];
 	UISegmentedControl* segmentedControl = [[UISegmentedControl alloc] initWithItems:buttonNames];
 	segmentedControl.segmentedControlStyle = UIBarStyleBlackTranslucent; 
 	segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleWidth;
@@ -84,7 +81,7 @@ NSArray *allSubviews(UIView *aView)
 	segmentedControl.momentary = NO;
 	segmentedControl.selectedSegmentIndex = 0;
 	
-	CFShow(allSubviews(segmentedControl));
+	CFShow(allSubviewsMiss(segmentedControl));
 	
 	
 	// Add it to the navigation bar
@@ -97,10 +94,10 @@ NSArray *allSubviews(UIView *aView)
 
 - (id)init {
 	
-	if (self = [super initWithNibName:@"Organizer" bundle:nil]) {
-		self.title = @"Organizer";
-		UIImage* anImage = [UIImage imageNamed:@"40-inbox.png"];
-		UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:@"Organizer" image:anImage tag:0];
+	if (self = [super initWithNibName:@"IMissedIt" bundle:nil]) {
+		self.title = @"IMissedIt";
+		UIImage* anImage = [UIImage imageNamed:@"iMisseditIcon.png"];
+		UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:@"IMissedIt" image:anImage tag:0];
 		self.tabBarItem = theItem;
 		[theItem release];
 	}
@@ -111,19 +108,19 @@ NSArray *allSubviews(UIView *aView)
 
 
 /*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-*/
+ // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+ - (void)viewDidLoad {
+ [super viewDidLoad];
+ }
+ */
 
 /*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations.
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
+ // Override to allow orientations other than the default portrait orientation.
+ - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+ // Return YES for supported orientations.
+ return (interfaceOrientation == UIInterfaceOrientationPortrait);
+ }
+ */
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -145,3 +142,4 @@ NSArray *allSubviews(UIView *aView)
 
 
 @end
+

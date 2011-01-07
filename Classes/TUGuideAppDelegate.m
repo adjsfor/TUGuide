@@ -16,6 +16,7 @@
 @synthesize serverLogin;
 @synthesize serverCreate;
 @synthesize tabBarController;
+@synthesize organizerViewController,locationViewController,friendViewController,foodViewController,missViewController;
 
 
 #pragma mark -
@@ -34,6 +35,8 @@
 
 
 -(void)passing:(NSObject *)requestor command:(NSString *)cmd message:(NSString *)msg{
+	
+	XLog();
 	
 	//login successful -> switch to tabbar 
 	if ([cmd isEqual:@"loginSuccessful"]) {
@@ -114,34 +117,39 @@
 	mainNavigationController.delegate2 = self;
 	//[window addSubview:mainNavigationController.view];
 	
-	//OrganizerViewController *org = [[OrganizerViewController alloc] init];
-	LecturesViewController *le = [[LecturesViewController alloc]init];
 	
+	organizerViewController = [[OrganizerViewController alloc] init];
+	locationViewController = [[LocationViewController alloc] init];
+	friendViewController  = [[FriendsViewController alloc] init];
+	foodViewController = [[FoodViewController alloc] init];
+	missViewController = [[IMissedItViewController alloc] init];
 	
-	UINavigationController *org = [[UINavigationController alloc] initWithRootViewController:[[OrganizerViewController alloc] init]];
-	UINavigationController *loc = [[UINavigationController alloc] initWithRootViewController:[[LocationViewController alloc] init]];
+	organizerViewController.delegate2 = self;
+	locationViewController.delegate2 = self;
+	friendViewController.delegate2 = self;
+	foodViewController.delegate2 = self;
+	missViewController.delegate2 = self;
+	
+	UINavigationController *org = [[UINavigationController alloc] initWithRootViewController:organizerViewController];
+	UINavigationController *loc = [[UINavigationController alloc] initWithRootViewController:locationViewController];
+	UINavigationController *fri = [[UINavigationController alloc] initWithRootViewController:friendViewController];
+	UINavigationController *foo = [[UINavigationController alloc] initWithRootViewController:foodViewController];
+	UINavigationController *mis = [[UINavigationController alloc] initWithRootViewController:missViewController];
+	
 	
 	
 	NSMutableArray *controllers = [NSMutableArray array];
 	//[controllers addObject:mainNavigationController];
 	[controllers addObject:org];
 	[controllers addObject:loc];
-	
+	[controllers addObject:fri];
+	[controllers addObject:foo];
+	[controllers addObject:mis];
 	
 	tabBarController = [[MainUITabBarController alloc] init];
-	
-	
 	tabBarController.viewControllers = controllers;
 	
-	//tabBarController.customizableViewControllers = controllers;
-	
-	
-	[window addSubview:tabBarController.view];
-	
-	//MapViewController *map = [[MapViewController alloc] init];
-	//[window addSubview:map.view];
-	
-    
+	[window addSubview:tabBarController.view]; // add tabbar and go
     [window makeKeyAndVisible];
     
     return YES;

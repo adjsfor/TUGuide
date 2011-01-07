@@ -11,7 +11,20 @@
 
 @implementation LocationViewController
 
-@synthesize segmentedController, mapViewController, mapListViewController;
+@synthesize segmentedController, mapViewController, mapListViewController,delegate2;
+
+
+NSArray *allSubviewsLocation(UIView *aView)
+{
+	NSArray *results = [aView subviews];
+	for (UIView *eachView in [aView subviews])
+	{
+		NSArray *riz = allSubviewsLocation(eachView);
+		if (riz) results = [results arrayByAddingObjectsFromArray:riz];
+	}
+	return results;
+}
+
 
 -(void)passTo:(UIViewController *)requestor command:(NSString *)cmd message:(NSString *)msg{
 	//NSLog(@"OrganizerNavigationController: switching to controller %@", cmd);
@@ -34,18 +47,6 @@
 		default:
 			break;
 	}
-}
-
-// this is C function for updating all subviews
-NSArray *allSubviewsLocation(UIView *aView)
-{
-	NSArray *results = [aView subviews];
-	for (UIView *eachView in [aView subviews])
-	{
-		NSArray *riz = allSubviewsLocation(eachView);
-		if (riz) results = [results arrayByAddingObjectsFromArray:riz];
-	}
-	return results;
 }
 
 

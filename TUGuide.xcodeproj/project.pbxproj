@@ -19,6 +19,10 @@
 		4B38C1C112CA609A00E5C5D4 /* 48-fork-and-knife.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B38C1B412CA609A00E5C5D4 /* 48-fork-and-knife.png */; };
 		4B38C1C212CA609A00E5C5D4 /* 40-inbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B38C1B512CA609A00E5C5D4 /* 40-inbox.png */; };
 		4B38C1EC12CA946100E5C5D4 /* OrganizerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B38C1EB12CA946100E5C5D4 /* OrganizerViewController.m */; };
+		4B4CF92012D7CA9000D1368F /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */; };
+		4B4CF92412D7CB3200D1368F /* StubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4CF92312D7CB3200D1368F /* StubViewController.m */; };
+		4B4CFAD412D7D32400D1368F /* FoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4CFAD312D7D32400D1368F /* FoodViewController.m */; };
+		4B4CFAE812D7D4A500D1368F /* IMissedItViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4CFAE712D7D4A500D1368F /* IMissedItViewController.m */; };
 		4B819D1B12A561FE005C740F /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B819D1A12A561FE005C740F /* MainNavigationController.m */; };
 		4B819D2012A564C2005C740F /* ServerLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B819D1F12A564C2005C740F /* ServerLogin.m */; };
 		4B819D4A12A5706E005C740F /* RegisterLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B819D4912A5706E005C740F /* RegisterLoginViewController.m */; };
@@ -54,7 +58,6 @@
 		FA616EAF12B8BCD100E0E2C7 /* LecturesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA616EAE12B8BCD100E0E2C7 /* LecturesDetailViewController.m */; };
 		FA616EB212B8BD5C00E0E2C7 /* LecturesDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA616EB112B8BD5C00E0E2C7 /* LecturesDetailView.m */; };
 		FA616EDF12B8C17F00E0E2C7 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA616EDE12B8C17F00E0E2C7 /* EventKit.framework */; };
-		FA616EF512B8C53500E0E2C7 /* OrganizerNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA616EF412B8C53500E0E2C7 /* OrganizerNavigationController.m */; };
 		FA616F0212B8D09500E0E2C7 /* CoursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA616F0112B8D09500E0E2C7 /* CoursesViewController.m */; };
 		FA616F0512B8D0AB00E0E2C7 /* ToDoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA616F0412B8D0AB00E0E2C7 /* ToDoViewController.m */; };
 		FA6171D312B90A2300E0E2C7 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6171D212B90A2300E0E2C7 /* MapViewController.m */; };
@@ -89,6 +92,14 @@
 		4B38C1B512CA609A00E5C5D4 /* 40-inbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "40-inbox.png"; sourceTree = "<group>"; };
 		4B38C1EA12CA946100E5C5D4 /* OrganizerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrganizerViewController.h; sourceTree = "<group>"; };
 		4B38C1EB12CA946100E5C5D4 /* OrganizerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrganizerViewController.m; sourceTree = "<group>"; };
+		4B4CF91E12D7CA9000D1368F /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
+		4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
+		4B4CF92212D7CB3200D1368F /* StubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StubViewController.h; sourceTree = "<group>"; };
+		4B4CF92312D7CB3200D1368F /* StubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StubViewController.m; sourceTree = "<group>"; };
+		4B4CFAD212D7D32400D1368F /* FoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodViewController.h; sourceTree = "<group>"; };
+		4B4CFAD312D7D32400D1368F /* FoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodViewController.m; sourceTree = "<group>"; };
+		4B4CFAE612D7D4A500D1368F /* IMissedItViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMissedItViewController.h; sourceTree = "<group>"; };
+		4B4CFAE712D7D4A500D1368F /* IMissedItViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMissedItViewController.m; sourceTree = "<group>"; };
 		4B819D1912A561FE005C740F /* MainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
 		4B819D1A12A561FE005C740F /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
 		4B819D1E12A564C2005C740F /* ServerLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerLogin.h; sourceTree = "<group>"; };
@@ -146,8 +157,6 @@
 		FA616EB012B8BD5C00E0E2C7 /* LecturesDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LecturesDetailView.h; sourceTree = "<group>"; };
 		FA616EB112B8BD5C00E0E2C7 /* LecturesDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LecturesDetailView.m; sourceTree = "<group>"; };
 		FA616EDE12B8C17F00E0E2C7 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
-		FA616EF312B8C53500E0E2C7 /* OrganizerNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrganizerNavigationController.h; sourceTree = "<group>"; };
-		FA616EF412B8C53500E0E2C7 /* OrganizerNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrganizerNavigationController.m; sourceTree = "<group>"; };
 		FA616F0012B8D09500E0E2C7 /* CoursesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoursesViewController.h; sourceTree = "<group>"; };
 		FA616F0112B8D09500E0E2C7 /* CoursesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoursesViewController.m; sourceTree = "<group>"; };
 		FA616F0312B8D0AB00E0E2C7 /* ToDoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoViewController.h; sourceTree = "<group>"; };
@@ -203,6 +212,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4B4CF92112D7CAFA00D1368F /* HelperStubs */,
 				4B819E4512A59054005C740F /* Delegate Protocols */,
 				4B38C1C312CA772B00E5C5D4 /* TabBarModules */,
 				4B819D1D12A56433005C740F /* Server Access */,
@@ -362,8 +372,6 @@
 			children = (
 				4B38C1EA12CA946100E5C5D4 /* OrganizerViewController.h */,
 				4B38C1EB12CA946100E5C5D4 /* OrganizerViewController.m */,
-				FA616EF312B8C53500E0E2C7 /* OrganizerNavigationController.h */,
-				FA616EF412B8C53500E0E2C7 /* OrganizerNavigationController.m */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -385,6 +393,8 @@
 		4B38C1E012CA7D7400E5C5D4 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				4B4CF91E12D7CA9000D1368F /* FriendsViewController.h */,
+				4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -392,6 +402,8 @@
 		4B38C1E112CA7D7A00E5C5D4 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				4B4CFAD212D7D32400D1368F /* FoodViewController.h */,
+				4B4CFAD312D7D32400D1368F /* FoodViewController.m */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -458,8 +470,19 @@
 		4B38C1E912CA7DD400E5C5D4 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				4B4CFAE612D7D4A500D1368F /* IMissedItViewController.h */,
+				4B4CFAE712D7D4A500D1368F /* IMissedItViewController.m */,
 			);
 			name = Misc;
+			sourceTree = "<group>";
+		};
+		4B4CF92112D7CAFA00D1368F /* HelperStubs */ = {
+			isa = PBXGroup;
+			children = (
+				4B4CF92212D7CB3200D1368F /* StubViewController.h */,
+				4B4CF92312D7CB3200D1368F /* StubViewController.m */,
+			);
+			name = HelperStubs;
 			sourceTree = "<group>";
 		};
 		4B819D1C12A56208005C740F /* NavigationControllers */ = {
@@ -713,7 +736,6 @@
 				FACE15E112B820A600637DB9 /* LecturesViewController.m in Sources */,
 				FA616EAF12B8BCD100E0E2C7 /* LecturesDetailViewController.m in Sources */,
 				FA616EB212B8BD5C00E0E2C7 /* LecturesDetailView.m in Sources */,
-				FA616EF512B8C53500E0E2C7 /* OrganizerNavigationController.m in Sources */,
 				FA616F0212B8D09500E0E2C7 /* CoursesViewController.m in Sources */,
 				FA616F0512B8D0AB00E0E2C7 /* ToDoViewController.m in Sources */,
 				FA6171D312B90A2300E0E2C7 /* MapViewController.m in Sources */,
@@ -724,6 +746,10 @@
 				4B38C1EC12CA946100E5C5D4 /* OrganizerViewController.m in Sources */,
 				FACC502812D26D130007911F /* MapListViewController.m in Sources */,
 				FA9239DA12D3943700A3048D /* LocationViewController.m in Sources */,
+				4B4CF92012D7CA9000D1368F /* FriendsViewController.m in Sources */,
+				4B4CF92412D7CB3200D1368F /* StubViewController.m in Sources */,
+				4B4CFAD412D7D32400D1368F /* FoodViewController.m in Sources */,
+				4B4CFAE812D7D4A500D1368F /* IMissedItViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

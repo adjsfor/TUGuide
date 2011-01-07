@@ -129,6 +129,8 @@
 	
 	
 	tabBarController = [[MainUITabBarController alloc] init];
+	
+	
 	tabBarController.viewControllers = controllers;
 	
 	//tabBarController.customizableViewControllers = controllers;

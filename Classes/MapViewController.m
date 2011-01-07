@@ -12,11 +12,11 @@
 @implementation MapViewController
 
 @synthesize mapView;
-@synthesize shadowImage;
+@synthesize shadowImage, delegate;
 
 
 
-- (id)init {
+/*- (id)init {
 	
 	if (self = [super init]) {
 		self.title = @"Location/Map";
@@ -28,15 +28,28 @@
 	
 	return self;
 	
+}*/
+
+-(IBAction)segmentAction:(UISegmentedControl *)segmentPick
+{
+	NSLog(@"segment called %d", segmentPick.selectedSegmentIndex);
+	switch (segmentPick.selectedSegmentIndex) {
+		case 0:
+			[delegate passTo:self command:@"Map" message:@"Switch to Map"];
+			break;
+		case 1:
+			[delegate passTo:self command:@"List" message:@"Switch to List"];
+			break;
+		default:
+			break;
+	}
 }
 
-
-
--(void) segmentAction: (UISegmentedControl *) sender
+/*-(void) segmentAction: (UISegmentedControl *) sender
 {
 	
 	XLog();
-}
+}*/
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -48,11 +61,8 @@
 	[self gotoLocation];
 	[self.view addSubview:mapView];
 	
-	
-	
 	self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
-	
-	
+	self.navigationController.delegate = self;
 	// Create the segmented control. Choose one of the three styles
 	NSArray *buttonNames = [NSArray arrayWithObjects:@"Map", @"List", nil];
 	UISegmentedControl* segmentedControl = [[UISegmentedControl alloc] initWithItems:buttonNames];

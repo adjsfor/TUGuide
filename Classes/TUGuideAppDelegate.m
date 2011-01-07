@@ -119,13 +119,13 @@
 	
 	
 	UINavigationController *org = [[UINavigationController alloc] initWithRootViewController:[[OrganizerViewController alloc] init]];
-	UINavigationController *map = [[UINavigationController alloc] initWithRootViewController:[[MapViewController alloc] init]];
+	UINavigationController *loc = [[UINavigationController alloc] initWithRootViewController:[[LocationViewController alloc] init]];
 	
 	
 	NSMutableArray *controllers = [NSMutableArray array];
 	//[controllers addObject:mainNavigationController];
 	[controllers addObject:org];
-	[controllers addObject:map];
+	[controllers addObject:loc];
 	
 	
 	tabBarController = [[MainUITabBarController alloc] init];

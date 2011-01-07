@@ -62,6 +62,8 @@
 		FA61722512B90CAF00E0E2C7 /* tuAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA61722212B90CAF00E0E2C7 /* tuAnnotation.m */; };
 		FA61722612B90CAF00E0E2C7 /* annotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA61722412B90CAF00E0E2C7 /* annotationView.m */; };
 		FA67286612A099010049DBD8 /* ButtonDark.png in Resources */ = {isa = PBXBuildFile; fileRef = FA67286512A099010049DBD8 /* ButtonDark.png */; };
+		FA9239DA12D3943700A3048D /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9239D912D3943700A3048D /* LocationViewController.m */; };
+		FACC502812D26D130007911F /* MapListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACC502712D26D130007911F /* MapListViewController.m */; };
 		FACE15E112B820A600637DB9 /* LecturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACE15E012B820A600637DB9 /* LecturesViewController.m */; };
 		FAD1DB0312A0390500F782A0 /* TUGuideLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD1DB0212A0390500F782A0 /* TUGuideLogo.png */; };
 		FAD4AAA712A0CCD000817DCA /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD4AAA612A0CCD000817DCA /* User.m */; };
@@ -158,6 +160,10 @@
 		FA61722312B90CAF00E0E2C7 /* annotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = annotationView.h; sourceTree = "<group>"; };
 		FA61722412B90CAF00E0E2C7 /* annotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = annotationView.m; sourceTree = "<group>"; };
 		FA67286512A099010049DBD8 /* ButtonDark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonDark.png; sourceTree = "<group>"; };
+		FA9239D812D3943700A3048D /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		FA9239D912D3943700A3048D /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		FACC502612D26D130007911F /* MapListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapListViewController.h; sourceTree = "<group>"; };
+		FACC502712D26D130007911F /* MapListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapListViewController.m; sourceTree = "<group>"; };
 		FACE15DF12B820A600637DB9 /* LecturesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LecturesViewController.h; sourceTree = "<group>"; };
 		FACE15E012B820A600637DB9 /* LecturesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LecturesViewController.m; sourceTree = "<group>"; };
 		FAD1DB0212A0390500F782A0 /* TUGuideLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TUGuideLogo.png; sourceTree = "<group>"; };
@@ -230,7 +236,6 @@
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				8EAFF11212A0054D00C9BCA3 /* Tests-Info.plist */,
 				FAD4AB2312A0D8F500817DCA /* Settings.bundle */,
-				FA6171EA12B90B1A00E0E2C7 /* MapKit.framework */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA6171EA12B90B1A00E0E2C7 /* MapKit.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
@@ -409,6 +415,8 @@
 			children = (
 				FA6171D112B90A2300E0E2C7 /* MapViewController.h */,
 				FA6171D212B90A2300E0E2C7 /* MapViewController.m */,
+				FACC502612D26D130007911F /* MapListViewController.h */,
+				FACC502712D26D130007911F /* MapListViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -427,6 +435,8 @@
 		4B38C1E612CA7D9F00E5C5D4 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				FA9239D812D3943700A3048D /* LocationViewController.h */,
+				FA9239D912D3943700A3048D /* LocationViewController.m */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -712,6 +722,8 @@
 				8E78159612B8F69200DF4A8B /* ServerCreateUser.m in Sources */,
 				4B38C19212CA548B00E5C5D4 /* MainUITabBarController.m in Sources */,
 				4B38C1EC12CA946100E5C5D4 /* OrganizerViewController.m in Sources */,
+				FACC502812D26D130007911F /* MapListViewController.m in Sources */,
+				FA9239DA12D3943700A3048D /* LocationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MensaView.h"
 #import "RestaurantViewController.h"
+#import "MapListDetailViewController.h"
 
 @interface MensaViewController : UIViewController {
 	
@@ -21,5 +22,9 @@
 @property (nonatomic, retain) UISegmentedControl *segmentedController;
 
 - (IBAction)segmentAction:(UISegmentedControl *)segmentPick;
+- (void)mensaBlueAction:(id)sender;
+- (void)mensaRedAction:(id)sender;
+- (void)mensaGreenAction:(id)sender;
+- (void)mensaOrangeAction:(id)sender;
 
 @end

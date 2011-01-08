@@ -11,6 +11,8 @@
 
 @implementation MensaView
 
+@synthesize mensaBlue, mensaGreen, mensaRed, mensaOrange;
+
 
 - (id)initWithFrame:(CGRect)frame {
     
@@ -19,33 +21,25 @@
         self.backgroundColor = [UIColor whiteColor];
 		self.userInteractionEnabled = YES;
 		
-		UIImage *img = [UIImage imageNamed: @"MensaLogoBlue.png"];
-		UIImageView *mensaBlue = [[UIImageView alloc] initWithFrame:CGRectMake(20,30, 120, 120)];
-		mensaBlue.image = img;
-		[img release];
+		mensaBlue = [UIButton buttonWithType:UIButtonTypeCustom];
+		[mensaBlue setFrame:CGRectMake(20,30, 120, 120)];
+		[mensaBlue setImage:[UIImage imageNamed:@"MensaLogoBlue.png"] forState:UIControlStateNormal];
 		[self addSubview:mensaBlue];
-		[mensaBlue release];
 		
-		img = [UIImage imageNamed: @"MensaLogoRed.png"];
-		UIImageView *mensaRed = [[UIImageView alloc] initWithFrame:CGRectMake(180,30, 120, 120)];
-		mensaRed.image = img;
-		[img release];
+		mensaRed = [UIButton buttonWithType:UIButtonTypeCustom];
+		[mensaRed setFrame:CGRectMake(180,30, 120, 120)];
+		[mensaRed setImage:[UIImage imageNamed:@"MensaLogoRed.png"] forState:UIControlStateNormal];
 		[self addSubview:mensaRed];
-		[mensaRed release];
 		
-		img = [UIImage imageNamed: @"MensaLogoGreen.png"];
-		UIImageView *mensaGreen = [[UIImageView alloc] initWithFrame:CGRectMake(20,220, 120, 120)];
-		mensaGreen.image = img;
-		[img release];
+		mensaGreen = [UIButton buttonWithType:UIButtonTypeCustom];
+		[mensaGreen setFrame:CGRectMake(20,220, 120, 120)];
+		[mensaGreen setImage:[UIImage imageNamed:@"MensaLogoGreen.png"] forState:UIControlStateNormal];
 		[self addSubview:mensaGreen];
-		[mensaGreen release];
 		
-		img = [UIImage imageNamed: @"MensaLogoOrange.png"];
-		UIImageView *mensaOrange = [[UIImageView alloc] initWithFrame:CGRectMake(180,220, 120, 120)];
-		mensaOrange.image = img;
-		[img release];
+		mensaOrange = [UIButton buttonWithType:UIButtonTypeCustom];
+		[mensaOrange setFrame:CGRectMake(180,220, 120, 120)];
+		[mensaOrange setImage:[UIImage imageNamed:@"MensaLogoOrange.png"] forState:UIControlStateNormal];
 		[self addSubview:mensaOrange];
-		[mensaOrange release];
 	}
 	return self;
 }

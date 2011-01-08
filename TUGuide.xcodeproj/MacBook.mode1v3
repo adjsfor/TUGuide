@@ -232,6 +232,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -290,7 +292,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 297}, {332, 910}}</string>
+							<string>{{0, 0}, {332, 910}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -337,7 +339,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>FACF16A512D803E60087B05C</string>
+										<string>FAC2A29612D89B1D00792DC8</string>
 										<key>history</key>
 										<array>
 											<string>FA381CC012A00B05008E06D0</string>
@@ -414,7 +416,7 @@
 											<string>FACF165D12D800E00087B05C</string>
 											<string>FACF165E12D800E00087B05C</string>
 											<string>FACF16A412D803E60087B05C</string>
-											<string>FAD4AB1512A0D8C900817DCA</string>
+											<string>FAC2A29512D89B1D00792DC8</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -472,9 +474,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>FACF168612D803470087B05C</string>
+				<string>FAC2A29712D89B1D00792DC8</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>FACF168712D803470087B05C</string>
+				<string>FAC2A29812D89B1D00792DC8</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -612,10 +614,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C78EAAD065D492600B07095</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>FA381C8612A00474008E06D0</string>
 		<string>/Users/MacBook/Documents/xCodeWorkspace/TUGuide/TUGuide.xcodeproj</string>
+		<string>1C78EAAD065D492600B07095</string>
+		<string>1CD10A99069EF8BA00B06720</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 59 1680 969 0 0 1680 1028 </string>
@@ -695,7 +697,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>FA381C8612A00474008E06D0</string>
-				<string>FACF168812D803470087B05C</string>
+				<string>FAC2A29912D89B1D00792DC8</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -817,13 +819,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>FACF168912D803470087B05C</string>
+				<string>FAC2A29A12D89B1D00792DC8</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>FACF168A12D803470087B05C</string>
-				<string>FACF168B12D803470087B05C</string>
-				<string>FACF168C12D803470087B05C</string>
-				<string>FACF168D12D803470087B05C</string>
-				<string>FACF168E12D803470087B05C</string>
+				<string>FAC2A29B12D89B1D00792DC8</string>
+				<string>FAC2A29C12D89B1D00792DC8</string>
+				<string>FAC2A29D12D89B1D00792DC8</string>
+				<string>FAC2A29E12D89B1D00792DC8</string>
+				<string>FAC2A29F12D89B1D00792DC8</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -832,7 +834,7 @@
 			<key>WindowToolGUID</key>
 			<string>1CD10A99069EF8BA00B06720</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
@@ -987,7 +989,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>FACF168F12D803470087B05C</string>
+				<string>FAC2A2A012D89B1D00792DC8</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
@@ -997,7 +999,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

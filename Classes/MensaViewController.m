@@ -11,7 +11,7 @@
 
 @implementation MensaViewController
 
-@synthesize mensaView;
+@synthesize mensaView, segmentedController;
 
 - (id)init {
 	//Initialization of the ViewController and adding TabbarItems and Image
@@ -60,9 +60,30 @@
 	
 	//applying the View to the ViewController
 	mensaView = [[MensaView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
-	self.view = mensaView;
+	//adding the ButtonActions
+	[mensaView.mensaBlue addTarget:self action:@selector(mensaBlueAction:) forControlEvents:UIControlEventTouchUpInside];
+	[mensaView.mensaRed addTarget:self action:@selector(mensaRedAction:) forControlEvents:UIControlEventTouchUpInside];
+	[mensaView.mensaGreen addTarget:self action:@selector(mensaGreenAction:) forControlEvents:UIControlEventTouchUpInside];
+	[mensaView.mensaOrange addTarget:self action:@selector(mensaOrangeAction:) forControlEvents:UIControlEventTouchUpInside];
+
+	self.view = mensaView; 
 	[mensaView release]; 
 }
+
+- (void)mensaBlueAction:(id)sender{
+	[self.navigationController pushViewController:[[MapListDetailViewController alloc] init] animated:YES];
+}
+- (void)mensaRedAction:(id)sender{
+	[self.navigationController pushViewController:[[MapListDetailViewController alloc] init] animated:YES];
+}
+- (void)mensaGreenAction:(id)sender{
+	[self.navigationController pushViewController:[[MapListDetailViewController alloc] init] animated:YES];
+}
+- (void)mensaOrangeAction:(id)sender{
+	[self.navigationController pushViewController:[[MapListDetailViewController alloc] init] animated:YES];
+}
+
+
 	
 
 

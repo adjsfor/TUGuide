@@ -6,7 +6,7 @@
 //  Copyright 2011 7359. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+/*#import <UIKit/UIKit.h>
 #import "MapViewController.h"
 #import "MapListViewController.h"
 #import "MessagePassProtocol.h"
@@ -26,4 +26,4 @@
 
 -(void)passTo:(UIViewController *)requestor command:(NSString *)cmd message:(NSString *)msg;
 
-@end
+@end*/

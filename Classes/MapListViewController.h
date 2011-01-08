@@ -7,16 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIViewControllerDelegate.h"
+#import "MapListDetailViewController.h"
+#import "MapViewController.h"
 
 
 @interface MapListViewController : UITableViewController {
-
-	id <UIViewControllerDelegate>  delegate;
 	
 }
-
-@property (assign) id <UIViewControllerDelegate> delegate;
 
 - (IBAction)segmentAction:(UISegmentedControl *)segmentPick;
 @end

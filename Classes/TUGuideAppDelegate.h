@@ -11,7 +11,7 @@
 #import "MainNavigationController.h"
 #import "MessagePassProtocol.h"
 #import "OrganizerViewController.h"
-#import "LocationViewController.h"
+#import "MapViewController.h"
 #import	"ServerLogin.h"
 #import "ServerCreateUser.h"
 #import "MainUITabBarController.h"
@@ -29,7 +29,7 @@
 	//tabbar things
 	MainUITabBarController *tabBarController;
 	OrganizerViewController *organizerViewController;
-	LocationViewController *locationViewController;
+	MapViewController *mapViewController;
 	FriendsViewController *friendViewController ;
 	FoodViewController *foodViewController;
 	IMissedItViewController *missViewController;
@@ -47,7 +47,7 @@
 
 
 @property (nonatomic, retain) OrganizerViewController *organizerViewController;
-@property (nonatomic, retain) LocationViewController *locationViewController;
+@property (nonatomic, retain) MapViewController *mapViewController;
 @property (nonatomic, retain) FriendsViewController *friendViewController ;
 @property (nonatomic, retain) FoodViewController *foodViewController;
 @property (nonatomic, retain) IMissedItViewController *missViewController;

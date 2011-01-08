@@ -6,7 +6,7 @@
 //  Copyright 2011 7359. All rights reserved.
 //
 
-#import "LocationViewController.h"
+/*#import "LocationViewController.h"
 
 
 @implementation LocationViewController
@@ -116,7 +116,7 @@ NSArray *allSubviewsLocation(UIView *aView)
  return (interfaceOrientation == UIInterfaceOrientationPortrait);
  }
  */
-
+/*
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
@@ -136,4 +136,4 @@ NSArray *allSubviewsLocation(UIView *aView)
 }
 
 
-@end
+@end*/

@@ -35,3 +35,6 @@
 #define XLog(...)
 
 #endif 
+
+// this is C function for updating all subviews
+

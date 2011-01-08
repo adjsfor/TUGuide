@@ -11,12 +11,15 @@
 #import "MainNavigationController.h"
 #import "MessagePassProtocol.h"
 #import "OrganizerViewController.h"
-#import "LocationViewController.h"
+#import "MapViewController.h"
 #import	"ServerLogin.h"
 #import "ServerCreateUser.h"
 #import "MainUITabBarController.h"
 #import "ServerGetData.h"
 #import "DataPassProtocol.h"
+#import "FriendsViewController.h"
+#import "MensaViewController.h"
+#import "IMissedItViewController.h"
 
 //TEST
 #import "Building.h"
@@ -28,9 +31,19 @@
 	User *me;
 	ServerLogin *serverLogin;
 	ServerCreateUser *serverCreate;
+	
+	//tabbar things
 	MainUITabBarController *tabBarController;
 	ServerGetData *getData;
 
+	OrganizerViewController *organizerViewController;
+	MapViewController *mapViewController;
+	FriendsViewController *friendViewController ;
+	MensaViewController *mensaViewController;
+	IMissedItViewController *missViewController;
+	
+	
+	
 }
 
 @property (nonatomic, retain) UIWindow *window;
@@ -40,6 +53,13 @@
 @property (nonatomic, retain) ServerCreateUser *serverCreate;
 @property (nonatomic, retain) MainUITabBarController *tabBarController;
 @property (nonatomic, retain) ServerGetData *getData;
+
+
+@property (nonatomic, retain) OrganizerViewController *organizerViewController;
+@property (nonatomic, retain) MapViewController *mapViewController;
+@property (nonatomic, retain) FriendsViewController *friendViewController ;
+@property (nonatomic, retain) MensaViewController *mensaViewController;
+@property (nonatomic, retain) IMissedItViewController *missViewController;
 
 -(void)passing:(NSObject *)requestor command:(NSString *)cmd message:(NSString *)msg; 
 @end

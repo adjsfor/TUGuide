@@ -1,4 +1,4 @@
-    //
+//
 //  MapViewController.m
 //  TUGuide
 //
@@ -12,14 +12,21 @@
 @implementation MapViewController
 
 @synthesize mapView;
-@synthesize shadowImage, delegate;
+@synthesize tuImage, mapAnnotations, detailViewController;
 
++ (CGFloat)annotationPadding;
+{
+    return 10.0f;
+}
++ (CGFloat)calloutHeight;
+{
+    return 40.0f;
+}
 
-
-/*- (id)init {
+- (id)init {
 	
-	if (self = [super init]) {
-		self.title = @"Location/Map";
+	if (self) {
+		self.title = @"Location";
 		UIImage* anImage = [UIImage imageNamed:@"1map.png"];
 		UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:@"Location" image:anImage tag:0];
 		self.tabBarItem = theItem;
@@ -28,63 +35,59 @@
 	
 	return self;
 	
-}*/
+}
+
 
 -(IBAction)segmentAction:(UISegmentedControl *)segmentPick
 {
 	NSLog(@"segment called %d", segmentPick.selectedSegmentIndex);
 	switch (segmentPick.selectedSegmentIndex) {
 		case 0:
-			[delegate passTo:self command:@"Map" message:@"Switch to Map"];
+			//[delegate passTo:self command:@"Map" message:@"Switch to Map"];
 			break;
 		case 1:
-			[delegate passTo:self command:@"List" message:@"Switch to List"];
+			[self.navigationController pushViewController:[[MapListViewController alloc] init] animated:NO];
 			break;
 		default:
 			break;
 	}
 }
 
-/*-(void) segmentAction: (UISegmentedControl *) sender
-{
-	
-	XLog();
-}*/
-
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
+	[super viewDidLoad];
 	
+	//Creating Map View and Zoom into location
 	mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
 	mapView.mapType = MKMapTypeStandard;
-	[self loadAnnotations];
 	[self gotoLocation];
 	[self.view addSubview:mapView];
 	
+	//Creating annotations and applying them to the map
+	self.mapAnnotations = [[NSMutableArray alloc] initWithCapacity:2];
+	TUAnnotation *tuAnnotation = [[TUAnnotation alloc] init];
+    [self.mapAnnotations insertObject:tuAnnotation atIndex:0];
+	[self.mapView removeAnnotations:self.mapView.annotations];  // remove any annotations that exist
+    [self.mapView addAnnotations:self.mapAnnotations];    [tuAnnotation release];
+	
+	//Change Color of the navigationBar
 	self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
-	self.navigationController.delegate = self;
+	
 	// Create the segmented control. Choose one of the three styles
-	NSArray *buttonNames = [NSArray arrayWithObjects:@"Map", @"List", nil];
-	UISegmentedControl* segmentedControl = [[UISegmentedControl alloc] initWithItems:buttonNames];
+	NSArray *segments = [NSArray arrayWithObjects:@"Map", @"List", nil];
+	UISegmentedControl* segmentedControl = [[UISegmentedControl alloc] initWithItems:segments];
 	segmentedControl.segmentedControlStyle = UIBarStyleBlackTranslucent; 
 	segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 	
 	segmentedControl.frame = CGRectMake(0, 0, 290, 32);
 	[segmentedControl addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
-	
-	// For menus, the momentary behavior is preferred. Otherwise, the segmented control
-	// provides a radio-button style interface
-	segmentedControl.momentary = NO;
 	segmentedControl.selectedSegmentIndex = 0;
-	
-	//CFShow(allSubviews(segmentedControl));
-	
 	
 	// Add it to the navigation bar
 	self.navigationItem.titleView = segmentedControl;
+	self.navigationItem.hidesBackButton = YES;
 	[segmentedControl release];
-	
-    [super viewDidLoad];
 }
 
 -(void)gotoLocation
@@ -98,46 +101,7 @@
     [self.mapView setRegion:newRegion animated:YES];
 }
 
--(void)loadAnnotations
-{
-	CLLocationCoordinate2D workingCoordinate;
-	
-	workingCoordinate.latitude = 48.199047;
-	workingCoordinate.longitude = 16.36994;
-	tuAnnotation *tuMainBuilding = [[tuAnnotation alloc] initWithCoordinate:workingCoordinate];
-	[tuMainBuilding setTitle:@"TU Hauptgebäude"];
-	[tuMainBuilding setSubtitle:@"Karlsplatz 13"];
-	[tuMainBuilding setAnnotationType:tuAnnotationTypeUni];
-	
-	[mapView addAnnotation:tuMainBuilding];
-	
-	workingCoordinate.latitude = 48.196471;
-	workingCoordinate.longitude = 16.369522;
-	tuAnnotation *tuNewEI = [[tuAnnotation alloc] initWithCoordinate:workingCoordinate];
-	[tuNewEI setTitle:@"Neues EI"];
-	[tuNewEI setSubtitle:@"Gußhausstraße 25-29"];
-	[tuNewEI setAnnotationType:tuAnnotationTypeUni];
-	
-	[mapView addAnnotation:tuNewEI];
-	
-	workingCoordinate.latitude = 48.199013;
-	workingCoordinate.longitude = 16.367403;
-	tuAnnotation *freihaus = [[tuAnnotation alloc] initWithCoordinate:workingCoordinate];
-	[freihaus setTitle:@"Freihaus"];
-	[freihaus setSubtitle:@"Wiedner Hauptstraße 8-10"];
-	[freihaus setAnnotationType:tuAnnotationTypeUni];
-	
-	[mapView addAnnotation:freihaus];
-	
-	workingCoordinate.latitude = 48.199074;
-	workingCoordinate.longitude = 16.367322;
-	tuAnnotation *mensa = [[tuAnnotation alloc] initWithCoordinate:workingCoordinate];
-	[mensa setTitle:@"TU Mensa"];
-	[mensa setSubtitle:@"Wiedner Hauptstraße 8-10"];
-	[mensa setAnnotationType:tuAnnotationTypeMensa];
-	
-	[mapView addAnnotation:mensa];
-}
+
 
 - (void)mapView:(MKMapView *)mapView regionWillChangeAnimated:(BOOL)animated
 {
@@ -148,53 +112,77 @@
 	
 }
 
-- (annotationView *)mapView:(MKMapView *)mappView viewForAnnotation:(id <MKAnnotation>)annotation
+- (void)showDetails:(id)sender
 {
-	annotationView *tuAnnotationView = nil;
-	
-	// determine the type of annotation, and produce the correct type of annotation view for it.
-	tuAnnotation* myAnnotation = (tuAnnotation *)annotation;
-	
-	if(myAnnotation.annotationType == tuAnnotationTypeUni)
+    [self.navigationController pushViewController:self.detailViewController animated:YES];
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)theMapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    // if it's the user location, just return nil.
+    if ([annotation isKindOfClass:[MKUserLocation class]])
+        return nil;
+    
+    // handle our two custom annotations
+    //
+    if ([annotation isKindOfClass:[TUAnnotation class]]) 
 	{
-		NSString* identifier = @"Uni";
-		annotationView *newAnnotationView = (annotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
-		
-		if(nil == newAnnotationView)
-		{
-			newAnnotationView = [[[annotationView alloc] initWithAnnotation:myAnnotation reuseIdentifier:identifier] autorelease];
-		}
-		
-		tuAnnotationView = newAnnotationView;
-	}
-	else if(myAnnotation.annotationType == tuAnnotationTypeUni)
-	{
-		NSString* identifier = @"Mensa";
-		
-		annotationView *newAnnotationView = (annotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
-		
-		if(nil == newAnnotationView)
-		{
-			newAnnotationView = [[[annotationView alloc] initWithAnnotation:myAnnotation reuseIdentifier:identifier] autorelease];
-		}
-		
-		tuAnnotationView = newAnnotationView;
-	}
-	
-	[tuAnnotationView setEnabled:YES];
-	[tuAnnotationView setCanShowCallout:YES];
-	
-	return tuAnnotationView;
+        static NSString* TUAnnotationIdentifier = @"TUAnnotationIdentifier";
+        MKPinAnnotationView* pinView =
+		(MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:TUAnnotationIdentifier];
+        if (!pinView)
+        {
+            MKAnnotationView *annotationView = [[[MKAnnotationView alloc] initWithAnnotation:annotation
+                                                                             reuseIdentifier:TUAnnotationIdentifier] autorelease];
+            annotationView.canShowCallout = YES;
+			
+            UIImage *flagImage = [UIImage imageNamed:@"flag.png"];
+            
+            CGRect resizeRect;
+            
+            resizeRect.size = flagImage.size;
+            CGSize maxSize = CGRectInset(self.view.bounds,
+                                         [MapViewController annotationPadding],
+                                         [MapViewController annotationPadding]).size;
+            maxSize.height -= self.navigationController.navigationBar.frame.size.height + [MapViewController calloutHeight];
+            if (resizeRect.size.width > maxSize.width)
+                resizeRect.size = CGSizeMake(maxSize.width, resizeRect.size.height / resizeRect.size.width * maxSize.width);
+            if (resizeRect.size.height > maxSize.height)
+                resizeRect.size = CGSizeMake(resizeRect.size.width / resizeRect.size.height * maxSize.height, maxSize.height);
+            
+            resizeRect.origin = (CGPoint){0.0f, 0.0f};
+            UIGraphicsBeginImageContext(resizeRect.size);
+            [flagImage drawInRect:resizeRect];
+            UIImage *resizedImage = UIGraphicsGetImageFromCurrentImageContext();
+            UIGraphicsEndImageContext();
+            
+            annotationView.image = resizedImage;
+            annotationView.opaque = NO;
+			
+            UIImageView *sfIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"1map.png"]];
+            annotationView.leftCalloutAccessoryView = sfIconView;
+            [sfIconView release];
+            
+            return annotationView;
+        }
+        else
+        {
+            pinView.annotation = annotation;
+        }
+        return pinView;
+    }
+    
+    return nil;
 }
 
 
 /*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations.
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
+ // Override to allow orientations other than the default portrait orientation.
+ - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+ // Return YES for supported orientations.
+ return (interfaceOrientation == UIInterfaceOrientationPortrait);
+ }
+ */
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -204,6 +192,9 @@
 }
 
 - (void)viewDidUnload {
+	self.mapAnnotations = nil;
+    self.detailViewController = nil;
+    self.mapView = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -211,6 +202,9 @@
 
 
 - (void)dealloc {
+	[mapView release];
+    [detailViewController release];
+    [mapAnnotations release];
     [super dealloc];
 }
 

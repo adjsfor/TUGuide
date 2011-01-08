@@ -11,36 +11,34 @@
 
 @implementation MapListViewController
 
-@synthesize delegate;
-
 
 #pragma mark -
 #pragma mark Initialization
 
 /*
-- (id)initWithStyle:(UITableViewStyle)style {
-    // Override initWithStyle: if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization.
-    }
-    return self;
-}
-*/
+ - (id)initWithStyle:(UITableViewStyle)style {
+ // Override initWithStyle: if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
+ self = [super initWithStyle:style];
+ if (self) {
+ // Custom initialization.
+ }
+ return self;
+ }
+ */
 
 
 #pragma mark -
 #pragma mark View lifecycle
 
 
-/*- (void)viewDidLoad {
+- (void)viewDidLoad {
     [super viewDidLoad];
-
+	
 	self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
 	
 	// Create the segmented control. Choose one of the three styles
-	NSArray *buttonNames = [NSArray arrayWithObjects:@"Map", @"List", nil];
-	UISegmentedControl* segmentedControl = [[UISegmentedControl alloc] initWithItems:buttonNames];
+	NSArray *segments = [NSArray arrayWithObjects:@"Map", @"List", nil];
+	UISegmentedControl* segmentedControl = [[UISegmentedControl alloc] initWithItems:segments];
 	segmentedControl.segmentedControlStyle = UIBarStyleBlackTranslucent; 
 	segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 	
@@ -49,29 +47,29 @@
 	
 	// For menus, the momentary behavior is preferred. Otherwise, the segmented control
 	// provides a radio-button style interface
-	segmentedControl.momentary = NO;
-	segmentedControl.selectedSegmentIndex = 0;
+	segmentedControl.selectedSegmentIndex = 1;
 	
 	//CFShow(allSubviews(segmentedControl));
 	
 	
 	// Add it to the navigation bar
 	self.navigationItem.titleView = segmentedControl;
+	self.navigationItem.hidesBackButton = YES;
 	[segmentedControl release];
 	
     [super viewDidLoad];
 	
-}*/
+}
 
 -(IBAction)segmentAction:(UISegmentedControl *)segmentPick
 {
 	NSLog(@"segment called %d", segmentPick.selectedSegmentIndex);
 	switch (segmentPick.selectedSegmentIndex) {
 		case 0:
-			[delegate passTo:self command:@"Map" message:@"Switch to Map"];
+			[self.navigationController popViewControllerAnimated:NO];
+			//[self.navigationController pushViewController:[[MapViewController alloc] init] animated:YES];
 			break;
 		case 1:
-			[delegate passTo:self command:@"List" message:@"Switch to List"];
 			break;
 		default:
 			break;
@@ -79,32 +77,32 @@
 }
 
 /*
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-*/
+ - (void)viewWillAppear:(BOOL)animated {
+ [super viewWillAppear:animated];
+ }
+ */
 /*
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-}
-*/
+ - (void)viewDidAppear:(BOOL)animated {
+ [super viewDidAppear:animated];
+ }
+ */
 /*
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-}
-*/
+ - (void)viewWillDisappear:(BOOL)animated {
+ [super viewWillDisappear:animated];
+ }
+ */
 /*
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-}
-*/
+ - (void)viewDidDisappear:(BOOL)animated {
+ [super viewDidDisappear:animated];
+ }
+ */
 /*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations.
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
+ // Override to allow orientations other than the default portrait orientation.
+ - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+ // Return YES for supported orientations.
+ return (interfaceOrientation == UIInterfaceOrientationPortrait);
+ }
+ */
 
 
 #pragma mark -
@@ -118,7 +116,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 1;
+    return 10;
 }
 
 
@@ -131,6 +129,8 @@
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
+	
+	cell.textLabel.text = @"hallo";
     
     // Configure the cell...
     
@@ -139,43 +139,43 @@
 
 
 /*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
 
 
 /*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source.
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }   
-}
-*/
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+ 
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source.
+ [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ }   
+ else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+ }   
+ }
+ */
 
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+ }
+ */
 
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 
 #pragma mark -
@@ -183,13 +183,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
-    /*
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
+    
+    MapListDetailViewController *detailViewController = [[MapListDetailViewController alloc] initWithNibName:nil bundle:nil];
+	// ...
+	// Pass the selected object to the new view controller.
     [self.navigationController pushViewController:detailViewController animated:YES];
     [detailViewController release];
-    */
+    
 }
 
 

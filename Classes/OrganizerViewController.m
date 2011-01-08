@@ -11,7 +11,11 @@
 
 @implementation OrganizerViewController
 
-@synthesize segmentedController, lecturesViewController, coursesViewController, todoViewController;
+@synthesize segmentedController, lecturesViewController, coursesViewController, todoViewController,delegate2;
+
+
+
+
 
 -(void)passTo:(UIViewController *)requestor command:(NSString *)cmd message:(NSString *)msg{
 	//NSLog(@"OrganizerNavigationController: switching to controller %@", cmd);
@@ -21,6 +25,7 @@
 
 -(void) segmentAction: (UISegmentedControl *) sender
 {
+	[delegate2 passing:self command:@"change organization controller" message:@"some message"];
 	
 	switch (sender.selectedSegmentIndex) {
 		case 0:
@@ -40,7 +45,7 @@
 	}
 }
 
-// this is C function for updating all subviews
+
 NSArray *allSubviews(UIView *aView)
 {
 	NSArray *results = [aView subviews];
@@ -51,7 +56,6 @@ NSArray *allSubviews(UIView *aView)
 	}
 	return results;
 }
-
 
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {

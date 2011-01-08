@@ -9,23 +9,17 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 
-typedef enum {
-	tuAnnotationTypeUni = 0,
-	tuAnnotationTypeMensa = 1,
-} TuAnnotationType;
+#import <MapKit/MapKit.h>
 
-
-@interface tuAnnotation : NSObject <MKAnnotation>
+@interface TUAnnotation : NSObject <MKAnnotation>
 {
-	CLLocationCoordinate2D coordinate;
-	NSString *title;
-	NSString *subtitle;
-	TuAnnotationType annotationType;
+    UIImage *image;
+    NSNumber *latitude;
+    NSNumber *longitude;
 }
 
-@property (nonatomic) CLLocationCoordinate2D coordinate;
-@property (nonatomic, retain) NSString *title;
-@property (nonatomic, retain) NSString *subtitle;
-@property (nonatomic) TuAnnotationType annotationType;
+@property (nonatomic, retain) UIImage *image;
+@property (nonatomic, retain) NSNumber *latitude;
+@property (nonatomic, retain) NSNumber *longitude;
 
 @end

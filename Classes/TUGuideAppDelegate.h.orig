@@ -10,24 +10,62 @@
 #import <UIKit/UIKit.h>
 #import "MainNavigationController.h"
 #import "MessagePassProtocol.h"
-<<<<<<< HEAD
-#import "OrganizerNavigationController.h"
+#import "OrganizerViewController.h"
 #import "MapViewController.h"
-=======
 #import	"ServerLogin.h"
->>>>>>> bce8ec9406254dd9df144621bfe2cbb2004928d3
+#import "ServerCreateUser.h"
+#import "MainUITabBarController.h"
+<<<<<<< HEAD
+#import "ServerGetData.h"
+#import "DataPassProtocol.h"
+=======
+#import "FriendsViewController.h"
+#import "MensaViewController.h"
+#import "IMissedItViewController.h"
+>>>>>>> cadc900e12a7ac6a7afe70ed91a87b50f6653ade
 
-@interface TUGuideAppDelegate : NSObject <UIApplicationDelegate,UINavigationControllerDelegate,MessagePassProtocol> {
+//TEST
+#import "Building.h"
+#import "Classroom.h"
+
+@interface TUGuideAppDelegate : NSObject <UIApplicationDelegate,UINavigationControllerDelegate,MessagePassProtocol,DataPassProtocol> {
     UIWindow *window;
 	MainNavigationController *mainNavigationController;
 	User *me;
-	ServerLogin *server;
+	ServerLogin *serverLogin;
+	ServerCreateUser *serverCreate;
+	
+	//tabbar things
+	MainUITabBarController *tabBarController;
+<<<<<<< HEAD
+	ServerGetData *getData;
+
+=======
+	OrganizerViewController *organizerViewController;
+	MapViewController *mapViewController;
+	FriendsViewController *friendViewController ;
+	MensaViewController *mensaViewController;
+	IMissedItViewController *missViewController;
+	
+	
+	
+>>>>>>> cadc900e12a7ac6a7afe70ed91a87b50f6653ade
 }
 
 @property (nonatomic, retain) UIWindow *window;
 @property (nonatomic, retain) MainNavigationController *mainNavigationController;
 @property (nonatomic, retain) User *me;
-@property (nonatomic, retain) ServerLogin *server;
+@property (nonatomic, retain) ServerLogin *serverLogin;
+@property (nonatomic, retain) ServerCreateUser *serverCreate;
+@property (nonatomic, retain) MainUITabBarController *tabBarController;
+@property (nonatomic, retain) ServerGetData *getData;
+
+
+@property (nonatomic, retain) OrganizerViewController *organizerViewController;
+@property (nonatomic, retain) MapViewController *mapViewController;
+@property (nonatomic, retain) FriendsViewController *friendViewController ;
+@property (nonatomic, retain) MensaViewController *mensaViewController;
+@property (nonatomic, retain) IMissedItViewController *missViewController;
 
 -(void)passing:(NSObject *)requestor command:(NSString *)cmd message:(NSString *)msg; 
 @end

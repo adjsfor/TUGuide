@@ -6,26 +6,38 @@
 //  Copyright 2010 7359. All rights reserved.
 //
 
-#import "tuAnnotation.h"
+#import "TUAnnotation.h"
+
+@implementation TUAnnotation 
+
+@synthesize image;
+@synthesize latitude;
+@synthesize longitude;
 
 
-@implementation tuAnnotation
-
-@synthesize coordinate;
-@synthesize title;
-@synthesize subtitle;
-@synthesize annotationType;
-
--init
+- (CLLocationCoordinate2D)coordinate;
 {
-	return self;
+    CLLocationCoordinate2D theCoordinate;
+    theCoordinate.latitude = 48.199047;
+    theCoordinate.longitude = 16.36994;
+    return theCoordinate; 
 }
 
--initWithCoordinate:(CLLocationCoordinate2D)inCoord
+- (void)dealloc
 {
-	coordinate = inCoord;
-	return self;
+    [image release];
+    [super dealloc];
 }
 
+- (NSString *)title
+{
+    return @"San Francisco";
+}
+
+// optional
+- (NSString *)subtitle
+{
+    return @"Founded: June 29, 1776";
+}
 
 @end

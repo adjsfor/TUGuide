@@ -6,12 +6,25 @@
 //  Copyright 2011 7359. All rights reserved.
 //
 
-#import "LocationViewController.h"
+/*#import "LocationViewController.h"
 
 
 @implementation LocationViewController
 
-@synthesize segmentedController, mapViewController, mapListViewController;
+@synthesize segmentedController, mapViewController, mapListViewController,delegate2;
+
+
+NSArray *allSubviewsLocation(UIView *aView)
+{
+	NSArray *results = [aView subviews];
+	for (UIView *eachView in [aView subviews])
+	{
+		NSArray *riz = allSubviewsLocation(eachView);
+		if (riz) results = [results arrayByAddingObjectsFromArray:riz];
+	}
+	return results;
+}
+
 
 -(void)passTo:(UIViewController *)requestor command:(NSString *)cmd message:(NSString *)msg{
 	//NSLog(@"OrganizerNavigationController: switching to controller %@", cmd);
@@ -34,18 +47,6 @@
 		default:
 			break;
 	}
-}
-
-// this is C function for updating all subviews
-NSArray *allSubviewsLocation(UIView *aView)
-{
-	NSArray *results = [aView subviews];
-	for (UIView *eachView in [aView subviews])
-	{
-		NSArray *riz = allSubviewsLocation(eachView);
-		if (riz) results = [results arrayByAddingObjectsFromArray:riz];
-	}
-	return results;
 }
 
 
@@ -115,7 +116,7 @@ NSArray *allSubviewsLocation(UIView *aView)
  return (interfaceOrientation == UIInterfaceOrientationPortrait);
  }
  */
-
+/*
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
@@ -135,4 +136,4 @@ NSArray *allSubviewsLocation(UIView *aView)
 }
 
 
-@end
+@end*/

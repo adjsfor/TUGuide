@@ -8,23 +8,26 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
-#import "tuAnnotation.h"
-#import "annotationView.h"
-#import "UIViewControllerDelegate.h"
+#import "TUAnnotation.h"
+#import "MapListViewController.h"
+#import "MapListDetailViewController.h"
 
 @interface MapViewController : UIViewController <UINavigationBarDelegate, UINavigationControllerDelegate>{
 	MKMapView *mapView;
-	IBOutlet UIImageView *shadowImage;
-	id <UIViewControllerDelegate>  delegate;
-
+	IBOutlet UIImageView *tuImage;
+	NSMutableArray *mapAnnotations;
+	MapListDetailViewController *detailViewController;
 }
 
 @property (nonatomic, retain) MKMapView *mapView;
-@property (nonatomic, retain) IBOutlet UIImageView *shadowImage;
-@property (assign) id <UIViewControllerDelegate> delegate;
+@property (nonatomic, retain) IBOutlet UIImageView *tuImage;
+@property (nonatomic, retain) NSMutableArray *mapAnnotations;
+@property (nonatomic, retain) MapListDetailViewController *detailViewController;
 
--(void)loadAnnotations;
--(void)gotoLocation;
++ (CGFloat)annotationPadding;
++ (CGFloat)calloutHeight;
+
+- (void)gotoLocation;
 - (IBAction)segmentAction:(UISegmentedControl *)segmentPick;
 
 @end

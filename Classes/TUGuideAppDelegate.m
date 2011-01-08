@@ -16,6 +16,12 @@
 @synthesize serverLogin;
 @synthesize serverCreate;
 @synthesize tabBarController;
+@synthesize getData;
+
+#define BUILDINGS   0
+#define MENSA		1
+#define RESTAURANT  2
+#define CLASSROOM   3
 
 
 #pragma mark -
@@ -57,6 +63,8 @@
 	// startLoginEvent in ServerLogin with email und password
 	if ([cmd isEqual:@"goLogin"]) {
 		[serverLogin loginUserWithScreen_name:[mainNavigationController.loginViewController.loginView.emailField text] withPassword:[mainNavigationController.loginViewController.loginView.passwordField text]];
+		//[getData getAllBuildings];
+		[getData getAllClassrooms];
 	}
 	
 	
@@ -84,7 +92,95 @@
 		[someError release];
 	}
 	
+	
 	//NSLog(@"%@", requestor);
+}
+
+-(void)passingCommand:(NSString *)cmd sender:(int)sd message:(NSString *)msg data:(NSString *)data{
+	
+	if ([cmd isEqual:@"dataRecieved"]) {
+		//NEEDET VARIABLES
+		NSData *plistData = [data dataUsingEncoding:NSUTF8StringEncoding];
+		NSString *error;
+		NSPropertyListFormat format;
+		NSMutableArray* array;
+		NSMutableDictionary* myDict;
+		Classroom *c;
+		Building *b;
+		//END
+		switch (sd) {
+			case BUILDINGS:
+				
+				array = [NSPropertyListSerialization propertyListFromData:plistData
+																		 mutabilityOption:NSPropertyListImmutable
+																				   format:&format
+																		 errorDescription:&error];
+				if (array) {
+					myDict = [NSMutableDictionary dictionaryWithCapacity:[array count]];
+					NSLog(@"The count: %i", [myDict count]);
+					for (NSDictionary* dict in array) {
+						b = [Building customClassWithProperties:dict];
+						NSLog(@"----------------------------");
+						NSLog(@"Building id: %@",b.id);
+						NSLog(@"The name: %@", b.name);
+						if (b.classroomsList != nil) {
+							for (Classroom* class in b.classroomsList){
+								NSLog(@"Classroom name: %@", class.name);
+							}
+						}
+						NSLog(@"----------------------------");
+						//[b release];
+					}
+				} else {
+					NSLog(@"Plist does not exist, error:%@",error);
+				}
+				break;
+			case RESTAURANT:
+				
+				break;
+			case MENSA:
+				
+				break;
+			case CLASSROOM:
+				array = [NSPropertyListSerialization propertyListFromData:plistData
+														 mutabilityOption:NSPropertyListImmutable
+																   format:&format
+														 errorDescription:&error];
+				if (array) {
+					myDict = [NSMutableDictionary dictionaryWithCapacity:[array count]];
+					NSLog(@"The count: %i", [myDict count]);
+					for (NSDictionary* dict in array) {
+						c = [Classroom customClassWithProperties:dict];
+						NSLog(@"----------------------------");
+						NSLog(@"Classroom id: %@",c.id);
+						NSLog(@"The name: %@", c.name);
+						NSLog(@"The building_ID: %@", c.building_id);
+						//NSLog(@"The building: %@", c.building.name);
+						NSLog(@"----------------------------");
+						//[c dealloc];
+					}
+				} else {
+					NSLog(@"Plist does not exist, error:%@",error);
+				}
+				break;
+			default:
+				break;
+		}
+		//[myDict release];
+		//[plistData release];
+		//[error release];
+		//[array release];
+	}
+	if ([cmd isEqual:@"dataRecievedFailed"]) {
+		UIAlertView *someError = [[UIAlertView alloc] initWithTitle: @"Server offline" message:msg delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
+		[someError show];
+		[someError release];
+	}
+	if ([cmd isEqual:@"serverOffline"]) {
+		UIAlertView *someError = [[UIAlertView alloc] initWithTitle: @"Server offline" message:msg delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
+		[someError show];
+		[someError release];
+	}
 }
 
 
@@ -106,16 +202,19 @@
 	serverLogin = [[ServerLogin alloc] init];
 	serverLogin.delegate2 = self;
 	
+	getData = [[ServerGetData alloc] initWithURL];
+	getData.delegate2 = self;
+	
 	serverCreate = [[ServerCreateUser alloc] init];
 	serverCreate.delegate2 = self;
 	
 	mainNavigationController = [[MainNavigationController alloc]init];
 	mainNavigationController.delegate = self;
 	mainNavigationController.delegate2 = self;
-	//[window addSubview:mainNavigationController.view];
+	[window addSubview:mainNavigationController.view];
 	
 	//OrganizerViewController *org = [[OrganizerViewController alloc] init];
-	LecturesViewController *le = [[LecturesViewController alloc]init];
+	//1LecturesViewController *le = [[LecturesViewController alloc]init];
 	
 	
 	UINavigationController *org = [[UINavigationController alloc] initWithRootViewController:[[OrganizerViewController alloc] init]];
@@ -134,7 +233,7 @@
 	//tabBarController.customizableViewControllers = controllers;
 	
 	
-	[window addSubview:tabBarController.view];
+	//2[window addSubview:tabBarController.view];
 	
 	//MapViewController *map = [[MapViewController alloc] init];
 	//[window addSubview:map.view];

@@ -19,5 +19,7 @@
 @property (nonatomic) int  friendId;
 @property (nonatomic) bool approved;
 
++ (id)customClassWithProperties:(NSDictionary *)properties;
+- (id)initWithProperties:(NSDictionary *)properties;
 
 @end

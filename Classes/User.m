@@ -36,6 +36,17 @@
 	return [self initWithArguments:em withPassword:pw withScreenName:nil];
 }
 
++ (id)customClassWithProperties:(NSDictionary *)properties {
+	return [[[self alloc] initWithProperties:properties] autorelease];
+}
+
+- (id)initWithProperties:(NSDictionary *)properties {
+	if (self = [self init]) {
+		[self setValuesForKeysWithDictionary:properties];
+	}
+	return self;
+}
+
 -(id)init{
 	return [self initWithArguments:nil withPassword:nil withScreenName:nil];
 }

@@ -26,4 +26,7 @@
 @property (nonatomic,retain) NSString *name;
 @property (nonatomic,retain) NSString *content;
 
++ (id)customClassWithProperties:(NSDictionary *)properties;
+- (id)initWithProperties:(NSDictionary *)properties;
+
 @end

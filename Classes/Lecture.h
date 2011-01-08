@@ -36,4 +36,7 @@
 		   withUId:(NSString *)uId
 			withClassroom:(Classroom *)classroom;
 
++ (id)customClassWithProperties:(NSDictionary *)properties;
+- (id)initWithProperties:(NSDictionary *)properties;
+
 @end

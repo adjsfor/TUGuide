@@ -19,5 +19,7 @@
 
 -(id)init;
 -(id)initWithArguments:(int)eateryId withEateryType:(NSString *)eateryType;
++ (id)customClassWithProperties:(NSDictionary *)properties;
+- (id)initWithProperties:(NSDictionary *)properties;
 
 @end

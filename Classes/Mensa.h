@@ -34,5 +34,8 @@
 		   withAddress:(NSString *)address 
 	  withOpeningHours:(NSString *)openingHours;
 
++ (id)customClassWithProperties:(NSDictionary *)properties;
+- (id)initWithProperties:(NSDictionary *)properties;
+
 
 @end

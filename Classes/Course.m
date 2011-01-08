@@ -24,6 +24,17 @@
 	return self;
 }
 
++ (id)customClassWithProperties:(NSDictionary *)properties {
+	return [[[self alloc] initWithProperties:properties] autorelease];
+}
+
+- (id)initWithProperties:(NSDictionary *)properties {
+	if (self = [self init]) {
+		[self setValuesForKeysWithDictionary:properties];
+	}
+	return self;
+}
+
 -(void)dealloc{
 	[name release];
 	[courseNumber release];

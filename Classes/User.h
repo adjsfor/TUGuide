@@ -37,5 +37,7 @@
 -(id)init;
 -(id)initWithEmailAndPassword: (NSString *)em withPassword:(NSString *)pw;
 -(id)initWithArguments:(NSString *)email withPassword:(NSString *)pw withScreenName:(NSString *)u;
++ (id)customClassWithProperties:(NSDictionary *)properties;
+- (id)initWithProperties:(NSDictionary *)properties;
 
 @end

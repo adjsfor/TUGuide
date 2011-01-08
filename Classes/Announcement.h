@@ -34,4 +34,6 @@
 			withUserId:(int)userId
 		   withMessage:(NSString *)message
 			withReport:(NSString *)report;
++ (id)customClassWithProperties:(NSDictionary *)properties;
+- (id)initWithProperties:(NSDictionary *)properties;
 @end

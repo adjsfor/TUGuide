@@ -20,6 +20,7 @@
 @property (nonatomic,retain) NSString *courseNumber;
 
 -(id)init;
-
++ (id)customClassWithProperties:(NSDictionary *)properties;
+- (id)initWithProperties:(NSDictionary *)properties;
 
 @end

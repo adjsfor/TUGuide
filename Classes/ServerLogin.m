@@ -48,11 +48,6 @@
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
 	self.responseData = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
 	NSLog(@"-SERVER: report received data %@",responseData);
-	if (self.statusCode == 200) {
-		[delegate2 passing:self command:@"loginSuccessful" message:@"Login has been successful!"];
-	}else {
-		[delegate2 passing:self command:@"loginFail" message:@"Username/Password information incorrect, please try again!"];
-	}
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
@@ -63,6 +58,11 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSLog(@"-SERVER: connection finished loading");
+	if (self.statusCode == 200) {
+		[delegate2 passing:self command:@"loginSuccessful" message:@"Login has been successful!"];
+	}else {
+		[delegate2 passing:self command:@"loginFail" message:@"Username/Password information incorrect, please try again!"];
+	}
 }
 
 -(void) dealloc{

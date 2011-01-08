@@ -40,6 +40,17 @@
 	return [self initWithArguments:0 withAnnounced:nil withLectureId:nil withUserId:0 withMessage:nil withReport:nil];
 }
 
++ (id)customClassWithProperties:(NSDictionary *)properties {
+	return [[[self alloc] initWithProperties:properties] autorelease];
+}
+
+- (id)initWithProperties:(NSDictionary *)properties {
+	if (self = [self init]) {
+		[self setValuesForKeysWithDictionary:properties];
+	}
+	return self;
+}
+
 -(void)dealloc{
 	[lectureId release];
 	[message release];

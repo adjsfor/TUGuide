@@ -16,7 +16,7 @@
 #import "ServerCreateUser.h"
 #import "MainUITabBarController.h"
 #import "FriendsViewController.h"
-#import "FoodViewController.h"
+#import "MensaViewController.h"
 #import "IMissedItViewController.h"
 
 @interface TUGuideAppDelegate : NSObject <UIApplicationDelegate,UINavigationControllerDelegate,MessagePassProtocol> {
@@ -31,7 +31,7 @@
 	OrganizerViewController *organizerViewController;
 	MapViewController *mapViewController;
 	FriendsViewController *friendViewController ;
-	FoodViewController *foodViewController;
+	MensaViewController *mensaViewController;
 	IMissedItViewController *missViewController;
 	
 	
@@ -49,7 +49,7 @@
 @property (nonatomic, retain) OrganizerViewController *organizerViewController;
 @property (nonatomic, retain) MapViewController *mapViewController;
 @property (nonatomic, retain) FriendsViewController *friendViewController ;
-@property (nonatomic, retain) FoodViewController *foodViewController;
+@property (nonatomic, retain) MensaViewController *mensaViewController;
 @property (nonatomic, retain) IMissedItViewController *missViewController;
 
 -(void)passing:(NSObject *)requestor command:(NSString *)cmd message:(NSString *)msg; 

@@ -16,7 +16,7 @@
 @synthesize serverLogin;
 @synthesize serverCreate;
 @synthesize tabBarController;
-@synthesize organizerViewController,mapViewController,friendViewController,foodViewController,missViewController;
+@synthesize organizerViewController,mapViewController,friendViewController,mensaViewController,missViewController;
 
 
 #pragma mark -
@@ -121,19 +121,19 @@
 	organizerViewController = [[OrganizerViewController alloc] init];
 	mapViewController = [[MapViewController alloc] init];
 	friendViewController  = [[FriendsViewController alloc] init];
-	foodViewController = [[FoodViewController alloc] init];
+	mensaViewController = [[MensaViewController alloc] init];
 	missViewController = [[IMissedItViewController alloc] init];
 	
 	organizerViewController.delegate2 = self;
 	//mapViewController.delegate2 = self;
 	friendViewController.delegate2 = self;
-	foodViewController.delegate2 = self;
+	//foodViewController.delegate2 = self;
 	missViewController.delegate2 = self;
 	
 	UINavigationController *org = [[UINavigationController alloc] initWithRootViewController:organizerViewController];
-	UINavigationController *loc = [[UINavigationController alloc] initWithRootViewController:[[MapViewController alloc] init]];
+	UINavigationController *loc = [[UINavigationController alloc] initWithRootViewController:mapViewController];
 	UINavigationController *fri = [[UINavigationController alloc] initWithRootViewController:friendViewController];
-	UINavigationController *foo = [[UINavigationController alloc] initWithRootViewController:foodViewController];
+	UINavigationController *foo = [[UINavigationController alloc] initWithRootViewController:mensaViewController];
 	UINavigationController *mis = [[UINavigationController alloc] initWithRootViewController:missViewController];
 	
 	

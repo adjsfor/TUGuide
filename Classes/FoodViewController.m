@@ -6,7 +6,7 @@
 //  Copyright 2011 Galic Design. All rights reserved.
 //
 
-
+/*
 #import "FoodViewController.h"
 
 
@@ -119,8 +119,10 @@ NSArray *allSubviewsFood(UIView *aView)
  - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
  // Return YES for supported orientations.
  return (interfaceOrientation == UIInterfaceOrientationPortrait);
- }
- */
+ }*/
+
+/*
+ 
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
@@ -142,4 +144,4 @@ NSArray *allSubviewsFood(UIView *aView)
 
 
 @end
-
+*/

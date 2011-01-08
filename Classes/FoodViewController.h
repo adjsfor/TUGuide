@@ -5,7 +5,7 @@
 //  Created by Ivo Galic on 1/8/11.
 //  Copyright 2011 Galic Design. All rights reserved.
 //
-
+/*
 #import <UIKit/UIKit.h>
 #import "UIViewControllerDelegate.h"
 #import "MessagePassProtocol.h"
@@ -26,4 +26,4 @@
 -(void)passTo:(UIViewController *)requestor command:(NSString *)cmd message:(NSString *)msg;
 
 
-@end
+@end*/

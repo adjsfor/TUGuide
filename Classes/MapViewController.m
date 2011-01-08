@@ -58,18 +58,22 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
+	//Creating Map View and Zoom into location
 	mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
 	mapView.mapType = MKMapTypeStandard;
 	[self gotoLocation];
 	[self.view addSubview:mapView];
 	
+	//Creating annotations and applying them to the map
 	self.mapAnnotations = [[NSMutableArray alloc] initWithCapacity:2];
 	TUAnnotation *tuAnnotation = [[TUAnnotation alloc] init];
     [self.mapAnnotations insertObject:tuAnnotation atIndex:0];
 	[self.mapView removeAnnotations:self.mapView.annotations];  // remove any annotations that exist
     [self.mapView addAnnotations:self.mapAnnotations];    [tuAnnotation release];
 	
+	//Change Color of the navigationBar
 	self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
+	
 	// Create the segmented control. Choose one of the three styles
 	NSArray *segments = [NSArray arrayWithObjects:@"Map", @"List", nil];
 	UISegmentedControl* segmentedControl = [[UISegmentedControl alloc] initWithItems:segments];
@@ -78,13 +82,7 @@
 	
 	segmentedControl.frame = CGRectMake(0, 0, 290, 32);
 	[segmentedControl addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
-	
-	// For menus, the momentary behavior is preferred. Otherwise, the segmented control
-	// provides a radio-button style interface
 	segmentedControl.selectedSegmentIndex = 0;
-	
-	//CFShow(allSubviews(segmentedControl));
-	
 	
 	// Add it to the navigation bar
 	self.navigationItem.titleView = segmentedControl;

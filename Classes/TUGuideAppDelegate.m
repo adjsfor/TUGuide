@@ -46,7 +46,7 @@
 	
 	//login successful -> switch to tabbar 
 	if ([cmd isEqual:@"loginSuccessful"]) {
-		
+		[window addSubview:tabBarController.view];
 	}
 	
 	if ([cmd isEqual:@"registerSuccessful"]) {
@@ -246,9 +246,9 @@
 	[controllers addObject:mis];
 	
 	tabBarController = [[MainUITabBarController alloc] init];
-	tabBarController.viewControllers = controllers;
+	tabBarController.viewControllers = controllers;	
 	
-	[window addSubview:tabBarController.view]; // add tabbar and go
+	//[window addSubview:tabBarController.view]; // add tabbar and go
     [window makeKeyAndVisible];
     
     return YES;

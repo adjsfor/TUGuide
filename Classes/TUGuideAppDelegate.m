@@ -46,11 +46,21 @@
 	
 	//login successful -> switch to tabbar 
 	if ([cmd isEqual:@"loginSuccessful"]) {
+		[mainNavigationController.loginViewController.loginView.emailField resignFirstResponder];
+		[mainNavigationController.loginViewController.loginView.passwordField resignFirstResponder];
+		
+		window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 		[window addSubview:tabBarController.view];
+		[window makeKeyAndVisible];
 	}
 	
 	if ([cmd isEqual:@"registerSuccessful"]) {
 		// only when im logged in, kill whole MainNavigationController baum, open new TabBarNavigationController
+		[mainNavigationController.registerViewController.registerView.usernameField resignFirstResponder];
+		[mainNavigationController.registerViewController.registerView.passwordField resignFirstResponder];
+		[mainNavigationController.registerViewController.registerView.passwordField2 resignFirstResponder];
+		[mainNavigationController.registerViewController.registerView.emailField resignFirstResponder];
+		
 		UIAlertView *someError = [[UIAlertView alloc] initWithTitle: @"Info" message: @"Successfully registered" delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
 		[someError show];
 		[someError release];
@@ -60,20 +70,30 @@
 	if ([cmd isEqual:@"goRegister"]) {
 		// startRegisterEvent in ServerLogin, with data from fields
 		// self.mainNavigationController.registerViewController.registerView.passwordField.text; etc etc
+		[mainNavigationController.registerViewController.registerView.usernameField resignFirstResponder];
+		[mainNavigationController.registerViewController.registerView.passwordField resignFirstResponder];
+		[mainNavigationController.registerViewController.registerView.passwordField2 resignFirstResponder];
+		[mainNavigationController.registerViewController.registerView.emailField resignFirstResponder];
+		
 		[serverCreate createUserWithScreen_name:[mainNavigationController.registerViewController.registerView.usernameField text] withPassword:[mainNavigationController.registerViewController.registerView.passwordField text] withMail:[mainNavigationController.registerViewController.registerView.emailField text]];
 	}
 	
 	// startLoginEvent in ServerLogin with email und password
 	if ([cmd isEqual:@"goLogin"]) {
+		[mainNavigationController.loginViewController.loginView.emailField resignFirstResponder];
+		[mainNavigationController.loginViewController.loginView.passwordField resignFirstResponder];
+		
 		[serverLogin loginUserWithScreen_name:[mainNavigationController.loginViewController.loginView.emailField text] withPassword:[mainNavigationController.loginViewController.loginView.passwordField text]];
 		//[getData getAllBuildings];
-		[getData getAllClassrooms];
+		//[getData getAllClassrooms];
 	}
 	
 	
 	// komment
 	if ([cmd isEqual:@"loginFail"]) {
 		// startLoginEvent in ServerLogin with params
+		[mainNavigationController.loginViewController.loginView.emailField resignFirstResponder];
+		[mainNavigationController.loginViewController.loginView.passwordField resignFirstResponder];
 		UIAlertView *someError = [[UIAlertView alloc] initWithTitle: @"Error" message: @"Invalid password/username combination, please try again!" delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
 		[someError show];
 		[someError release];
@@ -82,6 +102,11 @@
 	
 	// failed to register
 	if ([cmd isEqual:@"registerFail"]) {
+		[mainNavigationController.registerViewController.registerView.usernameField resignFirstResponder];
+		[mainNavigationController.registerViewController.registerView.passwordField resignFirstResponder];
+		[mainNavigationController.registerViewController.registerView.passwordField2 resignFirstResponder];
+		[mainNavigationController.registerViewController.registerView.emailField resignFirstResponder];
+		
 		UIAlertView *someError = [[UIAlertView alloc] initWithTitle: @"Error" message: @"Invalid password/username combination, please try again!" delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
 		[someError show];
 		[someError release];
@@ -90,6 +115,14 @@
 	
 	// server offline
 	if ([cmd isEqual:@"serverOffline"]) {
+		[mainNavigationController.registerViewController.registerView.usernameField resignFirstResponder];
+		[mainNavigationController.registerViewController.registerView.passwordField resignFirstResponder];
+		[mainNavigationController.registerViewController.registerView.passwordField2 resignFirstResponder];
+		[mainNavigationController.registerViewController.registerView.emailField resignFirstResponder];
+		
+		[mainNavigationController.loginViewController.loginView.emailField resignFirstResponder];
+		[mainNavigationController.loginViewController.loginView.passwordField resignFirstResponder];
+		
 		UIAlertView *someError = [[UIAlertView alloc] initWithTitle: @"Server offline" message: @"We are sorry but our server is offline, please try again later!" delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
 		[someError show];
 		[someError release];

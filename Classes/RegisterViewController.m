@@ -63,6 +63,13 @@
     // Release any cached data, images, etc. that aren't in use.
 }
 
+-(void) viewWillDisappear:(BOOL)animated{
+	[registerView.usernameField resignFirstResponder];
+	[registerView.passwordField resignFirstResponder];
+	[registerView.passwordField2 resignFirstResponder];
+	[registerView.emailField resignFirstResponder];
+}
+
 - (void)viewDidUnload {
     [super viewDidUnload];
     // Release any retained subviews of the main view.

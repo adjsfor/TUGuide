@@ -37,7 +37,12 @@
 
 -(void) getAllBuildings;
 -(void) getAllClassrooms;
+-(void) getAllMensas;
+-(void) getAllRestaurants;
+
+
 -(id)initWithURL;
+-(void) send:(NSString *)message;
 
 - (NSString *)urlEncodeValue:(NSString *)str;
 

@@ -84,8 +84,7 @@
 		[mainNavigationController.loginViewController.loginView.passwordField resignFirstResponder];
 		
 		[serverLogin loginUserWithScreen_name:[mainNavigationController.loginViewController.loginView.emailField text] withPassword:[mainNavigationController.loginViewController.loginView.passwordField text]];
-		//[getData getAllBuildings];
-		//[getData getAllClassrooms];
+		[getData getAllRestaurants];
 	}
 	
 	
@@ -143,6 +142,7 @@
 		NSMutableDictionary* myDict;
 		Classroom *c;
 		Building *b;
+		Mensa *m;
 		//END
 		switch (sd) {
 			case BUILDINGS:
@@ -175,7 +175,30 @@
 				
 				break;
 			case MENSA:
-				
+				array = [NSPropertyListSerialization propertyListFromData:plistData
+														 mutabilityOption:NSPropertyListImmutable
+																   format:&format
+														 errorDescription:&error];
+				if (array) {
+					myDict = [NSMutableDictionary dictionaryWithCapacity:[array count]];
+					NSLog(@"The count: %i", [myDict count]);
+					for (NSDictionary* dict in array) {
+						m = [Mensa customClassWithProperties:dict];
+						NSLog(@"----------------------------");
+						NSLog(@"Mensa id: %@",m.id);
+						NSLog(@"The name: %@", m.name);
+						NSLog(@"The adress: %@", m.address);
+						if (m.mensaMenus != nil) {
+							for (MensaMenu* menu in m.mensaMenus){
+								NSLog(@"menu name: %@", menu.name);
+							}
+						}
+						NSLog(@"----------------------------");
+						//[m dealloc];
+					}
+				} else {
+					NSLog(@"Plist does not exist, error:%@",error);
+				}
 				break;
 			case CLASSROOM:
 				array = [NSPropertyListSerialization propertyListFromData:plistData

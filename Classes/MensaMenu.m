@@ -11,11 +11,13 @@
 
 @implementation MensaMenu
 
-@synthesize mesnaMenuId;
-@synthesize mensaId;
+@synthesize id;
+@synthesize mensa_id;
 @synthesize date;
 @synthesize name;
 @synthesize content;
+@synthesize created;
+@synthesize updated;
 
 
 -(id)init{

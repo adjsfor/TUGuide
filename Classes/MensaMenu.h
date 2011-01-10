@@ -11,20 +11,24 @@
 
 @interface MensaMenu : NSObject {
 	@private
-	int mesnaMenuId;
-	int mensaId;
+	int id;
+	int mensa_id;
 	NSDate *date;
 	NSString *name;
 	NSString *content;
+	NSString *created;
+	NSString *updated;
 
 }
 
 
-@property (nonatomic) int mesnaMenuId;
-@property (nonatomic) int mensaId;
+@property (nonatomic) int mensa_id;
+@property (nonatomic) int id;
 @property (nonatomic,retain) NSDate *date;
 @property (nonatomic,retain) NSString *name;
 @property (nonatomic,retain) NSString *content;
+@property (nonatomic,retain) NSString *created;
+@property (nonatomic,retain) NSString *updated;
 
 + (id)customClassWithProperties:(NSDictionary *)properties;
 - (id)initWithProperties:(NSDictionary *)properties;

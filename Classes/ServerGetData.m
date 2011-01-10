@@ -18,23 +18,27 @@
 
 -(void) getAllBuildings{
 	self.command = BUILDINGS;
-	NSMutableURLRequest *request = [[[NSMutableURLRequest alloc] init] autorelease];
-	NSMutableString *completeURL = [[NSMutableString alloc] initWithString:staticURL];
-	[completeURL appendString:@"Building"];
-	
-	[request setURL:[NSURL URLWithString:completeURL]];
-	[request setHTTPMethod:@"GET"];
-	[request addValue:@"Content-Type" forHTTPHeaderField:@"application/x-www-form-urlencoded"];
-	[request addValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-	[completeURL release];
-
-	dataConnection=[[NSURLConnection alloc] initWithRequest:request delegate:self];
+	[self send:@"Building"];
 }
 -(void) getAllClassrooms{
 	self.command = CLASSROOM;
+	[self send:@"Classroom"];
+}
+
+-(void) getAllRestaurants{
+	self.command = RESTAURANT;
+	[self send:@"Restaurant"];
+}
+
+-(void) getAllMensas{
+	self.command = MENSA;
+	[self send:@"Mensa"];
+}
+
+-(void) send:(NSString *)message{
 	NSMutableURLRequest *request = [[[NSMutableURLRequest alloc] init] autorelease];
 	NSMutableString *completeURL = [[NSMutableString alloc] initWithString:staticURL];
-	[completeURL appendString:@"Classroom"];
+	[completeURL appendString:message];
 	[request setURL:[NSURL URLWithString:completeURL]];
 	[request setHTTPMethod:@"GET"];
 	[request addValue:@"Content-Type" forHTTPHeaderField:@"application/x-www-form-urlencoded"];
@@ -74,7 +78,7 @@
 		self.responseData = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
 		[allRecievedData appendString:responseData];
 	}
-	//NSLog(@"-SERVER: report received part-data");
+	NSLog(@"-SERVER: report received part-data");
 	
 }
 
@@ -85,7 +89,7 @@
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    //NSLog(@"-SERVER: connection finished loading with data : %@",allRecievedData );
+    NSLog(@"-SERVER: connection finished loading with data : %@",allRecievedData );
 	NSLog(@"-SERVER: connection finished loading with data.");
 	if (self.statusCode == 200) {
 		switch (command) {

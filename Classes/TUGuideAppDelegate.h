@@ -24,6 +24,7 @@
 //TEST
 #import "Building.h"
 #import "Classroom.h"
+#import "Mensa.h"
 
 @interface TUGuideAppDelegate : NSObject <UIApplicationDelegate,UINavigationControllerDelegate,MessagePassProtocol,DataPassProtocol> {
     UIWindow *window;

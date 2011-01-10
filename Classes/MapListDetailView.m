@@ -11,13 +11,30 @@
 
 @implementation MapListDetailView
 
+@synthesize logo, header, addressHeader, address, categoryHeader, category, locationHeader, location, showLocationButton, classroom;
 
-- (id)initWithFrame:(CGRect)frame {
+
+- (id)initWithFrame:(CGRect)frame andClassroom:(Classroom *)c{
     
     self = [super initWithFrame:frame];
-    if (self) {
-        self.backgroundColor = [UIColor blackColor];
-    }
+
+	classroom = [[Classroom alloc]init];
+	classroom = c;
+    self.backgroundColor = [UIColor whiteColor];
+	
+	UIImage *img = [UIImage imageNamed: @"TUGuideLogo.png"];
+	logo = [[UIImageView alloc] initWithFrame:CGRectMake(30,0, 240, 240)];
+	logo.image = img;
+	[img release];
+	[self addSubview:logo];
+	[logo release];
+		
+	header = [[UILabel alloc]initWithFrame:CGRectMake(100,240, 220, 30)];
+	header.font = [UIFont fontWithName:@"Helvetica" size:11]; 
+	header.textColor = [UIColor whiteColor];
+	[header setText:c.name];
+	[self addSubview:header];
+	[header release];
     return self;
 }
 

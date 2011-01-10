@@ -13,8 +13,8 @@
 @interface Building : NSObject {
 	NSString *name;
 	NSString *address;
-	NSString *coordinates_lat;
-	NSString *coordinates_lon;
+	NSNumber *coordinates_lat;
+	NSNumber *coordinates_lon;
 	NSString *link;
 	int id;
 	NSString *created;
@@ -26,8 +26,8 @@
 @property (nonatomic) int id;
 @property (nonatomic,retain) NSString *name;
 @property (nonatomic,retain) NSString *address;
-@property (nonatomic,retain) NSString *coordinates_lat;
-@property (nonatomic,retain) NSString *coordinates_lon;
+@property (nonatomic,retain) NSNumber *coordinates_lat;
+@property (nonatomic,retain) NSNumber *coordinates_lon;
 @property (nonatomic,retain) NSString *link;
 @property (nonatomic,retain) NSString *created;
 @property (nonatomic,retain) NSString *updated;

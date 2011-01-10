@@ -13,13 +13,16 @@
 
 @interface TUAnnotation : NSObject <MKAnnotation>
 {
-    UIImage *image;
     NSNumber *latitude;
     NSNumber *longitude;
+	NSString *title;
+	NSString *subtitle;
 }
 
-@property (nonatomic, retain) UIImage *image;
 @property (nonatomic, retain) NSNumber *latitude;
 @property (nonatomic, retain) NSNumber *longitude;
+@property (nonatomic, retain) NSString *title;
+@property (nonatomic, retain) NSString *subtitle;
+
 
 @end

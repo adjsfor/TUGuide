@@ -11,7 +11,7 @@
 
 @implementation MapListDetailViewController
 
-@synthesize detailView;
+@synthesize detailView, c;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -24,10 +24,17 @@
  }
  */
 
+-(id)initWithClassroom:(Classroom *)classr
+{
+	c = [[Classroom alloc]init];
+	c = classr;
+	return self;
+}
+
 
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
-	detailView = [[MapListDetailView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+	detailView = [[MapListDetailView alloc] initWithFrame:[[UIScreen mainScreen] bounds]]; //andClassroom:c];
 }
 
 

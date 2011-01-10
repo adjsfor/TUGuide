@@ -11,6 +11,7 @@
 
 @implementation MapListViewController
 
+@synthesize buildingsArray, classroom, building, detailViewController;
 
 #pragma mark -
 #pragma mark Initialization
@@ -26,6 +27,13 @@
  }
  */
 
+- (id)initWithBuildings: (NSMutableArray *)b
+{
+	self = [super initWithStyle:UITableViewStyleGrouped];
+	buildingsArray = [[NSMutableArray alloc] init];
+	buildingsArray = b;
+	return self;
+}
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -33,9 +41,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
 	self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
-	
+		
 	// Create the segmented control. Choose one of the three styles
 	NSArray *segments = [NSArray arrayWithObjects:@"Map", @"List", nil];
 	UISegmentedControl* segmentedControl = [[UISegmentedControl alloc] initWithItems:segments];
@@ -110,13 +117,15 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 1;
+    return [buildingsArray count];
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 10;
+	Building *b = [[Building alloc] init];
+	b = [buildingsArray objectAtIndex:section];
+	return [b.classroomsList count];
 }
 
 
@@ -127,14 +136,26 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
 	
-	cell.textLabel.text = @"hallo";
+	
+	Building *b = [[Building alloc]init];
+	b = [buildingsArray objectAtIndex:[indexPath section]];
+	cell.textLabel.text = [[[b classroomsList] objectAtIndex:[indexPath row]]name ];
+						   
     
     // Configure the cell...
     
     return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+	
+	NSString *sectionHeader = nil;
+	sectionHeader = [[buildingsArray objectAtIndex:section] name];
+	
+	return sectionHeader;
 }
 
 
@@ -183,11 +204,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
-    
-    MapListDetailViewController *detailViewController = [[MapListDetailViewController alloc] initWithNibName:nil bundle:nil];
+	
+	Building *b = [[Building alloc]init];
+	b = [buildingsArray objectAtIndex:[indexPath section]];
+    Classroom *c = [[b classroomsList] objectAtIndex:[indexPath row]];
+    detailViewController = [[MapListDetailViewController alloc] initWithClassroom:c];
 	// ...
 	// Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    [self.navigationController pushViewController:self.detailViewController animated:YES];
     [detailViewController release];
     
 }

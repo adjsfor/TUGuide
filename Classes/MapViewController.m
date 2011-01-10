@@ -12,7 +12,12 @@
 @implementation MapViewController
 
 @synthesize mapView;
-@synthesize tuImage, mapAnnotations, detailViewController;
+@synthesize mapAnnotations, detailViewController, buildingsArray, getData, classroom, building;
+
+#define BUILDINGS   0
+#define MENSA		1
+#define RESTAURANT  2
+#define CLASSROOM   3
 
 + (CGFloat)annotationPadding;
 {
@@ -31,6 +36,7 @@
 		UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:@"Location" image:anImage tag:0];
 		self.tabBarItem = theItem;
 		[theItem release];
+		[self getBuildings];
 	}
 	
 	return self;
@@ -46,16 +52,108 @@
 			//[delegate passTo:self command:@"Map" message:@"Switch to Map"];
 			break;
 		case 1:
-			[self.navigationController pushViewController:[[MapListViewController alloc] init] animated:NO];
+			[self.navigationController pushViewController:[[MapListViewController alloc] initWithBuildings:buildingsArray] animated:NO];
 			break;
 		default:
 			break;
 	}
 }
 
+-(void)passingCommand:(NSString *)cmd sender:(int)sd message:(NSString *)msg data:(NSString *)data{
+	buildingsArray = [[NSMutableArray alloc]init];
+	
+	if ([cmd isEqual:@"dataRecieved"]) {
+		//NEEDET VARIABLES
+		NSData *plistData = [data dataUsingEncoding:NSUTF8StringEncoding];
+		NSString *error;
+		NSPropertyListFormat format;
+		NSMutableArray* array;
+		NSMutableDictionary* myDict;
+		Classroom *c;
+		Building *b;
+		//END
+		switch (sd) {
+			case BUILDINGS:
+				
+				array = [NSPropertyListSerialization propertyListFromData:plistData
+														 mutabilityOption:NSPropertyListImmutable
+																   format:&format
+														 errorDescription:&error];
+				if (array) {
+					myDict = [NSMutableDictionary dictionaryWithCapacity:[array count]];
+					NSLog(@"The count: %i", [myDict count]);
+					for (NSDictionary* dict in array) {
+						b = [Building customClassWithProperties:dict];
+						[buildingsArray addObject:b];
+						NSLog(@"----------------------------");
+						NSLog(@"Building id: %@",b.id);
+						NSLog(@"The name: %@", b.name);
+						NSLog(@"%@", b.address);
+						if (b.classroomsList != nil) {
+							for (Classroom* class in b.classroomsList){
+								NSLog(@"Classroom name: %@", class.name);
+							}
+						}
+						NSLog(@"----------------------------");
+						
+						//[b release];
+					}
+				} else {
+					NSLog(@"Plist does not exist, error:%@",error);
+				}
+				break;
+			case RESTAURANT:
+				
+				break;
+			case MENSA:
+				
+				break;
+			case CLASSROOM:
+				array = [NSPropertyListSerialization propertyListFromData:plistData
+														 mutabilityOption:NSPropertyListImmutable
+																   format:&format
+														 errorDescription:&error];
+				if (array) {
+					myDict = [NSMutableDictionary dictionaryWithCapacity:[array count]];
+					NSLog(@"The count: %i", [myDict count]);
+					for (NSDictionary* dict in array) {
+						c = [Classroom customClassWithProperties:dict];
+						NSLog(@"----------------------------");
+						NSLog(@"Classroom id: %@",c.id);
+						NSLog(@"The name: %@", c.name);
+						NSLog(@"The building_ID: %@", c.building_id);
+						//NSLog(@"The building: %@", c.building.name);
+						NSLog(@"----------------------------");
+						//[c dealloc];
+					}
+				} else {
+					NSLog(@"Plist does not exist, error:%@",error);
+				}
+				break;
+			default:
+				break;
+		}
+		//[myDict release];
+		//[plistData release];
+		//[error release];
+		//[array release];
+	}
+	if ([cmd isEqual:@"dataRecievedFailed"]) {
+		UIAlertView *someError = [[UIAlertView alloc] initWithTitle: @"Server offline" message:msg delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
+		[someError show];
+		[someError release];
+	}
+	if ([cmd isEqual:@"serverOffline"]) {
+		UIAlertView *someError = [[UIAlertView alloc] initWithTitle: @"Server offline" message:msg delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
+		[someError show];
+		[someError release];
+	}
+}
+
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
+- (void)viewDidLoad 
+{
 	[super viewDidLoad];
 	
 	//Creating Map View and Zoom into location
@@ -64,12 +162,11 @@
 	[self gotoLocation];
 	[self.view addSubview:mapView];
 	
+	//[self getBuildings];
+	mapAnnotations = [self createAnnotations:buildingsArray];
 	//Creating annotations and applying them to the map
-	self.mapAnnotations = [[NSMutableArray alloc] initWithCapacity:2];
-	TUAnnotation *tuAnnotation = [[TUAnnotation alloc] init];
-    [self.mapAnnotations insertObject:tuAnnotation atIndex:0];
 	[self.mapView removeAnnotations:self.mapView.annotations];  // remove any annotations that exist
-    [self.mapView addAnnotations:self.mapAnnotations];    [tuAnnotation release];
+    [self.mapView addAnnotations:self.mapAnnotations];    
 	
 	//Change Color of the navigationBar
 	self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
@@ -101,12 +198,36 @@
     [self.mapView setRegion:newRegion animated:YES];
 }
 
+-(void)getBuildings
+{
+	getData = [[ServerGetData alloc]initWithURL];
+	getData.delegate2 = self;
+	buildingsArray = [[NSMutableArray alloc] init];
+	[getData getAllBuildings];
+}
 
+-(NSMutableArray *)createAnnotations:(NSMutableArray *)buildings
+{
+	self.mapAnnotations = [[NSMutableArray alloc] init];
+	//TUAnnotation *tuAnnotation = [[TUAnnotation alloc] init];
+    for (Building *b in buildings) {
+		TUAnnotation *tuAnnotation = [[TUAnnotation alloc] init];
+		tuAnnotation.title = b.name;
+		tuAnnotation.subtitle = b.address;
+		tuAnnotation.latitude = b.coordinates_lat;
+		tuAnnotation.longitude = b.coordinates_lon;
+		[mapAnnotations addObject:tuAnnotation];
+		[tuAnnotation release];
+	}
+	return mapAnnotations;
+	
+}
 
 - (void)mapView:(MKMapView *)mapView regionWillChangeAnimated:(BOOL)animated
 {
 	
 }
+
 - (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
 {
 	
@@ -114,27 +235,33 @@
 
 - (void)showDetails:(id)sender
 {
+	detailViewController = [[MapListDetailViewController alloc] init];
     [self.navigationController pushViewController:self.detailViewController animated:YES];
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)theMapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
     // if it's the user location, just return nil.
-    if ([annotation isKindOfClass:[MKUserLocation class]])
-        return nil;
-    
-    // handle our two custom annotations
-    //
-    if ([annotation isKindOfClass:[TUAnnotation class]]) 
-	{
         static NSString* TUAnnotationIdentifier = @"TUAnnotationIdentifier";
         MKPinAnnotationView* pinView =
 		(MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:TUAnnotationIdentifier];
         if (!pinView)
         {
-            MKAnnotationView *annotationView = [[[MKAnnotationView alloc] initWithAnnotation:annotation
-                                                                             reuseIdentifier:TUAnnotationIdentifier] autorelease];
-            annotationView.canShowCallout = YES;
+            // if an existing pin view was not available, create one
+            MKPinAnnotationView* customPinView = [[[MKPinAnnotationView alloc]
+												   initWithAnnotation:annotation reuseIdentifier:TUAnnotationIdentifier] autorelease];
+            customPinView.pinColor = MKPinAnnotationColorPurple;
+            customPinView.animatesDrop = YES;
+            customPinView.canShowCallout = YES;
+			
+			
+			UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+            [rightButton addTarget:self
+                            action:@selector(showDetails:)
+                  forControlEvents:UIControlEventTouchUpInside];
+            customPinView.rightCalloutAccessoryView = rightButton;
+			
+            return customPinView;
 			
             UIImage *flagImage = [UIImage imageNamed:@"flag.png"];
             
@@ -156,24 +283,18 @@
             UIImage *resizedImage = UIGraphicsGetImageFromCurrentImageContext();
             UIGraphicsEndImageContext();
             
-            annotationView.image = resizedImage;
-            annotationView.opaque = NO;
+            customPinView.image = resizedImage;
+            customPinView.opaque = NO;
 			
             UIImageView *sfIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"1map.png"]];
-            annotationView.leftCalloutAccessoryView = sfIconView;
+            customPinView.leftCalloutAccessoryView = sfIconView;
             [sfIconView release];
             
-            return annotationView;
-        }
-        else
-        {
-            pinView.annotation = annotation;
+            return customPinView;
         }
         return pinView;
     }
-    
-    return nil;
-}
+
 
 
 /*

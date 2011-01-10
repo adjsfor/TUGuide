@@ -12,9 +12,13 @@
 
 @interface MapListDetailViewController : UIViewController {
 	MapListDetailView *detailView;
+	Classroom *c;
 	
 }
 
 @property (nonatomic, retain) MapListDetailView *detailView;
+@property (nonatomic, retain) Classroom *c;
+
+-(id)initWithClassroom:(Classroom *)classr;
 
 @end

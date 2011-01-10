@@ -49,9 +49,9 @@
 		[mainNavigationController.loginViewController.loginView.emailField resignFirstResponder];
 		[mainNavigationController.loginViewController.loginView.passwordField resignFirstResponder];
 		
-		window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-		[window addSubview:tabBarController.view];
-		[window makeKeyAndVisible];
+		//window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+		//[window addSubview:tabBarController.view];
+		//[window makeKeyAndVisible];
 	}
 	
 	if ([cmd isEqual:@"registerSuccessful"]) {
@@ -247,7 +247,7 @@
 	mainNavigationController = [[MainNavigationController alloc]init];
 	mainNavigationController.delegate = self;
 	mainNavigationController.delegate2 = self;
-	[window addSubview:mainNavigationController.view];
+	//[window addSubview:mainNavigationController.view];
 	
 	
 	organizerViewController = [[OrganizerViewController alloc] init];
@@ -281,6 +281,7 @@
 	tabBarController = [[MainUITabBarController alloc] init];
 	tabBarController.viewControllers = controllers;	
 	
+	[window addSubview:tabBarController.view];
 	//[window addSubview:tabBarController.view]; // add tabbar and go
     [window makeKeyAndVisible];
     

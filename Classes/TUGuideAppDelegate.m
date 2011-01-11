@@ -84,7 +84,6 @@
 		[mainNavigationController.loginViewController.loginView.passwordField resignFirstResponder];
 		
 		[serverLogin loginUserWithScreen_name:[mainNavigationController.loginViewController.loginView.emailField text] withPassword:[mainNavigationController.loginViewController.loginView.passwordField text]];
-		[getData getAllRestaurants];
 	}
 	
 	
@@ -240,6 +239,17 @@
 		[someError show];
 		[someError release];
 	}
+	if ([cmd isEqual:@"allDataRecieved"]) {
+		NSMutableArray *test = [getData getAllBuildingsAsArray];
+		for (Building* b in test) {
+			NSLog(@"---------------------");
+			NSLog(@"Building :%@",b.name);
+			for (Classroom* class in b.classroomsList){
+				NSLog(@"Classroom name: %@", class.name);
+			}
+			NSLog(@"---------------------");
+		}
+	}
 }
 
 
@@ -261,7 +271,7 @@
 	serverLogin = [[ServerLogin alloc] init];
 	serverLogin.delegate2 = self;
 	
-	getData = [[ServerGetData alloc] initWithURL];
+	getData = [[ServerGetData alloc] initAll];
 	getData.delegate2 = self;
 	
 	serverCreate = [[ServerCreateUser alloc] init];

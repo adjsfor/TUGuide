@@ -16,13 +16,13 @@
 #import "Classroom.h"
 #import "Building.h"
 
-@interface MapViewController : UIViewController <UINavigationBarDelegate, UINavigationControllerDelegate, DataPassProtocol>{
+@interface MapViewController : UIViewController <UINavigationBarDelegate, UINavigationControllerDelegate>{
 	MKMapView *mapView;
 	IBOutlet UIImageView *tuImage;
 	NSMutableArray *mapAnnotations;
 	MapListDetailViewController *detailViewController;
 	NSMutableArray *buildingsArray;
-	ServerGetData *getData;
+	//ServerGetData *getData;
 	Classroom *classroom;
 	Building *building;
 }
@@ -31,7 +31,7 @@
 @property (nonatomic, retain) NSMutableArray *mapAnnotations;
 @property (nonatomic, retain) MapListDetailViewController *detailViewController;
 @property (nonatomic, retain) NSMutableArray *buildingsArray;
-@property (nonatomic, retain) ServerGetData *getData;
+//@property (nonatomic, retain) ServerGetData *getData;
 @property (nonatomic, retain) Classroom *classroom;
 @property (nonatomic, retain) Building *building;
 
@@ -39,8 +39,9 @@
 + (CGFloat)annotationPadding;
 + (CGFloat)calloutHeight;
 
+- (id)initWithBuildings: (NSMutableArray *)b;
 - (void)gotoLocation;
-- (void)getBuildings;
+//- (void)getBuildings;
 - (IBAction)segmentAction:(UISegmentedControl *)segmentPick;
 -(NSMutableArray *)createAnnotations:(NSMutableArray *)buildings;
 

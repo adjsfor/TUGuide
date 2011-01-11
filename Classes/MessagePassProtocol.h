@@ -11,5 +11,5 @@
 
 @protocol MessagePassProtocol
 // used to send some commands between GUI and SERVICE 
--(void)passing:(NSObject *)requestor command:(NSString *)cmd message:(NSString *)msg; 
+-(BOOL)passing:(NSObject *)requestor command:(NSString *)cmd message:(NSString *)msg; 
 @end

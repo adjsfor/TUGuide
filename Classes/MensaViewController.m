@@ -11,9 +11,10 @@
 
 @implementation MensaViewController
 
-@synthesize mensaView, segmentedController;
+@synthesize mensaView, segmentedController, mensas, restaurants;
 
-- (id)init {
+- (id)initWithMensas: (NSMutableArray *)m andRestaurants: (NSMutableArray *)r;
+{
 	//Initialization of the ViewController and adding TabbarItems and Image
 	if (self = [super initWithNibName:nil bundle:nil]) {
 		self.title = @"Food";
@@ -21,6 +22,9 @@
 		UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:@"Food" image:anImage tag:0];
 		self.tabBarItem = theItem;
 		[theItem release];
+		
+		mensas = [[NSMutableArray alloc] initWithArray:m];
+		restaurants = [[NSMutableArray alloc] initWithArray:r];
 	}
 	
 	return self;

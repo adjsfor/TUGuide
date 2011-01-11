@@ -15,11 +15,18 @@
 	
 	MensaView *mensaView;
 	UISegmentedControl *segmentedController;
+	NSMutableArray *restaurants;
+	NSMutableArray *mensas;
 
 }
 
 @property (nonatomic, retain) MensaView *mensaView;
 @property (nonatomic, retain) UISegmentedControl *segmentedController;
+@property (nonatomic, retain) NSMutableArray *restaurants;
+@property (nonatomic, retain) NSMutableArray *mensas;
+
+
+- (id)initWithMensas: (NSMutableArray *)m andRestaurants: (NSMutableArray *)r;
 
 - (IBAction)segmentAction:(UISegmentedControl *)segmentPick;
 - (void)mensaBlueAction:(id)sender;

@@ -12,7 +12,7 @@
 @implementation MapViewController
 
 @synthesize mapView;
-@synthesize mapAnnotations, detailViewController, buildingsArray, getData, classroom, building;
+@synthesize mapAnnotations, detailViewController, buildingsArray, classroom, building;
 
 #define BUILDINGS   0
 #define MENSA		1
@@ -28,21 +28,22 @@
     return 40.0f;
 }
 
-- (id)init {
-	
+- (id)initWithBuildings: (NSMutableArray *)b
+{
 	if (self) {
 		self.title = @"Location";
 		UIImage* anImage = [UIImage imageNamed:@"1map.png"];
 		UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:@"Location" image:anImage tag:0];
 		self.tabBarItem = theItem;
 		[theItem release];
-		[self getBuildings];
+		
+		buildingsArray = [[NSMutableArray alloc] init];
+		buildingsArray = b;
+		//[self getBuildings];
 	}
 	
 	return self;
-	
 }
-
 
 -(IBAction)segmentAction:(UISegmentedControl *)segmentPick
 {
@@ -59,7 +60,7 @@
 	}
 }
 
--(void)passingCommand:(NSString *)cmd sender:(int)sd message:(NSString *)msg data:(NSString *)data{
+/*-(void)passingCommand:(NSString *)cmd sender:(int)sd message:(NSString *)msg data:(NSString *)data{
 	buildingsArray = [[NSMutableArray alloc]init];
 	
 	if ([cmd isEqual:@"dataRecieved"]) {
@@ -148,7 +149,7 @@
 		[someError show];
 		[someError release];
 	}
-}
+}*/
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -198,13 +199,13 @@
     [self.mapView setRegion:newRegion animated:YES];
 }
 
--(void)getBuildings
+/*-(void)getBuildings
 {
 	getData = [[ServerGetData alloc]initWithURL];
 	getData.delegate2 = self;
 	buildingsArray = [[NSMutableArray alloc] init];
 	[getData getAllBuildings];
-}
+}*/
 
 -(NSMutableArray *)createAnnotations:(NSMutableArray *)buildings
 {

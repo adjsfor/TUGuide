@@ -11,8 +11,15 @@
 
 @implementation RestaurantViewController
 
-@synthesize mapView, segmentedController;
+@synthesize mapView, segmentedController, restaurants;
 
+
+-(id)initWithRestaurants: (NSMutableArray *) r
+{
+	restaurants = [[NSMutableArray alloc] init];
+	restaurants = r;
+	return self;
+}
 
 -(IBAction)segmentAction:(UISegmentedControl *)segmentPick
 {

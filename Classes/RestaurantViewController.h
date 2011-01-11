@@ -14,13 +14,14 @@
 
 	UISegmentedControl *segmentedController;
 	MKMapView *mapView;
-	
+	NSMutableArray *restaurants;
 }
 
 @property (nonatomic, retain) UISegmentedControl *segmentedController;
 @property (nonatomic, retain) MKMapView *mapView;
+@property (nonatomic, retain) NSMutableArray *restaurants;
 
-
+-(id)initWithRestaurants: (NSMutableArray *) r;
 - (IBAction)segmentAction:(UISegmentedControl *)segmentPick;
 - (void)gotoLocation;
 @end

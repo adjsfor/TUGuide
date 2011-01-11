@@ -10,9 +10,9 @@
 	1D3623250D0F684500981E51 /* TUGuideAppDelegate.m */ = {
 		uiCtxt = {
 			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{10001, 446}\";\n            s = 0;\n        },\n                {\n            r = \"{10519, 351}\";\n            s = 0;\n        },\n                {\n            r = \"{10943, 165}\";\n            s = 0;\n        },\n                {\n            r = \"{11177, 205}\";\n            s = 0;\n        },\n                {\n            r = \"{11449, 118}\";\n            s = 0;\n        },\n                {\n            r = \"{11691, 140}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 11940}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {2210, 3250}}";
-			sepNavSelRange = "{7015, 0}";
-			sepNavVisRange = "{6857, 1062}";
+			sepNavIntBoundsRect = "{{0, 0}, {2210, 3380}}";
+			sepNavSelRange = "{9886, 0}";
+			sepNavVisRange = "{5899, 2976}";
 		};
 	};
 	1D6058900D05DD3D006BFB54 /* TUGuide */ = {
@@ -118,8 +118,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 316466127;
-			PBXWorkspaceStateSaveDate = 316466127;
+			PBXPerProjectTemplateStateSaveDate = 316477416;
+			PBXWorkspaceStateSaveDate = 316477416;
 		};
 		perUserProjectItems = {
 			FA381CC012A00B05008E06D0 /* PBXTextBookmark */ = FA381CC012A00B05008E06D0 /* PBXTextBookmark */;
@@ -182,8 +182,8 @@
 			FA903E7A12DD0D840079D0B3 /* PBXBookmark */ = FA903E7A12DD0D840079D0B3 /* PBXBookmark */;
 			FA903E7B12DD0D840079D0B3 /* PBXBookmark */ = FA903E7B12DD0D840079D0B3 /* PBXBookmark */;
 			FA903E8D12DD0E230079D0B3 /* PBXTextBookmark */ = FA903E8D12DD0E230079D0B3 /* PBXTextBookmark */;
-			FA903E8E12DD0E230079D0B3 /* PBXTextBookmark */ = FA903E8E12DD0E230079D0B3 /* PBXTextBookmark */;
-			FA903E9312DD0EC40079D0B3 /* PBXTextBookmark */ = FA903E9312DD0EC40079D0B3 /* PBXTextBookmark */;
+			FA903EB512DD0F690079D0B3 /* PBXTextBookmark */ = FA903EB512DD0F690079D0B3 /* PBXTextBookmark */;
+			FA903ED812DD10A10079D0B3 /* PBXTextBookmark */ = FA903ED812DD10A10079D0B3 /* PBXTextBookmark */;
 			FA923A3612D39EEF00A3048D /* PBXTextBookmark */ = FA923A3612D39EEF00A3048D /* PBXTextBookmark */;
 			FA923A3712D39EEF00A3048D /* PBXTextBookmark */ = FA923A3712D39EEF00A3048D /* PBXTextBookmark */;
 			FA923A3812D39EEF00A3048D /* PBXTextBookmark */ = FA923A3812D39EEF00A3048D /* PBXTextBookmark */;
@@ -501,7 +501,7 @@
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 1;
+		breakpointsEnabled = 0;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
@@ -1034,7 +1034,7 @@
 		ignoreCount = 0;
 		lineNumber = 78;
 		location = TUGuide;
-		modificationTime = 316476965.931499;
+		modificationTime = 316476965.9314989;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1153,7 +1153,7 @@
 		ignoreCount = 0;
 		lineNumber = 167;
 		location = TUGuide;
-		modificationTime = 316476965.931674;
+		modificationTime = 316476965.9316739;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1282,7 +1282,7 @@
 		);
 		name = /Users/MacBook/Documents/xCodeWorkspace/TUGuide/Settings.bundle/Root.plist;
 		rLen = 0;
-		rLoc = 9223372036854775807;
+		rLoc = 9223372036854775808;
 	};
 	FA903DD312DCFA5E0079D0B3 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -1478,17 +1478,7 @@
 		vrLen = 2543;
 		vrLoc = 0;
 	};
-	FA903E8E12DD0E230079D0B3 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1D3623250D0F684500981E51 /* TUGuideAppDelegate.m */;
-		name = "TUGuideAppDelegate.m: 224";
-		rLen = 0;
-		rLoc = 9886;
-		rType = 0;
-		vrLen = 2851;
-		vrLoc = 6141;
-	};
-	FA903E9312DD0EC40079D0B3 /* PBXTextBookmark */ = {
+	FA903EB512DD0F690079D0B3 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 1D3623250D0F684500981E51 /* TUGuideAppDelegate.m */;
 		name = "TUGuideAppDelegate.m: 224";
@@ -1497,6 +1487,16 @@
 		rType = 0;
 		vrLen = 3322;
 		vrLoc = 3858;
+	};
+	FA903ED812DD10A10079D0B3 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* TUGuideAppDelegate.m */;
+		name = "TUGuideAppDelegate.m: 224";
+		rLen = 0;
+		rLoc = 9886;
+		rType = 0;
+		vrLen = 2976;
+		vrLoc = 5899;
 	};
 	FA9239D812D3943700A3048D /* LocationViewController.h */ = {
 		uiCtxt = {

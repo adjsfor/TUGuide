@@ -14,6 +14,8 @@
 @synthesize dataConnection;
 @synthesize statusCode,delegate2,responseData,allRecievedData,staticURL,command;
 
+@synthesize restaurants,mensas,classrooms,buildings,load;
+
 
 
 -(void) getAllBuildings{
@@ -35,6 +37,21 @@
 	[self send:@"Mensa"];
 }
 
+-(NSArray *) getAllBuildingsAsArray{
+	return buildings;
+}
+-(NSArray *) getAllClassroomsAsArray{
+	return classrooms;
+}
+
+-(NSArray *) getAllRestaurantsAsArray{
+	return restaurants;
+}
+
+-(NSArray *) getAllMensasAsArray{
+	return mensas;
+}
+
 -(void) send:(NSString *)message{
 	NSMutableURLRequest *request = [[[NSMutableURLRequest alloc] init] autorelease];
 	NSMutableString *completeURL = [[NSMutableString alloc] initWithString:staticURL];
@@ -49,8 +66,15 @@
 }
 
 -(id)initWithURL{
+	load=ONE;
 	staticURL = [[NSString alloc] initWithString:@"http://hgmm.webhop.net:56789/"];
 	return [self init];
+}
+-(id)initAll{
+	[self initWithURL];
+	load=ALL;
+	[self getAllBuildings];
+	return self;
 }
 
 - (NSString *)urlEncodeValue:(NSString *)str
@@ -78,7 +102,7 @@
 		self.responseData = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
 		[allRecievedData appendString:responseData];
 	}
-	NSLog(@"-SERVER: report received part-data");
+	//NSLog(@"-SERVER: report received part-data");
 	
 }
 
@@ -89,22 +113,51 @@
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    NSLog(@"-SERVER: connection finished loading with data : %@",allRecievedData );
+    //NSLog(@"-SERVER: connection finished loading with data : %@",allRecievedData );
 	NSLog(@"-SERVER: connection finished loading with data.");
 	if (self.statusCode == 200) {
-		switch (command) {
-			case BUILDINGS:
-				[delegate2 passingCommand:@"dataRecieved" sender:BUILDINGS message:nil data:allRecievedData];
+		switch (load) {
+			case ONE:
+				switch (command) {
+					case BUILDINGS:
+						[delegate2 passingCommand:@"dataRecieved" sender:BUILDINGS message:nil data:allRecievedData];
+						break;
+					case RESTAURANT:
+						[delegate2 passingCommand:@"dataRecieved" sender:RESTAURANT message:nil data:allRecievedData];
+						break;
+					case MENSA:
+						[delegate2 passingCommand:@"dataRecieved" sender:MENSA message:nil data:allRecievedData];
+						break;
+					case CLASSROOM:
+						[delegate2 passingCommand:@"dataRecieved" sender:CLASSROOM message:nil data:allRecievedData];
+						break;
+					default:
+						break;
+				}
 				break;
-			case RESTAURANT:
-				[delegate2 passingCommand:@"dataRecieved" sender:RESTAURANT message:nil data:allRecievedData];
+			case ALL:
+				switch (command) {
+					case BUILDINGS:
+						[self saveObject:BUILDINGS withData:allRecievedData];
+						[self getAllRestaurants];
+						break;
+					case RESTAURANT:
+						[self saveObject:RESTAURANT withData:allRecievedData];
+						[self getAllMensas];
+						break;
+					case MENSA:
+						[self saveObject:MENSA withData:allRecievedData];
+						[self getAllClassrooms];
+						break;
+					case CLASSROOM:
+						[self saveObject:CLASSROOM withData:allRecievedData];
+						[delegate2 passingCommand:@"allDataRecieved" sender:ALL message:nil data:nil];
+						break;
+					default:
+						break;
+				}
 				break;
-			case MENSA:
-				[delegate2 passingCommand:@"dataRecieved" sender:MENSA message:nil data:allRecievedData];
-				break;
-			case CLASSROOM:
-				[delegate2 passingCommand:@"dataRecieved" sender:CLASSROOM message:nil data:allRecievedData];
-				break;
+
 			default:
 				break;
 		}
@@ -114,7 +167,88 @@
 	
 }
 
+-(void)saveObject:(int)obj withData:(NSString *)data{
+	//NEEDET VARIABLES
+	NSData *plistData = [data dataUsingEncoding:NSUTF8StringEncoding];
+	NSString *error;
+	NSPropertyListFormat format;
+	NSMutableArray* array;
+	NSMutableDictionary* myDict;
+	Classroom *c;
+	Building *b;
+	Mensa *m;
+	//END
+	switch (obj) {
+		case BUILDINGS:
+			
+			array = [NSPropertyListSerialization propertyListFromData:plistData
+													 mutabilityOption:NSPropertyListImmutable
+															   format:&format
+													 errorDescription:&error];
+			if (array) {
+				myDict = [NSMutableDictionary dictionaryWithCapacity:[array count]];
+				buildings = [[NSMutableArray alloc] init];
+				for (NSDictionary* dict in array) {
+					b = [Building customClassWithProperties:dict];
+					[buildings addObject:b];
+					//[b release];
+				}
+			} else {
+				NSLog(@"Plist Buildings does not exist, error:%@",error);
+			}
+			break;
+		case RESTAURANT:
+				NSLog(@"Plist Restaurants does not exist.");
+			break;
+		case MENSA:
+			array = [NSPropertyListSerialization propertyListFromData:plistData
+													 mutabilityOption:NSPropertyListImmutable
+															   format:&format
+													 errorDescription:&error];
+			if (array) {
+				myDict = [NSMutableDictionary dictionaryWithCapacity:[array count]];
+				mensas = [[NSMutableArray alloc] init];
+				for (NSDictionary* dict in array) {
+					m = [Mensa customClassWithProperties:dict];
+					[mensas addObject:m];
+					//[m release];
+				}
+			} else {
+				NSLog(@"Plist Mensas does not exist, error:%@",error);
+			}
+			break;
+		case CLASSROOM:
+			array = [NSPropertyListSerialization propertyListFromData:plistData
+													 mutabilityOption:NSPropertyListImmutable
+															   format:&format
+													 errorDescription:&error];
+			if (array) {
+				myDict = [NSMutableDictionary dictionaryWithCapacity:[array count]];
+				classrooms = [[NSMutableArray alloc] init];
+				for (NSDictionary* dict in array) {
+					c = [Classroom customClassWithProperties:dict];
+					[classrooms addObject:c];
+					//[c release];
+				}
+			} else {
+				NSLog(@"Plist Classrooms does not exist, error:%@",error);
+			}
+			break;
+		default:
+			break;
+	}
+	//[myDict release];
+	//[plistData release];
+	//[error release];
+	//[array release];
+}
+
+
 -(void) dealloc{
+	[restaurants release];
+	[mensas release];
+	[classrooms release];
+	[buildings release];
 	[dataConnection release];
 	[responseData release];
 	[allRecievedData release];

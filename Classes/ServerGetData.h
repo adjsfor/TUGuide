@@ -8,11 +8,19 @@
 
 #import <Foundation/Foundation.h>
 #import "DataPassProtocol.h"
+#import "Building.h"
+#import "Classroom.h"
+#import "Restaurant.h"
+#import "Mensa.h"
+#import "MensaMenu.h"
 
 #define BUILDINGS   0
 #define MENSA		1
 #define RESTAURANT  2
 #define CLASSROOM   3
+
+#define ALL			10
+#define ONE			11
 
 
 
@@ -24,6 +32,12 @@
 	NSMutableString *allRecievedData;
 	NSString *staticURL;
 	int command;
+	int load;
+	
+	NSMutableArray *buildings;
+	NSMutableArray *classrooms;
+	NSMutableArray *restaurants;
+	NSMutableArray *mensas;
 }
 
 @property (nonatomic, retain) NSURLConnection *dataConnection;
@@ -31,8 +45,14 @@
 @property (nonatomic, retain) NSMutableString *allRecievedData;
 @property (nonatomic) int statusCode;
 @property (nonatomic) int command;
+@property (nonatomic) int load;
 @property (nonatomic,assign) id <DataPassProtocol> delegate2;
 @property (nonatomic, retain) NSString *staticURL;
+
+@property (nonatomic, retain) NSMutableArray *buildings;
+@property (nonatomic, retain) NSMutableArray *classrooms;
+@property (nonatomic, retain) NSMutableArray *restaurants;
+@property (nonatomic, retain) NSMutableArray *mensas;
 
 
 -(void) getAllBuildings;
@@ -40,8 +60,17 @@
 -(void) getAllMensas;
 -(void) getAllRestaurants;
 
+-(NSMutableArray *) getAllBuildingsAsArray;
+-(NSMutableArray *) getAllClassroomsAsArray;
+-(NSMutableArray *) getAllRestaurantsAsArray;
+-(NSMutableArray *) getAllMensasAsArray;
+
 
 -(id)initWithURL;
+-(id)initAll;
+
+-(void)saveObject:(int)obj withData:(NSString *)data;
+
 -(void) send:(NSString *)message;
 
 - (NSString *)urlEncodeValue:(NSString *)str;

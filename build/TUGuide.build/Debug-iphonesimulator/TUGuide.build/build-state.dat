@@ -1,7 +1,7 @@
 TTUGuide
 v7
 r0
-t316477571.032442
+t316478255.954179
 cCheck dependencies
 cProcessInfoPlistFile /Users/MacBook/Documents/xCodeWorkspace/TUGuide/build/Debug-iphonesimulator/TUGuide.app/Info.plist TUGuide-Info.plist
 cCpResource build/Debug-iphonesimulator/TUGuide.app/TUGuideLogo.png TUGuideLogo.png
@@ -1134,7 +1134,7 @@ s934
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies316477571#316477571#0(0"0(0#1#0"8632645536#0"0#
+lSLF07#2@18"Check dependencies316478255#316478255#0(0"0(0#1#0"8632230592#0"0#
 
 CCompileC build/TUGuide.build/Debug-iphonesimulator/TUGuide.build/Objects-normal/i386/Announcement.o /Users/MacBook/Documents/xCodeWorkspace/TUGuide/Classes/Announcement.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s316477270.175836

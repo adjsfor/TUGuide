@@ -31,6 +31,9 @@
 		4BA645BE12A154B600B03B82 /* Building.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA645BD12A154B600B03B82 /* Building.m */; };
 		4BA645FE12A15B7F00B03B82 /* Mensa.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA645FD12A15B7F00B03B82 /* Mensa.m */; };
 		4BA6462512A1633E00B03B82 /* MensaMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA6462412A1633E00B03B82 /* MensaMenu.m */; };
+		4BC60EF812DCCB9E00A0BC84 /* todo.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 4BC60EF712DCCB9E00A0BC84 /* todo.sqlite */; };
+		4BC60F0612DCCC0900A0BC84 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC60F0512DCCC0900A0BC84 /* libsqlite3.0.dylib */; };
+		4BC60F3F12DCCF8900A0BC84 /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC60F3E12DCCF8900A0BC84 /* Todo.m */; };
 		8E1D031312D8C7E7003F2AA2 /* ServerGetData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1D031212D8C7E7003F2AA2 /* ServerGetData.m */; };
 		8E30CB4B12A5C43100BCA1B9 /* LoginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E30CB4A12A5C43100BCA1B9 /* LoginTests.m */; };
 		8E30CBAA12A66E9B00BCA1B9 /* ServerLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B819D1F12A564C2005C740F /* ServerLogin.m */; };
@@ -131,6 +134,10 @@
 		4BA645FD12A15B7F00B03B82 /* Mensa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mensa.m; sourceTree = "<group>"; };
 		4BA6462312A1633E00B03B82 /* MensaMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaMenu.h; sourceTree = "<group>"; };
 		4BA6462412A1633E00B03B82 /* MensaMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaMenu.m; sourceTree = "<group>"; };
+		4BC60EF712DCCB9E00A0BC84 /* todo.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = todo.sqlite; path = database/todo.sqlite; sourceTree = "<group>"; };
+		4BC60F0512DCCC0900A0BC84 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		4BC60F3D12DCCF8900A0BC84 /* Todo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Todo.h; sourceTree = "<group>"; };
+		4BC60F3E12DCCF8900A0BC84 /* Todo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Todo.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* TUGuide-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TUGuide-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		8E1D030C12D8C7B6003F2AA2 /* DataPassProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataPassProtocol.h; sourceTree = "<group>"; };
 		8E1D031112D8C7E7003F2AA2 /* ServerGetData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerGetData.h; sourceTree = "<group>"; };
@@ -222,6 +229,7 @@
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				FA616EDF12B8C17F00E0E2C7 /* EventKit.framework in Frameworks */,
 				FA6171EB12B90B1A00E0E2C7 /* MapKit.framework in Frameworks */,
+				4BC60F0612DCCC0900A0BC84 /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +300,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4BC60EF712DCCB9E00A0BC84 /* todo.sqlite */,
 				FAD1DB0712A0391800F782A0 /* Images */,
 				8D1107310486CEB800E47090 /* TUGuide-Info.plist */,
 			);
@@ -307,6 +316,7 @@
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 				8EAFF11B12A0058300C9BCA3 /* SenTestingKit.framework */,
 				FA616EDE12B8C17F00E0E2C7 /* EventKit.framework */,
+				4BC60F0512DCCC0900A0BC84 /* libsqlite3.0.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -645,6 +655,8 @@
 				8E8D5A1412A15C450096E52C /* Restaurant.m */,
 				4BA6462312A1633E00B03B82 /* MensaMenu.h */,
 				4BA6462412A1633E00B03B82 /* MensaMenu.m */,
+				4BC60F3D12DCCF8900A0BC84 /* Todo.h */,
+				4BC60F3E12DCCF8900A0BC84 /* Todo.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -733,6 +745,7 @@
 				FACF166E12D802AE0087B05C /* MensaLogoGreen.png in Resources */,
 				FACF166F12D802AE0087B05C /* MensaLogoOrange.png in Resources */,
 				FACF167012D802AE0087B05C /* MensaLogoRed.png in Resources */,
+				4BC60EF812DCCB9E00A0BC84 /* todo.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -810,6 +823,7 @@
 				FACF152012D7EC5A0087B05C /* RestaurantViewController.m in Sources */,
 				FACF152312D7EC7C0087B05C /* MensaView.m in Sources */,
 				8E1D031312D8C7E7003F2AA2 /* ServerGetData.m in Sources */,
+				4BC60F3F12DCCF8900A0BC84 /* Todo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

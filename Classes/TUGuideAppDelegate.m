@@ -270,7 +270,7 @@
 	mainNavigationController = [[MainNavigationController alloc]init];
 	mainNavigationController.delegate = self;
 	mainNavigationController.delegate2 = self;
-	[window addSubview:mainNavigationController.view];
+	//[window addSubview:mainNavigationController.view];
 	
 	
 	organizerViewController = [[OrganizerViewController alloc] init];
@@ -279,7 +279,7 @@
 	mensaViewController = [[MensaViewController alloc] init];
 	missViewController = [[IMissedItViewController alloc] init];
 	
-	organizerViewController.delegate2 = self;
+	//organizerViewController.delegate2 = self;
 	//mapViewController.delegate2 = self;
 	friendViewController.delegate2 = self;
 	//foodViewController.delegate2 = self;
@@ -304,7 +304,7 @@
 	tabBarController = [[MainUITabBarController alloc] init];
 	tabBarController.viewControllers = controllers;	
 	
-	//[window addSubview:tabBarController.view];
+	[window addSubview:tabBarController.view];
 	//[window addSubview:tabBarController.view]; // add tabbar and go
     [window makeKeyAndVisible];
     

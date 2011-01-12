@@ -180,6 +180,10 @@
 	serverLogin = [[ServerLogin alloc] init];
 	serverLogin.delegate2 = self;
 	
+	mainNavigationController = [[MainNavigationController alloc]init];
+	mainNavigationController.delegate = self;
+	mainNavigationController.delegate2 = self;
+	//[window addSubview:mainNavigationController.view];
 	serverCreate = [[ServerCreateUser alloc] init];
 	serverCreate.delegate2 = self;
 	

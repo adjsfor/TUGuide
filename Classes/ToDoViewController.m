@@ -2,7 +2,7 @@
 //  ToDoViewController.m
 //  TUGuide
 //
-//  Created by Martin Langeder on 15.12.10.
+//  Created by Ivo Galic on 15.12.10.
 //  Copyright 2010 7359. All rights reserved.
 //
 
@@ -11,196 +11,199 @@
 
 @implementation ToDoViewController
 
-@synthesize delegate, segmentedControl;
+@synthesize delegate,db,todoView,todoTempDatabase;
 
-#pragma mark -
-#pragma mark Initialization
-
-/*
-- (id)initWithStyle:(UITableViewStyle)style {
-    // Override initWithStyle: if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization.
-    }
-    return self;
-}
-*/
-
--(IBAction)segmentAction:(UISegmentedControl *)segmentPick
-{
-	NSLog(@"segment called %d", segmentPick.selectedSegmentIndex);
-	switch (segmentPick.selectedSegmentIndex) {
-		case 0:
-			[delegate passTo:self command:@"Lectures" message:@"Switch to Lectures"];
-			break;
-		case 1:
-			[delegate passTo:self command:@"Courses" message:@"Switch to Courses"];
-			break;
-		case 2:
-			[delegate passTo:self command:@"ToDo" message:@"Switch to ToDo"];
-			break;
-		default:
-			break;
+- (id)init{
+	if (self = [super init]) {
+		db = [[TodoDatabase alloc]init];
+		[db createEditableCopyOfDatabaseIfNeeded];
+		[db initializeDatabase];
+		todoView = [[TodoDetailViewController alloc]init];
+		todoView.delegate = self;
 	}
+	return self;
 }
-
-
-#pragma mark -
-#pragma mark View lifecycle
-
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-	
-	NSArray *segmentTextContent = [NSArray arrayWithObjects:@"Lectures", @"Courses", @"ToDo",nil];
-	segmentedControl = [[UISegmentedControl alloc] initWithItems:segmentTextContent];
-    segmentedControl.selectedSegmentIndex = 0;
-    segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    segmentedControl.segmentedControlStyle = UISegmentedControlStyleBar;
-    segmentedControl.frame = CGRectMake(0, 0, 300, 30);
-    [segmentedControl addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
-    
-    self.navigationItem.titleView = segmentedControl;
-    [segmentedControl release];
+	self.title = @"Todo Items";
+	self.navigationItem.leftBarButtonItem = self.editButtonItem;
 }
 
 
-/*
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-*/
-/*
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-}
-*/
-/*
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-}
-*/
-/*
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-}
-*/
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations.
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
 
+- (void) passTo:(UIViewController *)requestor command:(NSString *)cmd message:(NSString *)msg{
+	[delegate passTo:requestor command:cmd message:msg];
+}
 
-#pragma mark -
-#pragma mark Table view data source
+//- (void) addTodo:(id)sender {
+//
+//	
+//	if(self.todoView == nil) {
+//		TodoDetailViewController *viewController = [[TodoDetailViewController alloc] init];
+//		self.todoView = viewController;
+//		[viewController release];
+//	}
+//	
+//	Todo *todo = [db addTodo];
+//	[self.navigationController pushViewController:self.todoView animated:YES];
+//	self.todoView.todo = todo;
+//	self.todoView.title = todo.text;
+//	[self.todoView.todoText setText:todo.text];	
+//	
+//}
+
+//- (void)setEditing:(BOOL)editing animated:(BOOL)animated {
+//    // Updates the appearance of the Edit|Done button as necessary.
+//    [super setEditing:editing animated:animated];
+//    [self.tableView setEditing:editing animated:YES];
+//    // Disable the add button while editing.
+//    if (editing) {
+//        self.navigationItem.rightBarButtonItem.enabled = NO;
+//    } else {
+//        self.navigationItem.rightBarButtonItem.enabled = YES;
+//    }
+//}
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
-    return 1;
+	return 1;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section.
-    return 1;
+	return db.todos.count;
 }
 
 
-// Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-    }
-    
-    // Configure the cell...
-    
-    return cell;
+	
+	static NSString *MyIdentifier = @"MyIdentifier";
+	
+	TodoCell *cell = (TodoCell *)[tableView dequeueReusableCellWithIdentifier:MyIdentifier];
+	if (cell == nil) {
+		cell = [[[TodoCell alloc] initWithFrame:CGRectZero reuseIdentifier:MyIdentifier] autorelease];
+		//[emailField addTarget:self action:@selector(exitTextField:) forControlEvents:UIControlEventEditingDidEndOnExit];
+		
+		
+	}
+	
+	Todo *td = [db.todos objectAtIndex:indexPath.row];
+	
+	[cell setTodo:td];
+	
+	// Set up the cell
+	return cell;
 }
 
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source.
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }   
-}
-*/
-
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-
-#pragma mark -
-#pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-    [detailViewController release];
-    */
+	Todo *todo = (Todo *)[db.todos objectAtIndex:indexPath.row];
+	
+	if(self.todoView == nil) {
+		TodoDetailViewController *viewController = [[TodoDetailViewController alloc] init];
+		self.todoView = viewController;
+		[viewController release];
+	}	
+
+
+	
+	self.todoView.todo = todo;
+	self.todoView.title = todo.text;
+	self.todoView.todoText.text = todo.text;
+	XLog(@"inside2 %@",todo.text);
+	
+	NSInteger priority = todo.priority - 1;
+	if(priority > 2 || priority < 0) {
+		priority = 1;
+	}
+	priority = 2 - priority;
+	
+	[self.todoView.todoPriority setSelectedSegmentIndex:priority];
+	
+	if(todo.status == 1) {
+		[self.todoView.todoButton setTitle:@"Mark As In Progress" forState:UIControlStateNormal];
+		[self.todoView.todoButton setTitle:@"Mark As In Progress" forState:UIControlStateHighlighted];
+		[self.todoView.todoStatus setText:@"Complete"];
+	} else {
+		[self.todoView.todoButton setTitle:@"Mark As Complete" forState:UIControlStateNormal];
+		[self.todoView.todoButton setTitle:@"Mark As Complete" forState:UIControlStateHighlighted];
+		[self.todoView.todoStatus setText:@"In Progress"];
+	}
+	[delegate passTo:self command:@"editTodo" message:@"ogog"];
 }
 
 
-#pragma mark -
-#pragma mark Memory management
+
+// Override if you support editing the list
+- (void)tableView:(UITableView *)tableView commitEditingStyle:
+(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+	
+	Todo *todo = (Todo *)[db.todos objectAtIndex:indexPath.row];
+	
+	if (editingStyle == UITableViewCellEditingStyleDelete) {
+		[db removeTodo:todo];
+		// Delete the row from the data source
+		[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
+	}	
+}
+
+
+
+/*
+ Override if you support conditional editing of the list
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
+
+
+/*
+ Override if you support rearranging the list
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+ }
+ */
+
+
+/*
+ Override if you support conditional rearranging of the list
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */ 
+
+- (void)viewWillAppear:(BOOL)animated {
+	[self.tableView reloadData];
+	[super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+	[super viewDidAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+}
+
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+	// Return YES for supported orientations
+	return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
 
 - (void)didReceiveMemoryWarning {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Relinquish ownership any cached data, images, etc. that aren't in use.
-}
-
-- (void)viewDidUnload {
-    // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
-    // For example: self.myOutlet = nil;
+	[super didReceiveMemoryWarning]; // Releases the view if it doesn't have a superview
+	// Release anything that's not essential, such as cached data
 }
 
 
 - (void)dealloc {
-    [super dealloc];
+	[super dealloc];
 }
 
 
 @end
-

@@ -98,6 +98,7 @@
 		[mainNavigationController.loginViewController.loginView.emailField resignFirstResponder];
 		[mainNavigationController.loginViewController.loginView.passwordField resignFirstResponder];
 		UIAlertView *someError = [[UIAlertView alloc] initWithTitle: @"Error" message: @"Invalid password/username combination, please try again!" delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
+		[self initLogin];
 		[someError show];
 		[someError release];
 	}
@@ -130,6 +131,7 @@
 		[someError show];
 		[someError release];
 	}
+	return YES;
 }
 
 -(void)passingCommand:(NSString *)cmd sender:(int)sd message:(NSString *)msg data:(NSString *)data{
@@ -149,12 +151,8 @@
 		classroomsArray = [getData getAllClassroomsAsArray];
 		restaurantsArray = [getData getAllRestaurantsAsArray];
 		mensasArray = [getData getAllMensasAsArray];
-		BOOL loggedIn = [self passing:self command:@"loginFromPreferences" message:@"try to login from Preferences"];
-		if ( loggedIn){
-			[self initTabBar];
-		}else {
-			[self initLogin];
-		}
+		
+		[self passing:self command:@"loginFromPreferences" message:@"try to login from Preferences"];
 	}
 }
 

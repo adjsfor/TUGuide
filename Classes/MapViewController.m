@@ -98,8 +98,8 @@
 	MKCoordinateRegion newRegion;
     newRegion.center.latitude = 48.199047; //;
     newRegion.center.longitude = 16.36994;
-    newRegion.span.latitudeDelta = 0.0112872;
-    newRegion.span.longitudeDelta = 0.0109863;
+    newRegion.span.latitudeDelta = 0.00512872;
+    newRegion.span.longitudeDelta = 0.00509863;
 	
     [self.mapView setRegion:newRegion animated:YES];
 }
@@ -182,6 +182,22 @@
 		return annotationView;
 	}
 	return pinView;									
+}
+
+- (void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray *)views { 
+	MKAnnotationView *aV; 
+	for (aV in views) {
+		CGRect endFrame = aV.frame;
+		
+		aV.frame = CGRectMake(aV.frame.origin.x, aV.frame.origin.y - 230.0, aV.frame.size.width, aV.frame.size.height);
+		
+		[UIView beginAnimations:nil context:NULL];
+		[UIView setAnimationDuration:1];
+		[UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+		[aV setFrame:endFrame];
+		[UIView commitAnimations];
+		
+	}
 }
 
 

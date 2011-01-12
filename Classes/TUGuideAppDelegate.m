@@ -166,9 +166,16 @@
         [self release];
         return NO;
     }
-	
-	email = [[NSString alloc] initWithString:[[NSUserDefaults standardUserDefaults] stringForKey:@"name_preference"]];
-	password = [[NSString alloc] initWithString:[[NSUserDefaults standardUserDefaults] stringForKey:@"password_preference"]];
+	if ([[NSUserDefaults standardUserDefaults] stringForKey:@"name_preference"]!=nil) {
+		email = [[NSString alloc] initWithString:[[NSUserDefaults standardUserDefaults] stringForKey:@"name_preference"]];
+	}else {
+		email = [[NSString alloc] initWithString:@""];
+	}
+	if ([[NSUserDefaults standardUserDefaults] stringForKey:@"password_preference"]!=nil) {
+		password = [[NSString alloc] initWithString:[[NSUserDefaults standardUserDefaults] stringForKey:@"password_preference"]];
+	}else {
+		password = [[NSString alloc] initWithString:@""];
+	}
 	
 	serverLogin = [[ServerLogin alloc] init];
 	serverLogin.delegate2 = self;

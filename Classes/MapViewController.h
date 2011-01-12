@@ -17,24 +17,26 @@
 #import "Building.h"
 
 @interface MapViewController : UIViewController <MKMapViewDelegate>{
+	
 	MKMapView *mapView;
-	IBOutlet UIImageView *tuImage;
 	NSMutableArray *mapAnnotations;
-	MapListDetailViewController *detailViewController;
+	MapListClassViewController *classViewController;
 	NSMutableArray *buildingsArray;
 	Classroom *classroom;
 	Building *building;
 	UISegmentedControl *segmentedControl;
+	UIButton *detailButton;
 
 }
 
 @property (nonatomic, retain) MKMapView *mapView;
 @property (nonatomic, retain) NSMutableArray *mapAnnotations;
-@property (nonatomic, retain) MapListDetailViewController *detailViewController;
+@property (nonatomic, retain) MapListClassViewController *classViewController;
 @property (nonatomic, retain) NSMutableArray *buildingsArray;
 @property (nonatomic, retain) Classroom *classroom;
 @property (nonatomic, retain) Building *building;
 @property (nonatomic, retain) UISegmentedControl *segmentedControl;
+@property (nonatomic, retain) UIButton *detailButton;
 
 
 + (CGFloat)annotationPadding;
@@ -43,6 +45,5 @@
 - (id)initWithBuildings: (NSMutableArray *)b;
 - (void)gotoLocation;
 - (IBAction)segmentAction:(UISegmentedControl *)segmentPick;
--(NSMutableArray *)createAnnotations:(NSMutableArray *)buildings;
 
 @end

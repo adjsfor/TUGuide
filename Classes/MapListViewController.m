@@ -11,7 +11,7 @@
 
 @implementation MapListViewController
 
-@synthesize buildingsArray, classroom, building, detailViewController;
+@synthesize buildingsArray, classroom, building, classViewController;
 
 #pragma mark -
 #pragma mark Initialization
@@ -29,7 +29,7 @@
 
 - (id)initWithBuildings: (NSMutableArray *)b
 {
-	self = [super initWithStyle:UITableViewStyleGrouped];
+	self = [super initWithStyle:UITableViewStylePlain];
 	buildingsArray = [[NSMutableArray alloc] init];
 	buildingsArray = b;
 	return self;
@@ -117,15 +117,13 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return [buildingsArray count];
+    return 1;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-	Building *b = [[Building alloc] init];
-	b = [buildingsArray objectAtIndex:section];
-	return [b.classroomsList count];
+	return [buildingsArray count];
 }
 
 
@@ -140,22 +138,12 @@
     }
 	
 	
-	Building *b = [[Building alloc]init];
-	b = [buildingsArray objectAtIndex:[indexPath section]];
-	cell.textLabel.text = [[[b classroomsList] objectAtIndex:[indexPath row]]name ];
-						   
-    
-    // Configure the cell...
+	cell.textLabel.text = [[buildingsArray objectAtIndex:[indexPath row]]name ];
+	cell.detailTextLabel.text = [[buildingsArray objectAtIndex:[indexPath row]]address];
+	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+						
     
     return cell;
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-	
-	NSString *sectionHeader = nil;
-	sectionHeader = [[buildingsArray objectAtIndex:section] name];
-	
-	return sectionHeader;
 }
 
 
@@ -205,14 +193,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
 	
-	Building *b = [[Building alloc]init];
-	b = [buildingsArray objectAtIndex:[indexPath section]];
-    Classroom *c = [[b classroomsList] objectAtIndex:[indexPath row]];
-    detailViewController = [[MapListDetailViewController alloc] initWithClassroom:c];
+    Building *b = [buildingsArray objectAtIndex:[indexPath row]];
+    classViewController = [[MapListClassViewController alloc] initWithBuilding:b];
+	classViewController.title = b.name;
 	// ...
 	// Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:self.detailViewController animated:YES];
-    [detailViewController release];
+    [self.navigationController pushViewController:self.classViewController animated:YES];
+    [classViewController release];
     
 }
 

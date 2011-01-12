@@ -22,5 +22,5 @@
 @property (nonatomic, retain) Building *building;
 @property (nonatomic, retain) MapListDetailViewController *detailViewController;
 
-- (id)initWithBuildings: (NSMutableArray *)b;
+- (id)initWithBuilding: (Building *)b;
 @end

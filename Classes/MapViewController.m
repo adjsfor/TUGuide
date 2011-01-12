@@ -11,8 +11,8 @@
 
 @implementation MapViewController
 
-@synthesize mapView;
-@synthesize mapAnnotations, detailViewController, buildingsArray, classroom, building, segmentedControl;
+@synthesize mapView, detailButton;;
+@synthesize mapAnnotations, classViewController, buildingsArray, classroom, building, segmentedControl;
 
 #define BUILDINGS   0
 #define MENSA		1
@@ -70,17 +70,9 @@
 	[self gotoLocation];
 	[self.view addSubview:mapView];
 	
-	TUAnnotation *t = [[TUAnnotation alloc] init];
-	t.latitude = [[NSNumber alloc] initWithDouble:10.415039];
-	t.longitude = [[NSNumber alloc] initWithDouble:51.151786];
-	t.title = @"Hallo ";
-	[self.mapView addAnnotation:t];
 	
-	//[self getBuildings];
-	mapAnnotations = [self createAnnotations:buildingsArray];
-	//Creating annotations and applying them to the map
 	[self.mapView removeAnnotations:self.mapView.annotations];  // remove any annotations that exist
-    [self.mapView addAnnotations:self.mapAnnotations];    
+    [self.mapView addAnnotations:self.buildingsArray];   //set annotations to the map 
 	
 	//Change Color of the navigationBar
 	self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
@@ -112,24 +104,6 @@
     [self.mapView setRegion:newRegion animated:YES];
 }
 
-
--(NSMutableArray *)createAnnotations:(NSMutableArray *)buildings
-{
-	self.mapAnnotations = [[NSMutableArray alloc] init];
-	//TUAnnotation *tuAnnotation = [[TUAnnotation alloc] init];
-    for (Building *b in buildings) {
-		TUAnnotation *tuAnnotation = [[TUAnnotation alloc] init];
-		tuAnnotation.title = b.name;
-		tuAnnotation.subtitle = b.address;
-		tuAnnotation.latitude = b.coordinates_lat;
-		tuAnnotation.longitude = b.coordinates_lon;
-		[mapAnnotations addObject:tuAnnotation];
-		[tuAnnotation release];
-	}
-	return mapAnnotations;
-	
-}
-
 - (void)mapView:(MKMapView *)mapView regionWillChangeAnimated:(BOOL)animated
 {
 	
@@ -140,11 +114,17 @@
 	
 }
 
-- (void)showDetails:(id)sender
+- (void)showDetails:(UIButton *)sender
 {
-	detailViewController = [[MapListDetailViewController alloc] init];
-    [self.navigationController pushViewController:self.detailViewController animated:YES];
+	NSInteger selectedIndex = sender.tag;
+	building = [buildingsArray objectAtIndex:selectedIndex];
+	
+	classViewController = [[MapListClassViewController alloc] initWithBuilding:building];
+	classViewController.title = building.name;
+    [self.navigationController pushViewController:self.classViewController animated:YES];
+	[classViewController release];
 }
+
 
 - (MKAnnotationView *)mapView:(MKMapView *)theMapView viewForAnnotation:(id)annotation
 {
@@ -184,7 +164,16 @@
 		annotationView.leftCalloutAccessoryView = tuAnnotationIcon;
 		[tuAnnotationIcon release];
 		
-		UIButton *detailButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+		detailButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+		[detailButton addTarget:self action:@selector(showDetails:) forControlEvents:UIControlEventTouchUpInside];
+		
+		//Value for tagging the buttons to acces the right detailView
+		NSInteger tagValue = [buildingsArray indexOfObject:annotation];
+		
+		// set the tag property of the button to the index
+		detailButton.tag = tagValue;
+		NSLog(@"Dies ist der TagValue %i", tagValue);
+		NSLog(@"Dies ist der buttonVa %i", detailButton.tag);
 		detailButton.frame = CGRectMake(0, 0, 25, 25);
 		
 		// Set the button as the callout view
@@ -217,7 +206,7 @@
 
 - (void)viewDidUnload {
 	self.mapAnnotations = nil;
-    self.detailViewController = nil;
+    self.classViewController = nil;
     self.mapView = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -227,7 +216,7 @@
 
 - (void)dealloc {
 	[mapView release];
-    [detailViewController release];
+    [classViewController release];
     [mapAnnotations release];
     [super dealloc];
 }

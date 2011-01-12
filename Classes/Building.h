@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 #import "Classroom.h"
 
 
-@interface Building : NSObject {
+@interface Building : NSObject <MKAnnotation>{
 	NSString *name;
 	NSString *address;
 	NSNumber *coordinates_lat;
@@ -20,6 +21,8 @@
 	NSString *created;
 	NSString *updated;
 	NSMutableArray *classroomsList;
+	NSString *title;
+	NSString *subtitle;
 }
 
 
@@ -32,6 +35,8 @@
 @property (nonatomic,retain) NSString *created;
 @property (nonatomic,retain) NSString *updated;
 @property (nonatomic,retain) NSMutableArray* classroomsList;
+@property (nonatomic,retain) NSString *title;
+@property (nonatomic,retain) NSString *subtitle;
 
 
 + (id)customClassWithProperties:(NSDictionary *)properties;

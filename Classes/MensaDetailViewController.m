@@ -11,6 +11,16 @@
 
 @implementation MensaDetailViewController
 
+@synthesize mensa, detailView;
+
+-(id)initWithMensa:(Mensa *) m
+{
+	self = [super init];
+	self.mensa = m;
+	return self;
+}
+
+
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -22,11 +32,13 @@
 }
 */
 
-/*
+
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
+	detailView = [[MensaDetailView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
+	self.view = detailView;
 }
-*/
+
 
 /*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.

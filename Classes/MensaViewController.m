@@ -11,7 +11,7 @@
 
 @implementation MensaViewController
 
-@synthesize mensaView, segmentedController, mensas, restaurants;
+@synthesize mensaView, segmentedController, mensas, restaurants, mensaDetailViewController;
 
 - (id)initWithMensas: (NSMutableArray *)m andRestaurants: (NSMutableArray *)r;
 {
@@ -69,22 +69,26 @@
 	[mensaView.mensaRed addTarget:self action:@selector(mensaRedAction:) forControlEvents:UIControlEventTouchUpInside];
 	[mensaView.mensaGreen addTarget:self action:@selector(mensaGreenAction:) forControlEvents:UIControlEventTouchUpInside];
 	[mensaView.mensaOrange addTarget:self action:@selector(mensaOrangeAction:) forControlEvents:UIControlEventTouchUpInside];
-
+	
 	self.view = mensaView; 
 	[mensaView release]; 
 }
 
 - (void)mensaBlueAction:(id)sender{
-	[self.navigationController pushViewController:[[MapListDetailViewController alloc] init] animated:YES];
+	mensaDetailViewController = [[MensaDetailViewController alloc] initWithMensa:[mensas objectAtIndex:0]];
+	[self.navigationController pushViewController:mensaDetailViewController animated:YES];
 }
 - (void)mensaRedAction:(id)sender{
-	[self.navigationController pushViewController:[[MapListDetailViewController alloc] init] animated:YES];
+	mensaDetailViewController = [[MensaDetailViewController alloc] initWithMensa:[mensas objectAtIndex:1]];
+	[self.navigationController pushViewController:[[MensaDetailViewController alloc] init] animated:YES];
 }
 - (void)mensaGreenAction:(id)sender{
-	[self.navigationController pushViewController:[[MapListDetailViewController alloc] init] animated:YES];
+	mensaDetailViewController = [[MensaDetailViewController alloc] initWithMensa:[mensas objectAtIndex:2]];
+	[self.navigationController pushViewController:[[MensaDetailViewController alloc] init] animated:YES];
 }
 - (void)mensaOrangeAction:(id)sender{
-	[self.navigationController pushViewController:[[MapListDetailViewController alloc] init] animated:YES];
+	mensaDetailViewController = [[MensaDetailViewController alloc] initWithMensa:[mensas objectAtIndex:3]];
+	[self.navigationController pushViewController:[[MensaDetailViewController alloc] init] animated:YES];
 }
 
 

@@ -22,5 +22,4 @@
 @property (nonatomic, retain) UIButton *mensaGreen;
 @property (nonatomic, retain) UIButton *mensaOrange;
 
-
 @end

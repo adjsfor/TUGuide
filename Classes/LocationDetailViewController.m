@@ -50,7 +50,7 @@
 	[locationPdf loadRequest:request];
 	
 	[self.view addSubview:locationPdf];
-	[locationPdf release];				 
+	[locationPdf release];
 }
 
 /*

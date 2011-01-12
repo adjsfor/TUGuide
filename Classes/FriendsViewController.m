@@ -23,7 +23,7 @@
 }
 
 
--(void) segmentAction: (UISegmentedControl *) sender
+/*-(void) segmentAction: (UISegmentedControl *) sender
 {
 	[delegate2 passing:self command:@"change friends controller" message:@"some message"];
 	
@@ -89,7 +89,7 @@ NSArray *allSubviewsFriends(UIView *aView)
 	[segmentedControl release];
 	
 	
-}
+}*/
 
 
 - (id)init {

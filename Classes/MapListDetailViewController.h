@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MapListDetailView.h"
+#import "LocationDetailViewController.h"
 
 
 @interface MapListDetailViewController : UIViewController {
@@ -20,5 +21,6 @@
 @property (nonatomic, retain) Classroom *c;
 
 -(id)initWithClassroom:(Classroom *)classr;
+-(void)showLocationPdf:(id)sender;
 
 @end

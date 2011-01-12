@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MapListDetailViewController.h"
+#import "MapListClassViewController.h"
 #import "MapViewController.h"
 #import "Classroom.h"
 #import "Building.h"
@@ -17,13 +17,13 @@
 	NSMutableArray *buildingsArray;
 	Classroom *classroom;
 	Building *building;
-	MapListDetailViewController *detailViewController;
+	MapListClassViewController *detailViewController;
 }
 
 @property (nonatomic, retain) NSMutableArray *buildingsArray;
 @property (nonatomic, retain) Classroom *classroom;
 @property (nonatomic, retain) Building *building;
-@property (nonatomic, retain) MapListDetailViewController *detailViewController;
+@property (nonatomic, retain) MapListClassViewController *classViewController;
 
 - (IBAction)segmentAction:(UISegmentedControl *)segmentPick;
 - (id)initWithBuildings: (NSMutableArray *)b;

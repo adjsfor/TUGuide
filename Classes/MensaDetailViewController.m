@@ -1,15 +1,15 @@
     //
-//  MainUITabBarController.m
+//  MensaDetailViewController.m
 //  TUGuide
 //
-//  Created by Ivo Galic on 12/28/10.
-//  Copyright 2010 Galic Design. All rights reserved.
+//  Created by Martin Langeder on 12.01.11.
+//  Copyright 2011 7359. All rights reserved.
 //
 
-#import "MainUITabBarController.h"
+#import "MensaDetailViewController.h"
 
 
-@implementation MainUITabBarController
+@implementation MensaDetailViewController
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*

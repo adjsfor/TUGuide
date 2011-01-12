@@ -11,35 +11,29 @@
 
 @implementation Restaurant
 
-@synthesize restaurantId;
+@synthesize id;
+
 @synthesize name;
-@synthesize coordinates;
+@synthesize coordinates_lat;
+@synthesize coordinates_lon;
 @synthesize address;
-@synthesize openingHours;
+@synthesize opening_hours_from_monday;
+@synthesize opening_hours_until_monday;
+@synthesize opening_hours_from_tuesday;
+@synthesize opening_hours_until_tuesday;
+@synthesize opening_hours_from_wednesday;
+@synthesize opening_hours_until_wednesday;
+@synthesize opening_hours_from_thursday;
+@synthesize opening_hours_until_thursday;
+@synthesize opening_hours_from_friday;
+@synthesize opening_hours_until_friday;
+@synthesize opening_hours_from_saturday;
+@synthesize opening_hours_until_saturday;
+@synthesize opening_hours_from_sunday;
+@synthesize opening_hours_until_sunday;
+@synthesize created;
+@synthesize updated;
 
--(id)initWithArguments:(int)eateryId2 
-		withEateryType:(NSString *)eateryType2 
-	  withRestaurantId:(int)restaurantId2 
-			  withName:(NSString *)name2 
-	   withCoordinates:(NSString *)coordinates2 
-		   withAddress:(NSString *)address2 
-	  withOpeningHours:(NSString *)openingHours2{
-	
-	if (self = [super init]) {
-		self.eateryId = eateryId2;
-		self.eateryType = eateryType2;
-		self.restaurantId = restaurantId2;
-		self.name = name2;
-		self.coordinates = coordinates2;
-		self.address = address2;
-		self.openingHours = openingHours2;
-	}
-	return self;
-}
-
--(id)init{
-	return [self initWithArguments:0 withEateryType:nil withRestaurantId:0 withName:nil withCoordinates:nil withAddress:nil withOpeningHours:nil];
-}
 
 + (id)customClassWithProperties:(NSDictionary *)properties {
 	return [[[self alloc] initWithProperties:properties] autorelease];
@@ -47,17 +41,54 @@
 
 - (id)initWithProperties:(NSDictionary *)properties {
 	if (self = [self init]) {
-		[self setValuesForKeysWithDictionary:properties];
+		//[self setValuesForKeysWithDictionary:properties];
+		self.name = [properties objectForKey:@"name"];
+		self.id = (int)[properties objectForKey:@"id"];
+		self.coordinates_lat = [properties objectForKey:@"coordinates_lat"];
+		self.coordinates_lon = [properties objectForKey:@"coordinates_lon"];
+		self.address = [properties objectForKey:@"address"];
+		self.opening_hours_from_monday = [properties objectForKey:@"opening_hours_from_monday"];
+		self.opening_hours_until_monday = [properties objectForKey:@"opening_hours_until_monday"];
+		self.opening_hours_from_tuesday = [properties objectForKey:@"opening_hours_from_tuesday"];
+		self.opening_hours_until_tuesday = [properties objectForKey:@"opening_hours_until_tuesday"];
+		self.opening_hours_from_wednesday = [properties objectForKey:@"opening_hours_from_wednesday"];
+		self.opening_hours_until_wednesday = [properties objectForKey:@"opening_hours_until_wednesday"];
+		self.opening_hours_from_thursday = [properties objectForKey:@"opening_hours_from_thursday"];
+		self.opening_hours_until_thursday = [properties objectForKey:@"opening_hours_until_thursday"];
+		self.opening_hours_from_friday = [properties objectForKey:@"opening_hours_from_friday"];
+		self.opening_hours_until_friday = [properties objectForKey:@"opening_hours_until_friday"];
+		self.opening_hours_from_saturday = [properties objectForKey:@"opening_hours_from_saturday"];
+		self.opening_hours_until_saturday = [properties objectForKey:@"opening_hours_until_saturday"];
+		self.opening_hours_from_sunday = [properties objectForKey:@"opening_hours_from_sunday"];
+		self.opening_hours_until_sunday = [properties objectForKey:@"opening_hours_until_sunday"];
+		self.created = [properties objectForKey:@"created"];
+		self.updated = [properties objectForKey:@"updated"];
 	}
 	return self;
 }
 
 -(void)dealloc{
-	[eateryType release];
 	[name release];
-	[coordinates release];
+	[coordinates_lat release];
+	[coordinates_lon release];
 	[address release];
-	[openingHours release];
+	[opening_hours_from_monday release];
+	[opening_hours_until_monday release];
+	[opening_hours_from_tuesday release];
+	[opening_hours_until_tuesday release];
+	[opening_hours_from_wednesday release];
+	[opening_hours_until_wednesday release];
+	[opening_hours_from_thursday release];
+	[opening_hours_until_thursday release];
+	[opening_hours_from_friday release];
+	[opening_hours_until_friday release];
+	[opening_hours_from_saturday release];
+	[opening_hours_until_saturday release];
+	[opening_hours_from_sunday release];
+	[opening_hours_until_sunday release];
+	[created release];
+	[updated release];
+	
 	[super dealloc];
 }
 

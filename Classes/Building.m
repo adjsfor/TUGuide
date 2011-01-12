@@ -12,7 +12,7 @@
 @implementation Building
 
 @synthesize id;
-@synthesize name;
+@synthesize name, title, subtitle;
 @synthesize address;
 
 @synthesize coordinates_lat;
@@ -37,6 +37,8 @@
 		self.id = (int)[properties objectForKey:@"id"];
 		self.name = [properties objectForKey:@"name"];
 		self.address =[properties objectForKey:@"address"];
+		self.title = self.name;
+		self.subtitle = self.address;
 		self.coordinates_lat = [properties objectForKey:@"coordinates_lat"];
 		self.coordinates_lon = [properties objectForKey:@"coordinates_lon"];
 		self.link = [properties objectForKey:@"link"];
@@ -53,6 +55,14 @@
 		}
 	}
 	return self;
+}
+
+- (CLLocationCoordinate2D)coordinate;
+{
+    CLLocationCoordinate2D theCoordinate;
+    theCoordinate.latitude = [coordinates_lat doubleValue];
+    theCoordinate.longitude = [coordinates_lon doubleValue];
+    return theCoordinate; 
 }
 
 -(void)dealloc{

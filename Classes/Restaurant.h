@@ -11,27 +11,52 @@
 
 
 @interface Restaurant : Eatery {
-	int restaurantId;
+	int id;
+	
 	NSString *name;
-	NSString *coordinates;
+	NSString *coordinates_lat;
+	NSString *coordinates_lon;
 	NSString *address;
-	NSString *openingHours;
+	NSString *opening_hours_from_monday;
+	NSString *opening_hours_until_monday;
+	NSString *opening_hours_from_tuesday;
+	NSString *opening_hours_until_tuesday;
+	NSString *opening_hours_from_wednesday;
+	NSString *opening_hours_until_wednesday;
+	NSString *opening_hours_from_thursday;
+	NSString *opening_hours_until_thursday;
+	NSString *opening_hours_from_friday;
+	NSString *opening_hours_until_friday;
+	NSString *opening_hours_from_saturday;
+	NSString *opening_hours_until_saturday;
+	NSString *opening_hours_from_sunday;
+	NSString *opening_hours_until_sunday;
+	NSString *created;
+	NSString *updated;
 }
 
-@property (nonatomic) int restaurantId;
-@property (nonatomic,retain) NSString *name;
-@property (nonatomic,retain) NSString *coordinates;
-@property (nonatomic,retain) NSString *address;
-@property (nonatomic,retain) NSString *openingHours;
+@property (nonatomic) int id;
 
--(id)init;
--(id)initWithArguments:(int)eateryId 
-		withEateryType:(NSString *)eateryType 
-	  withRestaurantId:(int)restaurantId 
-			  withName:(NSString *)name 
-	   withCoordinates:(NSString *)coordinates 
-		   withAddress:(NSString *)address 
-	  withOpeningHours:(NSString *)openingHours;
+@property (nonatomic,retain) NSString *name;
+@property (nonatomic,retain) NSString *coordinates_lat;
+@property (nonatomic,retain) NSString *coordinates_lon;
+@property (nonatomic,retain) NSString *address;
+@property (nonatomic,retain) NSString *opening_hours_from_monday;
+@property (nonatomic,retain) NSString *opening_hours_until_monday;
+@property (nonatomic,retain) NSString *opening_hours_from_tuesday;
+@property (nonatomic,retain) NSString *opening_hours_until_tuesday;
+@property (nonatomic,retain) NSString *opening_hours_from_wednesday;
+@property (nonatomic,retain) NSString *opening_hours_until_wednesday;
+@property (nonatomic,retain) NSString *opening_hours_from_thursday;
+@property (nonatomic,retain) NSString *opening_hours_until_thursday;
+@property (nonatomic,retain) NSString *opening_hours_from_friday;
+@property (nonatomic,retain) NSString *opening_hours_until_friday;
+@property (nonatomic,retain) NSString *opening_hours_from_saturday;
+@property (nonatomic,retain) NSString *opening_hours_until_saturday;
+@property (nonatomic,retain) NSString *opening_hours_from_sunday;
+@property (nonatomic,retain) NSString *opening_hours_until_sunday;
+@property (nonatomic,retain) NSString *created;
+@property (nonatomic,retain) NSString *updated;
 
 + (id)customClassWithProperties:(NSDictionary *)properties;
 - (id)initWithProperties:(NSDictionary *)properties;

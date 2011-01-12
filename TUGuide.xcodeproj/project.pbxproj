@@ -12,7 +12,6 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
-		4B38C19212CA548B00E5C5D4 /* MainUITabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B38C19112CA548B00E5C5D4 /* MainUITabBarController.m */; };
 		4B38C1A812CA607900E5C5D4 /* 1map.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B38C1A712CA607900E5C5D4 /* 1map.png */; };
 		4B38C1BA12CA609A00E5C5D4 /* iMisseditIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B38C1AD12CA609A00E5C5D4 /* iMisseditIcon.png */; };
 		4B38C1C012CA609A00E5C5D4 /* 145-persondot.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B38C1B312CA609A00E5C5D4 /* 145-persondot.png */; };
@@ -44,6 +43,7 @@
 		8E30CB4B12A5C43100BCA1B9 /* LoginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E30CB4A12A5C43100BCA1B9 /* LoginTests.m */; };
 		8E30CBAA12A66E9B00BCA1B9 /* ServerLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B819D1F12A564C2005C740F /* ServerLogin.m */; };
 		8E78159612B8F69200DF4A8B /* ServerCreateUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E78159512B8F69200DF4A8B /* ServerCreateUser.m */; };
+		8E7DEC6A12DDFD13002C06BD /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8E7DEC6912DDFD13002C06BD /* Settings.bundle */; };
 		8E8D59C112A143C40096E52C /* Announcement.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D59C012A143C40096E52C /* Announcement.m */; };
 		8E8D59DC12A14B820096E52C /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D59DB12A14B820096E52C /* Friend.m */; };
 		8E8D59DF12A14C900096E52C /* Lecture.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D59DE12A14C900096E52C /* Lecture.m */; };
@@ -61,6 +61,7 @@
 		8ED0D54C12A55CF200B3F33D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		8ED0D54D12A55CF200B3F33D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		8ED0D54E12A55CF200B3F33D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		FA37B09A12DDA62F0057AA9B /* MapListClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA37B09912DDA62F0057AA9B /* MapListClassViewController.m */; };
 		FA381CA212A00563008E06D0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA381CA112A00563008E06D0 /* LoginViewController.m */; };
 		FA381CA512A0057A008E06D0 /* RegisterLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA381CA412A0057A008E06D0 /* RegisterLoginView.m */; };
 		FA381CAB12A00593008E06D0 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA381CAA12A00593008E06D0 /* LoginView.m */; };
@@ -74,6 +75,11 @@
 		FA6171EB12B90B1A00E0E2C7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6171EA12B90B1A00E0E2C7 /* MapKit.framework */; };
 		FA61722512B90CAF00E0E2C7 /* TUAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA61722212B90CAF00E0E2C7 /* TUAnnotation.m */; };
 		FA67286612A099010049DBD8 /* ButtonDark.png in Resources */ = {isa = PBXBuildFile; fileRef = FA67286512A099010049DBD8 /* ButtonDark.png */; };
+		FA903E7012DD0C800079D0B3 /* startUp.png in Resources */ = {isa = PBXBuildFile; fileRef = FA903E6F12DD0C800079D0B3 /* startUp.png */; };
+		FA903FB112DD22FD0079D0B3 /* MensaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA903FB012DD22FD0079D0B3 /* MensaDetailViewController.m */; };
+		FA903FB312DD26E40079D0B3 /* tuAnnotation.png in Resources */ = {isa = PBXBuildFile; fileRef = FA903FB212DD26E40079D0B3 /* tuAnnotation.png */; };
+		FA903FD512DD27D90079D0B3 /* calloutTu.png in Resources */ = {isa = PBXBuildFile; fileRef = FA903FD412DD27D90079D0B3 /* calloutTu.png */; };
+		FA90401C12DD2B230079D0B3 /* LocationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA90401B12DD2B230079D0B3 /* LocationDetailViewController.m */; };
 		FA9239DA12D3943700A3048D /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9239D912D3943700A3048D /* LocationViewController.m */; };
 		FACC502812D26D130007911F /* MapListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACC502712D26D130007911F /* MapListViewController.m */; };
 		FACE15E112B820A600637DB9 /* LecturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACE15E012B820A600637DB9 /* LecturesViewController.m */; };
@@ -91,7 +97,6 @@
 		FACF167012D802AE0087B05C /* MensaLogoRed.png in Resources */ = {isa = PBXBuildFile; fileRef = FACF166C12D802AE0087B05C /* MensaLogoRed.png */; };
 		FAD1DB0312A0390500F782A0 /* TUGuideLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD1DB0212A0390500F782A0 /* TUGuideLogo.png */; };
 		FAD4AAA712A0CCD000817DCA /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD4AAA612A0CCD000817DCA /* User.m */; };
-		FAD4AB2412A0D8F500817DCA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FAD4AB2312A0D8F500817DCA /* Settings.bundle */; };
 		FAD4AB3412A0DA1800817DCA /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD4AB3312A0DA1800817DCA /* icon.png */; };
 /* End PBXBuildFile section */
 
@@ -104,8 +109,6 @@
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* TUGuide_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUGuide_Prefix.pch; sourceTree = "<group>"; };
-		4B38C19012CA548B00E5C5D4 /* MainUITabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainUITabBarController.h; sourceTree = "<group>"; };
-		4B38C19112CA548B00E5C5D4 /* MainUITabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainUITabBarController.m; sourceTree = "<group>"; };
 		4B38C1A712CA607900E5C5D4 /* 1map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1map.png; sourceTree = "<group>"; };
 		4B38C1AD12CA609A00E5C5D4 /* iMisseditIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iMisseditIcon.png; sourceTree = "<group>"; };
 		4B38C1B312CA609A00E5C5D4 /* 145-persondot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "145-persondot.png"; sourceTree = "<group>"; };
@@ -162,6 +165,7 @@
 		8E78155512B8F0C200DF4A8B /* UIElementDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIElementDelegate.h; sourceTree = "<group>"; };
 		8E78159412B8F69200DF4A8B /* ServerCreateUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerCreateUser.h; sourceTree = "<group>"; };
 		8E78159512B8F69200DF4A8B /* ServerCreateUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerCreateUser.m; sourceTree = "<group>"; };
+		8E7DEC6912DDFD13002C06BD /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		8E8D59BF12A143C40096E52C /* Announcement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Announcement.h; sourceTree = "<group>"; };
 		8E8D59C012A143C40096E52C /* Announcement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Announcement.m; sourceTree = "<group>"; };
 		8E8D59DA12A14B820096E52C /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friend.h; sourceTree = "<group>"; };
@@ -181,6 +185,8 @@
 		8EAFF11B12A0058300C9BCA3 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		8EBD4CE912A47164008D9B56 /* Wizard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wizard.h; sourceTree = "<group>"; };
 		8EBD4CEA12A47164008D9B56 /* Wizard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wizard.m; sourceTree = "<group>"; };
+		FA37B09812DDA62F0057AA9B /* MapListClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapListClassViewController.h; sourceTree = "<group>"; };
+		FA37B09912DDA62F0057AA9B /* MapListClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapListClassViewController.m; sourceTree = "<group>"; };
 		FA381CA012A00563008E06D0 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		FA381CA112A00563008E06D0 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		FA381CA312A0057A008E06D0 /* RegisterLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterLoginView.h; sourceTree = "<group>"; };
@@ -204,6 +210,13 @@
 		FA61722112B90CAF00E0E2C7 /* TUAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUAnnotation.h; sourceTree = "<group>"; };
 		FA61722212B90CAF00E0E2C7 /* TUAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUAnnotation.m; sourceTree = "<group>"; };
 		FA67286512A099010049DBD8 /* ButtonDark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonDark.png; sourceTree = "<group>"; };
+		FA903E6F12DD0C800079D0B3 /* startUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startUp.png; sourceTree = "<group>"; };
+		FA903FAF12DD22FD0079D0B3 /* MensaDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaDetailViewController.h; sourceTree = "<group>"; };
+		FA903FB012DD22FD0079D0B3 /* MensaDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaDetailViewController.m; sourceTree = "<group>"; };
+		FA903FB212DD26E40079D0B3 /* tuAnnotation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tuAnnotation.png; sourceTree = "<group>"; };
+		FA903FD412DD27D90079D0B3 /* calloutTu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calloutTu.png; sourceTree = "<group>"; };
+		FA90401A12DD2B230079D0B3 /* LocationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDetailViewController.h; sourceTree = "<group>"; };
+		FA90401B12DD2B230079D0B3 /* LocationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDetailViewController.m; sourceTree = "<group>"; };
 		FA9239D812D3943700A3048D /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		FA9239D912D3943700A3048D /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 		FACC502612D26D130007911F /* MapListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapListViewController.h; sourceTree = "<group>"; };
@@ -230,7 +243,6 @@
 		FAD1DB0212A0390500F782A0 /* TUGuideLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TUGuideLogo.png; sourceTree = "<group>"; };
 		FAD4AAA512A0CCD000817DCA /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		FAD4AAA612A0CCD000817DCA /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		FAD4AB2312A0D8F500817DCA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		FAD4AB3312A0DA1800817DCA /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -299,7 +311,7 @@
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				8EAFF11212A0054D00C9BCA3 /* Tests-Info.plist */,
-				FAD4AB2312A0D8F500817DCA /* Settings.bundle */,
+				8E7DEC6912DDFD13002C06BD /* Settings.bundle */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -424,6 +436,8 @@
 				4BC6101A12DCF10100A0BC84 /* TodoCell.m */,
 				4BC6101D12DCF32D00A0BC84 /* TodoDetailViewController.h */,
 				4BC6101E12DCF32D00A0BC84 /* TodoDetailViewController.m */,
+				4B38C1EA12CA946100E5C5D4 /* OrganizerViewController.h */,
+				4B38C1EB12CA946100E5C5D4 /* OrganizerViewController.m */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -476,6 +490,8 @@
 				FACF151C12D7EC380087B05C /* MensaViewController.m */,
 				FACF151E12D7EC5A0087B05C /* RestaurantViewController.h */,
 				FACF151F12D7EC5A0087B05C /* RestaurantViewController.m */,
+				FA903FAF12DD22FD0079D0B3 /* MensaDetailViewController.h */,
+				FA903FB012DD22FD0079D0B3 /* MensaDetailViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -487,8 +503,12 @@
 				FA6171D212B90A2300E0E2C7 /* MapViewController.m */,
 				FACC502612D26D130007911F /* MapListViewController.h */,
 				FACC502712D26D130007911F /* MapListViewController.m */,
+				FA37B09812DDA62F0057AA9B /* MapListClassViewController.h */,
+				FA37B09912DDA62F0057AA9B /* MapListClassViewController.m */,
 				FACF14AC12D7E50F0087B05C /* MapListDetailViewController.h */,
 				FACF14AD12D7E50F0087B05C /* MapListDetailViewController.m */,
+				FA90401A12DD2B230079D0B3 /* LocationDetailViewController.h */,
+				FA90401B12DD2B230079D0B3 /* LocationDetailViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -550,8 +570,6 @@
 			children = (
 				4B819D1912A561FE005C740F /* MainNavigationController.h */,
 				4B819D1A12A561FE005C740F /* MainNavigationController.m */,
-				4B38C19012CA548B00E5C5D4 /* MainUITabBarController.h */,
-				4B38C19112CA548B00E5C5D4 /* MainUITabBarController.m */,
 			);
 			name = NavigationControllers;
 			sourceTree = "<group>";
@@ -667,6 +685,9 @@
 				4BC6134E12DE0A9C00A0BC84 /* yellow.png */,
 				4BC6134F12DE0A9C00A0BC84 /* red.png */,
 				4BC6135012DE0A9C00A0BC84 /* green.png */,
+				FA903FD412DD27D90079D0B3 /* calloutTu.png */,
+				FA903FB212DD26E40079D0B3 /* tuAnnotation.png */,
+				FA903E6F12DD0C800079D0B3 /* startUp.png */,
 				FACF166912D802AE0087B05C /* MensaLogoBlue.png */,
 				FACF166A12D802AE0087B05C /* MensaLogoGreen.png */,
 				FACF166B12D802AE0087B05C /* MensaLogoOrange.png */,
@@ -787,7 +808,6 @@
 			files = (
 				FAD1DB0312A0390500F782A0 /* TUGuideLogo.png in Resources */,
 				FA67286612A099010049DBD8 /* ButtonDark.png in Resources */,
-				FAD4AB2412A0D8F500817DCA /* Settings.bundle in Resources */,
 				FAD4AB3412A0DA1800817DCA /* icon.png in Resources */,
 				4B38C1A812CA607900E5C5D4 /* 1map.png in Resources */,
 				4B38C1BA12CA609A00E5C5D4 /* iMisseditIcon.png in Resources */,
@@ -805,6 +825,10 @@
 				4BC6135212DE0A9C00A0BC84 /* yellow.png in Resources */,
 				4BC6135312DE0A9C00A0BC84 /* red.png in Resources */,
 				4BC6135412DE0A9C00A0BC84 /* green.png in Resources */,
+				FA903E7012DD0C800079D0B3 /* startUp.png in Resources */,
+				FA903FB312DD26E40079D0B3 /* tuAnnotation.png in Resources */,
+				FA903FD512DD27D90079D0B3 /* calloutTu.png in Resources */,
+				8E7DEC6A12DDFD13002C06BD /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -868,7 +892,6 @@
 				FA6171D312B90A2300E0E2C7 /* MapViewController.m in Sources */,
 				FA61722512B90CAF00E0E2C7 /* TUAnnotation.m in Sources */,
 				8E78159612B8F69200DF4A8B /* ServerCreateUser.m in Sources */,
-				4B38C19212CA548B00E5C5D4 /* MainUITabBarController.m in Sources */,
 				4B38C1EC12CA946100E5C5D4 /* OrganizerViewController.m in Sources */,
 				FACC502812D26D130007911F /* MapListViewController.m in Sources */,
 				FA9239DA12D3943700A3048D /* LocationViewController.m in Sources */,
@@ -886,6 +909,9 @@
 				4BC60F7512DCD50C00A0BC84 /* TodoDatabase.m in Sources */,
 				4BC6101B12DCF10100A0BC84 /* TodoCell.m in Sources */,
 				4BC6101F12DCF32D00A0BC84 /* TodoDetailViewController.m in Sources */,
+				FA903FB112DD22FD0079D0B3 /* MensaDetailViewController.m in Sources */,
+				FA90401C12DD2B230079D0B3 /* LocationDetailViewController.m in Sources */,
+				FA37B09A12DDA62F0057AA9B /* MapListClassViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

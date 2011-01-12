@@ -18,6 +18,8 @@
 @synthesize tabBarController;
 @synthesize getData;
 @synthesize organizerViewController,mapViewController,friendViewController,mensaViewController,missViewController;
+@synthesize buildingsArray, classroomsArray, restaurantsArray, mensasArray;
+@synthesize email, password;
 
 #define BUILDINGS   0
 #define MENSA		1
@@ -40,7 +42,7 @@
 
 
 
--(void)passing:(NSObject *)requestor command:(NSString *)cmd message:(NSString *)msg{
+-(BOOL)passing:(NSObject *)requestor command:(NSString *)cmd message:(NSString *)msg{
 	
 	XLog();
 	
@@ -49,9 +51,8 @@
 		[mainNavigationController.loginViewController.loginView.emailField resignFirstResponder];
 		[mainNavigationController.loginViewController.loginView.passwordField resignFirstResponder];
 		
-		window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-		[window addSubview:tabBarController.view];
-		[window makeKeyAndVisible];
+		[self initTabBar];
+		return YES; 
 	}
 	
 	if ([cmd isEqual:@"registerSuccessful"]) {
@@ -86,6 +87,10 @@
 		[serverLogin loginUserWithScreen_name:[mainNavigationController.loginViewController.loginView.emailField text] withPassword:[mainNavigationController.loginViewController.loginView.passwordField text]];
 	}
 	
+	if ([cmd isEqual:@"loginFromPreferences"]) {
+		[serverLogin loginUserWithScreen_name:email withPassword:password];
+	}
+	
 	
 	// komment
 	if ([cmd isEqual:@"loginFail"]) {
@@ -93,6 +98,7 @@
 		[mainNavigationController.loginViewController.loginView.emailField resignFirstResponder];
 		[mainNavigationController.loginViewController.loginView.passwordField resignFirstResponder];
 		UIAlertView *someError = [[UIAlertView alloc] initWithTitle: @"Error" message: @"Invalid password/username combination, please try again!" delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
+		[self initLogin];
 		[someError show];
 		[someError release];
 	}
@@ -125,110 +131,11 @@
 		[someError show];
 		[someError release];
 	}
-	
-	
-	//NSLog(@"%@", requestor);
+	return YES;
 }
 
 -(void)passingCommand:(NSString *)cmd sender:(int)sd message:(NSString *)msg data:(NSString *)data{
 	
-	if ([cmd isEqual:@"dataRecieved"]) {
-		//NEEDET VARIABLES
-		NSData *plistData = [data dataUsingEncoding:NSUTF8StringEncoding];
-		NSString *error;
-		NSPropertyListFormat format;
-		NSMutableArray* array;
-		NSMutableDictionary* myDict;
-		Classroom *c;
-		Building *b;
-		Mensa *m;
-		//END
-		switch (sd) {
-			case BUILDINGS:
-				
-				array = [NSPropertyListSerialization propertyListFromData:plistData
-																		 mutabilityOption:NSPropertyListImmutable
-																				   format:&format
-																		 errorDescription:&error];
-				if (array) {
-					myDict = [NSMutableDictionary dictionaryWithCapacity:[array count]];
-					NSLog(@"The count: %i", [myDict count]);
-					for (NSDictionary* dict in array) {
-						b = [Building customClassWithProperties:dict];
-						NSLog(@"----------------------------");
-						NSLog(@"Building id: %@",b.id);
-						NSLog(@"The name: %@", b.name);
-						if (b.classroomsList != nil) {
-							for (Classroom* class in b.classroomsList){
-								NSLog(@"Classroom name: %@", class.name);
-							}
-						}
-						NSLog(@"----------------------------");
-						//[b release];
-					}
-				} else {
-					NSLog(@"Plist does not exist, error:%@",error);
-				}
-				break;
-			case RESTAURANT:
-				
-				break;
-			case MENSA:
-				array = [NSPropertyListSerialization propertyListFromData:plistData
-														 mutabilityOption:NSPropertyListImmutable
-																   format:&format
-														 errorDescription:&error];
-				if (array) {
-					myDict = [NSMutableDictionary dictionaryWithCapacity:[array count]];
-					NSLog(@"The count: %i", [myDict count]);
-					for (NSDictionary* dict in array) {
-						m = [Mensa customClassWithProperties:dict];
-						NSLog(@"----------------------------");
-						NSLog(@"Mensa id: %@",m.id);
-						NSLog(@"The name: %@", m.name);
-						NSLog(@"The adress: %@", m.address);
-						if (m.mensaMenus != nil) {
-							for (MensaMenu* menu in m.mensaMenus){
-								NSLog(@"menu name: %@", menu.name);
-							}
-						}
-						NSLog(@"----------------------------");
-						//[m dealloc];
-					}
-				} else {
-					NSLog(@"Plist does not exist, error:%@",error);
-				}
-				break;
-			case CLASSROOM:
-				array = [NSPropertyListSerialization propertyListFromData:plistData
-														 mutabilityOption:NSPropertyListImmutable
-																   format:&format
-														 errorDescription:&error];
-				if (array) {
-					myDict = [NSMutableDictionary dictionaryWithCapacity:[array count]];
-					NSLog(@"The count: %i", [myDict count]);
-					for (NSDictionary* dict in array) {
-						c = [Classroom customClassWithProperties:dict];
-						NSLog(@"----------------------------");
-						NSLog(@"Classroom id: %@",c.id);
-						NSLog(@"The name: %@", c.name);
-						NSLog(@"The building_ID: %@", c.building_id);
-						//NSLog(@"The building: %@", c.building.name);
-						NSLog(@"----------------------------");
-						//[c dealloc];
-					}
-				} else {
-					NSLog(@"Plist does not exist, error:%@",error);
-				}
-				break;
-			default:
-				break;
-		}
-		//[myDict release];
-		//[plistData release];
-		//[error release];
-		//[array release];
-	}
 	if ([cmd isEqual:@"dataRecievedFailed"]) {
 		UIAlertView *someError = [[UIAlertView alloc] initWithTitle: @"Server offline" message:msg delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
 		[someError show];
@@ -240,20 +147,14 @@
 		[someError release];
 	}
 	if ([cmd isEqual:@"allDataRecieved"]) {
-		NSMutableArray *test = [getData getAllBuildingsAsArray];
-		for (Building* b in test) {
-			NSLog(@"---------------------");
-			NSLog(@"Building :%@",b.name);
-			for (Classroom* class in b.classroomsList){
-				NSLog(@"Classroom name: %@", class.name);
-			}
-			NSLog(@"---------------------");
-		}
+		buildingsArray = [getData getAllBuildingsAsArray];
+		classroomsArray = [getData getAllClassroomsAsArray];
+		restaurantsArray = [getData getAllRestaurantsAsArray];
+		mensasArray = [getData getAllMensasAsArray];
+		
+		[self passing:self command:@"loginFromPreferences" message:@"try to login from Preferences"];
 	}
 }
-
-
-
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
@@ -265,60 +166,76 @@
         [self release];
         return NO;
     }
+	if ([[NSUserDefaults standardUserDefaults] stringForKey:@"name_preference"]!=nil) {
+		email = [[NSString alloc] initWithString:[[NSUserDefaults standardUserDefaults] stringForKey:@"name_preference"]];
+	}else {
+		email = [[NSString alloc] initWithString:@""];
+	}
+	if ([[NSUserDefaults standardUserDefaults] stringForKey:@"password_preference"]!=nil) {
+		password = [[NSString alloc] initWithString:[[NSUserDefaults standardUserDefaults] stringForKey:@"password_preference"]];
+	}else {
+		password = [[NSString alloc] initWithString:@""];
+	}
 	
-	//TODO: check for pre defined settings if good then log in
-
-//	serverLogin = [[ServerLogin alloc] init];
-//	serverLogin.delegate2 = self;
-//	
-//	getData = [[ServerGetData alloc] initAll];
-//	getData.delegate2 = self;
-//	
-//	serverCreate = [[ServerCreateUser alloc] init];
-//	serverCreate.delegate2 = self;
+	serverLogin = [[ServerLogin alloc] init];
+	serverLogin.delegate2 = self;
 	
 	mainNavigationController = [[MainNavigationController alloc]init];
 	mainNavigationController.delegate = self;
 	mainNavigationController.delegate2 = self;
 	//[window addSubview:mainNavigationController.view];
+	serverCreate = [[ServerCreateUser alloc] init];
+	serverCreate.delegate2 = self;
 	
+	getData = [[ServerGetData alloc] initAll];
+	getData.delegate2 = self;
 	
+	UIView *start = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+	[start addSubview:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"startUp.png"]]];
+	[window addSubview:start];
+	[window makeKeyAndVisible];
+	
+	return YES;
+}
+
+-(void)initTabBar
+{
+	NSLog(@"Creating Tabbar");
+	//initialize the ViewControllers for the tabBarController
 	organizerViewController = [[OrganizerViewController alloc] init];
-	mapViewController = [[MapViewController alloc] init];
+	mapViewController = [[MapViewController alloc] initWithBuildings:buildingsArray];
 	friendViewController  = [[FriendsViewController alloc] init];
-	mensaViewController = [[MensaViewController alloc] init];
+	mensaViewController = [[MensaViewController alloc] initWithMensas:mensasArray andRestaurants:restaurantsArray];
 	missViewController = [[IMissedItViewController alloc] init];
 	
-	//organizerViewController.delegate2 = self;
-	//mapViewController.delegate2 = self;
-	friendViewController.delegate2 = self;
-	//foodViewController.delegate2 = self;
-	missViewController.delegate2 = self;
-	
+	//Creating the tabbarControllers
 	UINavigationController *org = [[UINavigationController alloc] initWithRootViewController:organizerViewController];
 	UINavigationController *loc = [[UINavigationController alloc] initWithRootViewController:mapViewController];
 	UINavigationController *fri = [[UINavigationController alloc] initWithRootViewController:friendViewController];
 	UINavigationController *foo = [[UINavigationController alloc] initWithRootViewController:mensaViewController];
 	UINavigationController *mis = [[UINavigationController alloc] initWithRootViewController:missViewController];
 	
-	
-	
 	NSMutableArray *controllers = [NSMutableArray array];
-	//[controllers addObject:mainNavigationController];
+	
 	[controllers addObject:org];
 	[controllers addObject:loc];
 	[controllers addObject:fri];
 	[controllers addObject:foo];
 	[controllers addObject:mis];
 	
-	tabBarController = [[MainUITabBarController alloc] init];
-	tabBarController.viewControllers = controllers;	
-	
+	tabBarController = [[UITabBarController alloc] init];
+	tabBarController.viewControllers = controllers;
 	[window addSubview:tabBarController.view];
-	//[window addSubview:tabBarController.view]; // add tabbar and go
-    [window makeKeyAndVisible];
-    
-    return YES;
+}
+
+-(void)initLogin
+{
+	//creating the loginView
+	NSLog(@"Creationg login");
+	mainNavigationController = [[MainNavigationController alloc]init];
+	mainNavigationController.delegate = self;
+	mainNavigationController.delegate2 = self;
+	[window addSubview:mainNavigationController.view];
 }
 
 

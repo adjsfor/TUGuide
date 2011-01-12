@@ -9,9 +9,9 @@
 #import "MapListViewController.h"
 
 
-@implementation MapListViewController
+@implementation MapListClassViewController
 
-@synthesize buildingsArray, classroom, building, classViewController;
+@synthesize classroom, building, detailViewController;
 
 #pragma mark -
 #pragma mark Initialization
@@ -27,11 +27,11 @@
  }
  */
 
-- (id)initWithBuildings: (NSMutableArray *)b
+- (id)initWithBuilding: (Building *)b
 {
 	self = [super initWithStyle:UITableViewStylePlain];
-	buildingsArray = [[NSMutableArray alloc] init];
-	buildingsArray = b;
+	building = [[Building alloc] init];
+	building = b;
 	return self;
 }
 
@@ -42,45 +42,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
-		
-	// Create the segmented control. Choose one of the three styles
-	NSArray *segments = [NSArray arrayWithObjects:@"Map", @"List", nil];
-	UISegmentedControl* segmentedControl = [[UISegmentedControl alloc] initWithItems:segments];
-	segmentedControl.segmentedControlStyle = UIBarStyleBlackTranslucent; 
-	segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-	
-	segmentedControl.frame = CGRectMake(0, 0, 290, 32);
-	[segmentedControl addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
-	
-	// For menus, the momentary behavior is preferred. Otherwise, the segmented control
-	// provides a radio-button style interface
-	segmentedControl.selectedSegmentIndex = 1;
-	
-	//CFShow(allSubviews(segmentedControl));
-	
-	
-	// Add it to the navigation bar
-	self.navigationItem.titleView = segmentedControl;
-	self.navigationItem.hidesBackButton = YES;
-	[segmentedControl release];
 	
     [super viewDidLoad];
 	
-}
-
--(IBAction)segmentAction:(UISegmentedControl *)segmentPick
-{
-	NSLog(@"segment called %d", segmentPick.selectedSegmentIndex);
-	switch (segmentPick.selectedSegmentIndex) {
-		case 0:
-			[self.navigationController popViewControllerAnimated:NO];
-			//[self.navigationController pushViewController:[[MapViewController alloc] init] animated:YES];
-			break;
-		case 1:
-			break;
-		default:
-			break;
-	}
 }
 
 /*
@@ -123,7 +87,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-	return [buildingsArray count];
+	return [building.classroomsList count];
 }
 
 
@@ -137,11 +101,8 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
 	
-	
-	cell.textLabel.text = [[buildingsArray objectAtIndex:[indexPath row]]name ];
-	cell.detailTextLabel.text = [[buildingsArray objectAtIndex:[indexPath row]]address];
+	cell.textLabel.text = [[[building classroomsList] objectAtIndex:[indexPath row]]name ];
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-						
     
     return cell;
 }
@@ -193,13 +154,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
 	
-    Building *b = [buildingsArray objectAtIndex:[indexPath row]];
-    classViewController = [[MapListClassViewController alloc] initWithBuilding:b];
-	classViewController.title = b.name;
+    Classroom *c = [[building classroomsList] objectAtIndex:[indexPath row]];
+    detailViewController = [[MapListDetailViewController alloc] initWithClassroom:c];
+	detailViewController.title = c.name;
 	// ...
 	// Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:self.classViewController animated:YES];
-    [classViewController release];
+    [self.navigationController pushViewController:self.detailViewController animated:YES];
+    [detailViewController release];
     
 }
 

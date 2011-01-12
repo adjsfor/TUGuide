@@ -1,17 +1,24 @@
 //
-//  MapListDetailViewController.m
+//  LocationDetailViewController.m
 //  TUGuide
 //
-//  Created by Martin Langeder on 07.01.11.
+//  Created by Martin Langeder on 10.01.11.
 //  Copyright 2011 7359. All rights reserved.
 //
 
-#import "MapListDetailViewController.h"
+#import "LocationDetailViewController.h"
 
 
-@implementation MapListDetailViewController
+@implementation LocationDetailViewController
 
-@synthesize detailView, c;
+@synthesize c;
+
+-(id)initWithClassroom:(Classroom *)classr
+{
+	c = [[Classroom alloc] init];
+	c = classr;
+	return self;
+}
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -24,24 +31,23 @@
  }
  */
 
--(id)initWithClassroom:(Classroom *)classr
-{
-	c = [[Classroom alloc]init];
-	c = classr;
-	return self;
-}
-
 
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
-	detailView = [[MapListDetailView alloc] initWithFrame:[[UIScreen mainScreen] bounds] andClassroom:c];
-	[detailView.showLocationButton addTarget:self action:@selector(showLocationPdf:) forControlEvents:UIControlEventTouchUpInside];
-	self.view = detailView;
-}
-
-- (void)showLocationPdf:(id)sender
-{
-	[self.navigationController pushViewController:[[LocationDetailViewController alloc] initWithClassroom:c] animated:YES];
+	self.view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
+	UIWebView *locationPdf = [[UIWebView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+	NSURL *targetURL = [NSURL URLWithString:@""];
+	if ([c.pdf_link_cms isEqualToString:@""]) {
+		targetURL = [NSURL URLWithString:c.pdf_link_wegweiser];
+	}else{
+		targetURL = [NSURL URLWithString:c.pdf_link_wegweiser];
+	}
+	NSLog(c.pdf_link_cms);
+	NSURLRequest *request = [NSURLRequest requestWithURL:targetURL];
+	[locationPdf loadRequest:request];
+	
+	[self.view addSubview:locationPdf];
+	[locationPdf release];				 
 }
 
 

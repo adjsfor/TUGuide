@@ -11,8 +11,26 @@
 
 @implementation RestaurantViewController
 
-@synthesize mapView, segmentedController;
+@synthesize mapView, segmentedController, restaurants;
 
+#pragma mark -
+
++ (CGFloat)annotationPadding;
+{
+    return 10.0f;
+}
++ (CGFloat)calloutHeight;
+{
+    return 40.0f;
+}
+
+
+-(id)initWithRestaurants: (NSMutableArray *) r
+{
+	restaurants = [[NSMutableArray alloc] init];
+	restaurants = r;
+	return self;
+}
 
 -(IBAction)segmentAction:(UISegmentedControl *)segmentPick
 {
@@ -20,7 +38,7 @@
 	switch (segmentPick.selectedSegmentIndex) {
 		case 0:
 			//pop this Controller from the Navigation Stack to go back to the rootViewController
-			[self.navigationController popViewControllerAnimated:YES];
+			[self.navigationController popViewControllerAnimated:NO];
 			break;
 		case 1:
 			//Do nothing because this is the right View and does not need to be changed
@@ -63,6 +81,7 @@
 	[super viewDidLoad];
 	//Creating Map View and Zoom into location
 	mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
+	mapView.delegate = self;
 	mapView.mapType = MKMapTypeStandard;
 	[self gotoLocation];
 	[self.view addSubview:mapView];
@@ -72,20 +91,20 @@
 	
 	// Create the segmented control. Choose one of the three styles
 	NSArray *buttonNames = [NSArray arrayWithObjects:@"Mensa", @"Restaurant", nil];
-	UISegmentedControl* segmentedControl = [[UISegmentedControl alloc] initWithItems:buttonNames];
-	segmentedControl.segmentedControlStyle = UIBarStyleBlackTranslucent; 
-	segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+	segmentedController = [[UISegmentedControl alloc] initWithItems:buttonNames];
+	segmentedController.segmentedControlStyle = UIBarStyleBlackTranslucent; 
+	segmentedController.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 	
-	segmentedControl.frame = CGRectMake(0, 0, 290, 32);
-	[segmentedControl addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
-	segmentedControl.selectedSegmentIndex = 1;
+	segmentedController.frame = CGRectMake(0, 0, 290, 32);
+	[segmentedController addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
+	segmentedController.selectedSegmentIndex = 1;
 	
 	// Add it to the navigation bar
-	self.navigationItem.titleView = segmentedControl;
+	self.navigationItem.titleView = segmentedController;
 	self.navigationItem.hidesBackButton = YES;
-	[segmentedControl release];
+	
+	[segmentedController release];
 }
-
 
 /*
 // Override to allow orientations other than the default portrait orientation.

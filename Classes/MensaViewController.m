@@ -11,9 +11,10 @@
 
 @implementation MensaViewController
 
-@synthesize mensaView, segmentedController;
+@synthesize mensaView, segmentedController, mensas, restaurants;
 
-- (id)init {
+- (id)initWithMensas: (NSMutableArray *)m andRestaurants: (NSMutableArray *)r;
+{
 	//Initialization of the ViewController and adding TabbarItems and Image
 	if (self = [super initWithNibName:nil bundle:nil]) {
 		self.title = @"Food";
@@ -21,6 +22,9 @@
 		UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:@"Food" image:anImage tag:0];
 		self.tabBarItem = theItem;
 		[theItem release];
+		
+		mensas = [[NSMutableArray alloc] initWithArray:m];
+		restaurants = [[NSMutableArray alloc] initWithArray:r];
 	}
 	
 	return self;
@@ -36,7 +40,7 @@
 			break;
 		case 1:
 			//Push the RestaurantViewController onto the NavigationStack. The Back Button will be hidden in -loadView
-			[self.navigationController pushViewController:[[RestaurantViewController alloc] init] animated:YES];
+			[self.navigationController pushViewController:[[RestaurantViewController alloc] init] animated:NO];
 			break;
 		default:
 			break;
@@ -94,21 +98,20 @@
 	//Change color of the navigationBar
 	self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
 	
-	
 	// Create the segmented control. Choose one of the three styles
 	NSArray *buttonNames = [NSArray arrayWithObjects:@"Mensa", @"Restaurant", nil];
-	UISegmentedControl* segmentedControl = [[UISegmentedControl alloc] initWithItems:buttonNames];
-	segmentedControl.segmentedControlStyle = UIBarStyleBlackTranslucent; 
-	segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+	segmentedController = [[UISegmentedControl alloc] initWithItems:buttonNames];
+	segmentedController.segmentedControlStyle = UIBarStyleBlackTranslucent; 
+	segmentedController.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 	
-	segmentedControl.frame = CGRectMake(0, 0, 290, 32);
-	[segmentedControl addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
-	segmentedControl.selectedSegmentIndex = 0;
+	segmentedController.frame = CGRectMake(0, 0, 290, 32);
+	[segmentedController addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
+	//segmentedController.selectedSegmentIndex = 0;
 	
 	// Add it to the navigation bar
-	self.navigationItem.titleView = segmentedControl;
+	self.navigationItem.titleView = segmentedController;
 	self.navigationItem.hidesBackButton = YES;
-	[segmentedControl release];
+	[segmentedController release];
 }
 
 
@@ -119,6 +122,10 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 */
+
+-(void)viewDidAppear:(BOOL)animated{
+	segmentedController.selectedSegmentIndex = 0;
+}
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.

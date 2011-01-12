@@ -12,9 +12,6 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
-		4B0F819C12DE29300016E7BF /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B0F819912DE29300016E7BF /* yellow.png */; };
-		4B0F819D12DE29300016E7BF /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B0F819A12DE29300016E7BF /* red.png */; };
-		4B0F819E12DE29300016E7BF /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B0F819B12DE29300016E7BF /* green.png */; };
 		4B38C1A812CA607900E5C5D4 /* 1map.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B38C1A712CA607900E5C5D4 /* 1map.png */; };
 		4B38C1BA12CA609A00E5C5D4 /* iMisseditIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B38C1AD12CA609A00E5C5D4 /* iMisseditIcon.png */; };
 		4B38C1C012CA609A00E5C5D4 /* 145-persondot.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B38C1B312CA609A00E5C5D4 /* 145-persondot.png */; };
@@ -23,6 +20,7 @@
 		4B38C1EC12CA946100E5C5D4 /* OrganizerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B38C1EB12CA946100E5C5D4 /* OrganizerViewController.m */; };
 		4B4CF92012D7CA9000D1368F /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */; };
 		4B4CF92412D7CB3200D1368F /* StubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4CF92312D7CB3200D1368F /* StubViewController.m */; };
+		4B4CFAD412D7D32400D1368F /* FoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4CFAD312D7D32400D1368F /* FoodViewController.m */; };
 		4B4CFAE812D7D4A500D1368F /* IMissedItViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4CFAE712D7D4A500D1368F /* IMissedItViewController.m */; };
 		4B819D1B12A561FE005C740F /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B819D1A12A561FE005C740F /* MainNavigationController.m */; };
 		4B819D2012A564C2005C740F /* ServerLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B819D1F12A564C2005C740F /* ServerLogin.m */; };
@@ -38,7 +36,9 @@
 		4BC60F7512DCD50C00A0BC84 /* TodoDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC60F7412DCD50C00A0BC84 /* TodoDatabase.m */; };
 		4BC6101B12DCF10100A0BC84 /* TodoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6101A12DCF10100A0BC84 /* TodoCell.m */; };
 		4BC6101F12DCF32D00A0BC84 /* TodoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6101E12DCF32D00A0BC84 /* TodoDetailViewController.m */; };
-		4BC6137A12DE129500A0BC84 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC6137912DE129500A0BC84 /* EventKitUI.framework */; };
+		4BC6135212DE0A9C00A0BC84 /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BC6134E12DE0A9C00A0BC84 /* yellow.png */; };
+		4BC6135312DE0A9C00A0BC84 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BC6134F12DE0A9C00A0BC84 /* red.png */; };
+		4BC6135412DE0A9C00A0BC84 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BC6135012DE0A9C00A0BC84 /* green.png */; };
 		8E1D031312D8C7E7003F2AA2 /* ServerGetData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1D031212D8C7E7003F2AA2 /* ServerGetData.m */; };
 		8E30CB4B12A5C43100BCA1B9 /* LoginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E30CB4A12A5C43100BCA1B9 /* LoginTests.m */; };
 		8E30CBAA12A66E9B00BCA1B9 /* ServerLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B819D1F12A564C2005C740F /* ServerLogin.m */; };
@@ -75,7 +75,6 @@
 		FA6171EB12B90B1A00E0E2C7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6171EA12B90B1A00E0E2C7 /* MapKit.framework */; };
 		FA61722512B90CAF00E0E2C7 /* TUAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA61722212B90CAF00E0E2C7 /* TUAnnotation.m */; };
 		FA67286612A099010049DBD8 /* ButtonDark.png in Resources */ = {isa = PBXBuildFile; fileRef = FA67286512A099010049DBD8 /* ButtonDark.png */; };
-		FA734F3112DE1A0500CC841A /* MensaDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA734F3012DE1A0500CC841A /* MensaDetailView.m */; };
 		FA903E7012DD0C800079D0B3 /* startUp.png in Resources */ = {isa = PBXBuildFile; fileRef = FA903E6F12DD0C800079D0B3 /* startUp.png */; };
 		FA903FB112DD22FD0079D0B3 /* MensaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA903FB012DD22FD0079D0B3 /* MensaDetailViewController.m */; };
 		FA903FB312DD26E40079D0B3 /* tuAnnotation.png in Resources */ = {isa = PBXBuildFile; fileRef = FA903FB212DD26E40079D0B3 /* tuAnnotation.png */; };
@@ -110,9 +109,6 @@
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* TUGuide_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUGuide_Prefix.pch; sourceTree = "<group>"; };
-		4B0F819912DE29300016E7BF /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow.png; sourceTree = "<group>"; };
-		4B0F819A12DE29300016E7BF /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
-		4B0F819B12DE29300016E7BF /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
 		4B38C1A712CA607900E5C5D4 /* 1map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1map.png; sourceTree = "<group>"; };
 		4B38C1AD12CA609A00E5C5D4 /* iMisseditIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iMisseditIcon.png; sourceTree = "<group>"; };
 		4B38C1B312CA609A00E5C5D4 /* 145-persondot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "145-persondot.png"; sourceTree = "<group>"; };
@@ -124,6 +120,8 @@
 		4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
 		4B4CF92212D7CB3200D1368F /* StubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StubViewController.h; sourceTree = "<group>"; };
 		4B4CF92312D7CB3200D1368F /* StubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StubViewController.m; sourceTree = "<group>"; };
+		4B4CFAD212D7D32400D1368F /* FoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodViewController.h; sourceTree = "<group>"; };
+		4B4CFAD312D7D32400D1368F /* FoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodViewController.m; sourceTree = "<group>"; };
 		4B4CFAE612D7D4A500D1368F /* IMissedItViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMissedItViewController.h; sourceTree = "<group>"; };
 		4B4CFAE712D7D4A500D1368F /* IMissedItViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMissedItViewController.m; sourceTree = "<group>"; };
 		4B819D1912A561FE005C740F /* MainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
@@ -155,7 +153,9 @@
 		4BC6101A12DCF10100A0BC84 /* TodoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoCell.m; sourceTree = "<group>"; };
 		4BC6101D12DCF32D00A0BC84 /* TodoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoDetailViewController.h; sourceTree = "<group>"; };
 		4BC6101E12DCF32D00A0BC84 /* TodoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoDetailViewController.m; sourceTree = "<group>"; };
-		4BC6137912DE129500A0BC84 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		4BC6134E12DE0A9C00A0BC84 /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yellow.png; path = "../../Downloads/__jdownload/todo part 4/yellow.png"; sourceTree = SOURCE_ROOT; };
+		4BC6134F12DE0A9C00A0BC84 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = red.png; path = "../../Downloads/__jdownload/todo part 4/red.png"; sourceTree = SOURCE_ROOT; };
+		4BC6135012DE0A9C00A0BC84 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = green.png; path = "../../Downloads/__jdownload/todo part 4/green.png"; sourceTree = SOURCE_ROOT; };
 		8D1107310486CEB800E47090 /* TUGuide-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TUGuide-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		8E1D030C12D8C7B6003F2AA2 /* DataPassProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataPassProtocol.h; sourceTree = "<group>"; };
 		8E1D031112D8C7E7003F2AA2 /* ServerGetData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerGetData.h; sourceTree = "<group>"; };
@@ -210,8 +210,6 @@
 		FA61722112B90CAF00E0E2C7 /* TUAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUAnnotation.h; sourceTree = "<group>"; };
 		FA61722212B90CAF00E0E2C7 /* TUAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUAnnotation.m; sourceTree = "<group>"; };
 		FA67286512A099010049DBD8 /* ButtonDark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonDark.png; sourceTree = "<group>"; };
-		FA734F2F12DE1A0500CC841A /* MensaDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaDetailView.h; sourceTree = "<group>"; };
-		FA734F3012DE1A0500CC841A /* MensaDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaDetailView.m; sourceTree = "<group>"; };
 		FA903E6F12DD0C800079D0B3 /* startUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startUp.png; sourceTree = "<group>"; };
 		FA903FAF12DD22FD0079D0B3 /* MensaDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaDetailViewController.h; sourceTree = "<group>"; };
 		FA903FB012DD22FD0079D0B3 /* MensaDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaDetailViewController.m; sourceTree = "<group>"; };
@@ -259,7 +257,6 @@
 				FA616EDF12B8C17F00E0E2C7 /* EventKit.framework in Frameworks */,
 				FA6171EB12B90B1A00E0E2C7 /* MapKit.framework in Frameworks */,
 				4BC60F0612DCCC0900A0BC84 /* libsqlite3.0.dylib in Frameworks */,
-				4BC6137A12DE129500A0BC84 /* EventKitUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +345,6 @@
 				8EAFF11B12A0058300C9BCA3 /* SenTestingKit.framework */,
 				FA616EDE12B8C17F00E0E2C7 /* EventKit.framework */,
 				4BC60F0512DCCC0900A0BC84 /* libsqlite3.0.dylib */,
-				4BC6137912DE129500A0BC84 /* EventKitUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -440,8 +436,6 @@
 				4BC6101A12DCF10100A0BC84 /* TodoCell.m */,
 				4BC6101D12DCF32D00A0BC84 /* TodoDetailViewController.h */,
 				4BC6101E12DCF32D00A0BC84 /* TodoDetailViewController.m */,
-				4B38C1EA12CA946100E5C5D4 /* OrganizerViewController.h */,
-				4B38C1EB12CA946100E5C5D4 /* OrganizerViewController.m */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -472,6 +466,8 @@
 		4B38C1E112CA7D7A00E5C5D4 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				4B4CFAD212D7D32400D1368F /* FoodViewController.h */,
+				4B4CFAD312D7D32400D1368F /* FoodViewController.m */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -481,8 +477,6 @@
 			children = (
 				FACF152112D7EC7C0087B05C /* MensaView.h */,
 				FACF152212D7EC7C0087B05C /* MensaView.m */,
-				FA734F2F12DE1A0500CC841A /* MensaDetailView.h */,
-				FA734F3012DE1A0500CC841A /* MensaDetailView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -686,12 +680,15 @@
 		FAD1DB0712A0391800F782A0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				4B0F819912DE29300016E7BF /* yellow.png */,
-				4B0F819A12DE29300016E7BF /* red.png */,
-				4B0F819B12DE29300016E7BF /* green.png */,
+<<<<<<< HEAD
+				4BC6134E12DE0A9C00A0BC84 /* yellow.png */,
+				4BC6134F12DE0A9C00A0BC84 /* red.png */,
+				4BC6135012DE0A9C00A0BC84 /* green.png */,
+=======
 				FA903FD412DD27D90079D0B3 /* calloutTu.png */,
 				FA903FB212DD26E40079D0B3 /* tuAnnotation.png */,
 				FA903E6F12DD0C800079D0B3 /* startUp.png */,
+>>>>>>> 9ba61982550eb874abde4069a37bb3e529039dbf
 				FACF166912D802AE0087B05C /* MensaLogoBlue.png */,
 				FACF166A12D802AE0087B05C /* MensaLogoGreen.png */,
 				FACF166B12D802AE0087B05C /* MensaLogoOrange.png */,
@@ -825,14 +822,17 @@
 				FACF166E12D802AE0087B05C /* MensaLogoGreen.png in Resources */,
 				FACF166F12D802AE0087B05C /* MensaLogoOrange.png in Resources */,
 				FACF167012D802AE0087B05C /* MensaLogoRed.png in Resources */,
+<<<<<<< HEAD
 				4BC60EF812DCCB9E00A0BC84 /* todo.sqlite in Resources */,
+				4BC6135212DE0A9C00A0BC84 /* yellow.png in Resources */,
+				4BC6135312DE0A9C00A0BC84 /* red.png in Resources */,
+				4BC6135412DE0A9C00A0BC84 /* green.png in Resources */,
+=======
 				FA903E7012DD0C800079D0B3 /* startUp.png in Resources */,
 				FA903FB312DD26E40079D0B3 /* tuAnnotation.png in Resources */,
 				FA903FD512DD27D90079D0B3 /* calloutTu.png in Resources */,
 				8E7DEC6A12DDFD13002C06BD /* Settings.bundle in Resources */,
-				4B0F819C12DE29300016E7BF /* yellow.png in Resources */,
-				4B0F819D12DE29300016E7BF /* red.png in Resources */,
-				4B0F819E12DE29300016E7BF /* green.png in Resources */,
+>>>>>>> 9ba61982550eb874abde4069a37bb3e529039dbf
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -901,6 +901,7 @@
 				FA9239DA12D3943700A3048D /* LocationViewController.m in Sources */,
 				4B4CF92012D7CA9000D1368F /* FriendsViewController.m in Sources */,
 				4B4CF92412D7CB3200D1368F /* StubViewController.m in Sources */,
+				4B4CFAD412D7D32400D1368F /* FoodViewController.m in Sources */,
 				4B4CFAE812D7D4A500D1368F /* IMissedItViewController.m in Sources */,
 				FACF14AB12D7E4D20087B05C /* MapListDetailView.m in Sources */,
 				FACF14AE12D7E50F0087B05C /* MapListDetailViewController.m in Sources */,
@@ -908,14 +909,16 @@
 				FACF152012D7EC5A0087B05C /* RestaurantViewController.m in Sources */,
 				FACF152312D7EC7C0087B05C /* MensaView.m in Sources */,
 				8E1D031312D8C7E7003F2AA2 /* ServerGetData.m in Sources */,
+<<<<<<< HEAD
 				4BC60F3F12DCCF8900A0BC84 /* Todo.m in Sources */,
 				4BC60F7512DCD50C00A0BC84 /* TodoDatabase.m in Sources */,
 				4BC6101B12DCF10100A0BC84 /* TodoCell.m in Sources */,
 				4BC6101F12DCF32D00A0BC84 /* TodoDetailViewController.m in Sources */,
+=======
 				FA903FB112DD22FD0079D0B3 /* MensaDetailViewController.m in Sources */,
 				FA90401C12DD2B230079D0B3 /* LocationDetailViewController.m in Sources */,
 				FA37B09A12DDA62F0057AA9B /* MapListClassViewController.m in Sources */,
-				FA734F3112DE1A0500CC841A /* MensaDetailView.m in Sources */,
+>>>>>>> 9ba61982550eb874abde4069a37bb3e529039dbf
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

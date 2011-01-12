@@ -125,6 +125,17 @@ NSArray *allSubviews(UIView *aView)
 	//CFShow(allSubviews(segmentedControl));
 	
 	
+	EKEventStore * eventStore = [[EKEventStore alloc] init];
+	NSArray * calendars = [eventStore calendars];
+	
+	NSEnumerator *e = [calendars objectEnumerator];
+	EKCalendar *object;
+	while (object = (EKCalendar *)[e nextObject]) {
+		XLog(@"ES GEHT %@",object.title);
+	}
+	
+	
+	
 	// Add it to the navigation bar
 	self.navigationItem.titleView = segmentedControl;
 	[segmentedControl release];

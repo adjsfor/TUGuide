@@ -226,6 +226,13 @@
 	tabBarController = [[UITabBarController alloc] init];
 	tabBarController.viewControllers = controllers;
 	[window addSubview:tabBarController.view];
+	
+	
+
+	
+	
+	
+	
 }
 
 -(void)initLogin

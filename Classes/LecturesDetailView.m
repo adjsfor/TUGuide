@@ -2,7 +2,7 @@
 //  LecturesDetailView.m
 //  TUGuide
 //
-//  Created by Martin Langeder on 15.12.10.
+//  Created by Ivo Galic on 15.12.10.
 //  Copyright 2010 7359. All rights reserved.
 //
 
@@ -46,6 +46,13 @@
 		[self addSubview:headerLabelNumber];
 		[self addSubview:headerLabelCourseName];
 		[self addSubview:logo];
+		
+		
+
+		
+		
+		
+		
     }
     return self;
 }

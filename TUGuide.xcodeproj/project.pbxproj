@@ -39,6 +39,7 @@
 		4BC6135212DE0A9C00A0BC84 /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BC6134E12DE0A9C00A0BC84 /* yellow.png */; };
 		4BC6135312DE0A9C00A0BC84 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BC6134F12DE0A9C00A0BC84 /* red.png */; };
 		4BC6135412DE0A9C00A0BC84 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BC6135012DE0A9C00A0BC84 /* green.png */; };
+		4BC6137A12DE129500A0BC84 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC6137912DE129500A0BC84 /* EventKitUI.framework */; };
 		8E1D031312D8C7E7003F2AA2 /* ServerGetData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1D031212D8C7E7003F2AA2 /* ServerGetData.m */; };
 		8E30CB4B12A5C43100BCA1B9 /* LoginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E30CB4A12A5C43100BCA1B9 /* LoginTests.m */; };
 		8E30CBAA12A66E9B00BCA1B9 /* ServerLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B819D1F12A564C2005C740F /* ServerLogin.m */; };
@@ -156,6 +157,7 @@
 		4BC6134E12DE0A9C00A0BC84 /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yellow.png; path = "../../Downloads/__jdownload/todo part 4/yellow.png"; sourceTree = SOURCE_ROOT; };
 		4BC6134F12DE0A9C00A0BC84 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = red.png; path = "../../Downloads/__jdownload/todo part 4/red.png"; sourceTree = SOURCE_ROOT; };
 		4BC6135012DE0A9C00A0BC84 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = green.png; path = "../../Downloads/__jdownload/todo part 4/green.png"; sourceTree = SOURCE_ROOT; };
+		4BC6137912DE129500A0BC84 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* TUGuide-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TUGuide-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		8E1D030C12D8C7B6003F2AA2 /* DataPassProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataPassProtocol.h; sourceTree = "<group>"; };
 		8E1D031112D8C7E7003F2AA2 /* ServerGetData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerGetData.h; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 				FA616EDF12B8C17F00E0E2C7 /* EventKit.framework in Frameworks */,
 				FA6171EB12B90B1A00E0E2C7 /* MapKit.framework in Frameworks */,
 				4BC60F0612DCCC0900A0BC84 /* libsqlite3.0.dylib in Frameworks */,
+				4BC6137A12DE129500A0BC84 /* EventKitUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +348,7 @@
 				8EAFF11B12A0058300C9BCA3 /* SenTestingKit.framework */,
 				FA616EDE12B8C17F00E0E2C7 /* EventKit.framework */,
 				4BC60F0512DCCC0900A0BC84 /* libsqlite3.0.dylib */,
+				4BC6137912DE129500A0BC84 /* EventKitUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

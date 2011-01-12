@@ -177,6 +177,7 @@
 	Classroom *c;
 	Building *b;
 	Mensa *m;
+	Restaurant *r;
 	//END
 	switch (obj) {
 		case BUILDINGS:
@@ -198,7 +199,21 @@
 			}
 			break;
 		case RESTAURANT:
-				NSLog(@"Plist Restaurants does not exist.");
+			array = [NSPropertyListSerialization propertyListFromData:plistData
+													 mutabilityOption:NSPropertyListImmutable
+															   format:&format
+													 errorDescription:&error];
+			if (array) {
+				myDict = [NSMutableDictionary dictionaryWithCapacity:[array count]];
+				restaurants = [[NSMutableArray alloc] init];
+				for (NSDictionary* dict in array) {
+					r = [Restaurant customClassWithProperties:dict];
+					[restaurants addObject:r];
+					//[r release];
+				}
+			} else {
+				NSLog(@"Plist Mensas does not exist, error:%@",error);
+			}
 			break;
 		case MENSA:
 			array = [NSPropertyListSerialization propertyListFromData:plistData

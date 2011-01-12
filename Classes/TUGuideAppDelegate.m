@@ -186,8 +186,27 @@
 	getData = [[ServerGetData alloc] initAll];
 	getData.delegate2 = self;
 	
+	UIActivityIndicatorView *activityIndicatorView =
+	[[[UIActivityIndicatorView alloc]
+	  initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray]
+	 autorelease];
+	
+	activityIndicatorView.autoresizingMask =
+	UIViewAutoresizingFlexibleLeftMargin |
+	UIViewAutoresizingFlexibleRightMargin |
+	UIViewAutoresizingFlexibleTopMargin |
+	UIViewAutoresizingFlexibleBottomMargin;
+	[activityIndicatorView startAnimating];
+	
+	activityIndicatorView.frame = CGRectMake(135.0, 400.0, 50.0, 50.0);
+	
+	UILabel *text = [[UILabel alloc] initWithFrame:CGRectMake(135.0, 400.0, 200.0, 50.0)];
+	[text setText:@"Loading data form server...."];
+	
+	
 	UIView *start = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	[start addSubview:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"startUp.png"]]];
+	[start addSubview:activityIndicatorView];
 	[window addSubview:start];
 	[window makeKeyAndVisible];
 	

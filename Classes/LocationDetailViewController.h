@@ -14,7 +14,6 @@
 @interface LocationDetailViewController : UIViewController {
 	
 	Classroom *c;
-	
 }
 
 @property (nonatomic, retain) Classroom *c;

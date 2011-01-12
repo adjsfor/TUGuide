@@ -35,21 +35,23 @@
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
 	self.view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
-	UIWebView *locationPdf = [[UIWebView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+	
+	UIWebView *locationPdf = [[UIWebView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 370.0)];
+	[locationPdf setScalesPageToFit:YES];
+
 	NSURL *targetURL = [NSURL URLWithString:@""];
 	if ([c.pdf_link_cms isEqualToString:@""]) {
 		targetURL = [NSURL URLWithString:c.pdf_link_wegweiser];
 	}else{
 		targetURL = [NSURL URLWithString:c.pdf_link_wegweiser];
 	}
-	NSLog(c.pdf_link_cms);
+	NSLog(@"%@",c.pdf_link_cms);
 	NSURLRequest *request = [NSURLRequest requestWithURL:targetURL];
 	[locationPdf loadRequest:request];
 	
 	[self.view addSubview:locationPdf];
-	[locationPdf release];				 
+	[locationPdf release];
 }
-
 
 /*
  // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.

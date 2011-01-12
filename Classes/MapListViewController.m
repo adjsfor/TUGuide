@@ -139,7 +139,7 @@
 	
 	
 	cell.textLabel.text = [[buildingsArray objectAtIndex:[indexPath row]]name ];
-	cell.detailTextLabel.text = [[buildingsArray objectAtIndex:[indexPath row]]address];
+	cell.detailTextLabel.text = (NSString *)[[buildingsArray objectAtIndex:[indexPath row]] address];
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 						
     

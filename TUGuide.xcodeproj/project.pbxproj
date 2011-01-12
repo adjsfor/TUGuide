@@ -34,6 +34,12 @@
 		4BC60EF812DCCB9E00A0BC84 /* todo.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 4BC60EF712DCCB9E00A0BC84 /* todo.sqlite */; };
 		4BC60F0612DCCC0900A0BC84 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC60F0512DCCC0900A0BC84 /* libsqlite3.0.dylib */; };
 		4BC60F3F12DCCF8900A0BC84 /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC60F3E12DCCF8900A0BC84 /* Todo.m */; };
+		4BC60F7512DCD50C00A0BC84 /* TodoDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC60F7412DCD50C00A0BC84 /* TodoDatabase.m */; };
+		4BC6101B12DCF10100A0BC84 /* TodoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6101A12DCF10100A0BC84 /* TodoCell.m */; };
+		4BC6101F12DCF32D00A0BC84 /* TodoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6101E12DCF32D00A0BC84 /* TodoDetailViewController.m */; };
+		4BC6135212DE0A9C00A0BC84 /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BC6134E12DE0A9C00A0BC84 /* yellow.png */; };
+		4BC6135312DE0A9C00A0BC84 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BC6134F12DE0A9C00A0BC84 /* red.png */; };
+		4BC6135412DE0A9C00A0BC84 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BC6135012DE0A9C00A0BC84 /* green.png */; };
 		8E1D031312D8C7E7003F2AA2 /* ServerGetData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1D031212D8C7E7003F2AA2 /* ServerGetData.m */; };
 		8E30CB4B12A5C43100BCA1B9 /* LoginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E30CB4A12A5C43100BCA1B9 /* LoginTests.m */; };
 		8E30CBAA12A66E9B00BCA1B9 /* ServerLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B819D1F12A564C2005C740F /* ServerLogin.m */; };
@@ -138,6 +144,15 @@
 		4BC60F0512DCCC0900A0BC84 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		4BC60F3D12DCCF8900A0BC84 /* Todo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Todo.h; sourceTree = "<group>"; };
 		4BC60F3E12DCCF8900A0BC84 /* Todo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Todo.m; sourceTree = "<group>"; };
+		4BC60F7312DCD50C00A0BC84 /* TodoDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoDatabase.h; sourceTree = "<group>"; };
+		4BC60F7412DCD50C00A0BC84 /* TodoDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoDatabase.m; sourceTree = "<group>"; };
+		4BC6101912DCF10100A0BC84 /* TodoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoCell.h; sourceTree = "<group>"; };
+		4BC6101A12DCF10100A0BC84 /* TodoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoCell.m; sourceTree = "<group>"; };
+		4BC6101D12DCF32D00A0BC84 /* TodoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoDetailViewController.h; sourceTree = "<group>"; };
+		4BC6101E12DCF32D00A0BC84 /* TodoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoDetailViewController.m; sourceTree = "<group>"; };
+		4BC6134E12DE0A9C00A0BC84 /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yellow.png; path = "../../Downloads/__jdownload/todo part 4/yellow.png"; sourceTree = SOURCE_ROOT; };
+		4BC6134F12DE0A9C00A0BC84 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = red.png; path = "../../Downloads/__jdownload/todo part 4/red.png"; sourceTree = SOURCE_ROOT; };
+		4BC6135012DE0A9C00A0BC84 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = green.png; path = "../../Downloads/__jdownload/todo part 4/green.png"; sourceTree = SOURCE_ROOT; };
 		8D1107310486CEB800E47090 /* TUGuide-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TUGuide-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		8E1D030C12D8C7B6003F2AA2 /* DataPassProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataPassProtocol.h; sourceTree = "<group>"; };
 		8E1D031112D8C7E7003F2AA2 /* ServerGetData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerGetData.h; sourceTree = "<group>"; };
@@ -250,6 +265,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4BC60F7212DCD4DC00A0BC84 /* Database */,
 				4B4CF92112D7CAFA00D1368F /* HelperStubs */,
 				4B819E4512A59054005C740F /* Delegate Protocols */,
 				4B38C1C312CA772B00E5C5D4 /* TabBarModules */,
@@ -336,9 +352,11 @@
 		4B38C1C412CA773B00E5C5D4 /* Organizer */ = {
 			isa = PBXGroup;
 			children = (
-				4B38C1DC12CA7CE200E5C5D4 /* Misc */,
-				4B38C1DB12CA7CD500E5C5D4 /* View */,
-				4B38C1DA12CA7CCB00E5C5D4 /* ViewController */,
+				4B38C1EA12CA946100E5C5D4 /* OrganizerViewController.h */,
+				4B38C1EB12CA946100E5C5D4 /* OrganizerViewController.m */,
+				4BC6105512DCFEA000A0BC84 /* Lectures */,
+				4BC6105412DCFE9800A0BC84 /* Courses */,
+				4BC6105312DCFE9000A0BC84 /* ToDo */,
 			);
 			name = Organizer;
 			sourceTree = "<group>";
@@ -386,12 +404,6 @@
 		4B38C1DA12CA7CCB00E5C5D4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				FACE15DF12B820A600637DB9 /* LecturesViewController.h */,
-				FACE15E012B820A600637DB9 /* LecturesViewController.m */,
-				FA616EAD12B8BCD100E0E2C7 /* LecturesDetailViewController.h */,
-				FA616EAE12B8BCD100E0E2C7 /* LecturesDetailViewController.m */,
-				FA616F0012B8D09500E0E2C7 /* CoursesViewController.h */,
-				FA616F0112B8D09500E0E2C7 /* CoursesViewController.m */,
 				FA616F0312B8D0AB00E0E2C7 /* ToDoViewController.h */,
 				FA616F0412B8D0AB00E0E2C7 /* ToDoViewController.m */,
 			);
@@ -401,8 +413,6 @@
 		4B38C1DB12CA7CD500E5C5D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FA616EB012B8BD5C00E0E2C7 /* LecturesDetailView.h */,
-				FA616EB112B8BD5C00E0E2C7 /* LecturesDetailView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -410,8 +420,10 @@
 		4B38C1DC12CA7CE200E5C5D4 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
-				4B38C1EA12CA946100E5C5D4 /* OrganizerViewController.h */,
-				4B38C1EB12CA946100E5C5D4 /* OrganizerViewController.m */,
+				4BC6101912DCF10100A0BC84 /* TodoCell.h */,
+				4BC6101A12DCF10100A0BC84 /* TodoCell.m */,
+				4BC6101D12DCF32D00A0BC84 /* TodoDetailViewController.h */,
+				4BC6101E12DCF32D00A0BC84 /* TodoDetailViewController.m */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -569,6 +581,47 @@
 			name = "Delegate Protocols";
 			sourceTree = "<group>";
 		};
+		4BC60F7212DCD4DC00A0BC84 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				4BC60F7312DCD50C00A0BC84 /* TodoDatabase.h */,
+				4BC60F7412DCD50C00A0BC84 /* TodoDatabase.m */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+		4BC6105312DCFE9000A0BC84 /* ToDo */ = {
+			isa = PBXGroup;
+			children = (
+				4B38C1DC12CA7CE200E5C5D4 /* Misc */,
+				4B38C1DB12CA7CD500E5C5D4 /* View */,
+				4B38C1DA12CA7CCB00E5C5D4 /* ViewController */,
+			);
+			name = ToDo;
+			sourceTree = "<group>";
+		};
+		4BC6105412DCFE9800A0BC84 /* Courses */ = {
+			isa = PBXGroup;
+			children = (
+				FA616F0012B8D09500E0E2C7 /* CoursesViewController.h */,
+				FA616F0112B8D09500E0E2C7 /* CoursesViewController.m */,
+			);
+			name = Courses;
+			sourceTree = "<group>";
+		};
+		4BC6105512DCFEA000A0BC84 /* Lectures */ = {
+			isa = PBXGroup;
+			children = (
+				FA616EAD12B8BCD100E0E2C7 /* LecturesDetailViewController.h */,
+				FA616EAE12B8BCD100E0E2C7 /* LecturesDetailViewController.m */,
+				FACE15DF12B820A600637DB9 /* LecturesViewController.h */,
+				FACE15E012B820A600637DB9 /* LecturesViewController.m */,
+				FA616EB012B8BD5C00E0E2C7 /* LecturesDetailView.h */,
+				FA616EB112B8BD5C00E0E2C7 /* LecturesDetailView.m */,
+			);
+			name = Lectures;
+			sourceTree = "<group>";
+		};
 		8EAFF11712A0055900C9BCA3 /* LogicTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -611,6 +664,9 @@
 		FAD1DB0712A0391800F782A0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4BC6134E12DE0A9C00A0BC84 /* yellow.png */,
+				4BC6134F12DE0A9C00A0BC84 /* red.png */,
+				4BC6135012DE0A9C00A0BC84 /* green.png */,
 				FACF166912D802AE0087B05C /* MensaLogoBlue.png */,
 				FACF166A12D802AE0087B05C /* MensaLogoGreen.png */,
 				FACF166B12D802AE0087B05C /* MensaLogoOrange.png */,
@@ -746,6 +802,9 @@
 				FACF166F12D802AE0087B05C /* MensaLogoOrange.png in Resources */,
 				FACF167012D802AE0087B05C /* MensaLogoRed.png in Resources */,
 				4BC60EF812DCCB9E00A0BC84 /* todo.sqlite in Resources */,
+				4BC6135212DE0A9C00A0BC84 /* yellow.png in Resources */,
+				4BC6135312DE0A9C00A0BC84 /* red.png in Resources */,
+				4BC6135412DE0A9C00A0BC84 /* green.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -824,6 +883,9 @@
 				FACF152312D7EC7C0087B05C /* MensaView.m in Sources */,
 				8E1D031312D8C7E7003F2AA2 /* ServerGetData.m in Sources */,
 				4BC60F3F12DCCF8900A0BC84 /* Todo.m in Sources */,
+				4BC60F7512DCD50C00A0BC84 /* TodoDatabase.m in Sources */,
+				4BC6101B12DCF10100A0BC84 /* TodoCell.m in Sources */,
+				4BC6101F12DCF32D00A0BC84 /* TodoDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

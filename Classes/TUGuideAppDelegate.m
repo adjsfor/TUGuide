@@ -268,14 +268,14 @@
 	
 	//TODO: check for pre defined settings if good then log in
 
-	serverLogin = [[ServerLogin alloc] init];
-	serverLogin.delegate2 = self;
-	
-	getData = [[ServerGetData alloc] initAll];
-	getData.delegate2 = self;
-	
-	serverCreate = [[ServerCreateUser alloc] init];
-	serverCreate.delegate2 = self;
+//	serverLogin = [[ServerLogin alloc] init];
+//	serverLogin.delegate2 = self;
+//	
+//	getData = [[ServerGetData alloc] initAll];
+//	getData.delegate2 = self;
+//	
+//	serverCreate = [[ServerCreateUser alloc] init];
+//	serverCreate.delegate2 = self;
 	
 	mainNavigationController = [[MainNavigationController alloc]init];
 	mainNavigationController.delegate = self;

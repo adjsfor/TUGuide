@@ -20,7 +20,6 @@
 		4B38C1EC12CA946100E5C5D4 /* OrganizerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B38C1EB12CA946100E5C5D4 /* OrganizerViewController.m */; };
 		4B4CF92012D7CA9000D1368F /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */; };
 		4B4CF92412D7CB3200D1368F /* StubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4CF92312D7CB3200D1368F /* StubViewController.m */; };
-		4B4CFAD412D7D32400D1368F /* FoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4CFAD312D7D32400D1368F /* FoodViewController.m */; };
 		4B4CFAE812D7D4A500D1368F /* IMissedItViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4CFAE712D7D4A500D1368F /* IMissedItViewController.m */; };
 		4B819D1B12A561FE005C740F /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B819D1A12A561FE005C740F /* MainNavigationController.m */; };
 		4B819D2012A564C2005C740F /* ServerLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B819D1F12A564C2005C740F /* ServerLogin.m */; };
@@ -66,6 +65,7 @@
 		FA6171EB12B90B1A00E0E2C7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6171EA12B90B1A00E0E2C7 /* MapKit.framework */; };
 		FA61722512B90CAF00E0E2C7 /* TUAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA61722212B90CAF00E0E2C7 /* TUAnnotation.m */; };
 		FA67286612A099010049DBD8 /* ButtonDark.png in Resources */ = {isa = PBXBuildFile; fileRef = FA67286512A099010049DBD8 /* ButtonDark.png */; };
+		FA734F3112DE1A0500CC841A /* MensaDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA734F3012DE1A0500CC841A /* MensaDetailView.m */; };
 		FA903E7012DD0C800079D0B3 /* startUp.png in Resources */ = {isa = PBXBuildFile; fileRef = FA903E6F12DD0C800079D0B3 /* startUp.png */; };
 		FA903FB112DD22FD0079D0B3 /* MensaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA903FB012DD22FD0079D0B3 /* MensaDetailViewController.m */; };
 		FA903FB312DD26E40079D0B3 /* tuAnnotation.png in Resources */ = {isa = PBXBuildFile; fileRef = FA903FB212DD26E40079D0B3 /* tuAnnotation.png */; };
@@ -111,8 +111,6 @@
 		4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
 		4B4CF92212D7CB3200D1368F /* StubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StubViewController.h; sourceTree = "<group>"; };
 		4B4CF92312D7CB3200D1368F /* StubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StubViewController.m; sourceTree = "<group>"; };
-		4B4CFAD212D7D32400D1368F /* FoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodViewController.h; sourceTree = "<group>"; };
-		4B4CFAD312D7D32400D1368F /* FoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodViewController.m; sourceTree = "<group>"; };
 		4B4CFAE612D7D4A500D1368F /* IMissedItViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMissedItViewController.h; sourceTree = "<group>"; };
 		4B4CFAE712D7D4A500D1368F /* IMissedItViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMissedItViewController.m; sourceTree = "<group>"; };
 		4B819D1912A561FE005C740F /* MainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
@@ -188,6 +186,8 @@
 		FA61722112B90CAF00E0E2C7 /* TUAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUAnnotation.h; sourceTree = "<group>"; };
 		FA61722212B90CAF00E0E2C7 /* TUAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUAnnotation.m; sourceTree = "<group>"; };
 		FA67286512A099010049DBD8 /* ButtonDark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonDark.png; sourceTree = "<group>"; };
+		FA734F2F12DE1A0500CC841A /* MensaDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaDetailView.h; sourceTree = "<group>"; };
+		FA734F3012DE1A0500CC841A /* MensaDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaDetailView.m; sourceTree = "<group>"; };
 		FA903E6F12DD0C800079D0B3 /* startUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startUp.png; sourceTree = "<group>"; };
 		FA903FAF12DD22FD0079D0B3 /* MensaDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaDetailViewController.h; sourceTree = "<group>"; };
 		FA903FB012DD22FD0079D0B3 /* MensaDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaDetailViewController.m; sourceTree = "<group>"; };
@@ -444,8 +444,6 @@
 		4B38C1E112CA7D7A00E5C5D4 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
-				4B4CFAD212D7D32400D1368F /* FoodViewController.h */,
-				4B4CFAD312D7D32400D1368F /* FoodViewController.m */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -455,6 +453,8 @@
 			children = (
 				FACF152112D7EC7C0087B05C /* MensaView.h */,
 				FACF152212D7EC7C0087B05C /* MensaView.m */,
+				FA734F2F12DE1A0500CC841A /* MensaDetailView.h */,
+				FA734F3012DE1A0500CC841A /* MensaDetailView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -823,7 +823,6 @@
 				FA9239DA12D3943700A3048D /* LocationViewController.m in Sources */,
 				4B4CF92012D7CA9000D1368F /* FriendsViewController.m in Sources */,
 				4B4CF92412D7CB3200D1368F /* StubViewController.m in Sources */,
-				4B4CFAD412D7D32400D1368F /* FoodViewController.m in Sources */,
 				4B4CFAE812D7D4A500D1368F /* IMissedItViewController.m in Sources */,
 				FACF14AB12D7E4D20087B05C /* MapListDetailView.m in Sources */,
 				FACF14AE12D7E50F0087B05C /* MapListDetailViewController.m in Sources */,
@@ -834,6 +833,7 @@
 				FA903FB112DD22FD0079D0B3 /* MensaDetailViewController.m in Sources */,
 				FA90401C12DD2B230079D0B3 /* LocationDetailViewController.m in Sources */,
 				FA37B09A12DDA62F0057AA9B /* MapListClassViewController.m in Sources */,
+				FA734F3112DE1A0500CC841A /* MensaDetailView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

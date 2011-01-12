@@ -22,22 +22,22 @@
 		self.userInteractionEnabled = YES;
 		
 		mensaBlue = [UIButton buttonWithType:UIButtonTypeCustom];
-		[mensaBlue setFrame:CGRectMake(20,30, 120, 120)];
-		[mensaBlue setImage:[UIImage imageNamed:@"MensaLogoBlue.png"] forState:UIControlStateNormal];
+		[mensaBlue setFrame:CGRectMake(20,10, 110, 160)];
+		[mensaBlue setBackgroundImage:[UIImage imageNamed:@"MensaLogoBlue.png"] forState:UIControlStateNormal];
 		[self addSubview:mensaBlue];
 		
 		mensaRed = [UIButton buttonWithType:UIButtonTypeCustom];
-		[mensaRed setFrame:CGRectMake(180,30, 120, 120)];
+		[mensaRed setFrame:CGRectMake(180,10, 110, 160)];
 		[mensaRed setImage:[UIImage imageNamed:@"MensaLogoRed.png"] forState:UIControlStateNormal];
 		[self addSubview:mensaRed];
 		
 		mensaGreen = [UIButton buttonWithType:UIButtonTypeCustom];
-		[mensaGreen setFrame:CGRectMake(20,220, 120, 120)];
+		[mensaGreen setFrame:CGRectMake(20,190, 110, 160)];
 		[mensaGreen setImage:[UIImage imageNamed:@"MensaLogoGreen.png"] forState:UIControlStateNormal];
 		[self addSubview:mensaGreen];
 		
 		mensaOrange = [UIButton buttonWithType:UIButtonTypeCustom];
-		[mensaOrange setFrame:CGRectMake(180,220, 120, 120)];
+		[mensaOrange setFrame:CGRectMake(180,190, 110, 160)];
 		[mensaOrange setImage:[UIImage imageNamed:@"MensaLogoOrange.png"] forState:UIControlStateNormal];
 		[self addSubview:mensaOrange];
 	}

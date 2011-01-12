@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "MensaView.h"
 #import "RestaurantViewController.h"
-#import "MapListDetailViewController.h"
+#import "MensaDetailViewController.h"
 
 @interface MensaViewController : UIViewController {
 	
 	MensaView *mensaView;
+	MensaDetailViewController *mensaDetailViewController;
 	UISegmentedControl *segmentedController;
 	NSMutableArray *restaurants;
 	NSMutableArray *mensas;
@@ -24,6 +25,7 @@
 @property (nonatomic, retain) UISegmentedControl *segmentedController;
 @property (nonatomic, retain) NSMutableArray *restaurants;
 @property (nonatomic, retain) NSMutableArray *mensas;
+@property (nonatomic, retain) MensaDetailViewController *mensaDetailViewController;
 
 
 - (id)initWithMensas: (NSMutableArray *)m andRestaurants: (NSMutableArray *)r;

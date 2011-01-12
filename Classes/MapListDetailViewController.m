@@ -34,7 +34,14 @@
 
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
-	detailView = [[MapListDetailView alloc] initWithFrame:[[UIScreen mainScreen] bounds]]; //andClassroom:c];
+	detailView = [[MapListDetailView alloc] initWithFrame:[[UIScreen mainScreen] bounds] andClassroom:c];
+	[detailView.showLocationButton addTarget:self action:@selector(showLocationPdf:) forControlEvents:UIControlEventTouchUpInside];
+	self.view = detailView;
+}
+
+- (void)showLocationPdf:(id)sender
+{
+	[self.navigationController pushViewController:[[LocationDetailViewController alloc] initWithClassroom:c] animated:YES];
 }
 
 

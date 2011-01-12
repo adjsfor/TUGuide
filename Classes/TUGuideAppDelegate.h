@@ -14,7 +14,6 @@
 #import "MapViewController.h"
 #import	"ServerLogin.h"
 #import "ServerCreateUser.h"
-#import "MainUITabBarController.h"
 #import "ServerGetData.h"
 #import "DataPassProtocol.h"
 #import "FriendsViewController.h"
@@ -29,7 +28,7 @@
 	ServerCreateUser *serverCreate;
 	
 	//tabbar things
-	MainUITabBarController *tabBarController;
+	UITabBarController *tabBarController;
 	ServerGetData *getData;
 	
 	//ViewController for initializing the TabBar
@@ -57,7 +56,7 @@
 @property (nonatomic, retain) User *me;
 @property (nonatomic, retain) ServerLogin *serverLogin;
 @property (nonatomic, retain) ServerCreateUser *serverCreate;
-@property (nonatomic, retain) MainUITabBarController *tabBarController;
+@property (nonatomic, retain) UITabBarController *tabBarController;
 @property (nonatomic, retain) ServerGetData *getData;
 
 

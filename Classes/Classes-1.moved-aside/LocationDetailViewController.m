@@ -1,15 +1,24 @@
     //
-//  MainUITabBarController.m
+//  LocationDetailViewController.m
 //  TUGuide
 //
-//  Created by Ivo Galic on 12/28/10.
-//  Copyright 2010 Galic Design. All rights reserved.
+//  Created by Martin Langeder on 10.01.11.
+//  Copyright 2011 7359. All rights reserved.
 //
 
-#import "MainUITabBarController.h"
+#import "LocationDetailViewController.h"
 
 
-@implementation MainUITabBarController
+@implementation LocationDetailViewController
+
+@synthesize c;
+
+-(id)initWithClassroom:(Classroom *)classr
+{
+	c = [[Classroom alloc] init];
+	c = classr;
+	return self;
+}
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -22,11 +31,25 @@
 }
 */
 
-/*
+
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
+	self.view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
+	UIWebView *locationPdf = [[UIWebView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+	NSURL *targetURL = [NSURL URLWithString:@""];
+	if ([c.pdf_link_cms isEqualToString:@""]) {
+		targetURL = [NSURL URLWithString:c.pdf_link_wegweiser];
+	}else{
+		targetURL = [NSURL URLWithString:c.pdf_link_wegweiser];
+	}
+	NSLog(c.pdf_link_cms);
+	NSURLRequest *request = [NSURLRequest requestWithURL:targetURL];
+	[locationPdf loadRequest:request];
+	
+	[self.view addSubview:locationPdf];
+	[locationPdf release];				 
 }
-*/
+
 
 /*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.

@@ -149,51 +149,13 @@
 		classroomsArray = [getData getAllClassroomsAsArray];
 		restaurantsArray = [getData getAllRestaurantsAsArray];
 		mensasArray = [getData getAllMensasAsArray];
-		
-		if ([self passing:self command:@"loginFromPreferences" message:@"try to login from Preferences"] == YES){
+		BOOL loggedIn = [self passing:self command:@"loginFromPreferences" message:@"try to login from Preferences"];
+		if ( loggedIn){
 			[self initTabBar];
 		}else {
 			[self initLogin];
 		}
 	}
-}
-
--(void)initTabBar
-{
-	//initialize the ViewControllers for the tabBarController
-	organizerViewController = [[OrganizerViewController alloc] init];
-	mapViewController = [[MapViewController alloc] initWithBuildings:buildingsArray];
-	friendViewController  = [[FriendsViewController alloc] init];
-	mensaViewController = [[MensaViewController alloc] initWithMensas:mensasArray andRestaurants:restaurantsArray];
-	missViewController = [[IMissedItViewController alloc] init];
-	
-	//Creating the tabbarControllers
-	UINavigationController *org = [[UINavigationController alloc] initWithRootViewController:organizerViewController];
-	UINavigationController *loc = [[UINavigationController alloc] initWithRootViewController:mapViewController];
-	UINavigationController *fri = [[UINavigationController alloc] initWithRootViewController:friendViewController];
-	UINavigationController *foo = [[UINavigationController alloc] initWithRootViewController:mensaViewController];
-	UINavigationController *mis = [[UINavigationController alloc] initWithRootViewController:missViewController];
-	
-	NSMutableArray *controllers = [NSMutableArray array];
-	
-	[controllers addObject:org];
-	[controllers addObject:loc];
-	[controllers addObject:fri];
-	[controllers addObject:foo];
-	[controllers addObject:mis];
-	
-	tabBarController = [[MainUITabBarController alloc] init];
-	tabBarController.viewControllers = controllers;
-	[window addSubview:tabBarController.view];
-}
-
--(void)initLogin
-{
-	//creating the loginView
-	mainNavigationController = [[MainNavigationController alloc]init];
-	mainNavigationController.delegate = self;
-	mainNavigationController.delegate2 = self;
-	[window addSubview:mainNavigationController.view];
 }
 
 
@@ -225,6 +187,46 @@
 	[window makeKeyAndVisible];
 	
 	return YES;
+}
+
+-(void)initTabBar
+{
+	NSLog(@"Creating Tabbar");
+	//initialize the ViewControllers for the tabBarController
+	organizerViewController = [[OrganizerViewController alloc] init];
+	mapViewController = [[MapViewController alloc] initWithBuildings:buildingsArray];
+	friendViewController  = [[FriendsViewController alloc] init];
+	mensaViewController = [[MensaViewController alloc] initWithMensas:mensasArray andRestaurants:restaurantsArray];
+	missViewController = [[IMissedItViewController alloc] init];
+	
+	//Creating the tabbarControllers
+	UINavigationController *org = [[UINavigationController alloc] initWithRootViewController:organizerViewController];
+	UINavigationController *loc = [[UINavigationController alloc] initWithRootViewController:mapViewController];
+	UINavigationController *fri = [[UINavigationController alloc] initWithRootViewController:friendViewController];
+	UINavigationController *foo = [[UINavigationController alloc] initWithRootViewController:mensaViewController];
+	UINavigationController *mis = [[UINavigationController alloc] initWithRootViewController:missViewController];
+	
+	NSMutableArray *controllers = [NSMutableArray array];
+	
+	[controllers addObject:org];
+	[controllers addObject:loc];
+	[controllers addObject:fri];
+	[controllers addObject:foo];
+	[controllers addObject:mis];
+	
+	tabBarController = [[UITabBarController alloc] init];
+	tabBarController.viewControllers = controllers;
+	[window addSubview:tabBarController.view];
+}
+
+-(void)initLogin
+{
+	//creating the loginView
+	NSLog(@"Creationg login");
+	mainNavigationController = [[MainNavigationController alloc]init];
+	mainNavigationController.delegate = self;
+	mainNavigationController.delegate2 = self;
+	[window addSubview:mainNavigationController.view];
 }
 
 

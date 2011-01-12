@@ -10,7 +10,7 @@
 #import <MapKit/MapKit.h>
 
 
-@interface RestaurantViewController : UIViewController {
+@interface RestaurantViewController : UIViewController <MKMapViewDelegate> {
 
 	UISegmentedControl *segmentedController;
 	MKMapView *mapView;

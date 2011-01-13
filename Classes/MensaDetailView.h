@@ -7,10 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MensaMenu.h"
 
 
 @interface MensaDetailView : UIView {
+	
+	UIImageView *logo;
+	UILabel *header;
+	MensaMenu *menu;
+	UITableView *contentTable;
 
 }
+
+@property (nonatomic, retain) UIImageView *logo;
+@property (nonatomic, retain) UILabel *header;
+@property (nonatomic, retain) MensaMenu *menu;
+@property (nonatomic, retain) UITableView *contentTable;
+
+
 
 @end

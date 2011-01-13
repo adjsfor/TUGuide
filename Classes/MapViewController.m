@@ -25,7 +25,7 @@
 }
 + (CGFloat)calloutHeight;
 {
-    return 40.0f;
+    return 30.0f;
 }
 
 - (id)initWithBuildings: (NSMutableArray *)b
@@ -192,7 +192,7 @@
 		aV.frame = CGRectMake(aV.frame.origin.x, aV.frame.origin.y - 230.0, aV.frame.size.width, aV.frame.size.height);
 		
 		[UIView beginAnimations:nil context:NULL];
-		[UIView setAnimationDuration:0.65];
+		[UIView setAnimationDuration:0.45];
 		[UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
 		[aV setFrame:endFrame];
 		[UIView commitAnimations];

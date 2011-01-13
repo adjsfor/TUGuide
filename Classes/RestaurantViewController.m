@@ -11,7 +11,7 @@
 
 @implementation RestaurantViewController
 
-@synthesize mapView, segmentedController, restaurants;
+@synthesize mapView, segmentedController, restaurants, restaurant;
 
 #pragma mark -
 
@@ -58,11 +58,29 @@
 	
     [self.mapView setRegion:newRegion animated:YES];
 }
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView {
 
-}*/
+
+- (MKAnnotationView *)mapView:(MKMapView *)theMapView viewForAnnotation:(id)annotation
+{
+	static NSString* MensaAnnotationIdentifier = @"MensaAnnotationIdentifier";
+	MKPinAnnotationView* pinView =
+	(MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:MensaAnnotationIdentifier];
+	if (!pinView)
+	{
+		MKPinAnnotationView *annotationView = [[[MKPinAnnotationView alloc] initWithAnnotation:annotation
+																		 reuseIdentifier:MensaAnnotationIdentifier] autorelease];
+		annotationView.pinColor = MKPinAnnotationColorGreen;
+		annotationView.animatesDrop = YES;
+		annotationView.canShowCallout = YES;
+		
+		//UIImageView *tuAnnotationIcon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"calloutTu.png"]];
+		//annotationView.leftCalloutAccessoryView = tuAnnotationIcon;
+		//[tuAnnotationIcon release];
+		
+		return annotationView;
+	}
+	return pinView;									
+}
 
 - (void)mapView:(MKMapView *)mapView regionWillChangeAnimated:(BOOL)animated
 {
@@ -73,9 +91,6 @@
 	
 }
 
-
-
-
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
 	[super viewDidLoad];
@@ -85,6 +100,9 @@
 	mapView.mapType = MKMapTypeStandard;
 	[self gotoLocation];
 	[self.view addSubview:mapView];
+	
+	[self.mapView removeAnnotations:self.mapView.annotations];  // remove any annotations that exist
+    [self.mapView addAnnotations:self.restaurants];   //set annotations to the map 
 	
 	//Change color of the navigationBar
 	self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
@@ -113,6 +131,22 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 */
+
+- (void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray *)views { 
+	MKAnnotationView *aV; 
+	for (aV in views) {
+		CGRect endFrame = aV.frame;
+		
+		aV.frame = CGRectMake(aV.frame.origin.x, aV.frame.origin.y - 230.0, aV.frame.size.width, aV.frame.size.height);
+		
+		[UIView beginAnimations:nil context:NULL];
+		[UIView setAnimationDuration:0.45];
+		[UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+		[aV setFrame:endFrame];
+		[UIView commitAnimations];
+		
+	}
+}
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.

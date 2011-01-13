@@ -61,6 +61,14 @@
 		8ED0D54C12A55CF200B3F33D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		8ED0D54D12A55CF200B3F33D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		8ED0D54E12A55CF200B3F33D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		FA34B81A12DEB7AB00D0E836 /* HeaderBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = FA34B81912DEB7AB00D0E836 /* HeaderBackground.png */; };
+		FA34B82712DEB92C00D0E836 /* tulogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FA34B82612DEB92C00D0E836 /* tulogo.png */; };
+		FA34B87712DEC06E00D0E836 /* bg_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FA34B87612DEC06E00D0E836 /* bg_logo.png */; };
+		FA34B8F112DEC61100D0E836 /* MensaLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FA34B8F012DEC61100D0E836 /* MensaLogo.png */; };
+		FA34B93912DEF6CE00D0E836 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = FA34B93612DEF6CE00D0E836 /* green.png */; };
+		FA34B93A12DEF6CE00D0E836 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = FA34B93712DEF6CE00D0E836 /* red.png */; };
+		FA34B93B12DEF6CE00D0E836 /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = FA34B93812DEF6CE00D0E836 /* yellow.png */; };
+		FA34BB7A12DF282C00D0E836 /* tuAnnotation.png in Resources */ = {isa = PBXBuildFile; fileRef = FA34BB7412DF27FD00D0E836 /* tuAnnotation.png */; };
 		FA37B09A12DDA62F0057AA9B /* MapListClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA37B09912DDA62F0057AA9B /* MapListClassViewController.m */; };
 		FA381CA212A00563008E06D0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA381CA112A00563008E06D0 /* LoginViewController.m */; };
 		FA381CA512A0057A008E06D0 /* RegisterLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA381CA412A0057A008E06D0 /* RegisterLoginView.m */; };
@@ -73,13 +81,9 @@
 		FA616F0512B8D0AB00E0E2C7 /* ToDoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA616F0412B8D0AB00E0E2C7 /* ToDoViewController.m */; };
 		FA6171D312B90A2300E0E2C7 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6171D212B90A2300E0E2C7 /* MapViewController.m */; };
 		FA6171EB12B90B1A00E0E2C7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6171EA12B90B1A00E0E2C7 /* MapKit.framework */; };
-		FA61722512B90CAF00E0E2C7 /* TUAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = FA61722212B90CAF00E0E2C7 /* TUAnnotation.m */; };
-		FA67286612A099010049DBD8 /* ButtonDark.png in Resources */ = {isa = PBXBuildFile; fileRef = FA67286512A099010049DBD8 /* ButtonDark.png */; };
 		FA734F3112DE1A0500CC841A /* MensaDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA734F3012DE1A0500CC841A /* MensaDetailView.m */; };
 		FA903E7012DD0C800079D0B3 /* startUp.png in Resources */ = {isa = PBXBuildFile; fileRef = FA903E6F12DD0C800079D0B3 /* startUp.png */; };
 		FA903FB112DD22FD0079D0B3 /* MensaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA903FB012DD22FD0079D0B3 /* MensaDetailViewController.m */; };
-		FA903FB312DD26E40079D0B3 /* tuAnnotation.png in Resources */ = {isa = PBXBuildFile; fileRef = FA903FB212DD26E40079D0B3 /* tuAnnotation.png */; };
-		FA903FD512DD27D90079D0B3 /* calloutTu.png in Resources */ = {isa = PBXBuildFile; fileRef = FA903FD412DD27D90079D0B3 /* calloutTu.png */; };
 		FA90401C12DD2B230079D0B3 /* LocationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA90401B12DD2B230079D0B3 /* LocationDetailViewController.m */; };
 		FA9239DA12D3943700A3048D /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9239D912D3943700A3048D /* LocationViewController.m */; };
 		FACC502812D26D130007911F /* MapListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACC502712D26D130007911F /* MapListViewController.m */; };
@@ -185,6 +189,14 @@
 		8EAFF11B12A0058300C9BCA3 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		8EBD4CE912A47164008D9B56 /* Wizard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wizard.h; sourceTree = "<group>"; };
 		8EBD4CEA12A47164008D9B56 /* Wizard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wizard.m; sourceTree = "<group>"; };
+		FA34B81912DEB7AB00D0E836 /* HeaderBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeaderBackground.png; sourceTree = "<group>"; };
+		FA34B82612DEB92C00D0E836 /* tulogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tulogo.png; sourceTree = "<group>"; };
+		FA34B87612DEC06E00D0E836 /* bg_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_logo.png; sourceTree = "<group>"; };
+		FA34B8F012DEC61100D0E836 /* MensaLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MensaLogo.png; sourceTree = "<group>"; };
+		FA34B93612DEF6CE00D0E836 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
+		FA34B93712DEF6CE00D0E836 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
+		FA34B93812DEF6CE00D0E836 /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow.png; sourceTree = "<group>"; };
+		FA34BB7412DF27FD00D0E836 /* tuAnnotation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tuAnnotation.png; sourceTree = "<group>"; };
 		FA37B09812DDA62F0057AA9B /* MapListClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapListClassViewController.h; sourceTree = "<group>"; };
 		FA37B09912DDA62F0057AA9B /* MapListClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapListClassViewController.m; sourceTree = "<group>"; };
 		FA381CA012A00563008E06D0 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -207,16 +219,11 @@
 		FA6171D112B90A2300E0E2C7 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		FA6171D212B90A2300E0E2C7 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		FA6171EA12B90B1A00E0E2C7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		FA61722112B90CAF00E0E2C7 /* TUAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUAnnotation.h; sourceTree = "<group>"; };
-		FA61722212B90CAF00E0E2C7 /* TUAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUAnnotation.m; sourceTree = "<group>"; };
-		FA67286512A099010049DBD8 /* ButtonDark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonDark.png; sourceTree = "<group>"; };
 		FA734F2F12DE1A0500CC841A /* MensaDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaDetailView.h; sourceTree = "<group>"; };
 		FA734F3012DE1A0500CC841A /* MensaDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaDetailView.m; sourceTree = "<group>"; };
 		FA903E6F12DD0C800079D0B3 /* startUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startUp.png; sourceTree = "<group>"; };
 		FA903FAF12DD22FD0079D0B3 /* MensaDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaDetailViewController.h; sourceTree = "<group>"; };
 		FA903FB012DD22FD0079D0B3 /* MensaDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaDetailViewController.m; sourceTree = "<group>"; };
-		FA903FB212DD26E40079D0B3 /* tuAnnotation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tuAnnotation.png; sourceTree = "<group>"; };
-		FA903FD412DD27D90079D0B3 /* calloutTu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calloutTu.png; sourceTree = "<group>"; };
 		FA90401A12DD2B230079D0B3 /* LocationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDetailViewController.h; sourceTree = "<group>"; };
 		FA90401B12DD2B230079D0B3 /* LocationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDetailViewController.m; sourceTree = "<group>"; };
 		FA9239D812D3943700A3048D /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
@@ -520,8 +527,6 @@
 		4B38C1E512CA7D9900E5C5D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FA61722112B90CAF00E0E2C7 /* TUAnnotation.h */,
-				FA61722212B90CAF00E0E2C7 /* TUAnnotation.m */,
 				FACF14A912D7E4D20087B05C /* MapListDetailView.h */,
 				FACF14AA12D7E4D20087B05C /* MapListDetailView.m */,
 			);
@@ -686,11 +691,16 @@
 		FAD1DB0712A0391800F782A0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				FA34BB7412DF27FD00D0E836 /* tuAnnotation.png */,
+				FA34B8F012DEC61100D0E836 /* MensaLogo.png */,
+				FA34B87612DEC06E00D0E836 /* bg_logo.png */,
+				FA34B81912DEB7AB00D0E836 /* HeaderBackground.png */,
+				FA34B93612DEF6CE00D0E836 /* green.png */,
+				FA34B93712DEF6CE00D0E836 /* red.png */,
+				FA34B93812DEF6CE00D0E836 /* yellow.png */,
 				4B0F819912DE29300016E7BF /* yellow.png */,
 				4B0F819A12DE29300016E7BF /* red.png */,
 				4B0F819B12DE29300016E7BF /* green.png */,
-				FA903FD412DD27D90079D0B3 /* calloutTu.png */,
-				FA903FB212DD26E40079D0B3 /* tuAnnotation.png */,
 				FA903E6F12DD0C800079D0B3 /* startUp.png */,
 				FACF166912D802AE0087B05C /* MensaLogoBlue.png */,
 				FACF166A12D802AE0087B05C /* MensaLogoGreen.png */,
@@ -705,7 +715,7 @@
 				4B38C1B512CA609A00E5C5D4 /* 40-inbox.png */,
 				4B38C1A712CA607900E5C5D4 /* 1map.png */,
 				FAD4AB3312A0DA1800817DCA /* icon.png */,
-				FA67286512A099010049DBD8 /* ButtonDark.png */,
+				FA34B82612DEB92C00D0E836 /* tulogo.png */,
 				FAD1DB0212A0390500F782A0 /* TUGuideLogo.png */,
 			);
 			name = Images;
@@ -811,7 +821,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAD1DB0312A0390500F782A0 /* TUGuideLogo.png in Resources */,
-				FA67286612A099010049DBD8 /* ButtonDark.png in Resources */,
 				FAD4AB3412A0DA1800817DCA /* icon.png in Resources */,
 				4B38C1A812CA607900E5C5D4 /* 1map.png in Resources */,
 				4B38C1BA12CA609A00E5C5D4 /* iMisseditIcon.png in Resources */,
@@ -827,12 +836,18 @@
 				FACF167012D802AE0087B05C /* MensaLogoRed.png in Resources */,
 				4BC60EF812DCCB9E00A0BC84 /* todo.sqlite in Resources */,
 				FA903E7012DD0C800079D0B3 /* startUp.png in Resources */,
-				FA903FB312DD26E40079D0B3 /* tuAnnotation.png in Resources */,
-				FA903FD512DD27D90079D0B3 /* calloutTu.png in Resources */,
 				8E7DEC6A12DDFD13002C06BD /* Settings.bundle in Resources */,
 				4B0F819C12DE29300016E7BF /* yellow.png in Resources */,
 				4B0F819D12DE29300016E7BF /* red.png in Resources */,
 				4B0F819E12DE29300016E7BF /* green.png in Resources */,
+				FA34B81A12DEB7AB00D0E836 /* HeaderBackground.png in Resources */,
+				FA34B82712DEB92C00D0E836 /* tulogo.png in Resources */,
+				FA34B87712DEC06E00D0E836 /* bg_logo.png in Resources */,
+				FA34B8F112DEC61100D0E836 /* MensaLogo.png in Resources */,
+				FA34B93912DEF6CE00D0E836 /* green.png in Resources */,
+				FA34B93A12DEF6CE00D0E836 /* red.png in Resources */,
+				FA34B93B12DEF6CE00D0E836 /* yellow.png in Resources */,
+				FA34BB7A12DF282C00D0E836 /* tuAnnotation.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -894,7 +909,6 @@
 				FA616F0212B8D09500E0E2C7 /* CoursesViewController.m in Sources */,
 				FA616F0512B8D0AB00E0E2C7 /* ToDoViewController.m in Sources */,
 				FA6171D312B90A2300E0E2C7 /* MapViewController.m in Sources */,
-				FA61722512B90CAF00E0E2C7 /* TUAnnotation.m in Sources */,
 				8E78159612B8F69200DF4A8B /* ServerCreateUser.m in Sources */,
 				4B38C1EC12CA946100E5C5D4 /* OrganizerViewController.m in Sources */,
 				FACC502812D26D130007911F /* MapListViewController.m in Sources */,

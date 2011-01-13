@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
-#import "TUAnnotation.h"
 #import "MapListViewController.h"
 #import "MapListDetailViewController.h"
 #import "ServerGetData.h"

@@ -40,7 +40,7 @@
 			break;
 		case 1:
 			//Push the RestaurantViewController onto the NavigationStack. The Back Button will be hidden in -loadView
-			[self.navigationController pushViewController:[[RestaurantViewController alloc] init] animated:NO];
+			[self.navigationController pushViewController:[[RestaurantViewController alloc] initWithRestaurants:restaurants] animated:NO];
 			break;
 		default:
 			break;
@@ -80,15 +80,15 @@
 }
 - (void)mensaRedAction:(id)sender{
 	mensaDetailViewController = [[MensaDetailViewController alloc] initWithMensa:[mensas objectAtIndex:1]];
-	[self.navigationController pushViewController:[[MensaDetailViewController alloc] init] animated:YES];
+	[self.navigationController pushViewController:mensaDetailViewController animated:YES];
 }
 - (void)mensaGreenAction:(id)sender{
 	mensaDetailViewController = [[MensaDetailViewController alloc] initWithMensa:[mensas objectAtIndex:2]];
-	[self.navigationController pushViewController:[[MensaDetailViewController alloc] init] animated:YES];
+	[self.navigationController pushViewController:mensaDetailViewController animated:YES];
 }
 - (void)mensaOrangeAction:(id)sender{
 	mensaDetailViewController = [[MensaDetailViewController alloc] initWithMensa:[mensas objectAtIndex:3]];
-	[self.navigationController pushViewController:[[MensaDetailViewController alloc] init] animated:YES];
+	[self.navigationController pushViewController:mensaDetailViewController animated:YES];
 }
 
 

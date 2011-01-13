@@ -33,6 +33,7 @@
 @synthesize opening_hours_until_sunday;
 @synthesize created;
 @synthesize updated;
+@synthesize title, subtitle;
 
 
 + (id)customClassWithProperties:(NSDictionary *)properties {
@@ -47,6 +48,8 @@
 		self.coordinates_lat = [properties objectForKey:@"coordinates_lat"];
 		self.coordinates_lon = [properties objectForKey:@"coordinates_lon"];
 		self.address = [properties objectForKey:@"address"];
+		self.title = self.name;
+		self.subtitle = self.address;
 		self.opening_hours_from_monday = [properties objectForKey:@"opening_hours_from_monday"];
 		self.opening_hours_until_monday = [properties objectForKey:@"opening_hours_until_monday"];
 		self.opening_hours_from_tuesday = [properties objectForKey:@"opening_hours_from_tuesday"];
@@ -65,6 +68,14 @@
 		self.updated = [properties objectForKey:@"updated"];
 	}
 	return self;
+}
+
+- (CLLocationCoordinate2D)coordinate
+{
+    CLLocationCoordinate2D theCoordinate;
+    theCoordinate.latitude = [coordinates_lat doubleValue];
+    theCoordinate.longitude = [coordinates_lon doubleValue];
+    return theCoordinate; 
 }
 
 -(void)dealloc{

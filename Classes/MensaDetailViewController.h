@@ -10,7 +10,7 @@
 #import "Mensa.h"
 #import "MensaDetailView.h"
 
-@interface MensaDetailViewController : UIViewController {
+@interface MensaDetailViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
 	
 	Mensa *mensa;
 	MensaDetailView *detailView;

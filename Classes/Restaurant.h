@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "Eatery.h"
+#import <MapKit/MapKit.h>
 
 
-@interface Restaurant : Eatery {
+
+@interface Restaurant : Eatery <MKAnnotation>{
 	int id;
 	
 	NSString *name;
@@ -33,6 +35,8 @@
 	NSString *opening_hours_until_sunday;
 	NSString *created;
 	NSString *updated;
+	NSString *title;
+	NSString *subtitle;
 }
 
 @property (nonatomic) int id;
@@ -57,6 +61,8 @@
 @property (nonatomic,retain) NSString *opening_hours_until_sunday;
 @property (nonatomic,retain) NSString *created;
 @property (nonatomic,retain) NSString *updated;
+@property (nonatomic,retain) NSString *title;
+@property (nonatomic,retain) NSString *subtitle;
 
 + (id)customClassWithProperties:(NSDictionary *)properties;
 - (id)initWithProperties:(NSDictionary *)properties;

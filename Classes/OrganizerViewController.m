@@ -31,11 +31,12 @@
 	self.todoViewController.todoView.title = todo.text;
 	[self.todoViewController.todoView.todoText setText:todo.text];	
 	
-	
 }
+
 
 -(void)passTo:(UIViewController *)requestor command:(NSString *)cmd message:(NSString *)msg{
 	
+	XLog(@"->>>> @%",cmd);
 	// start editing
 	if ([cmd isEqual:@"editTodo"]) {
 		[self.navigationController pushViewController:self.todoViewController.todoView animated:YES];
@@ -45,7 +46,12 @@
 	if ([cmd isEqual:@"finishedEditTodo"]) {
 		[self.navigationController popViewControllerAnimated:YES];
 	}
-		 
+	
+	// finish editing
+	if ([cmd isEqual:@"editEvent"]) {
+		 [self.navigationController pushViewController:self.lecturesViewController.detailViewController animated:YES];
+	}
+		
 }
 
 
@@ -72,7 +78,7 @@
 																	 style:UIBarButtonItemStyleBordered 
 																	target:self action:@selector(addTodo:)];
 			self.navigationItem.rightBarButtonItem = btn;
-
+			
 			//[self.navigationController pushViewController:todoViewController animated:YES];
 			
 			break;
@@ -97,11 +103,13 @@ NSArray *allSubviews(UIView *aView)
 - (void)loadView {
 	
 	// create for segmented control
-	lecturesViewController = [[LecturesViewController alloc] init];
+	lecturesViewController = [[LecturesCalendarTableViewController alloc] init];
 	coursesViewController = [[CoursesViewController alloc] init];
 	todoViewController = [[ToDoViewController alloc] init];
 	
 	todoViewController.delegate = self;
+	lecturesViewController.delegate2 = self;
+	
 	
 	self.view = lecturesViewController.view;
 	
@@ -122,18 +130,7 @@ NSArray *allSubviews(UIView *aView)
 	segmentedControl.momentary = NO;
 	segmentedControl.selectedSegmentIndex = 0;
 	
-	//CFShow(allSubviews(segmentedControl));
-	
-	
-	EKEventStore * eventStore = [[EKEventStore alloc] init];
-	NSArray * calendars = [eventStore calendars];
-	
-	NSEnumerator *e = [calendars objectEnumerator];
-	EKCalendar *object;
-	while (object = (EKCalendar *)[e nextObject]) {
-		XLog(@"ES GEHT %@",object.title);
-	}
-	
+	//CFShow(allSubviews(segmentedControl));	
 	
 	
 	// Add it to the navigation bar

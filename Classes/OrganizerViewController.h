@@ -12,17 +12,18 @@
 #import "ToDoViewController.h"
 #import "UIViewControllerDelegate.h"
 #import "MessagePassProtocol.h"
+#import "LecturesCalendarTableViewController.h"
 
 @interface OrganizerViewController : UIViewController <UIViewControllerDelegate> {
 	UISegmentedControl *segmentedController;
-	LecturesViewController *lecturesViewController;
+	LecturesCalendarTableViewController *lecturesViewController;
 	CoursesViewController *coursesViewController;
 	ToDoViewController *todoViewController;
 	id <MessagePassProtocol> delegate2;
 }
 
 @property (nonatomic, retain) UISegmentedControl *segmentedController;
-@property (nonatomic, retain) LecturesViewController *lecturesViewController;
+@property (nonatomic, retain) LecturesCalendarTableViewController *lecturesViewController;
 @property (nonatomic, retain) CoursesViewController *coursesViewController;
 @property (nonatomic, retain) ToDoViewController *todoViewController;
 @property (nonatomic,assign) id <MessagePassProtocol> delegate2;

@@ -15,6 +15,7 @@
 		4B0F819C12DE29300016E7BF /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B0F819912DE29300016E7BF /* yellow.png */; };
 		4B0F819D12DE29300016E7BF /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B0F819A12DE29300016E7BF /* red.png */; };
 		4B0F819E12DE29300016E7BF /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B0F819B12DE29300016E7BF /* green.png */; };
+		4B2C630A12DF32AD00D7519B /* LecturesCalendarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2C630912DF32AD00D7519B /* LecturesCalendarTableViewController.m */; };
 		4B38C1A812CA607900E5C5D4 /* 1map.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B38C1A712CA607900E5C5D4 /* 1map.png */; };
 		4B38C1BA12CA609A00E5C5D4 /* iMisseditIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B38C1AD12CA609A00E5C5D4 /* iMisseditIcon.png */; };
 		4B38C1C012CA609A00E5C5D4 /* 145-persondot.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B38C1B312CA609A00E5C5D4 /* 145-persondot.png */; };
@@ -113,6 +114,8 @@
 		4B0F819912DE29300016E7BF /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow.png; sourceTree = "<group>"; };
 		4B0F819A12DE29300016E7BF /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
 		4B0F819B12DE29300016E7BF /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
+		4B2C630812DF32AD00D7519B /* LecturesCalendarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LecturesCalendarTableViewController.h; sourceTree = "<group>"; };
+		4B2C630912DF32AD00D7519B /* LecturesCalendarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LecturesCalendarTableViewController.m; sourceTree = "<group>"; };
 		4B38C1A712CA607900E5C5D4 /* 1map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1map.png; sourceTree = "<group>"; };
 		4B38C1AD12CA609A00E5C5D4 /* iMisseditIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iMisseditIcon.png; sourceTree = "<group>"; };
 		4B38C1B312CA609A00E5C5D4 /* 145-persondot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "145-persondot.png"; sourceTree = "<group>"; };
@@ -351,6 +354,22 @@
 				4BC6137912DE129500A0BC84 /* EventKitUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B0F81D712DE3AAE0016E7BF /* GUI Objects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "GUI Objects";
+			sourceTree = "<group>";
+		};
+		4B2C630712DF328400D7519B /* EKObjects */ = {
+			isa = PBXGroup;
+			children = (
+				4B2C630812DF32AD00D7519B /* LecturesCalendarTableViewController.h */,
+				4B2C630912DF32AD00D7519B /* LecturesCalendarTableViewController.m */,
+			);
+			name = EKObjects;
 			sourceTree = "<group>";
 		};
 		4B38C1C312CA772B00E5C5D4 /* TabBarModules */ = {
@@ -634,6 +653,8 @@
 		4BC6105512DCFEA000A0BC84 /* Lectures */ = {
 			isa = PBXGroup;
 			children = (
+				4B2C630712DF328400D7519B /* EKObjects */,
+				4B0F81D712DE3AAE0016E7BF /* GUI Objects */,
 				FA616EAD12B8BCD100E0E2C7 /* LecturesDetailViewController.h */,
 				FA616EAE12B8BCD100E0E2C7 /* LecturesDetailViewController.m */,
 				FACE15DF12B820A600637DB9 /* LecturesViewController.h */,
@@ -916,6 +937,7 @@
 				FA90401C12DD2B230079D0B3 /* LocationDetailViewController.m in Sources */,
 				FA37B09A12DDA62F0057AA9B /* MapListClassViewController.m in Sources */,
 				FA734F3112DE1A0500CC841A /* MensaDetailView.m in Sources */,
+				4B2C630A12DF32AD00D7519B /* LecturesCalendarTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

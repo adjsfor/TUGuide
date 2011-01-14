@@ -37,7 +37,7 @@
 		self.tabBarItem = theItem;
 		[theItem release];
 		
-		buildingsArray = [[NSMutableArray alloc] init];
+		//buildingsArray = [[NSMutableArray alloc] init];
 		buildingsArray = b;
 	}
 	

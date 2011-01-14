@@ -30,7 +30,7 @@
 - (id)initWithBuilding: (Building *)b
 {
 	self = [super initWithStyle:UITableViewStylePlain];
-	building = [[Building alloc] init];
+	//building = [[Building alloc] init];
 	building = b;
 	return self;
 }

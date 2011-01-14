@@ -26,7 +26,7 @@
 
 -(id)initWithClassroom:(Classroom *)classr
 {
-	c = [[Classroom alloc]init];
+	//c = [[Classroom alloc]init];
 	c = classr;
 	return self;
 }

@@ -28,6 +28,7 @@
 							 screen_name,mail, password];
 	[request setHTTPBody:[requestBody dataUsingEncoding:NSASCIIStringEncoding]];
 	dataConnection=[[NSURLConnection alloc] initWithRequest:request delegate:self];
+	[requestBody release];
 }
 
 
@@ -49,12 +50,14 @@
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
 	self.responseData = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
 	NSLog(@"-SERVER: report received data %@",responseData);
+	[responseData release];
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     NSLog(@"-SERVER: report failed with error");
     NSLog(@"%@", [error description]);
 	[delegate2 passing:self command:@"serverOffline" message:@"We are sorry but our server is offline, please try later!"];
+	[dataConnection release];
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
@@ -64,10 +67,10 @@
 	}else {
 		[delegate2 passing:self command:@"registerFail" message:@"Username/Password/mail information incorrect, please try again!"];
 	}
+	[dataConnection release];
 }
 
 -(void) dealloc{
-	[dataConnection release];
 	[super dealloc];
 }
 

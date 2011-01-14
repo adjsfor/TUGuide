@@ -30,7 +30,7 @@
 - (id)initWithBuildings: (NSMutableArray *)b
 {
 	self = [super initWithStyle:UITableViewStylePlain];
-	buildingsArray = [[NSMutableArray alloc] init];
+	//buildingsArray = [[NSMutableArray alloc] init];
 	buildingsArray = b;
 	return self;
 }

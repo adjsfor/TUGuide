@@ -20,20 +20,24 @@
 
 -(void) getAllBuildings{
 	self.command = BUILDINGS;
+	allRecievedData = [[NSMutableString alloc] init];
 	[self send:@"Building"];
 }
 -(void) getAllClassrooms{
 	self.command = CLASSROOM;
+	allRecievedData = [[NSMutableString alloc] init];
 	[self send:@"Classroom"];
 }
 
 -(void) getAllRestaurants{
 	self.command = RESTAURANT;
+	allRecievedData = [[NSMutableString alloc] init];
 	[self send:@"Restaurant"];
 }
 
 -(void) getAllMensas{
 	self.command = MENSA;
+	allRecievedData = [[NSMutableString alloc] init];
 	[self send:@"Mensa"];
 }
 
@@ -90,7 +94,6 @@
 		self.statusCode = [(NSHTTPURLResponse *)response statusCode];
 	}
 	NSLog(@"The code is: %i", statusCode );	
-	allRecievedData = [[NSMutableString alloc] init];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
@@ -102,6 +105,7 @@
 		self.responseData = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
 		[allRecievedData appendString:responseData];
 	}
+	[responseData release];
 	//NSLog(@"-SERVER: report received part-data");
 	
 }
@@ -109,11 +113,14 @@
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     NSLog(@"-SERVER: report failed with error");
     NSLog(@"%@", [error description]);
+	[allRecievedData release];
+	[dataConnection release];
 	[delegate2 passingCommand:@"serverOffline" sender:-1 message:@"We are sorry but our server is offline, please try later!" data:nil];
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     //NSLog(@"-SERVER: connection finished loading with data : %@",allRecievedData );
+	[dataConnection release];
 	NSLog(@"-SERVER: connection finished loading with data.");
 	if (self.statusCode == 200) {
 		switch (load) {
@@ -139,18 +146,22 @@
 				switch (command) {
 					case BUILDINGS:
 						[self saveObject:BUILDINGS withData:allRecievedData];
+						[allRecievedData release];
 						[self getAllRestaurants];
 						break;
 					case RESTAURANT:
 						[self saveObject:RESTAURANT withData:allRecievedData];
+						[allRecievedData release];
 						[self getAllMensas];
 						break;
 					case MENSA:
 						[self saveObject:MENSA withData:allRecievedData];
+						[allRecievedData release];
 						[self getAllClassrooms];
 						break;
 					case CLASSROOM:
 						[self saveObject:CLASSROOM withData:allRecievedData];
+						[allRecievedData release];
 						[delegate2 passingCommand:@"allDataRecieved" sender:ALL message:nil data:nil];
 						break;
 					default:
@@ -163,6 +174,7 @@
 		}
 	}else {
 		[delegate2 passingCommand:@"dataRecievedFailed" sender:-1 message:@"There was a problem in downloading the data, please try again later" data:nil];
+		[allRecievedData release];
 	}
 	
 }
@@ -264,9 +276,6 @@
 	[mensas release];
 	[classrooms release];
 	[buildings release];
-	[dataConnection release];
-	[responseData release];
-	[allRecievedData release];
 	[super dealloc];
 }
 

@@ -21,7 +21,7 @@
 	UIColor *blue = [UIColor colorWithRed:.06 green:.165 blue:.60 alpha:1];
 	UIColor *grey = [UIColor colorWithRed:.43 green:.43 blue:.43 alpha:1];
 	
-	classroom = [[Classroom alloc]init];
+	//classroom = [[Classroom alloc]init];
 	classroom = c;
     self.backgroundColor = [UIColor whiteColor];
 	

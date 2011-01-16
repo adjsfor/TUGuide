@@ -85,7 +85,7 @@
 -(Todo *) addTodo {
 	NSInteger primaryKey = [Todo insertNewTodoIntoDatabase:database];
     Todo *newTodo = [[Todo alloc] initWithPrimaryKey:primaryKey database:database];
-	
+
 	[todos addObject:newTodo];
 	return newTodo;
 }

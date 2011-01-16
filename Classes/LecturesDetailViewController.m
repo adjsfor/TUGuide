@@ -10,7 +10,7 @@
 
 
 @implementation LecturesDetailViewController
-@synthesize detailView;
+@synthesize detailView,delegate2,classrooms;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -25,12 +25,12 @@
 
 
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView {
-	detailView = [[LecturesDetailView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
-	self.view = detailView;
-	
-	self.view.userInteractionEnabled = YES;
-}
+//- (void)loadView {
+//	detailView = [[LecturesDetailView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
+//	self.view = detailView;
+//	
+//	self.view.userInteractionEnabled = YES;
+//}
 
 
 /*
@@ -48,11 +48,38 @@
 }
 */
 
+- (LecturesDetailViewController *)initWithClassrooms:(NSMutableArray*)classes{
+	self = [super init];
+	if (self) {
+		self.classrooms = classes;
+	}
+	return self;
+}
+
+- (void)viewDidLoad{
+
+	XLog("pre");
+	//self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];	
+	//self.allowsEditing = YES;
+//	UIBarButtonItem * btn = [[UIBarButtonItem alloc] initWithTitle:@"Add" 
+//															 style:UIBarButtonItemStyleBordered 
+//															target:self action:@selector(addTodo:)];
+//	self.navigationItem.rightBarButtonItem = btn;
+	Classroom *c = [LecturesCalendarHelper searchClassroomByName:self.classrooms name:[self.event location]];
+	
+	XLog("Classroom %@",c);
+}
+
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
     
     // Release any cached data, images, etc. that aren't in use.
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+	[delegate2 passTo:self command:@"goDeselect" message:@"back"];
+	[super viewWillDisappear:animated];
 }
 
 - (void)viewDidUnload {

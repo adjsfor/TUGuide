@@ -11,13 +11,19 @@
 
 @implementation OrganizerViewController
 
-@synthesize segmentedController, lecturesViewController, coursesViewController, todoViewController,delegate2;
+@synthesize segmentedController, lecturesViewController, coursesViewController, todoViewController,delegate2, classrooms;
 
+- (id)initWithClassrooms:(NSMutableArray*)classes{
+	self = [self init];
+	if (self) {
+		self.classrooms = classes;
+	}
+	return self;
+}
 
 
 - (void) addTodo:(id)sender {
 	XLog();
-	
 	
 	if(self.todoViewController.todoView == nil) {
 		TodoDetailViewController *viewController = [[TodoDetailViewController alloc] init];
@@ -34,9 +40,13 @@
 }
 
 
+- (void)eventViewController:(EKEventViewController *)controller didCompleteWithAction:(EKEventViewAction)action{
+	XLog();
+}
+
 -(void)passTo:(UIViewController *)requestor command:(NSString *)cmd message:(NSString *)msg{
 	
-	XLog(@"->>>> @%",cmd);
+	XLog(" %@  ",cmd);
 	// start editing
 	if ([cmd isEqual:@"editTodo"]) {
 		[self.navigationController pushViewController:self.todoViewController.todoView animated:YES];
@@ -49,7 +59,15 @@
 	
 	// finish editing
 	if ([cmd isEqual:@"editEvent"]) {
+		self.lecturesViewController.detailViewController.delegate2 = self;
 		 [self.navigationController pushViewController:self.lecturesViewController.detailViewController animated:YES];
+		 
+	}
+	
+	// finish editing
+	if ([cmd isEqual:@"goDeselect"]) {
+		[self.lecturesViewController.tableView deselectRowAtIndexPath:self.lecturesViewController.tableView.indexPathForSelectedRow animated:YES];
+		
 	}
 		
 }
@@ -103,13 +121,12 @@ NSArray *allSubviews(UIView *aView)
 - (void)loadView {
 	
 	// create for segmented control
-	lecturesViewController = [[LecturesCalendarTableViewController alloc] init];
+	lecturesViewController = [[LecturesCalendarTableViewController alloc] initWithClassrooms:self.classrooms];
 	coursesViewController = [[CoursesViewController alloc] init];
 	todoViewController = [[ToDoViewController alloc] init];
 	
 	todoViewController.delegate = self;
 	lecturesViewController.delegate2 = self;
-	
 	
 	self.view = lecturesViewController.view;
 	
@@ -138,6 +155,7 @@ NSArray *allSubviews(UIView *aView)
 	[segmentedControl release];
 	
 	
+	
 }
 
 
@@ -160,6 +178,7 @@ NSArray *allSubviews(UIView *aView)
 	if(self.view == todoViewController.view){
 	[self.todoViewController.tableView reloadData];
 	}
+	
 	[super viewWillAppear:animated];
 }
 /*

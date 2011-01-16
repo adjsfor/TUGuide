@@ -39,7 +39,7 @@
 	UIWebView *locationPdf = [[UIWebView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 370.0)];
 	[locationPdf setScalesPageToFit:YES];
 
-	NSURL *targetURL = [NSURL URLWithString:@""];
+	NSURL *targetURL;
 	if ([c.pdf_link_cms isEqualToString:@""]) {
 		targetURL = [NSURL URLWithString:c.pdf_link_wegweiser];
 	}else{

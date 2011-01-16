@@ -10,7 +10,24 @@
 
 @implementation LecturesCalendarTableViewController
 
-@synthesize eventsList, eventStore, defaultCalendar, detailViewController, delegate2;
+@synthesize eventsList, eventStore, defaultCalendar, detailViewController, delegate2,classrooms;
+
+
+
+
+
+#pragma mark -
+#pragma mark Initilize
+
+- (LecturesCalendarTableViewController *)initWithClassrooms:(NSMutableArray*)classes{
+	self = [super initWithStyle:UITableViewStyleGrouped];
+	if (self) {
+		self.classrooms = classes;
+	}
+	return self;
+}
+
+
 
 
 #pragma mark -
@@ -30,27 +47,19 @@
 
 - (void)viewDidLoad {
 	self.title = @"Events List";
-	
 	// Initialize an event store object with the init method. Initilize the array for events.
 	self.eventStore = [[EKEventStore alloc] init];
-	
-	self.eventsList = [[NSMutableArray alloc] initWithArray:0];
-	
 	// Get the default calendar from store.
 	self.defaultCalendar = [self.eventStore defaultCalendarForNewEvents];
-	
 	//	Create an Add button 
 	UIBarButtonItem *addButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:
 									  UIBarButtonSystemItemAdd target:self action:@selector(addEvent:)];
 	self.navigationItem.rightBarButtonItem = addButtonItem;
 	[addButtonItem release];
-	
-	
+	//[self.eventsList addObjectsFromArray:[self fetchEventsForToday]];
+	self.eventsList = [self fetchEventsForToday];
 	self.navigationController.delegate = self;
-	
 	// Fetch today's event on selected calendar and put them into the eventsList array
-	[self.eventsList addObjectsFromArray:[self fetchEventsForToday]];
-	[self initTiss];
 	[self.tableView reloadData];
 	
 }
@@ -62,6 +71,7 @@
 
 
 - (void)viewWillAppear:(BOOL)animated {
+	XLog("deselect");
 	[self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:NO];	 
 }
 
@@ -75,74 +85,9 @@
 #pragma mark -
 #pragma mark Table view data source
 
-// Fetching events happening in the next 24 hours with a predicate, limiting to the default calendar 
-- (NSArray *)fetchEventsForToday {
-	
-	//EKEventStore * eventStore = [[EKEventStore alloc] init];
-	NSMutableArray * relevant_calendars =  [[NSMutableArray alloc]init];
-	
-	NSEnumerator *e = [[eventStore calendars] objectEnumerator];
-	EKCalendar *object;
-	while (object = (EKCalendar *)[e nextObject]) {
-		XLog(@"ES GEHT %@",object.title);
-		NSString *compare = object.title;
-		if ([compare hasPrefix:@"Tiss"]) {
-			XLog(@"->>>>>>>> %@",object.title);
-			[relevant_calendars addObject:object];
-		}
-	}
-	
-	
-	// Create the predicate's start and end dates.
-	CFGregorianDate gregorianStartDate, gregorianEndDate;
-	CFGregorianUnits startUnits = {0, 0, 0, 0, 0, 0};
-	CFGregorianUnits endUnits = {0, 0, 14, 0, 0, 0};
-	CFTimeZoneRef timeZone = CFTimeZoneCopySystem();
-	
-	gregorianStartDate = CFAbsoluteTimeGetGregorianDate(
-														CFAbsoluteTimeAddGregorianUnits(CFAbsoluteTimeGetCurrent(), timeZone, startUnits),
-														timeZone);
-	gregorianStartDate.hour = 0;
-	gregorianStartDate.minute = 0;
-	gregorianStartDate.second = 0;
-	
-	
-	
-	gregorianEndDate = CFAbsoluteTimeGetGregorianDate(
-													  
-													  CFAbsoluteTimeAddGregorianUnits(CFAbsoluteTimeGetCurrent(), timeZone, endUnits),
-													  timeZone);
-	gregorianEndDate.hour = 0;
-	gregorianEndDate.minute = 0;
-	gregorianEndDate.second = 0;
-	
-	
-	
-	NSDate* startDate =   [NSDate dateWithTimeIntervalSinceReferenceDate:CFGregorianDateGetAbsoluteTime(gregorianStartDate, timeZone)];
-	NSDate* endDate =   [NSDate dateWithTimeIntervalSinceReferenceDate:CFGregorianDateGetAbsoluteTime(gregorianEndDate, timeZone)];
-	
-	CFRelease(timeZone);
-	
-	// Create the predicate.
-	
-	NSPredicate *predicate = [eventStore predicateForEventsWithStartDate:startDate endDate:endDate calendars:relevant_calendars]; // eventStore is an instance variable.
-	
-	
-	
-	// Fetch all events that match the predicate.
-	
-	NSArray *events = [eventStore eventsMatchingPredicate:predicate];
-	
-	//[self setEvents:events];
-	
-	
-	NSEnumerator *e1 = [events objectEnumerator];
-	EKEvent *object1;
-	while (object1 = (EKEvent *)[e1 nextObject]) {
-		XLog(" ->>>>>>>  %@",object1.title);
-	}
-	
-	return events;
+// Fetching events happening in the next 15 days with a predicate, limiting to the default calendar 
+- (NSMutableArray *)fetchEventsForToday {
+	return [LecturesCalendarHelper getEKEventsFromCalendarWithPrefix:@"Tiss" startingDay:0 endingDay:15];
 }
 
 
@@ -150,9 +95,21 @@
 #pragma mark Table View
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return eventsList.count;
+	if (tableView == self.tableView) return [[self.eventsList objectAtIndex:section] count];
+	return 0;
 }
 
+- (NSString *)tableView:(UITableView *)aTableView titleForHeaderInSection:(NSInteger)section{
+	if (aTableView == self.tableView) 
+	{
+		if ([[self.eventsList objectAtIndex:section] count] == 0) return nil;
+		EKEvent * event = [[self.eventsList objectAtIndex:section] objectAtIndex:0];
+		NSDate * date = [event startDate];
+		NSString * string = [LecturesCalendarHelper getFormatedDate:date];
+		return [NSString stringWithFormat:@"%@", string];
+	}
+	else return nil;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	
@@ -171,7 +128,8 @@
 	cell.accessoryType = editableCellAccessoryType;
 	
 	// Get the event at the row selected and display it's title
-	cell.textLabel.text = [[self.eventsList objectAtIndex:indexPath.row] title];
+	//cell.textLabel.text = [[self.eventsList objectAtIndex:indexPath.row] title];
+	cell.textLabel.text = [[[self.eventsList objectAtIndex:indexPath.section] objectAtIndex:indexPath.row] title];
 	
 	return cell;
 }
@@ -182,15 +140,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {	
 	// Upon selecting an event, create an EKEventViewController to display the event.
-	self.detailViewController = [[EKEventViewController alloc] initWithNibName:nil bundle:nil];			
-	detailViewController.event = [self.eventsList objectAtIndex:indexPath.row];
-	
+	self.detailViewController = [[LecturesDetailViewController alloc] initWithClassrooms:self.classrooms];			
+	detailViewController.event = [[self.eventsList objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+	detailViewController.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];	
 	// Allow event editing.
 	detailViewController.allowsEditing = YES;
 	
 	//	Push detailViewController onto the navigation controller stack
 	//	If the underlying event gets deleted, detailViewController will remove itself from
 	//	the stack and clear its event property.
+	
+
+	//detailViewController.delegate = self;
 	
 	[delegate2 passTo:self command:@"editEvent" message:@"editingEvent"];
 	//[self.navigationController pushViewController:detailViewController animated:YES];
@@ -203,13 +164,18 @@
 
 - (void)navigationController:(UINavigationController *)navigationController 
 	  willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+	XLog("navigationController");
 	// if we are navigating back to the rootViewController, and the detailViewController's event
 	// has been deleted -  will title being NULL, then remove the events from the eventsList
 	// and reload the table view. This takes care of reloading the table view after adding an event too.
-	if (viewController == self && self.detailViewController.event.title == NULL) {
-		[self.eventsList removeObject:self.detailViewController.event];
+	NSIndexPath *selectedIndexPath = [[self tableView] indexPathForSelectedRow];
+	
+	if (self.detailViewController.event.title == NULL) {
+		[[self.eventsList objectAtIndex:selectedIndexPath.section] removeObject:self.detailViewController.event];		
 		[self.tableView reloadData];
 	}
+
+		 
 }
 
 
@@ -240,9 +206,10 @@
 // Overriding EKEventEditViewDelegate method to update event store according to user actions.
 - (void)eventEditViewController:(EKEventEditViewController *)controller 
 		  didCompleteWithAction:(EKEventEditViewAction)action {
-	
+	XLog();
 	NSError *error = nil;
 	EKEvent *thisEvent = controller.event;
+	NSIndexPath *selectedIndexPath = [[self tableView] indexPathForSelectedRow];
 	
 	switch (action) {
 		case EKEventEditViewActionCanceled:
@@ -254,8 +221,11 @@
 			// and reload table view.
 			// If the new event is being added to the default calendar, then update its 
 			// eventsList.
-			if (self.defaultCalendar ==  thisEvent.calendar) {
-				[self.eventsList addObject:thisEvent];
+			if (self.defaultCalendar ==  thisEvent.calendar) 
+				{
+					[[self.eventsList objectAtIndex:selectedIndexPath.section] addObject:thisEvent];
+					//[self.eventsList addObject:thisEvent];
+				
 			}
 			[controller.eventStore saveEvent:controller.event span:EKSpanThisEvent error:&error];
 			[self.tableView reloadData];
@@ -267,7 +237,8 @@
 			// If deleting an event from the currenly default calendar, then update its 
 			// eventsList.
 			if (self.defaultCalendar ==  thisEvent.calendar) {
-				[self.eventsList removeObject:thisEvent];
+				[[self.eventsList objectAtIndex:selectedIndexPath.section] addObject:thisEvent];
+				//[self.eventsList removeObject:thisEvent];
 			}
 			[controller.eventStore removeEvent:thisEvent span:EKSpanThisEvent error:&error];
 			[self.tableView reloadData];
@@ -289,11 +260,11 @@
 }
 
 
-- (void)initTiss{
-
-	
-	
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+	 return [self.eventsList count];
 }
+
+
 
 
 @end

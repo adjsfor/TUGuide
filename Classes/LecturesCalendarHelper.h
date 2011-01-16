@@ -15,9 +15,16 @@
 
 }
 +(void) displayMultiDimArray:(NSMutableArray*)array;
-+(NSString*)getFormatedDate:(NSDate*)date;
+
++(NSString*)getFormatedDate:(NSDate*)date formatter:(NSString*)format;
+
 +(Classroom *) searchClassroomByName:(NSMutableArray*)array name:(NSString*)string;
+
 +(NSMutableArray*) getEKEventsFromCalendarWithPrefix:(NSString*)calprefix
 										 startingDay:(int)startDay
 										   endingDay:(int)endDay;
+
++ (NSString *)stripDoubleSpaceFrom:(NSString *)str;
+
++ (BOOL)compareTwoFirstWords:(NSString *)first second:(NSString*)second;
 @end

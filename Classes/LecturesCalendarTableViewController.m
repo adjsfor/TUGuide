@@ -13,9 +13,6 @@
 @synthesize eventsList, eventStore, defaultCalendar, detailViewController, delegate2,classrooms;
 
 
-
-
-
 #pragma mark -
 #pragma mark Initilize
 
@@ -47,8 +44,10 @@
 
 - (void)viewDidLoad {
 	self.title = @"Events List";
+	
 	// Initialize an event store object with the init method. Initilize the array for events.
 	self.eventStore = [[EKEventStore alloc] init];
+
 	// Get the default calendar from store.
 	self.defaultCalendar = [self.eventStore defaultCalendarForNewEvents];
 	//	Create an Add button 
@@ -58,6 +57,7 @@
 	[addButtonItem release];
 	//[self.eventsList addObjectsFromArray:[self fetchEventsForToday]];
 	self.eventsList = [self fetchEventsForToday];
+	//XLog(" %i ",[self.eventsList count]);
 	self.navigationController.delegate = self;
 	// Fetch today's event on selected calendar and put them into the eventsList array
 	[self.tableView reloadData];
@@ -105,7 +105,7 @@
 		if ([[self.eventsList objectAtIndex:section] count] == 0) return nil;
 		EKEvent * event = [[self.eventsList objectAtIndex:section] objectAtIndex:0];
 		NSDate * date = [event startDate];
-		NSString * string = [LecturesCalendarHelper getFormatedDate:date];
+		NSString * string = [LecturesCalendarHelper getFormatedDate:date formatter:@"EEEE dd/MM/yyyy"];
 		return [NSString stringWithFormat:@"%@", string];
 	}
 	else return nil;
@@ -115,13 +115,13 @@
 	
 	static NSString *CellIdentifier = @"Cell";
 	
-	// Add disclosure triangle to cell
+	// Add disclosure triangle to cell hh:mma
 	UITableViewCellAccessoryType editableCellAccessoryType =UITableViewCellAccessoryDisclosureIndicator;
 	
 	
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if (cell == nil) {
-		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault 
+		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle 
 									   reuseIdentifier:CellIdentifier] autorelease];
 	}
 	
@@ -129,8 +129,16 @@
 	
 	// Get the event at the row selected and display it's title
 	//cell.textLabel.text = [[self.eventsList objectAtIndex:indexPath.row] title];
-	cell.textLabel.text = [[[self.eventsList objectAtIndex:indexPath.section] objectAtIndex:indexPath.row] title];
+	EKEvent *e = [[self.eventsList objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
 	
+	
+	NSDate * dateStart = [e startDate];
+	NSDate * dateEnd = [e endDate];
+	NSString * date1 = [LecturesCalendarHelper getFormatedDate:dateStart formatter:@"hh:mm"];
+	NSString * date2 = [LecturesCalendarHelper getFormatedDate:dateEnd formatter:@"hh:mm"];
+	
+	cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@", date1, date2];
+	cell.detailTextLabel.text = [e title];
 	return cell;
 }
 
@@ -140,8 +148,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {	
 	// Upon selecting an event, create an EKEventViewController to display the event.
-	self.detailViewController = [[LecturesDetailViewController alloc] initWithClassrooms:self.classrooms];			
+	self.detailViewController = [[LecturesDetailViewController alloc] initWithClassrooms:self.classrooms];	
+	
 	detailViewController.event = [[self.eventsList objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+	//XLog(" %s ", [detailViewController.event location]);
 	detailViewController.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];	
 	// Allow event editing.
 	detailViewController.allowsEditing = YES;

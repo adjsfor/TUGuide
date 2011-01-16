@@ -8,23 +8,80 @@
 
 #import "LecturesCalendarHelper.h"
 
-
 @implementation LecturesCalendarHelper
 
+// smart algorithmus for searching because of TISS and Wegweiser inconsistence
+// 1. equals
+// 2. prefix -> two words
+// 3. prefix reverse -> two words
+// 4. two words only
+// 5. suffix (only if first 4 fail)
 +(Classroom *) searchClassroomByName:(NSMutableArray*)array name:(NSString*)string{
+	//XLog("incoming search %@ ", string);
 	Classroom *c;
-	if (array != nil) {
-		for (int i = 0; i<[array count]; i++) {
+	NSString *temp;
+	NSRange match;
+	if (array != nil) { 
+		for (int i = 0; i<[array count]; i++) { // loop all classrooms
 			c = [array objectAtIndex:i];
-			if ([[c name] hasPrefix:string]) {
-				XLog("--searching classroom %@ ", [c name]);
+			temp = [self stripDoubleSpaceFrom:[c name]]; // remove double spaces in the name of classes
+			//XLog("-->match<-- -%@- -%@- ", temp, string);
+			
+			if ([string isEqual:temp]) { // check other side prefix
+				match = [string rangeOfString: temp];
+				XLog("found match 1:1 %@ match: %i ", temp , match.length);
+				return c;
+				break;
+			}
+			
+			if ([string hasPrefix:temp]) { // check other side prefix
+				match = [string rangeOfString: temp];
+				if([self compareTwoFirstWords:temp second:string]){
+					XLog("--found match prefix %@ match: %i ", temp , match.length);
+					return c;
+					break;
+				}
+			}
+			
+			if ([temp hasPrefix:string]) { // check one side prefix
+				if([self compareTwoFirstWords:temp second:string]){
+					match = [string rangeOfString: temp];
+					XLog("--found match prefix %@ match: %i ", temp , match.length);
+					return c;
+					break;
+				}
+			}
+			
+			if([self compareTwoFirstWords:temp second:string]){
+				XLog("--found two words %@ ", temp );
+				return c;
 				break;
 			}
 
 		}
+		
+		// this is unsure but if 3 first fail then suffix is going 
+		for (int i = 0; i<[array count]; i++) { // loop for suffix
+			c = [array objectAtIndex:i];
+			temp = [self stripDoubleSpaceFrom:[c name]];
+			//XLog("-->match<-- -%@- -%@- ", temp, string);
+			if ([string hasSuffix:temp]) { // check other side prefix
+				match = [string rangeOfString: temp];
+					XLog("--found match suffix %@ match: %i ", temp , match.length);
+					return c;
+					break;
+			}
+			
+			if ([temp hasSuffix:string]) { // check one side prefix
+					match = [string rangeOfString: temp];
+					XLog("--found match suffix %@ match: %i ", temp , match.length);
+					return c;
+					break;
+			}
 		}
-	XLog("searching classroom %@ ", [c name]);
-	return c;
+	}
+	XLog("nothing found in search");
+	return nil;
 }
 
 +(void) displayMultiDimArray:(NSMutableArray*)array{
@@ -36,10 +93,10 @@
 	}
 }
 
-+(NSString*)getFormatedDate:(NSDate*)date{
++(NSString*)getFormatedDate:(NSDate*)date formatter:(NSString*)format{
 	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 	[dateFormatter setDateStyle:NSDateFormatterMediumStyle];
-	[dateFormatter setDateFormat:@"EEEE dd/MM/yyyy"];
+	[dateFormatter setDateFormat:format];
 	
 	NSString *formattedDateString = [dateFormatter stringFromDate:date];
 	
@@ -143,12 +200,43 @@
 		compare = formattedDateString;
 		
 	}
-	
+	//[eventStore release];
 	[dateFormatter release];
 	return section_events;
 	
 }
 
++ (NSString *)stripDoubleSpaceFrom:(NSString *)str {
+    while ([str rangeOfString:@"  "].location != NSNotFound) {
+        str = [str stringByReplacingOccurrencesOfString:@"  " withString:@" "];
+    }
+    return str;
+}
+
++ (BOOL)compareTwoFirstWords:(NSString *)first second:(NSString*)second{
+	NSArray *chunks1 = [first componentsSeparatedByString: @" "];
+	NSArray *chunks2 = [second componentsSeparatedByString: @" "];
+	if(chunks1!=nil && chunks2!=nil){
+		if([chunks1 count]>1 && [chunks2 count]>1){
+			NSString * f1 = [chunks1 objectAtIndex:0];
+			NSString * f2 = [chunks1 objectAtIndex:1];
+			NSString * s1 = [chunks2 objectAtIndex:0];
+			NSString * s2 = [chunks2 objectAtIndex:1];
+			if ([f1 isEqual:s1] && [f2 isEqual:s2]) {
+				return YES;
+			}else {
+				return NO;
+			}
+
+		}else{
+			return NO;
+		}
+	}else {
+		return NO;
+	}
+
+
+}
 
 
 

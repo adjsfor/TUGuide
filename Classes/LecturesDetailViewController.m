@@ -1,16 +1,16 @@
-    //
+//
 //  LecturesDetailViewController.m
 //  TUGuide
 //
-//  Created by Martin Langeder on 15.12.10.
-//  Copyright 2010 7359. All rights reserved.
+//  Created by Ivo Galic
+//  Copyright Galic Design All rights reserved.
 //
 
 #import "LecturesDetailViewController.h"
 
 
 @implementation LecturesDetailViewController
-@synthesize detailView,delegate2,classrooms;
+@synthesize delegate2,classrooms,classroom;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 /*
@@ -56,18 +56,66 @@
 	return self;
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+	//if (tableView == self.tableView) return [[self.eventsList objectAtIndex:section] count];
+	return 3;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+	
+	if(indexPath.row < 2 || classroom == nil) {
+	return	[super tableView:tableView cellForRowAtIndexPath:indexPath];
+	}
+	
+	// Add my cell Location , Classroom PDF , I missed it?
+	
+	static NSString *CellIdentifier = @"Cell";
+	
+	
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	if (cell == nil) {
+		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle 
+									   reuseIdentifier:CellIdentifier] autorelease];
+	}
+
+	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+	
+	// Get the event at the row selected and display it's title
+	//cell.textLabel.text = [[self.eventsList objectAtIndex:indexPath.row] title];
+	if(indexPath.row == 2){
+		cell.textLabel.text = @"Display classroom location";
+		cell.detailTextLabel.text = [classroom name];
+	}
+
+	
+	return cell;
+}
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
+	XLog(" %i ", indexPath.row);
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    LocationDetailViewController *detailViewController = [[LocationDetailViewController alloc] initWithClassroom:self.classroom];
+	detailViewController.title = classroom.name;
+	// ...
+	// Pass the selected object to the new view controller.
+    [self.navigationController pushViewController:detailViewController animated:YES];
+    [detailViewController release];	
+}
+
+
+
+
 - (void)viewDidLoad{
 
-	XLog("pre");
 	//self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];	
 	//self.allowsEditing = YES;
-//	UIBarButtonItem * btn = [[UIBarButtonItem alloc] initWithTitle:@"Add" 
-//															 style:UIBarButtonItemStyleBordered 
-//															target:self action:@selector(addTodo:)];
-//	self.navigationItem.rightBarButtonItem = btn;
-	Classroom *c = [LecturesCalendarHelper searchClassroomByName:self.classrooms name:[self.event location]];
+	self.title = @"Lecture View";
+
+	classroom = [LecturesCalendarHelper searchClassroomByName:self.classrooms name:[self.event location]];
 	
-	XLog("Classroom %@",c);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -80,6 +128,13 @@
 - (void)viewWillDisappear:(BOOL)animated{
 	[delegate2 passTo:self command:@"goDeselect" message:@"back"];
 	[super viewWillDisappear:animated];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+	XLog();
+	[[super tableView] deselectRowAtIndexPath:[[super tableView] indexPathForSelectedRow] animated:YES];
+	//[tableView deselectRowAtIndexPath:super.tableView.indexPathForSelectedRow animated:YES];
+	[super viewWillAppear:animated];
 }
 
 - (void)viewDidUnload {

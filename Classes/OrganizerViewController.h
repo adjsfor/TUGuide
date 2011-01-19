@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "LecturesViewController.h"
-#import "CoursesViewController.h"
 #import "ToDoViewController.h"
 #import "UIViewControllerDelegate.h"
 #import "MessagePassProtocol.h"
@@ -18,7 +17,6 @@
 @interface OrganizerViewController : UIViewController <UIViewControllerDelegate,UINavigationControllerDelegate,EKEventViewDelegate> {
 	UISegmentedControl *segmentedController;
 	LecturesCalendarTableViewController *lecturesViewController;
-	CoursesViewController *coursesViewController;
 	ToDoViewController *todoViewController;
 	id <MessagePassProtocol> delegate2;
 	NSMutableArray *classrooms;
@@ -26,7 +24,6 @@
 
 @property (nonatomic, retain) UISegmentedControl *segmentedController;
 @property (nonatomic, retain) LecturesCalendarTableViewController *lecturesViewController;
-@property (nonatomic, retain) CoursesViewController *coursesViewController;
 @property (nonatomic, retain) ToDoViewController *todoViewController;
 @property (nonatomic, retain) NSMutableArray *classrooms;
 @property (nonatomic,assign) id <MessagePassProtocol> delegate2;

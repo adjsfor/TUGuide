@@ -88,7 +88,10 @@
 	for (int i = 0; i<[array count]; i++) {
 		XLog("----> %i", i);
 		for (int n = 0; n<[[array objectAtIndex:i] count]; n++) {
-			XLog("--------> %i %@", n,[[array objectAtIndex:i] objectAtIndex:n]);
+			EKEvent * ek;
+			ek = [[array objectAtIndex:i] objectAtIndex:n];
+			XLog("--------> %@ ",[ek eventIdentifier] );
+			//XLog("--------> %i %@", n,[[array objectAtIndex:i] objectAtIndex:n]);
 		}
 	}
 }
@@ -200,6 +203,8 @@
 		compare = formattedDateString;
 		
 	}
+	
+	//[self displayMultiDimArray:section_events];
 	//[eventStore release];
 	[dateFormatter release];
 	return section_events;

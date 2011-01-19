@@ -11,7 +11,7 @@
 
 @implementation OrganizerViewController
 
-@synthesize segmentedController, lecturesViewController, coursesViewController, todoViewController,delegate2, classrooms;
+@synthesize segmentedController, lecturesViewController, todoViewController,delegate2, classrooms;
 
 -(OrganizerViewController*)initWithClassrooms:(NSMutableArray*)classes{
 	self = [self init];
@@ -85,11 +85,6 @@
 			self.navigationItem.rightBarButtonItem = nil;
 			break;
 		case 1:
-			XLog(@"Switch to courses" );	
-			self.navigationItem.rightBarButtonItem = nil;
-			self.view = coursesViewController.view;
-			break;
-		case 2:
 			XLog(@"Switch to todo's" );
 			self.view = todoViewController.view;
 			UIBarButtonItem * btn = [[UIBarButtonItem alloc] initWithTitle:@"Add" 
@@ -122,7 +117,6 @@ NSArray *allSubviews(UIView *aView)
 	
 	// create for segmented control
 	lecturesViewController = [[LecturesCalendarTableViewController alloc] initWithClassrooms:self.classrooms];
-	coursesViewController = [[CoursesViewController alloc] init];
 	todoViewController = [[ToDoViewController alloc] init];
 	
 	todoViewController.delegate = self;
@@ -134,7 +128,7 @@ NSArray *allSubviews(UIView *aView)
 	
 	
 	// Create the segmented control. Choose one of the three styles
-	NSArray *buttonNames = [NSArray arrayWithObjects:@"Lectures", @"Courses", @"Todo", nil];
+	NSArray *buttonNames = [NSArray arrayWithObjects:@"Lectures", @"Todo", nil];
 	UISegmentedControl* segmentedControl = [[UISegmentedControl alloc] initWithItems:buttonNames];
 	segmentedControl.segmentedControlStyle = UIBarStyleBlackTranslucent; 
 	segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleWidth;

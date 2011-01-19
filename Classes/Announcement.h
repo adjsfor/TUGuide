@@ -11,29 +11,28 @@
 
 
 @interface Announcement : NSObject {
-	int announcementId;
-	bool announced;
-	Lecture *lectureId;
-	int userId;
+	
 	NSString *message;
 	NSString *report;
+	
+	int id;
+	NSString *when_announced;
+	int lecture_id;
+	int user_id;
+	int uuid;
 }
 
-@property (nonatomic) int announcementId;
-@property (nonatomic) bool announced;
-@property (nonatomic,retain) Lecture *lectureId;
-@property (nonatomic) int userId;
+@property (nonatomic) int id;
+@property (nonatomic) int lecture_id;
+@property (nonatomic) int user_id;
+@property (nonatomic) int uuid;
+
+@property (nonatomic,retain) NSString *when_announced;
 @property (nonatomic,retain) NSString *message;
 @property (nonatomic,retain) NSString *report;
 
 
--(id)init;
--(id)initWithArguments:(int)announcementId
-		 withAnnounced:(bool)announced
-		 withLectureId:(Lecture *)lectureId
-			withUserId:(int)userId
-		   withMessage:(NSString *)message
-			withReport:(NSString *)report;
+
 + (id)customClassWithProperties:(NSDictionary *)properties;
 - (id)initWithProperties:(NSDictionary *)properties;
 @end

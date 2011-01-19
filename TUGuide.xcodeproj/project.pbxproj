@@ -57,6 +57,7 @@
 		8E8D5A1512A15C450096E52C /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D5A1412A15C450096E52C /* Restaurant.m */; };
 		8E90545E12E7716700D170CB /* FriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E90545D12E7716700D170CB /* FriendListViewController.m */; };
 		8E90551D12E78D6700D170CB /* getFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E90551C12E78D6700D170CB /* getFriends.m */; };
+		8E90558412E7A41800D170CB /* ServeriMissedIt.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E90558312E7A41800D170CB /* ServeriMissedIt.m */; };
 		8EAFF11A12A0057300C9BCA3 /* LogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAFF11912A0057300C9BCA3 /* LogicTests.m */; };
 		8EAFF15012A0059E00C9BCA3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EAFF11B12A0058300C9BCA3 /* SenTestingKit.framework */; };
 		8EBD4CEB12A47164008D9B56 /* Wizard.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD4CEA12A47164008D9B56 /* Wizard.m */; };
@@ -202,6 +203,8 @@
 		8E90545D12E7716700D170CB /* FriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendListViewController.m; sourceTree = "<group>"; };
 		8E90551B12E78D6700D170CB /* getFriends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getFriends.h; sourceTree = "<group>"; };
 		8E90551C12E78D6700D170CB /* getFriends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getFriends.m; sourceTree = "<group>"; };
+		8E90558212E7A41800D170CB /* ServeriMissedIt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServeriMissedIt.h; sourceTree = "<group>"; };
+		8E90558312E7A41800D170CB /* ServeriMissedIt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServeriMissedIt.m; sourceTree = "<group>"; };
 		8EAFF11112A0054D00C9BCA3 /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EAFF11212A0054D00C9BCA3 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		8EAFF11812A0057300C9BCA3 /* LogicTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogicTests.h; sourceTree = "<group>"; };
@@ -658,6 +661,8 @@
 				8E78159512B8F69200DF4A8B /* ServerCreateUser.m */,
 				8E90551B12E78D6700D170CB /* getFriends.h */,
 				8E90551C12E78D6700D170CB /* getFriends.m */,
+				8E90558212E7A41800D170CB /* ServeriMissedIt.h */,
+				8E90558312E7A41800D170CB /* ServeriMissedIt.m */,
 			);
 			name = "Server Access";
 			sourceTree = "<group>";
@@ -996,6 +1001,7 @@
 				8E90545E12E7716700D170CB /* FriendListViewController.m in Sources */,
 				8E90551D12E78D6700D170CB /* getFriends.m in Sources */,
 				FAE3B5C412E79C6600215763 /* IMissedViewController.m in Sources */,
+				8E90558412E7A41800D170CB /* ServeriMissedIt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,7 +23,6 @@
 		4B38C1C212CA609A00E5C5D4 /* 40-inbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B38C1B512CA609A00E5C5D4 /* 40-inbox.png */; };
 		4B4CF92012D7CA9000D1368F /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */; };
 		4B4CF92412D7CB3200D1368F /* StubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4CF92312D7CB3200D1368F /* StubViewController.m */; };
-		4B4CFAE812D7D4A500D1368F /* IMissedItViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4CFAE712D7D4A500D1368F /* IMissedItViewController.m */; };
 		4B4E17F412E778B20096CE7E /* done.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B4E17F312E778B20096CE7E /* done.png */; };
 		4B4E17F612E778CC0096CE7E /* inprogress.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B4E17F512E778CC0096CE7E /* inprogress.png */; };
 		4B505E0C12E2266D00BF44E5 /* LecturesCalendarHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B505E0B12E2266D00BF44E5 /* LecturesCalendarHelper.m */; };
@@ -110,6 +109,7 @@
 		FAD4AB3412A0DA1800817DCA /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD4AB3312A0DA1800817DCA /* icon.png */; };
 		FAE3B50712E78FCD00215763 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE3B50612E78FCD00215763 /* CoreLocation.framework */; };
 		FAE3B54312E793D800215763 /* ButtonDark.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE3B54212E793D800215763 /* ButtonDark.png */; };
+		FAE3B5C412E79C6600215763 /* IMissedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE3B5C312E79C6600215763 /* IMissedViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -137,8 +137,6 @@
 		4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
 		4B4CF92212D7CB3200D1368F /* StubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StubViewController.h; sourceTree = "<group>"; };
 		4B4CF92312D7CB3200D1368F /* StubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StubViewController.m; sourceTree = "<group>"; };
-		4B4CFAE612D7D4A500D1368F /* IMissedItViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMissedItViewController.h; sourceTree = "<group>"; };
-		4B4CFAE712D7D4A500D1368F /* IMissedItViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMissedItViewController.m; sourceTree = "<group>"; };
 		4B4E17F312E778B20096CE7E /* done.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = done.png; sourceTree = "<group>"; };
 		4B4E17F512E778CC0096CE7E /* inprogress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inprogress.png; sourceTree = "<group>"; };
 		4B505E0A12E2266D00BF44E5 /* LecturesCalendarHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LecturesCalendarHelper.h; sourceTree = "<group>"; };
@@ -271,6 +269,8 @@
 		FAD4AB3312A0DA1800817DCA /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		FAE3B50612E78FCD00215763 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FAE3B54212E793D800215763 /* ButtonDark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonDark.png; sourceTree = "<group>"; };
+		FAE3B5C212E79C6600215763 /* IMissedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMissedViewController.h; sourceTree = "<group>"; };
+		FAE3B5C312E79C6600215763 /* IMissedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMissedViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -429,7 +429,6 @@
 		4B38C1C612CA775A00E5C5D4 /* iMissedIt */ = {
 			isa = PBXGroup;
 			children = (
-				4B38C1E912CA7DD400E5C5D4 /* Misc */,
 				4B38C1E812CA7DD000E5C5D4 /* View */,
 				4B38C1E712CA7DC800E5C5D4 /* ViewController */,
 			);
@@ -579,6 +578,8 @@
 		4B38C1E712CA7DC800E5C5D4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FAE3B5C212E79C6600215763 /* IMissedViewController.h */,
+				FAE3B5C312E79C6600215763 /* IMissedViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -588,15 +589,6 @@
 			children = (
 			);
 			name = View;
-			sourceTree = "<group>";
-		};
-		4B38C1E912CA7DD400E5C5D4 /* Misc */ = {
-			isa = PBXGroup;
-			children = (
-				4B4CFAE612D7D4A500D1368F /* IMissedItViewController.h */,
-				4B4CFAE712D7D4A500D1368F /* IMissedItViewController.m */,
-			);
-			name = Misc;
 			sourceTree = "<group>";
 		};
 		4B4CF92112D7CAFA00D1368F /* HelperStubs */ = {
@@ -983,7 +975,6 @@
 				FA9239DA12D3943700A3048D /* LocationViewController.m in Sources */,
 				4B4CF92012D7CA9000D1368F /* FriendsViewController.m in Sources */,
 				4B4CF92412D7CB3200D1368F /* StubViewController.m in Sources */,
-				4B4CFAE812D7D4A500D1368F /* IMissedItViewController.m in Sources */,
 				FACF14AB12D7E4D20087B05C /* MapListDetailView.m in Sources */,
 				FACF14AE12D7E50F0087B05C /* MapListDetailViewController.m in Sources */,
 				FACF151D12D7EC380087B05C /* MensaViewController.m in Sources */,
@@ -1004,6 +995,7 @@
 				4BDD144412E5F0920010FE4A /* OrganizerViewController.m in Sources */,
 				8E90545E12E7716700D170CB /* FriendListViewController.m in Sources */,
 				8E90551D12E78D6700D170CB /* getFriends.m in Sources */,
+				FAE3B5C412E79C6600215763 /* IMissedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

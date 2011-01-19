@@ -18,7 +18,7 @@
 #import "DataPassProtocol.h"
 #import "FriendsViewController.h"
 #import "MensaViewController.h"
-#import "IMissedItViewController.h"
+#import "IMissedViewController.h"
 #import "User.h"
 
 @interface TUGuideAppDelegate : NSObject <UIApplicationDelegate,UINavigationControllerDelegate,MessagePassProtocol,DataPassProtocol> {
@@ -37,7 +37,7 @@
 	MapViewController *mapViewController;
 	FriendsViewController *friendViewController ;
 	MensaViewController *mensaViewController;
-	IMissedItViewController *missViewController;
+	IMissedViewController *missViewController;
 	
 	//arrays for received data
 	NSMutableArray *buildingsArray;
@@ -65,7 +65,7 @@
 @property (nonatomic, retain) MapViewController *mapViewController;
 @property (nonatomic, retain) FriendsViewController *friendViewController ;
 @property (nonatomic, retain) MensaViewController *mensaViewController;
-@property (nonatomic, retain) IMissedItViewController *missViewController;
+@property (nonatomic, retain) IMissedViewController *missViewController;
 
 @property (nonatomic, retain) NSMutableArray *buildingsArray;
 @property (nonatomic, retain) NSMutableArray *classroomsArray;

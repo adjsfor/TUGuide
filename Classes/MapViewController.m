@@ -99,17 +99,6 @@
 	[segmentedControl release];
 }
 
--(void)gotoLocation
-{
-	MKCoordinateRegion newRegion;
-    newRegion.center.latitude = 48.199047; //;
-    newRegion.center.longitude = 16.36994;
-    newRegion.span.latitudeDelta = 0.00512872;
-    newRegion.span.longitudeDelta = 0.00509863;
-	
-    [self.mapView setRegion:newRegion animated:YES];
-}
-
 - (void)mapView:(MKMapView *)mapView regionWillChangeAnimated:(BOOL)animated
 {
 	

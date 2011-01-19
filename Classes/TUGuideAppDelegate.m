@@ -202,7 +202,7 @@
 	UIViewAutoresizingFlexibleBottomMargin;
 	[activityIndicatorView startAnimating];
 	
-	activityIndicatorView.frame = CGRectMake(135.0, 400.0, 50.0, 50.0);
+	activityIndicatorView.frame = CGRectMake(135.0, 400.0, 35.0, 35.0);
 	
 	UILabel *text = [[UILabel alloc] initWithFrame:CGRectMake(135.0, 400.0, 200.0, 50.0)];
 	[text setText:@"Loading data form server...."];

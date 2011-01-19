@@ -8,6 +8,10 @@
 
 #import "TodoCell.h"
 
+#define TODO_RED_COLOR	[UIColor colorWithRed:0.9020f green:0.7490f blue:0.7529f alpha:1.0f]
+#define TODO_YELLOW_COLOR	[UIColor colorWithRed:0.8980f green:0.8588f blue:0.7608f alpha:1.0f]
+#define TODO_GREEN_COLOR	[UIColor colorWithRed:0.6549f green:0.7961f blue:0.5647f alpha:1.0f]
+
 static UIImage *priority1Image = nil;
 static UIImage *priority2Image = nil;
 static UIImage *priority3Image = nil;
@@ -25,9 +29,10 @@ static UIImage *priority3Image = nil;
 {
     // The priority images are cached as part of the class, so they need to be
     // explicitly retained.
-    priority1Image = [[UIImage imageNamed:@"red.png"] retain];
-    priority2Image = [[UIImage imageNamed:@"yellow.png"] retain];
-	priority3Image = [[UIImage imageNamed:@"green.png"] retain];
+
+    priority1Image = [[UIImage imageNamed:@"done.png"] retain];
+    priority2Image = [[UIImage imageNamed:@"incomplete.png"] retain];
+	priority3Image = [[UIImage imageNamed:@"done.png"] retain];
 	
 }
 
@@ -35,12 +40,15 @@ static UIImage *priority3Image = nil;
 	if (self = [super initWithFrame:frame reuseIdentifier:reuseIdentifier]) {
         UIView *myContentView = self.contentView;
         
-		self.todoPriorityImageView = [[UIImageView alloc] initWithImage:priority1Image];
+		self.todoPriorityImageView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 5, 25, 25)];
+		self.todoPriorityImageView.image = priority1Image;
 		[myContentView addSubview:self.todoPriorityImageView];
         [self.todoPriorityImageView release];
         
         self.todoTextLabel = [self newLabelWithPrimaryColor:[UIColor blackColor] 
-											  selectedColor:[UIColor whiteColor] fontSize:14.0 bold:YES]; 
+											  selectedColor:[UIColor whiteColor] fontSize:17.0 bold:YES]; 
+		self.todoTextLabel.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.0]; 
+		
 		self.todoTextLabel.textAlignment = UITextAlignmentLeft; // default
 		[myContentView addSubview:self.todoTextLabel];
 		[self.todoTextLabel release];
@@ -70,17 +78,25 @@ static UIImage *priority3Image = nil;
     todo = newTodo;
     
     self.todoTextLabel.text = newTodo.text;
-    self.todoPriorityImageView.image = [self imageForPriority:newTodo.priority];
-    
+    self.todoPriorityImageView.image = [self imageForComplete:newTodo.status];
+
 	switch(newTodo.priority) {
 		case 2:
-			self.todoPriorityLabel.text = @"Medium";
+			//self.todoPriorityLabel.text = @"Medium";
+			self.backgroundColor = TODO_YELLOW_COLOR;
+			//todoTextLabel.backgroundColor = TODO_YELLOW_COLOR;
+			todoTextLabel.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.0]; 
+
 			break;
 		case 3:
-			self.todoPriorityLabel.text = @"Low";
+			//self.todoPriorityLabel.text = @"Low";
+			self.backgroundColor = TODO_GREEN_COLOR;
+			todoTextLabel.backgroundColor = TODO_GREEN_COLOR;
 			break;
 		default:
-			self.todoPriorityLabel.text = @"High";
+			//self.todoPriorityLabel.text = @"High";
+			self.backgroundColor = TODO_RED_COLOR;
+			todoTextLabel.backgroundColor = TODO_RED_COLOR;
 			break;
 	}
 	
@@ -91,11 +107,11 @@ static UIImage *priority3Image = nil;
 
 - (void)layoutSubviews {
     
-#define LEFT_COLUMN_OFFSET 1
+#define LEFT_COLUMN_OFFSET 5
 #define LEFT_COLUMN_WIDTH 50
 	
-#define RIGHT_COLUMN_OFFSET 75
-#define RIGHT_COLUMN_WIDTH 240
+#define RIGHT_COLUMN_OFFSET 35
+#define RIGHT_COLUMN_WIDTH 255
 	
 #define UPPER_ROW_TOP 4
     
@@ -108,7 +124,7 @@ static UIImage *priority3Image = nil;
 		CGRect frame;
         
         // Place the Text label.
-		frame = CGRectMake(boundsX +RIGHT_COLUMN_OFFSET  , UPPER_ROW_TOP, RIGHT_COLUMN_WIDTH, 13);
+		frame = CGRectMake(boundsX +RIGHT_COLUMN_OFFSET  , UPPER_ROW_TOP, RIGHT_COLUMN_WIDTH, 20);
 		frame.origin.y = 15;
 		self.todoTextLabel.frame = frame;
         
@@ -138,7 +154,7 @@ static UIImage *priority3Image = nil;
 	if (selected) {
 	    backgroundColor = [UIColor clearColor];
 	} else {
-		backgroundColor = [UIColor whiteColor];
+		backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.0];
 	}
     
 	self.todoTextLabel.backgroundColor = backgroundColor;
@@ -172,19 +188,15 @@ static UIImage *priority3Image = nil;
 	return newLabel;
 }
 
-- (UIImage *)imageForPriority:(NSInteger)priority
+- (UIImage *)imageForComplete:(NSInteger)complete
 {
-	switch (priority) {
-		case 2:
-			return priority2Image;
-			break;
-		case 3:
-			return priority3Image;
-			break;
-		default:
-			return priority1Image;
-			break;
+	//XLog("===== %i",complete);
+	if (complete == 0 ) {
+		return priority2Image;
+	}else {
+		return priority1Image;
 	}
+	
 	return nil;
 }
 

@@ -43,7 +43,7 @@
     // Open the database. The database was prepared outside the application.
     if (sqlite3_open([path UTF8String], &database) == SQLITE_OK) {
         // Get the primary key for all books.
-        const char *sql = "SELECT pk FROM todo";
+        const char *sql = "SELECT pk FROM todo ORDER BY priority";
         sqlite3_stmt *statement;
         // Preparing a statement compiles the SQL query into a byte-code program in the SQLite library.
         // The third parameter is either the length of the SQL string or -1 to read up to the first null terminator.        

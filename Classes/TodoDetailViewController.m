@@ -81,6 +81,7 @@
 }
 
 - (void) updateStatus:(id) sender {
+	XLog(" %i ",self.todo.status);
 	if(self.todo.status == 0) {
 		[self.todoButton setTitle:@"Mark As In Progress" forState:UIControlStateNormal];
 		[self.todoButton setTitle:@"Mark As In Progress" forState:UIControlStateHighlighted];
@@ -106,7 +107,7 @@
 }
 
 - (void) viewWillDisappear:(BOOL)animated{
-	[self updateStatus:self];
+	//[self updateStatus:self];
 	[self updatePriority:self];
 	[self updateText:self];
 	[todo dehydrate]; // update the data in database

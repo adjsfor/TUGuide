@@ -13,7 +13,7 @@
 
 @synthesize segmentedController, lecturesViewController, todoViewController,delegate2, classrooms;
 
--(OrganizerViewController*)initWithClassrooms:(NSMutableArray*)classes{
+-(OrganizerViewController *)initWithClassrooms:(NSMutableArray*)classes{
 	self = [self init];
 	if (self) {
 		self.classrooms = classes;

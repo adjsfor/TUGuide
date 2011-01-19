@@ -67,8 +67,14 @@
 	mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
 	mapView.mapType = MKMapTypeStandard;
 	mapView.delegate = self;
-	[self gotoLocation];
+	mapView.showsUserLocation = YES;
+	//[self gotoLocation];
 	[self.view addSubview:mapView];
+	
+	CLLocationManager *locationManager=[[CLLocationManager alloc] init];
+	locationManager.delegate=self;
+	
+	[locationManager startUpdatingLocation];
 	
 	
 	[self.mapView removeAnnotations:self.mapView.annotations];  // remove any annotations that exist
@@ -125,9 +131,28 @@
 	[classViewController release];
 }
 
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
+	
+	location = newLocation.coordinate;
+	//One location is obtained.. just zoom to that location
+	
+	MKCoordinateRegion region;
+	region.center=location;
+	//Set Zoom level using Span
+	MKCoordinateSpan span;
+	span.latitudeDelta=.005;
+	span.longitudeDelta=.005;
+	region.span=span;
+	
+	[mapView setRegion:region animated:TRUE];
+	
+}
 
 - (MKAnnotationView *)mapView:(MKMapView *)theMapView viewForAnnotation:(id)annotation
 {
+	if (annotation==self.mapView.userLocation)
+        return nil;
+	
 	static NSString* TuAnnotationIdentifier = @"TuAnnotationIdentifier";
 	MKPinAnnotationView* pinView =
 	(MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:TuAnnotationIdentifier];

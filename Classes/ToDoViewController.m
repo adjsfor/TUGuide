@@ -113,7 +113,7 @@
 	self.todoView.todoText.text = todo.text;
 	XLog(@"inside2 %@",todo.text);
 	
-	NSInteger priority = todo.priority - 1;
+	NSInteger priority = todo.priority -1;
 	if(priority > 2 || priority < 0) {
 		priority = 1;
 	}
@@ -197,6 +197,7 @@
 
 
 - (void)didReceiveMemoryWarning {
+	
 	[super didReceiveMemoryWarning]; // Releases the view if it doesn't have a superview
 	// Release anything that's not essential, such as cached data
 }

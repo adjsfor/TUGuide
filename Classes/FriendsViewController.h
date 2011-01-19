@@ -7,23 +7,40 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIViewControllerDelegate.h"
-#import "MessagePassProtocol.h"
-#import "StubViewController.h"
+#import <MapKit/MapKit.h>
+#import "FriendListViewController.h"
+#import "MapListDetailViewController.h"
+#import "ServerGetData.h"
+#import "DataPassProtocol.h"
+#import "Classroom.h"
+#import "Friend.h"
 
-@interface FriendsViewController : UIViewController {
-	UISegmentedControl *segmentedController;
-	StubViewController *stubViewController;
-	id <MessagePassProtocol> delegate2;
+@interface FriendsViewController : UIViewController <MKMapViewDelegate> {
+	MKMapView *mapView;
+	NSMutableArray *mapAnnotations;
+	MapListClassViewController *classViewController;
+	NSMutableArray *friendsArray;
+	Classroom *classroom;
+	Building *building;
+	UISegmentedControl *segmentedControl;
+	UIButton *detailButton;
 }
 
-@property (nonatomic, retain) UISegmentedControl *segmentedController;
-@property (nonatomic, retain) StubViewController *stubViewController;
-@property (nonatomic,assign) id <MessagePassProtocol> delegate2;
+@property (nonatomic, retain) MKMapView *mapView;
+@property (nonatomic, retain) NSMutableArray *mapAnnotations;
+@property (nonatomic, retain) MapListClassViewController *classViewController;
+@property (nonatomic, retain) NSMutableArray *friendsArray;
+@property (nonatomic, retain) Classroom *classroom;
+@property (nonatomic, retain) Building *building;
+@property (nonatomic, retain) UISegmentedControl *segmentedControl;
+@property (nonatomic, retain) UIButton *detailButton;
 
 
++ (CGFloat)annotationPadding;
++ (CGFloat)calloutHeight;
 
--(void)passTo:(UIViewController *)requestor command:(NSString *)cmd message:(NSString *)msg;
-
+- (id)initView;
+- (void)gotoLocation;
+- (IBAction)segmentAction:(UISegmentedControl *)segmentPick;
 
 @end

@@ -19,6 +19,7 @@
 #import "FriendsViewController.h"
 #import "MensaViewController.h"
 #import "IMissedItViewController.h"
+#import "User.h"
 
 @interface TUGuideAppDelegate : NSObject <UIApplicationDelegate,UINavigationControllerDelegate,MessagePassProtocol,DataPassProtocol> {
     UIWindow *window;

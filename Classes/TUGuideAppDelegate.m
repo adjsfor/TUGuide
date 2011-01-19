@@ -50,6 +50,7 @@
 	if ([cmd isEqual:@"loginSuccessful"]) {
 		[mainNavigationController.loginViewController.loginView.emailField resignFirstResponder];
 		[mainNavigationController.loginViewController.loginView.passwordField resignFirstResponder];
+		me = serverLogin.me;
 		
 		[self initTabBar];
 		return YES; 
@@ -140,11 +141,12 @@
 		UIAlertView *someError = [[UIAlertView alloc] initWithTitle: @"Server offline" message:msg delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
 		[someError show];
 		[someError release];
+		//exit(0);
 	}
 	if ([cmd isEqual:@"serverOffline"]) {
 		UIAlertView *someError = [[UIAlertView alloc] initWithTitle: @"Server offline" message:msg delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
 		[someError show];
-		[someError release];
+		//exit(0);
 	}
 	if ([cmd isEqual:@"allDataRecieved"]) {
 		buildingsArray = [getData getAllBuildingsAsArray];
@@ -233,7 +235,7 @@
 	//initialize the ViewControllers for the tabBarController
 	organizerViewController = [[OrganizerViewController alloc] initWithClassrooms:classroomsArray];
 	mapViewController = [[MapViewController alloc] initWithBuildings:buildingsArray];
-	friendViewController  = [[FriendsViewController alloc] init];
+	friendViewController  = [[FriendsViewController alloc] initView];
 	mensaViewController = [[MensaViewController alloc] initWithMensas:mensasArray andRestaurants:restaurantsArray];
 	missViewController = [[IMissedItViewController alloc] init];
 	

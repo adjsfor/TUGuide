@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "MessagePassProtocol.h"
+#import "User.h"
 
 
 @interface ServerLogin : NSObject {
@@ -15,10 +16,14 @@
 	int statusCode;
 	id <MessagePassProtocol> delegate2;
 	NSString *responseData;
+	NSMutableString *allData;
+	User * me;
 }
 
 @property (nonatomic, retain) NSURLConnection *dataConnection;
 @property (nonatomic, retain) NSString *responseData;
+@property (nonatomic, retain) NSMutableString *allData;
+@property (nonatomic, retain) User * me;
 @property (nonatomic) int statusCode;
 @property (nonatomic,assign) id <MessagePassProtocol> delegate2;
 

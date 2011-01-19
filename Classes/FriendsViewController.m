@@ -12,89 +12,21 @@
 
 @implementation FriendsViewController
 
-@synthesize segmentedController,stubViewController,delegate2;
+@synthesize mapView, detailButton;;
+@synthesize mapAnnotations, classViewController, friendsArray, classroom, building, segmentedControl;
 
-
-
-
-
--(void)passTo:(UIViewController *)requestor command:(NSString *)cmd message:(NSString *)msg{
-	//NSLog(@"OrganizerNavigationController: switching to controller %@", cmd);
-}
-
-
-/*-(void) segmentAction: (UISegmentedControl *) sender
++ (CGFloat)annotationPadding;
 {
-	[delegate2 passing:self command:@"change friends controller" message:@"some message"];
-	
-	switch (sender.selectedSegmentIndex) {
-		case 0:
-			XLog(@"Switch to map" );	
-			self.view = stubViewController.view;
-			break;
-		case 1:
-			XLog(@"Switch to list" );	
-			self.view = stubViewController.view;
-			break;
-		default:
-			break;
-	}
+    return 10.0f;
 }
-
-
-
-NSArray *allSubviewsFriends(UIView *aView)
++ (CGFloat)calloutHeight;
 {
-	NSArray *results = [aView subviews];
-	for (UIView *eachView in [aView subviews])
-	{
-		NSArray *riz = allSubviews(eachView);
-		if (riz) results = [results arrayByAddingObjectsFromArray:riz];
-	}
-	return results;
+    return 30.0f;
 }
 
-
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView {
-	
-	// create for segmented control
-	stubViewController = [[StubViewController alloc] init];
-	
-	
-	self.view = stubViewController.view;
-	
-	self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
-	
-	
-	// Create the segmented control. Choose one of the three styles
-	NSArray *buttonNames = [NSArray arrayWithObjects:@"Map", @"Friends", nil];
-	UISegmentedControl* segmentedControl = [[UISegmentedControl alloc] initWithItems:buttonNames];
-	segmentedControl.segmentedControlStyle = UIBarStyleBlackTranslucent; 
-	segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-	
-	segmentedControl.frame = CGRectMake(0, 0, 290, 32);
-	[segmentedControl addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
-	
-	// For menus, the momentary behavior is preferred. Otherwise, the segmented control
-	// provides a radio-button style interface
-	segmentedControl.momentary = NO;
-	segmentedControl.selectedSegmentIndex = 0;
-	
-	CFShow(allSubviewsFriends(segmentedControl));
-	
-	
-	// Add it to the navigation bar
-	self.navigationItem.titleView = segmentedControl;
-	[segmentedControl release];
-	
-	
-}*/
-
-
-- (id)init {
-	
-	if (self = [super initWithNibName:@"Friends" bundle:nil]) {
+- (id)initView
+{
+	if (self) {
 		self.title = @"Friends";
 		UIImage* anImage = [UIImage imageNamed:@"145-persondot.png"];
 		UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:@"Friends" image:anImage tag:0];
@@ -103,16 +35,164 @@ NSArray *allSubviewsFriends(UIView *aView)
 	}
 	
 	return self;
+}
+
+-(IBAction)segmentAction:(UISegmentedControl *)segmentPick
+{
+	NSLog(@"segment called %d", segmentPick.selectedSegmentIndex);
+	switch (segmentPick.selectedSegmentIndex) {
+		case 0:
+			break;
+		case 1:
+			[self.navigationController pushViewController:[[FriendListViewController alloc] initWithFriends:friendsArray] animated:NO];
+			break;
+		default:
+			break;
+	}
+}
+
+// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+- (void)viewDidLoad 
+{
+	[super viewDidLoad];
+	
+	//Creating Map View and Zoom into location
+	mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
+	mapView.mapType = MKMapTypeStandard;
+	mapView.delegate = self;
+	[self gotoLocation];
+	[self.view addSubview:mapView];
+	
+	
+	[self.mapView removeAnnotations:self.mapView.annotations];  // remove any annotations that exist
+    [self.mapView addAnnotations:self.friendsArray];   //set annotations to the map 
+	
+	//Change Color of the navigationBar
+	self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
+	
+	// Create the segmented control. Choose one of the three styles
+	NSArray *segments = [NSArray arrayWithObjects:@"Map", @"Friends", nil];
+	segmentedControl = [[UISegmentedControl alloc] initWithItems:segments];
+	segmentedControl.segmentedControlStyle = UIBarStyleBlackTranslucent; 
+	segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+	
+	segmentedControl.frame = CGRectMake(0, 0, 290, 32);
+	[segmentedControl addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
+	segmentedControl.selectedSegmentIndex = 0;
+	
+	// Add it to the navigation bar
+	self.navigationItem.titleView = segmentedControl;
+	self.navigationItem.hidesBackButton = YES;
+	[segmentedControl release];
+}
+
+-(void)gotoLocation
+{
+	MKCoordinateRegion newRegion;
+    newRegion.center.latitude = 48.199047; //;
+    newRegion.center.longitude = 16.36994;
+    newRegion.span.latitudeDelta = 0.00512872;
+    newRegion.span.longitudeDelta = 0.00509863;
+	
+    [self.mapView setRegion:newRegion animated:YES];
+}
+
+- (void)mapView:(MKMapView *)mapView regionWillChangeAnimated:(BOOL)animated
+{
 	
 }
 
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
+{
+	
+}
 
-/*
- // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
- - (void)viewDidLoad {
- [super viewDidLoad];
- }
- */
+- (void)showDetails:(UIButton *)sender
+{
+	/*NSInteger selectedIndex = sender.tag;
+	building = [buildingsArray objectAtIndex:selectedIndex];
+	
+	classViewController = [[MapListClassViewController alloc] initWithBuilding:building];
+	classViewController.title = building.name;
+    [self.navigationController pushViewController:self.classViewController animated:YES];
+	[classViewController release];*/
+}
+
+
+- (MKAnnotationView *)mapView:(MKMapView *)theMapView viewForAnnotation:(id)annotation
+{
+	static NSString* TuAnnotationIdentifier = @"TuAnnotationIdentifier";
+	MKPinAnnotationView* pinView =
+	(MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:TuAnnotationIdentifier];
+	if (!pinView)
+	{
+		MKAnnotationView *annotationView = [[[MKAnnotationView alloc] initWithAnnotation:annotation
+																		 reuseIdentifier:TuAnnotationIdentifier] autorelease];
+		annotationView.canShowCallout = YES;
+		
+		UIImage *tuAnnotationImage = [UIImage imageNamed:@"personGreen.png"];
+		
+		CGRect resizeRect;
+		
+		resizeRect.size = tuAnnotationImage.size;
+		CGSize maxSize = CGRectInset(self.view.bounds,
+									 [MapViewController annotationPadding],
+									 [MapViewController annotationPadding]).size;
+		maxSize.height -= self.navigationController.navigationBar.frame.size.height + [MapViewController calloutHeight];
+		if (resizeRect.size.width > maxSize.width)
+			resizeRect.size = CGSizeMake(maxSize.width, resizeRect.size.height / resizeRect.size.width * maxSize.width);
+		if (resizeRect.size.height > maxSize.height)
+			resizeRect.size = CGSizeMake(resizeRect.size.width / resizeRect.size.height * maxSize.height, maxSize.height);
+		
+		resizeRect.origin = (CGPoint){0.0f, 0.0f};
+		UIGraphicsBeginImageContext(resizeRect.size);
+		[tuAnnotationImage drawInRect:resizeRect];
+		UIImage *resizedImage = UIGraphicsGetImageFromCurrentImageContext();
+		UIGraphicsEndImageContext();
+		
+		annotationView.image = resizedImage;
+		annotationView.opaque = NO;
+		
+		UIImageView *tuAnnotationIcon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"calloutTu.png"]];
+		annotationView.leftCalloutAccessoryView = tuAnnotationIcon;
+		[tuAnnotationIcon release];
+		
+		detailButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+		[detailButton addTarget:self action:@selector(showDetails:) forControlEvents:UIControlEventTouchUpInside];
+		
+		//Value for tagging the buttons to acces the right detailView
+		NSInteger tagValue = [friendsArray indexOfObject:annotation];
+		
+		// set the tag property of the button to the index
+		detailButton.tag = tagValue;
+		NSLog(@"Dies ist der TagValue %i", tagValue);
+		NSLog(@"Dies ist der buttonVa %i", detailButton.tag);
+		detailButton.frame = CGRectMake(0, 0, 25, 25);
+		
+		// Set the button as the callout view
+		annotationView.rightCalloutAccessoryView = detailButton; 
+		
+		return annotationView;
+	}
+	return pinView;									
+}
+
+- (void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray *)views { 
+	MKAnnotationView *aV; 
+	for (aV in views) {
+		CGRect endFrame = aV.frame;
+		
+		aV.frame = CGRectMake(aV.frame.origin.x, aV.frame.origin.y - 230.0, aV.frame.size.width, aV.frame.size.height);
+		
+		[UIView beginAnimations:nil context:NULL];
+		[UIView setAnimationDuration:0.45];
+		[UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+		[aV setFrame:endFrame];
+		[UIView commitAnimations];
+		
+	}
+}
+
 
 /*
  // Override to allow orientations other than the default portrait orientation.
@@ -122,6 +202,10 @@ NSArray *allSubviewsFriends(UIView *aView)
  }
  */
 
+-(void)viewDidAppear:(BOOL)animated{
+	segmentedControl.selectedSegmentIndex = 0;
+}
+
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
@@ -130,6 +214,9 @@ NSArray *allSubviewsFriends(UIView *aView)
 }
 
 - (void)viewDidUnload {
+	self.mapAnnotations = nil;
+    self.classViewController = nil;
+    self.mapView = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -137,9 +224,11 @@ NSArray *allSubviewsFriends(UIView *aView)
 
 
 - (void)dealloc {
+	[mapView release];
+    [classViewController release];
+    [mapAnnotations release];
     [super dealloc];
 }
 
 
 @end
-

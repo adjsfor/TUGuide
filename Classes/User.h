@@ -24,7 +24,7 @@
 }
 
 @property (nonatomic) int userId;
-@property (nonatomic,retain) NSString *screenName;
+@property (nonatomic,retain) NSString *screen_name;
 @property (nonatomic,retain) NSString *email;
 @property (nonatomic,retain) NSString *password;
 @property (nonatomic,retain) NSString *coordinates;
@@ -34,10 +34,10 @@
 @property (nonatomic,retain) NSDate *lastLogin;
 @property (nonatomic,retain) NSMutableArray *friendList;
 
--(id)init;
 -(id)initWithEmailAndPassword: (NSString *)em withPassword:(NSString *)pw;
 -(id)initWithArguments:(NSString *)email withPassword:(NSString *)pw withScreenName:(NSString *)u;
 + (id)customClassWithProperties:(NSDictionary *)properties;
 - (id)initWithProperties:(NSDictionary *)properties;
+
 
 @end

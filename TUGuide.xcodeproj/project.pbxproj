@@ -53,6 +53,8 @@
 		8E8D59E812A151820096E52C /* Classroom.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D59E712A151820096E52C /* Classroom.m */; };
 		8E8D5A1212A15AB00096E52C /* Eatery.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D5A1112A15AB00096E52C /* Eatery.m */; };
 		8E8D5A1512A15C450096E52C /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8D5A1412A15C450096E52C /* Restaurant.m */; };
+		8E90545E12E7716700D170CB /* FriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E90545D12E7716700D170CB /* FriendListViewController.m */; };
+		8E90551D12E78D6700D170CB /* getFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E90551C12E78D6700D170CB /* getFriends.m */; };
 		8EAFF11A12A0057300C9BCA3 /* LogicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAFF11912A0057300C9BCA3 /* LogicTests.m */; };
 		8EAFF15012A0059E00C9BCA3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EAFF11B12A0058300C9BCA3 /* SenTestingKit.framework */; };
 		8EBD4CEB12A47164008D9B56 /* Wizard.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD4CEA12A47164008D9B56 /* Wizard.m */; };
@@ -190,6 +192,10 @@
 		8E8D5A1112A15AB00096E52C /* Eatery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Eatery.m; sourceTree = "<group>"; };
 		8E8D5A1312A15C450096E52C /* Restaurant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Restaurant.h; sourceTree = "<group>"; };
 		8E8D5A1412A15C450096E52C /* Restaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Restaurant.m; sourceTree = "<group>"; };
+		8E90545C12E7716700D170CB /* FriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendListViewController.h; sourceTree = "<group>"; };
+		8E90545D12E7716700D170CB /* FriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendListViewController.m; sourceTree = "<group>"; };
+		8E90551B12E78D6700D170CB /* getFriends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getFriends.h; sourceTree = "<group>"; };
+		8E90551C12E78D6700D170CB /* getFriends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getFriends.m; sourceTree = "<group>"; };
 		8EAFF11112A0054D00C9BCA3 /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EAFF11212A0054D00C9BCA3 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		8EAFF11812A0057300C9BCA3 /* LogicTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogicTests.h; sourceTree = "<group>"; };
@@ -470,6 +476,10 @@
 		4B38C1DD12CA7CF200E5C5D4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4B4CF91E12D7CA9000D1368F /* FriendsViewController.h */,
+				4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */,
+				8E90545C12E7716700D170CB /* FriendListViewController.h */,
+				8E90545D12E7716700D170CB /* FriendListViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -484,8 +494,6 @@
 		4B38C1E012CA7D7400E5C5D4 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
-				4B4CF91E12D7CA9000D1368F /* FriendsViewController.h */,
-				4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -644,6 +652,8 @@
 				4B819D1E12A564C2005C740F /* ServerLogin.h */,
 				8E78159412B8F69200DF4A8B /* ServerCreateUser.h */,
 				8E78159512B8F69200DF4A8B /* ServerCreateUser.m */,
+				8E90551B12E78D6700D170CB /* getFriends.h */,
+				8E90551C12E78D6700D170CB /* getFriends.m */,
 			);
 			name = "Server Access";
 			sourceTree = "<group>";
@@ -972,6 +982,8 @@
 				4B505E0C12E2266D00BF44E5 /* LecturesCalendarHelper.m in Sources */,
 				4B50612B12E3691100BF44E5 /* CacheData.m in Sources */,
 				4BDD144412E5F0920010FE4A /* OrganizerViewController.m in Sources */,
+				8E90545E12E7716700D170CB /* FriendListViewController.m in Sources */,
+				8E90551D12E78D6700D170CB /* getFriends.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

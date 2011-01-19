@@ -10,13 +10,16 @@
 
 
 @implementation ServerLogin
-@synthesize dataConnection;
+@synthesize dataConnection,me,allData;
 @synthesize statusCode,delegate2,responseData;
 
 
 
 -(void) loginUserWithScreen_name:(NSString *)screen_name 
 					 withPassword:(NSString *)password{
+	NSLog(@"Login USER:%@, password:%@",screen_name,password);
+	allData = [[NSMutableString alloc] init];
+	me = [[User alloc] initWithArguments:nil withPassword:password withScreenName:screen_name];
 	NSMutableURLRequest *request = [[[NSMutableURLRequest alloc] init] autorelease];
 	[request setURL:[NSURL URLWithString:@"http://hgmm.webhop.net:56789/User/login"]];
 	[request setHTTPMethod:@"POST"];
@@ -49,6 +52,7 @@
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
 	self.responseData = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
 	NSLog(@"-SERVER: report received data %@",responseData);
+	[allData appendString:responseData];
 	[responseData release];
 }
 
@@ -57,14 +61,24 @@
     NSLog(@"%@", [error description]);
 	[delegate2 passing:self command:@"serverOffline" message:@"We are sorry but our server is offline, please try later!"];
 	[dataConnection release];
+	[allData release];
+	[me release];
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSLog(@"-SERVER: connection finished loading");
 	if (self.statusCode == 200) {
+		if ([allData hasPrefix:@"session_id="]) {
+			me.sessionId=[allData substringFromIndex:11];
+			NSLog(@"TESTING SESSION ID:%@",me.sessionId);
+		}else {
+			NSLog(@"TESTING SESSION ID: NO SESSION ID");
+		}
 		[delegate2 passing:self command:@"loginSuccessful" message:@"Login has been successful!"];
 	}else {
 		[delegate2 passing:self command:@"loginFail" message:@"Username/Password information incorrect, please try again!"];
+		[me release];
+		[allData release];
 	}
 	[dataConnection release];
 }

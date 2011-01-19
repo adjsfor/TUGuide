@@ -26,8 +26,10 @@
 	 
 	 */
 	if (self.loginView.saveLogin.on == YES) {
-		[[NSUserDefaults standardUserDefaults] setObject: loginView.emailField.text  forKey: @"name_preference"]; 
-		[[NSUserDefaults standardUserDefaults] setObject: loginView.emailField.text  forKey: @"password_preference"];
+		NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+		[prefs setObject: loginView.emailField.text  forKey: @"name_preference"];
+		[prefs setObject: loginView.passwordField.text  forKey: @"password_preference"];
+		[prefs synchronize];
 	}	
 	if ([cmd isEqual:@"enterTextField"]) {
 		CGPoint scrollPoint = CGPointMake(0.0, 210.0);

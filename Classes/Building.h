@@ -29,14 +29,14 @@
 @property (nonatomic) int id;
 @property (nonatomic,retain) NSString *name;
 @property (nonatomic,retain) NSString *address;
-@property (nonatomic,retain) NSNumber *coordinates_lat;
-@property (nonatomic,retain) NSNumber *coordinates_lon;
 @property (nonatomic,retain) NSString *link;
 @property (nonatomic,retain) NSString *created;
 @property (nonatomic,retain) NSString *updated;
 @property (nonatomic,retain) NSMutableArray* classroomsList;
 @property (nonatomic,retain) NSString *title;
 @property (nonatomic,retain) NSString *subtitle;
+@property (nonatomic,retain) NSNumber *coordinates_lat;
+@property (nonatomic,retain) NSNumber *coordinates_lon;
 
 
 + (id)customClassWithProperties:(NSDictionary *)properties;

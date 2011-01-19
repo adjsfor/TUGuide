@@ -6,31 +6,33 @@
 //  Copyright 2011 Galic Design. All rights reserved.
 //
 
-
-
 #import <UIKit/UIKit.h>
 #import <EventKit/EventKit.h>
 #import <EventKitUI/EventKitUI.h>
 #import "UIViewControllerDelegate.h"
+#import "LecturesCalendarHelper.h"
+#import "LecturesDetailViewController.h"
 	
 @interface LecturesCalendarTableViewController : UITableViewController <UINavigationBarDelegate, UITableViewDelegate, 
 	EKEventEditViewDelegate, UINavigationControllerDelegate, UIActionSheetDelegate> {
-		
-		EKEventViewController *detailViewController;
-		EKEventStore *eventStore;
-		EKCalendar *defaultCalendar;
-		NSMutableArray *eventsList;
-		id <UIViewControllerDelegate> delegate2;
+	LecturesDetailViewController *detailViewController;
+	EKEventStore *eventStore;
+	EKCalendar *defaultCalendar;
+	NSMutableArray *eventsList;
+	id <UIViewControllerDelegate> delegate2;
+	NSMutableArray *classrooms;
 	}
 	
-	@property (nonatomic, retain) EKEventStore *eventStore;
-	@property (nonatomic, assign) id <UIViewControllerDelegate> delegate2;
-	@property (nonatomic, retain) EKCalendar *defaultCalendar;
-	@property (nonatomic, retain) NSMutableArray *eventsList;
-	@property (nonatomic, retain) EKEventViewController *detailViewController;
+@property (nonatomic, retain) EKEventStore *eventStore;
+@property (nonatomic, assign) id <UIViewControllerDelegate> delegate2;
+@property (nonatomic, retain) EKCalendar *defaultCalendar;
+@property (nonatomic, retain) NSMutableArray *eventsList;
+@property (nonatomic, retain) LecturesDetailViewController *detailViewController;
+@property (nonatomic, retain) NSMutableArray *classrooms;
 	
-- (NSArray *) fetchEventsForToday;
+- (NSMutableArray *) fetchEventsForToday;
 - (IBAction) addEvent:(id)sender;
-- (void)initTiss;
+- (LecturesCalendarTableViewController *)initWithClassrooms:(NSMutableArray*)classes;
+
 @end
 	

@@ -14,7 +14,8 @@
 @synthesize delegate,db,todoView,todoTempDatabase;
 
 - (id)init{
-	if (self = [super init]) {
+	if (self = [super initWithStyle:UITableViewStyleGrouped]) {
+		
 		db = [[TodoDatabase alloc]init];
 		[db createEditableCopyOfDatabaseIfNeeded];
 		[db initializeDatabase];

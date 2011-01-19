@@ -11,13 +11,19 @@
 
 @implementation OrganizerViewController
 
-@synthesize segmentedController, lecturesViewController, coursesViewController, todoViewController,delegate2;
+@synthesize segmentedController, lecturesViewController, todoViewController,delegate2, classrooms;
 
+-(OrganizerViewController*)initWithClassrooms:(NSMutableArray*)classes{
+	self = [self init];
+	if (self) {
+		self.classrooms = classes;
+	}
+	return self;
+}
 
 
 - (void) addTodo:(id)sender {
 	XLog();
-	
 	
 	if(self.todoViewController.todoView == nil) {
 		TodoDetailViewController *viewController = [[TodoDetailViewController alloc] init];
@@ -34,9 +40,13 @@
 }
 
 
+- (void)eventViewController:(EKEventViewController *)controller didCompleteWithAction:(EKEventViewAction)action{
+	XLog();
+}
+
 -(void)passTo:(UIViewController *)requestor command:(NSString *)cmd message:(NSString *)msg{
 	
-	XLog(@"->>>> @%",cmd);
+	XLog(" %@  ",cmd);
 	// start editing
 	if ([cmd isEqual:@"editTodo"]) {
 		[self.navigationController pushViewController:self.todoViewController.todoView animated:YES];
@@ -49,7 +59,15 @@
 	
 	// finish editing
 	if ([cmd isEqual:@"editEvent"]) {
+		self.lecturesViewController.detailViewController.delegate2 = self;
 		 [self.navigationController pushViewController:self.lecturesViewController.detailViewController animated:YES];
+		 
+	}
+	
+	// finish editing
+	if ([cmd isEqual:@"goDeselect"]) {
+		[self.lecturesViewController.tableView deselectRowAtIndexPath:self.lecturesViewController.tableView.indexPathForSelectedRow animated:YES];
+		
 	}
 		
 }
@@ -67,11 +85,6 @@
 			self.navigationItem.rightBarButtonItem = nil;
 			break;
 		case 1:
-			XLog(@"Switch to courses" );	
-			self.navigationItem.rightBarButtonItem = nil;
-			self.view = coursesViewController.view;
-			break;
-		case 2:
 			XLog(@"Switch to todo's" );
 			self.view = todoViewController.view;
 			UIBarButtonItem * btn = [[UIBarButtonItem alloc] initWithTitle:@"Add" 
@@ -103,13 +116,11 @@ NSArray *allSubviews(UIView *aView)
 - (void)loadView {
 	
 	// create for segmented control
-	lecturesViewController = [[LecturesCalendarTableViewController alloc] init];
-	coursesViewController = [[CoursesViewController alloc] init];
+	lecturesViewController = [[LecturesCalendarTableViewController alloc] initWithClassrooms:self.classrooms];
 	todoViewController = [[ToDoViewController alloc] init];
 	
 	todoViewController.delegate = self;
 	lecturesViewController.delegate2 = self;
-	
 	
 	self.view = lecturesViewController.view;
 	
@@ -117,7 +128,7 @@ NSArray *allSubviews(UIView *aView)
 	
 	
 	// Create the segmented control. Choose one of the three styles
-	NSArray *buttonNames = [NSArray arrayWithObjects:@"Lectures", @"Courses", @"Todo", nil];
+	NSArray *buttonNames = [NSArray arrayWithObjects:@"Lectures", @"Todo", nil];
 	UISegmentedControl* segmentedControl = [[UISegmentedControl alloc] initWithItems:buttonNames];
 	segmentedControl.segmentedControlStyle = UIBarStyleBlackTranslucent; 
 	segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleWidth;
@@ -136,6 +147,7 @@ NSArray *allSubviews(UIView *aView)
 	// Add it to the navigation bar
 	self.navigationItem.titleView = segmentedControl;
 	[segmentedControl release];
+	
 	
 	
 }
@@ -160,6 +172,7 @@ NSArray *allSubviews(UIView *aView)
 	if(self.view == todoViewController.view){
 	[self.todoViewController.tableView reloadData];
 	}
+	
 	[super viewWillAppear:animated];
 }
 /*

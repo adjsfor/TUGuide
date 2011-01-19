@@ -209,10 +209,20 @@
 	
 	
 	UIView *start = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-	[start addSubview:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"startUp.png"]]];
+	UIImageView *img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"startUp.png"]];
+	[start addSubview:img];
 	[start addSubview:activityIndicatorView];
 	[window addSubview:start];
 	[window makeKeyAndVisible];
+	[start release];
+	[text release];
+	[img release];
+	
+	// need to go away , only testing 
+	//[self initTabBar];
+	
+	
+	
 	
 	return YES;
 }
@@ -221,7 +231,7 @@
 {
 	NSLog(@"Creating Tabbar");
 	//initialize the ViewControllers for the tabBarController
-	organizerViewController = [[OrganizerViewController alloc] init];
+	organizerViewController = [[OrganizerViewController alloc] initWithClassrooms:classroomsArray];
 	mapViewController = [[MapViewController alloc] initWithBuildings:buildingsArray];
 	friendViewController  = [[FriendsViewController alloc] init];
 	mensaViewController = [[MensaViewController alloc] initWithMensas:mensasArray andRestaurants:restaurantsArray];
@@ -247,6 +257,11 @@
 	[window addSubview:tabBarController.view];
 	
 	
+	[org release];
+	[loc release];
+	[fri release];
+	[foo release];
+	[mis release];
 
 	
 	

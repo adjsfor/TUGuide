@@ -16,14 +16,17 @@
 	UILabel *header;
 	MensaMenu *menu;
 	UITableView *contentTable;
-
+	NSString *name;
+	UIColor *color;
 }
 
 @property (nonatomic, retain) UIImageView *logo;
 @property (nonatomic, retain) UILabel *header;
 @property (nonatomic, retain) MensaMenu *menu;
 @property (nonatomic, retain) UITableView *contentTable;
+@property (nonatomic, retain) NSString *name;
+@property (nonatomic, retain) UIColor *color;
 
-
+- (id)initWithFrame:(CGRect)frame andName:(NSString *)n;
 
 @end

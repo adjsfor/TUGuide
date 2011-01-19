@@ -61,8 +61,8 @@
 
 - (void)dealloc {
 	[bigLogo release];
-	[registerButton release];
-	[loginButton release];
+	//[registerButton release];
+	//[loginButton release];
     [super dealloc];
 }
 

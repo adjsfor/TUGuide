@@ -14,8 +14,10 @@
 #import "DataPassProtocol.h"
 #import "Classroom.h"
 #import "Building.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface MapViewController : UIViewController <MKMapViewDelegate>{
+
+@interface MapViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>{
 	
 	MKMapView *mapView;
 	NSMutableArray *mapAnnotations;
@@ -25,6 +27,7 @@
 	Building *building;
 	UISegmentedControl *segmentedControl;
 	UIButton *detailButton;
+	CLLocationCoordinate2D location;
 
 }
 

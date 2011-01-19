@@ -103,6 +103,7 @@
 		FAD1DB0312A0390500F782A0 /* TUGuideLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD1DB0212A0390500F782A0 /* TUGuideLogo.png */; };
 		FAD4AAA712A0CCD000817DCA /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD4AAA612A0CCD000817DCA /* User.m */; };
 		FAD4AB3412A0DA1800817DCA /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD4AB3312A0DA1800817DCA /* icon.png */; };
+		FAE3B50712E78FCD00215763 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE3B50612E78FCD00215763 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -255,6 +256,7 @@
 		FAD4AAA512A0CCD000817DCA /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		FAD4AAA612A0CCD000817DCA /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		FAD4AB3312A0DA1800817DCA /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		FAE3B50612E78FCD00215763 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +271,7 @@
 				FA6171EB12B90B1A00E0E2C7 /* MapKit.framework in Frameworks */,
 				4BC60F0612DCCC0900A0BC84 /* libsqlite3.0.dylib in Frameworks */,
 				4BC6137A12DE129500A0BC84 /* EventKitUI.framework in Frameworks */,
+				FAE3B50712E78FCD00215763 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +358,7 @@
 				FA616EDE12B8C17F00E0E2C7 /* EventKit.framework */,
 				4BC60F0512DCCC0900A0BC84 /* libsqlite3.0.dylib */,
 				4BC6137912DE129500A0BC84 /* EventKitUI.framework */,
+				FAE3B50612E78FCD00215763 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1007,6 +1011,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TUGuide_Prefix.pch;
 				INFOPLIST_FILE = "TUGuide-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				PRODUCT_NAME = TUGuide;
 			};
 			name = Debug;

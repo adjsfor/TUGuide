@@ -14,8 +14,9 @@
 #import "DataPassProtocol.h"
 #import "Classroom.h"
 #import "Friend.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface FriendsViewController : UIViewController <MKMapViewDelegate> {
+@interface FriendsViewController : UIViewController <MKMapViewDelegate,CLLocationManagerDelegate> {
 	MKMapView *mapView;
 	NSMutableArray *mapAnnotations;
 	MapListClassViewController *classViewController;
@@ -24,6 +25,7 @@
 	Building *building;
 	UISegmentedControl *segmentedControl;
 	UIButton *detailButton;
+	CLLocationCoordinate2D location;
 }
 
 @property (nonatomic, retain) MKMapView *mapView;
@@ -36,11 +38,11 @@
 @property (nonatomic, retain) UIButton *detailButton;
 
 
+
 + (CGFloat)annotationPadding;
 + (CGFloat)calloutHeight;
 
 - (id)initView;
-- (void)gotoLocation;
 - (IBAction)segmentAction:(UISegmentedControl *)segmentPick;
 
 @end

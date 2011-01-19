@@ -45,7 +45,6 @@
 + (CGFloat)calloutHeight;
 
 - (id)initWithBuildings: (NSMutableArray *)b;
-- (void)gotoLocation;
 - (IBAction)segmentAction:(UISegmentedControl *)segmentPick;
 
 @end

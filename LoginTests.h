@@ -15,14 +15,17 @@
 #import <SenTestingKit/SenTestingKit.h>
 #import <UIKit/UIKit.h>
 #import "ServerLogin.h"
+#import "ServerCreateUser.h"
 
 
 
-@interface LoginTests : SenTestCase {
+@interface LoginTests : SenTestCase <MessagePassProtocol>{
 	ServerLogin *server;
+	ServerCreateUser *create;
 }
 
 @property (nonatomic, retain) ServerLogin *server;
+@property (nonatomic, retain) ServerCreateUser *create;
 
 - (void) createUser;
 - (void) createUserWithExistingMail;
@@ -33,11 +36,11 @@
 - (void) loginUserWithFalsePassword;
 - (void) loginUserWithFalsePasswordAndName;
 
--(BOOL) helperCreateMethodWithName:(NSString *)name 
+-(void) helperCreateMethodWithName:(NSString *)name 
 						   andMail:(NSString *)mail 
 					   andPassword:(NSString *)pass;
 
--(BOOL) helperLoginUserWithName:(NSString *)name 
+-(void) helperLoginUserWithName:(NSString *)name 
 					andPassword:(NSString *)pass;
 
 @end

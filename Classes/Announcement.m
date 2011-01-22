@@ -11,34 +11,15 @@
 
 @implementation Announcement
 
-@synthesize announcementId;
-@synthesize announced;
-@synthesize lectureId;
-@synthesize userId;
 @synthesize message;
 @synthesize report;
 
--(id)initWithArguments:(int)announcementId2
-		 withAnnounced:(bool)announced2
-		 withLectureId:(Lecture *)lectureId2
-			withUserId:(int)userId2
-		   withMessage:(NSString *)message2
-			withReport:(NSString *)report2{
-	
-	if (self = [super init]) {
-		self.announcementId = announcementId2;
-		self.announced = announced2;
-		self.lectureId = lectureId2;
-		self.userId = userId2;
-		self.message = message2;
-		self.report = report2;
-	}
-	return self;
-}
+@synthesize id;
+@synthesize when_announced;
+@synthesize lecture_id;
+@synthesize user_id;
+@synthesize uuid;
 
--(id)init{
-	return [self initWithArguments:0 withAnnounced:nil withLectureId:nil withUserId:0 withMessage:nil withReport:nil];
-}
 
 + (id)customClassWithProperties:(NSDictionary *)properties {
 	return [[[self alloc] initWithProperties:properties] autorelease];
@@ -46,13 +27,20 @@
 
 - (id)initWithProperties:(NSDictionary *)properties {
 	if (self = [self init]) {
-		[self setValuesForKeysWithDictionary:properties];
+		//[self setValuesForKeysWithDictionary:properties];
+		self.message = [properties objectForKey:@"message"];
+		self.report = [properties objectForKey:@"report"];
+		self.id = (int)[properties objectForKey:@"id"];
+		self.when_announced = [properties objectForKey:@"when_announced"];
+		self.lecture_id = (int)[properties objectForKey:@"lecture_id"];
+		self.user_id = (int)[properties objectForKey:@"user_id"];
+		self.uuid = (int)[properties objectForKey:@"uuid"];
 	}
 	return self;
 }
 
 -(void)dealloc{
-	[lectureId release];
+	[when_announced release];
 	[message release];
 	[report release];
 	[super dealloc];

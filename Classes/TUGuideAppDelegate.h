@@ -20,8 +20,9 @@
 #import "MensaViewController.h"
 #import "IMissedViewController.h"
 #import "User.h"
+#import "HelpViewController.h"
 
-@interface TUGuideAppDelegate : NSObject <UIApplicationDelegate,UINavigationControllerDelegate,MessagePassProtocol,DataPassProtocol> {
+@interface TUGuideAppDelegate : NSObject <UIApplicationDelegate,UINavigationControllerDelegate,MessagePassProtocol,DataPassProtocol, UIAlertViewDelegate> {
     UIWindow *window;
 	MainNavigationController *mainNavigationController;
 	User *me;

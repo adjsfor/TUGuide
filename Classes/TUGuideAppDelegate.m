@@ -161,6 +161,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
+	//[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES],@"firstLaunch",nil]];
+		
     // Override point for customization after application launch.
 	window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     if (!window) 
@@ -168,6 +170,7 @@
         [self release];
         return NO;
     }
+	
 	if ([[NSUserDefaults standardUserDefaults] stringForKey:@"name_preference"]!=nil) {
 		email = [[NSString alloc] initWithString:[[NSUserDefaults standardUserDefaults] stringForKey:@"name_preference"]];
 	}else {
@@ -221,13 +224,10 @@
 	[img release];
 	
 	// need to go away , only testing 
-	//[self initTabBar];
-	
-	
-	
-	
+	//[self initTabBar];*/
 	return YES;
 }
+
 
 -(void)initTabBar
 {
@@ -258,6 +258,10 @@
 	tabBarController.viewControllers = controllers;
 	[window addSubview:tabBarController.view];
 	
+	UIAlertView *someError = [[UIAlertView alloc] initWithTitle: @"HELP ?" message: @"Do you need help setting up tuGuide? " delegate: self cancelButtonTitle: @"NO" otherButtonTitles: @"OK", nil];
+	[someError show];
+	[someError release];
+	
 	
 	[org release];
 	[loc release];
@@ -266,10 +270,21 @@
 	[mis release];
 
 	
-	
-	
-	
 }
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	if (buttonIndex == 0)
+	{
+		// Yes, do something
+	}
+	else if (buttonIndex == 1)
+	{
+		HelpViewController *help = [[HelpViewController alloc]init];
+		[organizerViewController.navigationController pushViewController:help animated:YES];
+	}
+}
+
 
 -(void)initLogin
 {
@@ -313,6 +328,9 @@
 
 
 - (void)applicationWillTerminate:(UIApplication *)application {
+	
+	// -applicationWillTerminate:
+	[[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"firstLaunch"];
     /*
      Called when the application is about to terminate.
      See also applicationDidEnterBackground:.

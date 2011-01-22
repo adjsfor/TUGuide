@@ -10,6 +10,7 @@
 #import <EventKit/EventKit.h>
 #import <EventKitUI/EventKitUI.h>
 #import "LecturesCalendarHelper.h"
+#import "IMisseditDetailViewController.h"
 
 
 @interface IMissedViewController : UITableViewController <UITableViewDelegate, EKEventEditViewDelegate, UINavigationControllerDelegate>{

@@ -81,6 +81,7 @@
 		FA381CA512A0057A008E06D0 /* RegisterLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA381CA412A0057A008E06D0 /* RegisterLoginView.m */; };
 		FA381CAB12A00593008E06D0 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA381CAA12A00593008E06D0 /* LoginView.m */; };
 		FA381CB112A005D2008E06D0 /* RegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA381CB012A005D2008E06D0 /* RegisterView.m */; };
+		FA3862B212E87F6D00F4875D /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3862B112E87F6D00F4875D /* HelpViewController.m */; };
 		FA616EAF12B8BCD100E0E2C7 /* LecturesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA616EAE12B8BCD100E0E2C7 /* LecturesDetailViewController.m */; };
 		FA616EDF12B8C17F00E0E2C7 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA616EDE12B8C17F00E0E2C7 /* EventKit.framework */; };
 		FA616F0512B8D0AB00E0E2C7 /* ToDoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA616F0412B8D0AB00E0E2C7 /* ToDoViewController.m */; };
@@ -110,6 +111,8 @@
 		FAE3B50712E78FCD00215763 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE3B50612E78FCD00215763 /* CoreLocation.framework */; };
 		FAE3B54312E793D800215763 /* ButtonDark.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE3B54212E793D800215763 /* ButtonDark.png */; };
 		FAE3B5C412E79C6600215763 /* IMissedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE3B5C312E79C6600215763 /* IMissedViewController.m */; };
+		FAE3B62B12E7A44500215763 /* IMisseditDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE3B62A12E7A44500215763 /* IMisseditDetailView.m */; };
+		FAE3B62E12E7A5B100215763 /* IMisseditDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE3B62D12E7A5B100215763 /* IMisseditDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -227,6 +230,8 @@
 		FA381CAA12A00593008E06D0 /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
 		FA381CAF12A005D2008E06D0 /* RegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterView.h; sourceTree = "<group>"; };
 		FA381CB012A005D2008E06D0 /* RegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterView.m; sourceTree = "<group>"; };
+		FA3862B012E87F6D00F4875D /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		FA3862B112E87F6D00F4875D /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
 		FA616EAD12B8BCD100E0E2C7 /* LecturesDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LecturesDetailViewController.h; sourceTree = "<group>"; };
 		FA616EAE12B8BCD100E0E2C7 /* LecturesDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LecturesDetailViewController.m; sourceTree = "<group>"; };
 		FA616EDE12B8C17F00E0E2C7 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
@@ -271,6 +276,10 @@
 		FAE3B54212E793D800215763 /* ButtonDark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonDark.png; sourceTree = "<group>"; };
 		FAE3B5C212E79C6600215763 /* IMissedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMissedViewController.h; sourceTree = "<group>"; };
 		FAE3B5C312E79C6600215763 /* IMissedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMissedViewController.m; sourceTree = "<group>"; };
+		FAE3B62912E7A44500215763 /* IMisseditDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMisseditDetailView.h; sourceTree = "<group>"; };
+		FAE3B62A12E7A44500215763 /* IMisseditDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMisseditDetailView.m; sourceTree = "<group>"; };
+		FAE3B62C12E7A5B100215763 /* IMisseditDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMisseditDetailViewController.h; sourceTree = "<group>"; };
+		FAE3B62D12E7A5B100215763 /* IMisseditDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMisseditDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -580,6 +589,8 @@
 			children = (
 				FAE3B5C212E79C6600215763 /* IMissedViewController.h */,
 				FAE3B5C312E79C6600215763 /* IMissedViewController.m */,
+				FAE3B62C12E7A5B100215763 /* IMisseditDetailViewController.h */,
+				FAE3B62D12E7A5B100215763 /* IMisseditDetailViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -587,6 +598,8 @@
 		4B38C1E812CA7DD000E5C5D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FAE3B62912E7A44500215763 /* IMisseditDetailView.h */,
+				FAE3B62A12E7A44500215763 /* IMisseditDetailView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -725,6 +738,8 @@
 				4B819D4912A5706E005C740F /* RegisterLoginViewController.m */,
 				4B819E9312A59E55005C740F /* RegisterViewController.h */,
 				4B819E9412A59E55005C740F /* RegisterViewController.m */,
+				FA3862B012E87F6D00F4875D /* HelpViewController.h */,
+				FA3862B112E87F6D00F4875D /* HelpViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -996,6 +1011,9 @@
 				8E90545E12E7716700D170CB /* FriendListViewController.m in Sources */,
 				8E90551D12E78D6700D170CB /* getFriends.m in Sources */,
 				FAE3B5C412E79C6600215763 /* IMissedViewController.m in Sources */,
+				FAE3B62B12E7A44500215763 /* IMisseditDetailView.m in Sources */,
+				FAE3B62E12E7A5B100215763 /* IMisseditDetailViewController.m in Sources */,
+				FA3862B212E87F6D00F4875D /* HelpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1120,7 +1138,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = iphoneos4.2;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};

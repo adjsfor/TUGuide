@@ -38,7 +38,7 @@
 	[request addValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
 	NSString *requestBody = [[NSString alloc]
 							 initWithFormat:@"screen_name=%@&session_id=%@",
-							 me.screen_name, me.sessionId];
+							 me.screenName, me.sessionId];
 	[request setHTTPBody:[requestBody dataUsingEncoding:NSASCIIStringEncoding]];
 	dataConnection=[[NSURLConnection alloc] initWithRequest:request delegate:self];
 	[requestBody release];

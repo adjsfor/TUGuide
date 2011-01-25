@@ -35,8 +35,6 @@
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
 	detailView = [[IMisseditDetailView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
-	detailView.contentTable.dataSource = self;
-	detailView.contentTable.delegate = self;
 	self.view = detailView;
 }
 

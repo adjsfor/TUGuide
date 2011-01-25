@@ -24,7 +24,7 @@
 }
 
 @property (nonatomic) int userId;
-@property (nonatomic,retain) NSString *screen_name;
+@property (nonatomic,retain) NSString *screenName;
 @property (nonatomic,retain) NSString *email;
 @property (nonatomic,retain) NSString *password;
 @property (nonatomic,retain) NSString *coordinates;

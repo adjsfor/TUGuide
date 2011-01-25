@@ -96,7 +96,7 @@
 
 // Fetching events happening in the last 7 days with a predicate, limiting to the default calendar 
 - (NSMutableArray *)fetchEventsForToday {
-	return [LecturesCalendarHelper getEKEventsFromCalendarWithPrefix:@"Tiss" startingDay:-7 endingDay:0];
+	return [LecturesCalendarHelper getEKEventsFromCalendarWithPrefix:@"TISS" startingDay:-7 endingDay:0];
 }
 
 
@@ -206,7 +206,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
     
-    IMisseditDetailViewController *detailViewController = [[IMisseditDetailViewController alloc] init];
+    IMisseditDetailViewController *detailViewController = [[IMisseditDetailViewController alloc] initWithAnnouncements:[[self.eventsList objectAtIndex:indexPath.section] objectAtIndex:indexPath.row]];
      // ...
      // Pass the selected object to the new view controller.
     [self.navigationController pushViewController:detailViewController animated:YES];

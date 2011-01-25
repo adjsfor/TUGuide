@@ -12,7 +12,7 @@
 @implementation User
 
 @synthesize userId;
-@synthesize screen_name;
+@synthesize screenName;
 @synthesize email;
 @synthesize password;
 @synthesize coordinates;
@@ -27,7 +27,7 @@
 	if (self = [super init]) {
 		[self setEmail:em];
 		[self setPassword:pw];
-		self.screen_name= u;
+		[self setScreenName:u];
 	}
 	return self;	
 }
@@ -48,7 +48,7 @@
 }
 
 -(void)dealloc{
-	[screen_name release];
+	[screenName release];
 	[email release];
 	[password release];
 	[coordinates release];

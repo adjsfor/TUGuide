@@ -8,6 +8,16 @@
 	<array>
 		<dict>
 			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Show help on launch</string>
+			<key>Key</key>
+			<string>firstLaunch</string>
+			<key>DefaultValue</key>
+			<string>TRUE</string>
+		</dict>
+		<dict>
+			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
 			<string>User Data</string>

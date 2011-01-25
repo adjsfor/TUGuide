@@ -160,9 +160,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-    
-	//[[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES],@"firstLaunch",nil]];
-		
+    		
     // Override point for customization after application launch.
 	window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     if (!window) 
@@ -258,9 +256,12 @@
 	tabBarController.viewControllers = controllers;
 	[window addSubview:tabBarController.view];
 	
-	UIAlertView *someError = [[UIAlertView alloc] initWithTitle: @"HELP ?" message: @"Do you need help setting up tuGuide? " delegate: self cancelButtonTitle: @"NO" otherButtonTitles: @"OK", nil];
-	[someError show];
-	[someError release];
+	if ([[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"]) {
+		UIAlertView *someError = [[UIAlertView alloc] initWithTitle: @"HELP ?" message: @"Do you need help setting up tuGuide? " delegate: self cancelButtonTitle: @"NO" otherButtonTitles: @"OK", nil];
+		[someError show];
+		[someError release];
+	}
+	
 	
 	
 	[org release];
@@ -310,6 +311,10 @@
      Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
      If your application supports background execution, called instead of applicationWillTerminate: when the user quits.
      */
+	NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+	[prefs setBool:FALSE forKey:@"firstLaunch"];
+	[prefs synchronize];
+	
 }
 
 
@@ -330,8 +335,7 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
 	
 	// -applicationWillTerminate:
-	[[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"firstLaunch"];
-    /*
+	/*
      Called when the application is about to terminate.
      See also applicationDidEnterBackground:.
      */

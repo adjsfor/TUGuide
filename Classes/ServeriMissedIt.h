@@ -35,6 +35,11 @@
 				 andLectureId:(NSString *)lecture
 				 andSessionId:(NSString *)session_id;
 
+-(void) setDataForScreen_name:(NSString *)screen_name 
+				 andLectureId:(NSString *)lecture
+				 andSessionId:(NSString *)session_id
+				   andMessage:(NSString *)message;
+
 - (NSString *)urlEncodeValue:(NSString *)str;
 
 - (void)connection:(NSURLConnection *)connection

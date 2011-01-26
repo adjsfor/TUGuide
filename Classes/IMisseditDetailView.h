@@ -16,6 +16,7 @@
 }
 
 @property (nonatomic, retain) UITableView *contentTable;
+@property (nonatomic, retain) UILabel *header;
 
 - (id)initWithFrame:(CGRect)frame;
 

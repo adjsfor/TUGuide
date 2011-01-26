@@ -186,8 +186,8 @@
 		
 		// set the tag property of the button to the index
 		detailButton.tag = tagValue;
-		NSLog(@"Dies ist der TagValue %i", tagValue);
-		NSLog(@"Dies ist der buttonVa %i", detailButton.tag);
+		//NSLog(@"Dies ist der TagValue %i", tagValue);
+		//NSLog(@"Dies ist der buttonVa %i", detailButton.tag);
 		detailButton.frame = CGRectMake(0, 0, 25, 25);
 		
 		// Set the button as the callout view

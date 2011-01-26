@@ -11,12 +11,14 @@
 #import <EventKitUI/EventKitUI.h>
 #import "LecturesCalendarHelper.h"
 #import "IMisseditDetailViewController.h"
+#import "User.h"
 
 
 @interface IMissedViewController : UITableViewController <UITableViewDelegate, EKEventEditViewDelegate, UINavigationControllerDelegate>{
 	EKEventStore *eventStore;
 	EKCalendar *defaultCalendar;
 	NSMutableArray *eventsList;
+	User *me;
 
 }
 
@@ -24,7 +26,9 @@
 @property (nonatomic, retain) EKEventStore *eventStore;
 @property (nonatomic, retain) EKCalendar *defaultCalendar;
 @property (nonatomic, retain) NSMutableArray *eventsList;
+@property (nonatomic, retain) User *me;
 
+- (id)initWithUser:(User *)u;
 - (NSMutableArray *) fetchEventsForToday;
 - (IBAction) addEvent:(id)sender;
 

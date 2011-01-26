@@ -11,7 +11,7 @@
 
 @implementation IMisseditDetailView
 
-@synthesize contentTable;
+@synthesize contentTable, header;
 
 
 - (id)initWithFrame:(CGRect)frame {

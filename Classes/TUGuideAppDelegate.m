@@ -235,7 +235,7 @@
 	mapViewController = [[MapViewController alloc] initWithBuildings:buildingsArray];
 	friendViewController  = [[FriendsViewController alloc] initView];
 	mensaViewController = [[MensaViewController alloc] initWithMensas:mensasArray andRestaurants:restaurantsArray];
-	missViewController = [[IMissedViewController alloc] init];
+	missViewController = [[IMissedViewController alloc] initWithUser:me];
 	
 	//Creating the tabbarControllers
 	UINavigationController *org = [[UINavigationController alloc] initWithRootViewController:organizerViewController];

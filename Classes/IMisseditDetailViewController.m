@@ -11,12 +11,23 @@
 
 @implementation IMisseditDetailViewController
 
-@synthesize announcement, detailView;
+@synthesize announcement, detailView, me, serverConnection, event, identifier, newAnnouncement;
 
--(id)initWithAnnouncements:(Announcement *) a
+-(id)initWithEvent:(EKEvent *) e andUser:(User *)u
 {
 	self = [super init];
-	self.announcement = a;
+	self.me = u;
+	self.event = e;
+	NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+	[dateFormat setDateStyle:NSDateFormatterShortStyle];
+	[dateFormat setTimeStyle:NSDateFormatterShortStyle];
+	identifier = [[NSMutableString alloc]init];
+	[identifier appendString:[dateFormat stringFromDate:event.startDate]];
+	[identifier appendString:event.title];
+	serverConnection = [[ServeriMissedIt alloc]init];
+	//[serverConnection setDataForScreen_name:me.screenName andLectureId:identifier andSessionId:me.sessionId andMessage:@"erster eintrag"];
+	NSLog(@"identifier %@",identifier );
+	[serverConnection getDataForScreen_name:me.screenName andLectureId:identifier andSessionId:me.sessionId];
 	return self;
 }
 
@@ -35,16 +46,61 @@
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
 	detailView = [[IMisseditDetailView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
+	UIBarButtonItem * btn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addAnnouncement:)];
+	self.navigationItem.rightBarButtonItem = btn;
+	
 	self.view = detailView;
 }
 
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	self.detailView.header.lineBreakMode = UILineBreakModeWordWrap;
+	self.detailView.header.numberOfLines = 0;
+	[self.detailView.header setText:self.event.title];
+	NSMutableArray *announcements = [[NSMutableArray alloc]initWithArray:serverConnection.annoucements];
+	
 }
-*/
+
+-(void)addAnnouncement:(id)sender{
+	UIAlertView  *alert = [[UIAlertView alloc] initWithTitle:@"New Announcement" 
+													 message:@"My Message"
+													delegate:self cancelButtonTitle:@"Cancel" 
+										   otherButtonTitles:@"Add", nil];
+	[alert addTextFieldWithValue:@"" label:nil];
+	[alert textField].keyboardType = UIKeyboardTypeAlphabet;
+	alert.tag = 1;
+	[alert show];
+	[alert release];
+	
+}
+
+/*- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	if (buttonIndex == 0)
+	{
+		// Yes, do something
+	}
+	else if (buttonIndex == 1)
+	{
+	}
+}*/
+
+- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+	if(buttonIndex > 0) {
+		if(actionSheet.tag == 1) {
+			NSString *textValue = [actionSheet textField].text;
+			if(textValue==nil)
+				return;
+			[serverConnection setDataForScreen_name:me.screenName andLectureId:identifier andSessionId:me.sessionId andMessage:textValue];
+		}
+	}
+}
+
+
+
 
 /*
 // Override to allow orientations other than the default portrait orientation.

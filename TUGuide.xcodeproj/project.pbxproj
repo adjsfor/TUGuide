@@ -291,6 +291,7 @@
 		FA90401B12DD2B230079D0B3 /* LocationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDetailViewController.m; sourceTree = "<group>"; };
 		FA9239D812D3943700A3048D /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		FA9239D912D3943700A3048D /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		FAB72B2D12F06D38003CD8E1 /* UIAlertView_Extended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAlertView_Extended.h; sourceTree = "<group>"; };
 		FACC502612D26D130007911F /* MapListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapListViewController.h; sourceTree = "<group>"; };
 		FACC502712D26D130007911F /* MapListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapListViewController.m; sourceTree = "<group>"; };
 		FACF14A912D7E4D20087B05C /* MapListDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapListDetailView.h; sourceTree = "<group>"; };
@@ -643,6 +644,7 @@
 			children = (
 				FAE3B62912E7A44500215763 /* IMisseditDetailView.h */,
 				FAE3B62A12E7A44500215763 /* IMisseditDetailView.m */,
+				FAB72B2D12F06D38003CD8E1 /* UIAlertView_Extended.h */,
 			);
 			name = View;
 			sourceTree = "<group>";

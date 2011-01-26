@@ -26,7 +26,7 @@
 	[request addValue:@"Content-Type" forHTTPHeaderField:@"application/x-www-form-urlencoded"];
 	[request addValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
 	NSString *requestBody = [[NSString alloc]
-							 initWithFormat:@"screen_name=%@&session_id=%@&lecture_id=%@",
+							 initWithFormat:@"screen_name=%@&session_id=%@&uuid=%@",
 							 screen_name, session_id,lecture];
 	[request setHTTPBody:[requestBody dataUsingEncoding:NSASCIIStringEncoding]];
 	dataConnection=[[NSURLConnection alloc] initWithRequest:request delegate:self];
@@ -45,7 +45,7 @@
 	[request addValue:@"Content-Type" forHTTPHeaderField:@"application/x-www-form-urlencoded"];
 	[request addValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
 	NSString *requestBody = [[NSString alloc]
-							 initWithFormat:@"screen_name=%@&session_id=%@&lecture_id=%@&message=%@",
+							 initWithFormat:@"screen_name=%@&session_id=%@&uuid=%@&message=%@",
 							 screen_name, session_id,lecture,message];
 	[request setHTTPBody:[requestBody dataUsingEncoding:NSASCIIStringEncoding]];
 	dataConnection=[[NSURLConnection alloc] initWithRequest:request delegate:self];

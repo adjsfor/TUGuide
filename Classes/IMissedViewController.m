@@ -11,12 +11,12 @@
 
 @implementation IMissedViewController
 
-@synthesize eventsList, eventStore, defaultCalendar;
+@synthesize eventsList, eventStore, defaultCalendar, me;
 
 #pragma mark -
 #pragma mark Initialization
 
-- (id)init {
+- (id)initWithUser:(User *)u {
 	
 	if (self = [super initWithNibName:nil bundle:nil]) {
 		self = [super initWithStyle:UITableViewStyleGrouped];
@@ -24,6 +24,7 @@
 		UIImage* anImage = [UIImage imageNamed:@"iMisseditIcon.png"];
 		UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:@"IMissedIt" image:anImage tag:0];
 		self.tabBarItem = theItem;
+		self.me = u;
 		[theItem release];
 	}
 	
@@ -206,7 +207,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
     
-    IMisseditDetailViewController *detailViewController = [[IMisseditDetailViewController alloc] initWithAnnouncements:[[self.eventsList objectAtIndex:indexPath.section] objectAtIndex:indexPath.row]];
+    IMisseditDetailViewController *detailViewController = [[IMisseditDetailViewController alloc] initWithEvent:[[self.eventsList objectAtIndex:indexPath.section] objectAtIndex:indexPath.row]andUser:me];
      // ...
      // Pass the selected object to the new view controller.
     [self.navigationController pushViewController:detailViewController animated:YES];

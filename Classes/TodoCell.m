@@ -8,7 +8,7 @@
 
 #import "TodoCell.h"
 
-#define TODO_RED_COLOR	[UIColor colorWithRed:0.9020f green:0.7490f blue:0.7529f alpha:1.0f]
+#define TODO_RED_COLOR		[UIColor colorWithRed:0.9020f green:0.7490f blue:0.7529f alpha:1.0f]
 #define TODO_YELLOW_COLOR	[UIColor colorWithRed:0.8980f green:0.8588f blue:0.7608f alpha:1.0f]
 #define TODO_GREEN_COLOR	[UIColor colorWithRed:0.6549f green:0.7961f blue:0.5647f alpha:1.0f]
 

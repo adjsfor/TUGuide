@@ -25,7 +25,7 @@
 		[headerBackground release];
 		
         UIImage *img = [UIImage imageNamed: @"iMisseditIcon.png"];
-		logo = [[UIImageView alloc] initWithFrame:CGRectMake(15, 10, 70, 90)];
+		logo = [[UIImageView alloc] initWithFrame:CGRectMake(15, 10, 60, 80)];
 		logo.image = img;
 		[img release];
 		[self addSubview:logo];

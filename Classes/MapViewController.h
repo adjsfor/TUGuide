@@ -28,6 +28,7 @@
 	UISegmentedControl *segmentedControl;
 	UIButton *detailButton;
 	CLLocationCoordinate2D location;
+	CLLocationManager *locationManager;
 
 }
 
@@ -39,6 +40,7 @@
 @property (nonatomic, retain) Building *building;
 @property (nonatomic, retain) UISegmentedControl *segmentedControl;
 @property (nonatomic, retain) UIButton *detailButton;
+@property (nonatomic, retain) CLLocationManager *locationManager;
 
 
 + (CGFloat)annotationPadding;
@@ -46,5 +48,7 @@
 
 - (id)initWithBuildings: (NSMutableArray *)b;
 - (IBAction)segmentAction:(UISegmentedControl *)segmentPick;
+-(void)locateUser:(id)sender;
+- (void)gotoLocation;
 
 @end

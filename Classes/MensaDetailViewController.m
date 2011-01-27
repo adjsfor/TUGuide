@@ -95,6 +95,8 @@
 	cell.detailTextLabel.numberOfLines = 0;
 	cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:13];
 	cell.detailTextLabel.textColor = [UIColor colorWithRed:.43 green:.43 blue:.43 alpha:1];
+	
+	cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;
 }

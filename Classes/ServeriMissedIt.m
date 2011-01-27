@@ -18,17 +18,17 @@
 -(void) getDataForScreen_name:(NSString *)screen_name 
 				 andLectureId:(NSString *)lecture
 				 andSessionId:(NSString *)session_id{
-	state = GET;
+	state = POST;
 	allData = [[NSMutableString alloc] init];
 	NSMutableURLRequest *request = [[[NSMutableURLRequest alloc] init] autorelease];
 	[request setURL:[NSURL URLWithString:@"http://hgmm.webhop.net:56789/iMissedIt/announcements"]];
-	[request setHTTPMethod:@"GET"];
+	[request setHTTPMethod:@"POST"];
 	[request addValue:@"Content-Type" forHTTPHeaderField:@"application/x-www-form-urlencoded"];
 	[request addValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
 	NSString *requestBody = [[NSString alloc]
 							 initWithFormat:@"screen_name=%@&session_id=%@&uuid=%@",
 							 screen_name, session_id,lecture];
-	[request setHTTPBody:[requestBody dataUsingEncoding:NSASCIIStringEncoding]];
+	[request setHTTPBody:[requestBody dataUsingEncoding:NSUTF8StringEncoding]];
 	dataConnection=[[NSURLConnection alloc] initWithRequest:request delegate:self];
 	[requestBody release];
 }
@@ -47,7 +47,7 @@
 	NSString *requestBody = [[NSString alloc]
 							 initWithFormat:@"screen_name=%@&session_id=%@&uuid=%@&message=%@",
 							 screen_name, session_id,lecture,message];
-	[request setHTTPBody:[requestBody dataUsingEncoding:NSASCIIStringEncoding]];
+	[request setHTTPBody:[requestBody dataUsingEncoding:NSUTF8StringEncoding]];
 	dataConnection=[[NSURLConnection alloc] initWithRequest:request delegate:self];
 	[requestBody release];
 }
@@ -68,7 +68,7 @@
 	NSLog(@"The code is: %i", statusCode );	
 	if(state==POST){
 		[dataConnection release];
-		[allData release];
+		//[allData release];
 	}
 }
 
@@ -125,7 +125,7 @@
 		[allData release];
 		[delegate2 passing:self command:@"iMissedItDataFailed" message:nil];
 	}
-	[dataConnection release];
+	//[dataConnection release];
 }
 
 -(void) dealloc{

@@ -26,7 +26,8 @@
     self.backgroundColor = [UIColor whiteColor];
 	
 	UIImageView *headerBackground = [[UIImageView alloc]initWithFrame:CGRectMake(0, -20, 320, 120)];
-	headerBackground.image = [UIImage imageNamed:@"HeaderBackGround"];
+	UIImage *bimage = [UIImage imageNamed:@"HeaderBackground"];
+	headerBackground.image = bimage;
 	[self addSubview:headerBackground];
 	[headerBackground release];
 	
@@ -92,9 +93,11 @@
 	[self addSubview:location];
 	[location release];
     
-	showLocationButton = [UIButton buttonWithType:UIButtonTypeCustom];
-	[showLocationButton setFrame:CGRectMake(265, 140, 40, 40)];
-	[showLocationButton setBackgroundImage:[UIImage imageNamed:@"bg_logo.png"] forState:UIControlStateNormal];
+	showLocationButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+	[showLocationButton setFrame:CGRectMake(60, 320, 200, 35)];
+	[showLocationButton setTitle:@"Show Location PDF" forState:UIControlStateNormal];
+	[showLocationButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+	[showLocationButton setBackgroundImage:[UIImage imageNamed: @"ButtonDark.png"] forState:UIControlStateNormal];	
 	[self addSubview:showLocationButton];
 	//[showLocationButton release];
 	

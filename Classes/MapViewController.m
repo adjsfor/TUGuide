@@ -12,7 +12,7 @@
 @implementation MapViewController
 
 @synthesize mapView, detailButton;;
-@synthesize mapAnnotations, classViewController, buildingsArray, classroom, building, segmentedControl;
+@synthesize mapAnnotations, classViewController, buildingsArray, classroom, building, segmentedControl, locationManager;
 
 #define BUILDINGS   0
 #define MENSA		1
@@ -58,6 +58,24 @@
 	}
 }
 
+-(void)locateUser:(id)sender{
+	locationManager=[[CLLocationManager alloc] init];
+	locationManager.delegate=self;
+	[locationManager startUpdatingLocation];
+}
+
+- (void)gotoLocation
+{
+    MKCoordinateRegion newRegion;
+    newRegion.center.latitude = 48.19802;
+    newRegion.center.longitude = 16.367102;
+    newRegion.span.latitudeDelta = 0.005;
+    newRegion.span.longitudeDelta = 0.005;
+	
+    [self.mapView setRegion:newRegion animated:YES];
+}
+
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad 
 {
@@ -68,13 +86,13 @@
 	mapView.mapType = MKMapTypeStandard;
 	mapView.delegate = self;
 	mapView.showsUserLocation = YES;
-	//[self gotoLocation];
+	[self gotoLocation];
 	[self.view addSubview:mapView];
 	
-	CLLocationManager *locationManager=[[CLLocationManager alloc] init];
-	locationManager.delegate=self;
+	//CLLocationManager *locationManager=[[CLLocationManager alloc] init];
+	//locationManager.delegate=self;
 	
-	[locationManager startUpdatingLocation];
+	//[locationManager startUpdatingLocation];
 	
 	
 	[self.mapView removeAnnotations:self.mapView.annotations];  // remove any annotations that exist
@@ -96,6 +114,8 @@
 	// Add it to the navigation bar
 	self.navigationItem.titleView = segmentedControl;
 	self.navigationItem.hidesBackButton = YES;
+	UIBarButtonItem * btn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(locateUser:)];
+	self.navigationItem.rightBarButtonItem = btn;
 	[segmentedControl release];
 }
 
@@ -134,6 +154,7 @@
 	region.span=span;
 	
 	[mapView setRegion:region animated:TRUE];
+	[locationManager stopUpdatingLocation];
 	
 }
 

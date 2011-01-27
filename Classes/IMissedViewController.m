@@ -97,7 +97,7 @@
 
 // Fetching events happening in the last 7 days with a predicate, limiting to the default calendar 
 - (NSMutableArray *)fetchEventsForToday {
-	return [LecturesCalendarHelper getEKEventsFromCalendarWithPrefix:@"TISS" startingDay:-7 endingDay:0];
+	return [LecturesCalendarHelper getEKEventsFromCalendarWithPrefix:@"TISS" startingDay:-8 endingDay:0];
 }
 
 

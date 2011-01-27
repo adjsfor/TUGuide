@@ -16,7 +16,7 @@
 
 #include "UIAlertView_Extended.h"
 
-@interface IMisseditDetailViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate>{
+@interface IMisseditDetailViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate, MessagePassProtocol>{
 	IMisseditDetailView *detailView;
 	Announcement *announcement;
 	User *me;
@@ -24,6 +24,7 @@
 	EKEvent *event;
 	NSMutableString *identifier;
 	NSString *newAnnouncement;
+	NSMutableArray *announcements;
 }
 
 @property (nonatomic, retain) IMisseditDetailView *detailView;
@@ -33,6 +34,7 @@
 @property (nonatomic, retain) EKEvent *event;
 @property (nonatomic, retain) NSMutableString *identifier;
 @property (nonatomic, retain) NSString *newAnnouncement;
+@property (nonatomic, retain) NSMutableArray *announcements;
 
 
 -(id)initWithEvent:(EKEvent *) e andUser:(User *)u;

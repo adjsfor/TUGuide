@@ -1,4 +1,4 @@
-    //
+//
 //  iMisseditDetailViewController.m
 //  TUGuide
 //
@@ -11,7 +11,7 @@
 
 @implementation IMisseditDetailViewController
 
-@synthesize announcement, detailView, me, serverConnection, event, identifier, newAnnouncement;
+@synthesize announcement, detailView, me, serverConnection, event, identifier, newAnnouncement, announcements;
 
 -(id)initWithEvent:(EKEvent *) e andUser:(User *)u
 {
@@ -28,6 +28,7 @@
 	//[serverConnection setDataForScreen_name:me.screenName andLectureId:identifier andSessionId:me.sessionId andMessage:@"erster eintrag"];
 	NSLog(@"identifier %@",identifier );
 	[serverConnection getDataForScreen_name:me.screenName andLectureId:identifier andSessionId:me.sessionId];
+	serverConnection.delegate2 = self;
 	return self;
 }
 
@@ -46,8 +47,10 @@
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
 	detailView = [[IMisseditDetailView alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
-	UIBarButtonItem * btn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addAnnouncement:)];
-	self.navigationItem.rightBarButtonItem = btn;
+	detailView.contentTable.dataSource = self;
+	detailView.contentTable.delegate = self;
+	UIBarButtonItem * add = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addAnnouncement:)];
+	self.navigationItem.rightBarButtonItem = add;
 	
 	self.view = detailView;
 }
@@ -60,8 +63,6 @@
 	self.detailView.header.lineBreakMode = UILineBreakModeWordWrap;
 	self.detailView.header.numberOfLines = 0;
 	[self.detailView.header setText:self.event.title];
-	NSMutableArray *announcements = [[NSMutableArray alloc]initWithArray:serverConnection.annoucements];
-	
 }
 
 -(void)addAnnouncement:(id)sender{
@@ -99,6 +100,61 @@
 	}
 }
 
+-(BOOL)passing:(NSObject *)requestor command:(NSString *)cmd message:(NSString *)msg{
+	if ([cmd isEqual:@"iMissedItDataRecieved"]) {
+		NSLog(@"data received");
+		announcements = [[NSMutableArray alloc]initWithArray:serverConnection.annoucements];
+		[self.detailView.contentTable reloadData];
+		return YES; 
+	}
+	
+	if ([cmd isEqual:@"iMissedItDataFailed"]) {
+		NSLog(@"data not received");
+		return NO;
+	}
+	return YES;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    // Return the number of sections.
+    return 1;
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    // Return the number of rows in the section.
+	return [announcements count];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	return 85.0; //returns floating point which will be used for a cell row height at specified row index
+}
+
+
+// Customize the appearance of table view cells.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+    }
+	
+	cell.textLabel.text = [[announcements objectAtIndex:[indexPath row]] message];
+	
+	cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
+	cell.textLabel.numberOfLines = 0;
+	cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:16];
+	
+	cell.detailTextLabel.text = [[announcements objectAtIndex:[indexPath row]] when_announced];	cell.detailTextLabel.lineBreakMode = UILineBreakModeWordWrap;
+	cell.detailTextLabel.numberOfLines = 0;
+	cell.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:13];
+	cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    return cell;
+}
 
 
 

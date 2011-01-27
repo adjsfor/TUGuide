@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@protocol DataPassProtocol
+@protocol DataPassProtocol <NSObject>
 -(void)passingCommand:(NSString *)cmd sender:(int)sd message:(NSString *)msg data:(NSString *)data; 
 
 @end

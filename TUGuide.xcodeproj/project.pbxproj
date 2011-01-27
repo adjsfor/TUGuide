@@ -17,7 +17,6 @@
 		4B0F819E12DE29300016E7BF /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B0F819B12DE29300016E7BF /* green.png */; };
 		4B2C630A12DF32AD00D7519B /* LecturesCalendarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2C630912DF32AD00D7519B /* LecturesCalendarTableViewController.m */; };
 		4B38C1A812CA607900E5C5D4 /* 1map.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B38C1A712CA607900E5C5D4 /* 1map.png */; };
-		4B38C1BA12CA609A00E5C5D4 /* iMisseditIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B38C1AD12CA609A00E5C5D4 /* iMisseditIcon.png */; };
 		4B38C1C012CA609A00E5C5D4 /* 145-persondot.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B38C1B312CA609A00E5C5D4 /* 145-persondot.png */; };
 		4B38C1C112CA609A00E5C5D4 /* 48-fork-and-knife.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B38C1B412CA609A00E5C5D4 /* 48-fork-and-knife.png */; };
 		4B38C1C212CA609A00E5C5D4 /* 40-inbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B38C1B512CA609A00E5C5D4 /* 40-inbox.png */; };
@@ -138,6 +137,7 @@
 		FAE3B50712E78FCD00215763 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE3B50612E78FCD00215763 /* CoreLocation.framework */; };
 		FAE3B54312E793D800215763 /* ButtonDark.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE3B54212E793D800215763 /* ButtonDark.png */; };
 		FAE3B5C412E79C6600215763 /* IMissedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE3B5C312E79C6600215763 /* IMissedViewController.m */; };
+		FAE8389612F1210C0027983C /* iMisseditIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE8389512F1210C0027983C /* iMisseditIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -155,7 +155,6 @@
 		4B2C630812DF32AD00D7519B /* LecturesCalendarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LecturesCalendarTableViewController.h; sourceTree = "<group>"; };
 		4B2C630912DF32AD00D7519B /* LecturesCalendarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LecturesCalendarTableViewController.m; sourceTree = "<group>"; };
 		4B38C1A712CA607900E5C5D4 /* 1map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1map.png; sourceTree = "<group>"; };
-		4B38C1AD12CA609A00E5C5D4 /* iMisseditIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iMisseditIcon.png; sourceTree = "<group>"; };
 		4B38C1B312CA609A00E5C5D4 /* 145-persondot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "145-persondot.png"; sourceTree = "<group>"; };
 		4B38C1B412CA609A00E5C5D4 /* 48-fork-and-knife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "48-fork-and-knife.png"; sourceTree = "<group>"; };
 		4B38C1B512CA609A00E5C5D4 /* 40-inbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "40-inbox.png"; sourceTree = "<group>"; };
@@ -323,6 +322,7 @@
 		FAE3B62A12E7A44500215763 /* IMisseditDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMisseditDetailView.m; sourceTree = "<group>"; };
 		FAE3B62C12E7A5B100215763 /* IMisseditDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMisseditDetailViewController.h; sourceTree = "<group>"; };
 		FAE3B62D12E7A5B100215763 /* IMisseditDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMisseditDetailViewController.m; sourceTree = "<group>"; };
+		FAE8389512F1210C0027983C /* iMisseditIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iMisseditIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -823,6 +823,7 @@
 		FAD1DB0712A0391800F782A0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				FAE8389512F1210C0027983C /* iMisseditIcon.png */,
 				4B58B2CF12E781270073A1FA /* incomplete.png */,
 				FAE3B54212E793D800215763 /* ButtonDark.png */,
 				4B4E17F512E778CC0096CE7E /* inprogress.png */,
@@ -845,7 +846,6 @@
 				FACF153112D7EF1C0087B05C /* personGreen.png */,
 				FACF153212D7EF1C0087B05C /* personGrey.png */,
 				FACF153312D7EF1C0087B05C /* personOrange.png */,
-				4B38C1AD12CA609A00E5C5D4 /* iMisseditIcon.png */,
 				4B38C1B312CA609A00E5C5D4 /* 145-persondot.png */,
 				4B38C1B412CA609A00E5C5D4 /* 48-fork-and-knife.png */,
 				4B38C1B512CA609A00E5C5D4 /* 40-inbox.png */,
@@ -959,7 +959,6 @@
 				FAD1DB0312A0390500F782A0 /* TUGuideLogo.png in Resources */,
 				FAD4AB3412A0DA1800817DCA /* icon.png in Resources */,
 				4B38C1A812CA607900E5C5D4 /* 1map.png in Resources */,
-				4B38C1BA12CA609A00E5C5D4 /* iMisseditIcon.png in Resources */,
 				4B38C1C012CA609A00E5C5D4 /* 145-persondot.png in Resources */,
 				4B38C1C112CA609A00E5C5D4 /* 48-fork-and-knife.png in Resources */,
 				4B38C1C212CA609A00E5C5D4 /* 40-inbox.png in Resources */,
@@ -988,6 +987,7 @@
 				4B4E17F612E778CC0096CE7E /* inprogress.png in Resources */,
 				4B58B2D012E781270073A1FA /* incomplete.png in Resources */,
 				FAE3B54312E793D800215763 /* ButtonDark.png in Resources */,
+				FAE8389612F1210C0027983C /* iMisseditIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

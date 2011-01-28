@@ -60,6 +60,8 @@
     [super viewDidLoad];
     CGSize scrollContentSize = CGSizeMake(320, 430);
     self.scrollView.contentSize = scrollContentSize;
+	self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
+
 }
 
 

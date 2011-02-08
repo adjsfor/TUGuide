@@ -18,7 +18,7 @@
 -(void) getDataForScreen_name:(NSString *)screen_name 
 				 andLectureId:(NSString *)lecture
 				 andSessionId:(NSString *)session_id{
-	state = POST;
+	state = GET;
 	allData = [[NSMutableString alloc] init];
 	NSMutableURLRequest *request = [[[NSMutableURLRequest alloc] init] autorelease];
 	[request setURL:[NSURL URLWithString:@"http://hgmm.webhop.net:56789/iMissedIt/announcements"]];
@@ -67,7 +67,7 @@
 	}
 	NSLog(@"The code is: %i", statusCode );	
 	if(state==POST){
-		[dataConnection release];
+		//[dataConnection release];
 		//[allData release];
 	}
 }
@@ -90,35 +90,39 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
 	NSLog(@"-SERVER: connection finished loading");
 	if (self.statusCode == 200) {
-		//[delegate2 passing:self command:@"loginSuccessful" message:@"Login has been successful!"];
-		NSData *plistData = [allData dataUsingEncoding:NSUTF8StringEncoding];
-		NSString *error;
-		NSPropertyListFormat format;
-		NSMutableArray* array;
-		NSMutableDictionary* myDict;
-		Announcement *a;
-		//END
-		array = [NSPropertyListSerialization propertyListFromData:plistData
-												 mutabilityOption:NSPropertyListImmutable
-														   format:&format
-												 errorDescription:&error];
-		if (array) {
-			myDict = [NSMutableDictionary dictionaryWithCapacity:[array count]];
-			annoucements = [[NSMutableArray alloc] init];
-			for (NSDictionary* dict in array) {
-				a = [Announcement customClassWithProperties:dict];
-				[annoucements addObject:a];
-				//[b release];
+		if (state==GET) {
+			//[delegate2 passing:self command:@"loginSuccessful" message:@"Login has been successful!"];
+			NSData *plistData = [allData dataUsingEncoding:NSUTF8StringEncoding];
+			NSString *error;
+			NSPropertyListFormat format;
+			NSMutableArray* array;
+			NSMutableDictionary* myDict;
+			Announcement *a;
+			//END
+			array = [NSPropertyListSerialization propertyListFromData:plistData
+													 mutabilityOption:NSPropertyListImmutable
+															   format:&format
+													 errorDescription:&error];
+			if (array) {
+				myDict = [NSMutableDictionary dictionaryWithCapacity:[array count]];
+				annoucements = [[NSMutableArray alloc] init];
+				for (NSDictionary* dict in array) {
+					a = [Announcement customClassWithProperties:dict];
+					[annoucements addObject:a];
+					//[b release];
+				}
+			} else {
+				NSLog(@"Plist Buildings does not exist, error:%@",error);
 			}
-		} else {
-			NSLog(@"Plist Buildings does not exist, error:%@",error);
+			
+			//[myDict release];
+			//[plistData release];
+			//[error release];
+			//[array release];
+			[delegate2 passing:self command:@"iMissedItDataRecieved" message:nil];
+		}else if (state == POST) {
+			[delegate2 passing:self command:@"iMissedItDataSend" message:nil];
 		}
-		
-		//[myDict release];
-		//[plistData release];
-		//[error release];
-		//[array release];
-		[delegate2 passing:self command:@"iMissedItDataRecieved" message:nil];
 		
 	}else {
 		//[delegate2 passing:self command:@"loginFail" message:@"Username/Password information incorrect, please try again!"];

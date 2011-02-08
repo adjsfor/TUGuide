@@ -112,13 +112,12 @@
 		FA6171D312B90A2300E0E2C7 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6171D212B90A2300E0E2C7 /* MapViewController.m */; };
 		FA6171EB12B90B1A00E0E2C7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6171EA12B90B1A00E0E2C7 /* MapKit.framework */; };
 		FA734F3112DE1A0500CC841A /* MensaDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA734F3012DE1A0500CC841A /* MensaDetailView.m */; };
+		FA788C1F1301CA6B00999397 /* MissedItDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA788C1E1301CA6B00999397 /* MissedItDetailViewController.m */; };
 		FA903E7012DD0C800079D0B3 /* startUp.png in Resources */ = {isa = PBXBuildFile; fileRef = FA903E6F12DD0C800079D0B3 /* startUp.png */; };
 		FA903FB112DD22FD0079D0B3 /* MensaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA903FB012DD22FD0079D0B3 /* MensaDetailViewController.m */; };
 		FA90401C12DD2B230079D0B3 /* LocationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA90401B12DD2B230079D0B3 /* LocationDetailViewController.m */; };
 		FA9239DA12D3943700A3048D /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9239D912D3943700A3048D /* LocationViewController.m */; };
 		FAB1DE7712EEFCF10020F478 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3862B112E87F6D00F4875D /* HelpViewController.m */; };
-		FAB1DE7812EEFCF50020F478 /* IMisseditDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE3B62A12E7A44500215763 /* IMisseditDetailView.m */; };
-		FAB1DE7912EEFCF80020F478 /* IMisseditDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE3B62D12E7A5B100215763 /* IMisseditDetailViewController.m */; };
 		FACC502812D26D130007911F /* MapListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACC502712D26D130007911F /* MapListViewController.m */; };
 		FACF14AB12D7E4D20087B05C /* MapListDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = FACF14AA12D7E4D20087B05C /* MapListDetailView.m */; };
 		FACF14AE12D7E50F0087B05C /* MapListDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACF14AD12D7E50F0087B05C /* MapListDetailViewController.m */; };
@@ -286,6 +285,8 @@
 		FA6171EA12B90B1A00E0E2C7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FA734F2F12DE1A0500CC841A /* MensaDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaDetailView.h; sourceTree = "<group>"; };
 		FA734F3012DE1A0500CC841A /* MensaDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaDetailView.m; sourceTree = "<group>"; };
+		FA788C1D1301CA6B00999397 /* MissedItDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissedItDetailViewController.h; sourceTree = "<group>"; };
+		FA788C1E1301CA6B00999397 /* MissedItDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MissedItDetailViewController.m; sourceTree = "<group>"; };
 		FA903E6F12DD0C800079D0B3 /* startUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startUp.png; sourceTree = "<group>"; };
 		FA903FAF12DD22FD0079D0B3 /* MensaDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaDetailViewController.h; sourceTree = "<group>"; };
 		FA903FB012DD22FD0079D0B3 /* MensaDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaDetailViewController.m; sourceTree = "<group>"; };
@@ -321,10 +322,6 @@
 		FAE3B54212E793D800215763 /* ButtonDark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonDark.png; sourceTree = "<group>"; };
 		FAE3B5C212E79C6600215763 /* IMissedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMissedViewController.h; sourceTree = "<group>"; };
 		FAE3B5C312E79C6600215763 /* IMissedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMissedViewController.m; sourceTree = "<group>"; };
-		FAE3B62912E7A44500215763 /* IMisseditDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMisseditDetailView.h; sourceTree = "<group>"; };
-		FAE3B62A12E7A44500215763 /* IMisseditDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMisseditDetailView.m; sourceTree = "<group>"; };
-		FAE3B62C12E7A5B100215763 /* IMisseditDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMisseditDetailViewController.h; sourceTree = "<group>"; };
-		FAE3B62D12E7A5B100215763 /* IMisseditDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMisseditDetailViewController.m; sourceTree = "<group>"; };
 		FAE8389512F1210C0027983C /* iMisseditIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iMisseditIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -636,8 +633,8 @@
 			children = (
 				FAE3B5C212E79C6600215763 /* IMissedViewController.h */,
 				FAE3B5C312E79C6600215763 /* IMissedViewController.m */,
-				FAE3B62C12E7A5B100215763 /* IMisseditDetailViewController.h */,
-				FAE3B62D12E7A5B100215763 /* IMisseditDetailViewController.m */,
+				FA788C1D1301CA6B00999397 /* MissedItDetailViewController.h */,
+				FA788C1E1301CA6B00999397 /* MissedItDetailViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -645,8 +642,6 @@
 		4B38C1E812CA7DD000E5C5D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FAE3B62912E7A44500215763 /* IMisseditDetailView.h */,
-				FAE3B62A12E7A44500215763 /* IMisseditDetailView.m */,
 				FAB72B2D12F06D38003CD8E1 /* UIAlertView_Extended.h */,
 			);
 			name = View;
@@ -1082,6 +1077,7 @@
 				FAB1DE7812EEFCF50020F478 /* IMisseditDetailView.m in Sources */,
 				FAB1DE7912EEFCF80020F478 /* IMisseditDetailViewController.m in Sources */,
 				8E12F1901301D4500002DE3E /* DeleteAddFriend.m in Sources */,
+				FA788C1F1301CA6B00999397 /* MissedItDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

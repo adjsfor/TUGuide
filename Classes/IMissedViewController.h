@@ -10,7 +10,7 @@
 #import <EventKit/EventKit.h>
 #import <EventKitUI/EventKitUI.h>
 #import "LecturesCalendarHelper.h"
-#import "IMisseditDetailViewController.h"
+#import "MisseditDetailViewController.h"
 #import "User.h"
 
 

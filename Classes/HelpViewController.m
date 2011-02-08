@@ -33,7 +33,7 @@
 	[helpView scalesPageToFit];
 	
 	NSURL *targetURL;
-	targetURL = [NSURL URLWithString:@"http://hgmm.webhop.net:56789/help/wizard.png"];
+	targetURL = [NSURL URLWithString:@"http://hgmm.webhop.net:56789/help/wizard.jpg"];
 	
 	NSURLRequest *request = [NSURLRequest requestWithURL:targetURL];
 	[helpView loadRequest:request];

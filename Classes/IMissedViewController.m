@@ -207,7 +207,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
     
-    IMisseditDetailViewController *detailViewController = [[IMisseditDetailViewController alloc] initWithEvent:[[self.eventsList objectAtIndex:indexPath.section] objectAtIndex:indexPath.row]andUser:me];
+    MissedItDetailViewController *detailViewController = [[MissedItDetailViewController alloc] initWithEvent:[[self.eventsList objectAtIndex:indexPath.section] objectAtIndex:indexPath.row]andUser:me];
      // ...
      // Pass the selected object to the new view controller.
     [self.navigationController pushViewController:detailViewController animated:YES];

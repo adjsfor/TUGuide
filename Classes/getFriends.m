@@ -12,6 +12,7 @@
 @implementation getFriends
 @synthesize dataConnection,me,allData;
 @synthesize statusCode,delegate2,responseData,friends;
+@synthesize autoReleasePool;
 
 -(id) initWithUser:(User *)u{
 	me = u;
@@ -19,29 +20,36 @@
 }
 
 -(void) startProcessing{
-	[NSThread detachNewThreadSelector:@selector(processing) toTarget:self withObject:nil];
+	//[NSThread detachNewThreadSelector:@selector(processing) toTarget:self withObject:self];
+	[self processing];
 }
 
 -(void) processing{
-	while (YES) {
-		[self dataCall];
-		[NSThread sleepForTimeInterval:10.0];
-	}
+	//while (YES) {
+	//autoReleasePool = [[NSAutoreleasePool alloc] init];
+	[self dataCall];
+		
+	//}
 }
 
 -(void) dataCall{
+	//NSAutoreleasePool *autoReleasePool = [[NSAutoreleasePool alloc] init];
 	allData = [[NSMutableString alloc] init];
 	NSMutableURLRequest *request = [[[NSMutableURLRequest alloc] init] autorelease];
-	[request setURL:[NSURL URLWithString:@"http://hgmm.webhop.net:56789/Friend/"]];
+	NSString *requestBody = [[NSString alloc]
+							 initWithFormat:@"http://hgmm.webhop.net:56789/Friend/Index?screen_name=%@&session_id=%@",
+							 me.screenName, me.sessionId];
+	
+	[request setURL:[NSURL URLWithString:requestBody]];
 	[request setHTTPMethod:@"GET"];
 	[request addValue:@"Content-Type" forHTTPHeaderField:@"application/x-www-form-urlencoded"];
 	[request addValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-	NSString *requestBody = [[NSString alloc]
-							 initWithFormat:@"screen_name=%@&session_id=%@",
-							 me.screenName, me.sessionId];
-	[request setHTTPBody:[requestBody dataUsingEncoding:NSASCIIStringEncoding]];
+	
+	//[request setHTTPBody:[requestBody dataUsingEncoding:NSASCIIStringEncoding]];
 	dataConnection=[[NSURLConnection alloc] initWithRequest:request delegate:self];
 	[requestBody release];
+	//[request release];
+	//[autoReleasePool drain];
 }
 
 
@@ -114,7 +122,9 @@
 		[me release];
 		[allData release];
 	}
+	//[NSThread sleepForTimeInterval:10.0];
 	[dataConnection release];
+	//[self dataCall];
 }
 
 -(void) dealloc{

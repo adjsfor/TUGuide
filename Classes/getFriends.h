@@ -12,11 +12,14 @@
 #import "Friend.h"
 
 
+
 @interface getFriends : NSObject {
 	NSURLConnection *dataConnection;
 	int statusCode;
 	id <MessagePassProtocol> delegate2;
 	NSString *responseData;
+	
+	NSAutoreleasePool *autoReleasePool;
 	
 	NSMutableString *allData;
 	User * me;
@@ -27,6 +30,7 @@
 @property (nonatomic, retain) NSString *responseData;
 @property (nonatomic, retain) NSMutableString *allData;
 @property (nonatomic, retain) NSMutableArray *friends;
+@property (nonatomic, retain) NSAutoreleasePool *autoReleasePool;
 @property (nonatomic, retain) User * me;
 @property (nonatomic) int statusCode;
 @property (nonatomic,assign) id <MessagePassProtocol> delegate2;

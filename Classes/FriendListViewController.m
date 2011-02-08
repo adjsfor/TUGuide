@@ -140,11 +140,11 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
 	
-	
-	cell.textLabel.text = [[friendsArray objectAtIndex:[indexPath row]]name ];
-	cell.detailTextLabel.text = (NSString *)[[friendsArray objectAtIndex:[indexPath row]] address];
-	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-	
+	if ([friendsArray objectAtIndex:[indexPath row]]!= nil) {
+		cell.textLabel.text = [[friendsArray objectAtIndex:[indexPath row]] screen_name ];
+		cell.detailTextLabel.text = (NSString *)[[friendsArray objectAtIndex:[indexPath row]] subtitle];
+		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+	}
     
     return cell;
 }

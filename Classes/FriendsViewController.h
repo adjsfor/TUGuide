@@ -26,6 +26,7 @@
 	UISegmentedControl *segmentedControl;
 	UIButton *detailButton;
 	CLLocationCoordinate2D location;
+	User *me;
 }
 
 @property (nonatomic, retain) MKMapView *mapView;
@@ -36,7 +37,7 @@
 @property (nonatomic, retain) Building *building;
 @property (nonatomic, retain) UISegmentedControl *segmentedControl;
 @property (nonatomic, retain) UIButton *detailButton;
-
+@property (nonatomic, retain) User *me;
 
 
 + (CGFloat)annotationPadding;

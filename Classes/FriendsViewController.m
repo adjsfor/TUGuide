@@ -13,7 +13,25 @@
 @implementation FriendsViewController
 
 @synthesize mapView, detailButton;;
-@synthesize mapAnnotations, classViewController, friendsArray, classroom, building, segmentedControl;
+@synthesize mapAnnotations, classViewController, friendsArray, classroom, building, segmentedControl,me;
+
+
+-(id) initWithUser:(User *)u
+{
+	self = [super init];
+	if (self) {
+		self.title = @"Friends";
+		me = u;
+		UIImage* anImage = [UIImage imageNamed:@"145-persondot.png"];
+		UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:@"Friends" image:anImage tag:0];
+		self.tabBarItem = theItem;
+		[theItem release];
+	}
+	
+	return self;
+}
+
+
 
 + (CGFloat)annotationPadding;
 {
@@ -44,7 +62,7 @@
 		case 0:
 			break;
 		case 1:
-			[self.navigationController pushViewController:[[FriendListViewController alloc] initWithFriends:friendsArray] animated:NO];
+			[self.navigationController pushViewController:[[FriendListViewController alloc] initWithUser:me] animated:NO];
 			break;
 		default:
 			break;

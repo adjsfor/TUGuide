@@ -17,6 +17,7 @@
 	int statusCode;
 	id <MessagePassProtocol> delegate2;
 	NSString *responseData;
+	
 	NSMutableString *allData;
 	User * me;
 	NSMutableArray *friends;

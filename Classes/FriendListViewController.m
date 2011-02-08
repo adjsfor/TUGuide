@@ -12,17 +12,29 @@
 @implementation FriendListViewController
 
 
-@synthesize friendsArray, friend, classViewController;
+@synthesize friendsArray, friend, classViewController,serverConnection;
 
 #pragma mark -
 #pragma mark Initialization
 
-- (id)initWithFriends: (NSMutableArray *)f
+-(id) initWithUser:(User *)u
 {
 	self = [super initWithStyle:UITableViewStylePlain];
 	//buildingsArray = [[NSMutableArray alloc] init];
-	friendsArray = f;
+	me = u;
+	serverConnection = [[getFriends alloc ]initWithUser:u];
+	serverConnection.delegate2 = self;
+	[serverConnection startProcessing];
+	
 	return self;
+}
+
+
+-(BOOL)passing:(NSObject *)requestor command:(NSString *)cmd message:(NSString *)msg{
+	if ([cmd isEqual:@"finished"]) {
+		friendsArray = [serverConnection friends];
+		[self.tableView reloadData];
+	}
 }
 
 #pragma mark -
@@ -73,11 +85,12 @@
 	}
 }
 
-/*
+
  - (void)viewWillAppear:(BOOL)animated {
  [super viewWillAppear:animated];
+	 
  }
- */
+
 /*
  - (void)viewDidAppear:(BOOL)animated {
  [super viewDidAppear:animated];

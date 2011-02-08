@@ -233,7 +233,7 @@
 	//initialize the ViewControllers for the tabBarController
 	organizerViewController = [[OrganizerViewController alloc] initWithClassrooms:classroomsArray];
 	mapViewController = [[MapViewController alloc] initWithBuildings:buildingsArray];
-	friendViewController  = [[FriendsViewController alloc] initView];
+	friendViewController  = [[FriendsViewController alloc] initWithUser:me];
 	mensaViewController = [[MensaViewController alloc] initWithMensas:mensasArray andRestaurants:restaurantsArray];
 	missViewController = [[IMissedViewController alloc] initWithUser:me];
 	

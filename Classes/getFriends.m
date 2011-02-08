@@ -79,7 +79,7 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSLog(@"-SERVER: connection finished loading");
 	if (self.statusCode == 200) {
-		//[delegate2 passing:self command:@"loginSuccessful" message:@"Login has been successful!"];
+		//
 		NSData *plistData = [allData dataUsingEncoding:NSUTF8StringEncoding];
 		NSString *error;
 		NSPropertyListFormat format;
@@ -99,6 +99,7 @@
 				[friends addObject:f];
 				//[b release];
 			}
+			[delegate2 passing:self command:@"finished" message:@"Data form server friends"];
 		} else {
 			NSLog(@"Plist Buildings does not exist, error:%@",error);
 		}

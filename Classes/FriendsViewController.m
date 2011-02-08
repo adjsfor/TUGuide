@@ -61,6 +61,7 @@
 	NSLog(@"segment called %d", segmentPick.selectedSegmentIndex);
 	switch (segmentPick.selectedSegmentIndex) {
 		case 0:
+			self.navigationItem.rightBarButtonItem = nil;
 			break;
 		case 1:
 			[self.navigationController pushViewController:flv animated:NO];

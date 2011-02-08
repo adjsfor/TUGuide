@@ -32,6 +32,7 @@
 	[request setHTTPBody:[requestBody dataUsingEncoding:NSUTF8StringEncoding]];
 	dataConnection=[[NSURLConnection alloc] initWithRequest:request delegate:self];
 	[requestBody release];
+	XLog();
 }
 
 -(void) addFriendforMyScreenName:(NSString *)screen_name 
@@ -45,8 +46,9 @@
 	[request addValue:@"Content-Type" forHTTPHeaderField:@"application/x-www-form-urlencoded"];
 	[request addValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
 	NSString *requestBody = [[NSString alloc]
-							 initWithFormat:@"screen_name=%@&session_id=%@&uuid=%@&my_screen_name=%@",
+							 initWithFormat:@"screen_name=%@&session_id=%@&my_screen_name=%@",
 							 friendName, session_id,screen_name];
+	XLog(" %@" ,requestBody);
 	[request setHTTPBody:[requestBody dataUsingEncoding:NSUTF8StringEncoding]];
 	dataConnection=[[NSURLConnection alloc] initWithRequest:request delegate:self];
 	[requestBody release];

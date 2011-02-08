@@ -13,14 +13,18 @@
 #import "Friend.h"
 #import "getFriends.h"
 #import "MessagePassProtocol.h"
+#import "DeleteAddFriend.h"
+#include "UIAlertView_Extended.h"
 
-
-@interface FriendListViewController : UITableViewController<MessagePassProtocol> {
+@interface FriendListViewController : UITableViewController<MessagePassProtocol,UIAlertViewDelegate> {
 	NSMutableArray *friendsArray;
 	Friend *friend;
 	User * me;
 	MapListClassViewController *detailViewController;
 	getFriends *serverConnection;
+	DeleteAddFriend *serverCon;
+	NSString *selected_temp;
+	int add_del; // add 1 // del 0
 }
 
 @property (nonatomic, retain) NSMutableArray *friendsArray;
@@ -28,9 +32,10 @@
 @property (nonatomic, retain) MapListClassViewController *classViewController;
 @property (nonatomic, retain) getFriends *serverConnection;
 @property (nonatomic, retain) User * me;
+@property (nonatomic, retain) DeleteAddFriend *serverCon;
+@property (nonatomic, retain) NSString *selected_temp;
 
 - (IBAction)segmentAction:(UISegmentedControl *)segmentPick;
-- (id)initWithFriends: (NSMutableArray *)f;
 - (id) initWithUser:(User *)u;
 -(BOOL)passing:(NSObject *)requestor command:(NSString *)cmd message:(NSString *)msg; 
 

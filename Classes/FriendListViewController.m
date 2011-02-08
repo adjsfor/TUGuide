@@ -12,7 +12,7 @@
 @implementation FriendListViewController
 
 
-@synthesize friendsArray, friend, classViewController,serverConnection;
+@synthesize friendsArray, friend, classViewController,serverConnection,me,serverCon,selected_temp;
 
 #pragma mark -
 #pragma mark Initialization
@@ -22,8 +22,10 @@
 	self = [super initWithStyle:UITableViewStylePlain];
 	//buildingsArray = [[NSMutableArray alloc] init];
 	me = u;
-	serverConnection = [[getFriends alloc ]initWithUser:u];
+	serverConnection = [[ getFriends alloc ]initWithUser:me];
+	serverCon = [[ DeleteAddFriend alloc ]init];
 	serverConnection.delegate2 = self;
+	serverCon.delegate2 = self;
 	[serverConnection startProcessing];
 	
 	return self;
@@ -31,14 +33,63 @@
 
 
 -(BOOL)passing:(NSObject *)requestor command:(NSString *)cmd message:(NSString *)msg{
+	XLog("%@",cmd);
+	
 	if ([cmd isEqual:@"finished"]) {
 		friendsArray = [serverConnection friends];
 		[self.tableView reloadData];
 	}
+	if ([cmd isEqual:@"friendDeleted"]) {
+		XLog("%@",cmd);
+		[serverConnection startProcessing];
+	}	
+	
+	if ([cmd isEqual:@"friendAdded"]) {
+		XLog("%@",cmd);
+		[serverConnection startProcessing];
+	}
+	return YES;
 }
 
 #pragma mark -
 #pragma mark View lifecycle
+
+
+- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+	
+	if(buttonIndex > 0) {
+		XLog("%i",buttonIndex);
+		if (add_del == 0) {
+			XLog("DELETING %i",buttonIndex);
+			[serverCon deleteFriendforMyScreenName:me.screenName andSessionId:me.sessionId andFriendScreenName:selected_temp];
+		}else if (add_del == 1) {
+			NSString *textValue = [actionSheet textField].text;
+			if(textValue==nil)
+				return;
+			XLog("Adding %@",textValue);
+			[serverCon addFriendforMyScreenName:me.screenName andSessionId:me.sessionId andFriendScreenName:textValue];
+		}else{
+			XLog("ERROR %i",buttonIndex);
+		}
+
+			
+	}
+}
+
+-(void)addFriend:(id)sender{
+	UIAlertView  *alert = [[UIAlertView alloc] initWithTitle:@"Add new friend the friend?" 
+													 message:@""
+													delegate:self cancelButtonTitle:@"Cancel" 
+										   otherButtonTitles:@"Add", nil];
+	add_del = 1;
+	[alert addTextFieldWithValue:@"" label:@"friend name"];
+	[alert textField].keyboardType = UIKeyboardTypeAlphabet;
+	alert.tag = 1;
+	[alert show];
+	[alert release];
+}
+
+
 
 
 - (void)viewDidLoad {
@@ -65,7 +116,8 @@
 	self.navigationItem.titleView = segmentedControl;
 	self.navigationItem.hidesBackButton = YES;
 	[segmentedControl release];
-	
+	UIBarButtonItem * btn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addFriend:)];
+	self.navigationItem.rightBarButtonItem = btn;
     [super viewDidLoad];
 	
 }
@@ -142,7 +194,7 @@
 	
 	if ([friendsArray objectAtIndex:[indexPath row]]!= nil) {
 		cell.textLabel.text = [[friendsArray objectAtIndex:[indexPath row]] screen_name ];
-		cell.detailTextLabel.text = (NSString *)[[friendsArray objectAtIndex:[indexPath row]] subtitle];
+		cell.detailTextLabel.text = (NSString *)[[friendsArray objectAtIndex:[indexPath row]] email];
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	}
     
@@ -194,15 +246,17 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here. Create and push another view controller.
-	
-    Building *b = [friendsArray objectAtIndex:[indexPath row]];
-    classViewController = [[MapListClassViewController alloc] initWithBuilding:b];
-	classViewController.title = b.name;
-	// ...
-	// Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:self.classViewController animated:YES];
-    [classViewController release];
+	selected_temp = [[friendsArray objectAtIndex:[indexPath row]] screen_name ];
+	UIAlertView  *alert = [[UIAlertView alloc] initWithTitle:@"Delete the friend?" 
+													 message:[[friendsArray objectAtIndex:[indexPath row]] screen_name ]
+													delegate:self cancelButtonTitle:@"Cancel" 
+										   otherButtonTitles:@"Delete", nil];
+	add_del = 0;
+	//®®[alert addTextFieldWithValue:@"" label:nil];
+	//[alert textField].keyboardType = UIKeyboardTypeAlphabet;
+	alert.tag = 1;
+	[alert show];
+	[alert release];
     
 }
 
@@ -214,7 +268,7 @@
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
     
-    // Relinquish ownership any cached data, images, etc. that aren't in use.
+    // Relinquish ownership any cac∫shed data, images, etc. that aren't in use.
 }
 
 - (void)viewDidUnload {

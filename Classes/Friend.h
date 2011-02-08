@@ -19,6 +19,7 @@
 	NSNumber *coordinates_lat;
 	NSNumber *coordinates_lon;
 	NSString *last_login;
+	NSString *email;
 }
 
 @property (nonatomic) int beFriendId;
@@ -30,6 +31,7 @@
 @property (nonatomic,retain) NSNumber *coordinates_lon;
 @property (nonatomic,retain) NSString *screen_name;
 @property (nonatomic,retain) NSString *last_login;
+@property (nonatomic,retain) NSString *email;
 
 + (id)customClassWithProperties:(NSDictionary *)properties;
 - (id)initWithProperties:(NSDictionary *)properties;

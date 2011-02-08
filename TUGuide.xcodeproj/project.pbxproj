@@ -79,6 +79,7 @@
 		8E124B4012E880E4009CD610 /* CreateUserExistingScreenName.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E124B3F12E880E4009CD610 /* CreateUserExistingScreenName.m */; };
 		8E124B4312E88112009CD610 /* CreateUserExistingMail.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E124B4212E88112009CD610 /* CreateUserExistingMail.m */; };
 		8E124B4612E88140009CD610 /* CreateUserExistingMailScreenName.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E124B4512E88140009CD610 /* CreateUserExistingMailScreenName.m */; };
+		8E12F1901301D4500002DE3E /* DeleteAddFriend.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E12F18F1301D4500002DE3E /* DeleteAddFriend.m */; };
 		8E1D031312D8C7E7003F2AA2 /* ServerGetData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1D031212D8C7E7003F2AA2 /* ServerGetData.m */; };
 		8E78159612B8F69200DF4A8B /* ServerCreateUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E78159512B8F69200DF4A8B /* ServerCreateUser.m */; };
 		8E7DEC6A12DDFD13002C06BD /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8E7DEC6912DDFD13002C06BD /* Settings.bundle */; };
@@ -220,6 +221,8 @@
 		8E124B4212E88112009CD610 /* CreateUserExistingMail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateUserExistingMail.m; sourceTree = "<group>"; };
 		8E124B4412E88140009CD610 /* CreateUserExistingMailScreenName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateUserExistingMailScreenName.h; sourceTree = "<group>"; };
 		8E124B4512E88140009CD610 /* CreateUserExistingMailScreenName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateUserExistingMailScreenName.m; sourceTree = "<group>"; };
+		8E12F18E1301D4500002DE3E /* DeleteAddFriend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeleteAddFriend.h; sourceTree = "<group>"; };
+		8E12F18F1301D4500002DE3E /* DeleteAddFriend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteAddFriend.m; sourceTree = "<group>"; };
 		8E1D030C12D8C7B6003F2AA2 /* DataPassProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataPassProtocol.h; sourceTree = "<group>"; };
 		8E1D031112D8C7E7003F2AA2 /* ServerGetData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerGetData.h; sourceTree = "<group>"; };
 		8E1D031212D8C7E7003F2AA2 /* ServerGetData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerGetData.m; sourceTree = "<group>"; };
@@ -718,6 +721,8 @@
 				8E90551C12E78D6700D170CB /* getFriends.m */,
 				8E90558212E7A41800D170CB /* ServeriMissedIt.h */,
 				8E90558312E7A41800D170CB /* ServeriMissedIt.m */,
+				8E12F18E1301D4500002DE3E /* DeleteAddFriend.h */,
+				8E12F18F1301D4500002DE3E /* DeleteAddFriend.m */,
 			);
 			name = "Server Access";
 			sourceTree = "<group>";
@@ -1076,6 +1081,7 @@
 				FAB1DE7712EEFCF10020F478 /* HelpViewController.m in Sources */,
 				FAB1DE7812EEFCF50020F478 /* IMisseditDetailView.m in Sources */,
 				FAB1DE7912EEFCF80020F478 /* IMisseditDetailViewController.m in Sources */,
+				8E12F1901301D4500002DE3E /* DeleteAddFriend.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

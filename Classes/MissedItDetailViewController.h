@@ -1,13 +1,12 @@
 //
-//  iMisseditDetailViewController.h
+//  MissedItDetailViewController.h
 //  TUGuide
 //
-//  Created by Martin Langeder on 20.01.11.
+//  Created by Martin Langeder on 08.02.11.
 //  Copyright 2011 7359. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "IMisseditDetailView.h"
 #import "Announcement.h"
 #import "User.h"
 #import "ServeriMissedIt.h"
@@ -16,8 +15,8 @@
 
 #include "UIAlertView_Extended.h"
 
-@interface IMisseditDetailViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate, MessagePassProtocol>{
-	IMisseditDetailView *detailView;
+
+@interface MissedItDetailViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate, MessagePassProtocol>{
 	Announcement *announcement;
 	User *me;
 	ServeriMissedIt *serverConnection;
@@ -27,7 +26,6 @@
 	NSMutableArray *announcements;
 }
 
-@property (nonatomic, retain) IMisseditDetailView *detailView;
 @property (nonatomic, retain) Announcement *announcement;
 @property (nonatomic, retain) User *me;
 @property (nonatomic, retain) ServeriMissedIt *serverConnection;

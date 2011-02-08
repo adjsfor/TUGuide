@@ -17,7 +17,6 @@
 		4B0F819E12DE29300016E7BF /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B0F819B12DE29300016E7BF /* green.png */; };
 		4B2C630A12DF32AD00D7519B /* LecturesCalendarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2C630912DF32AD00D7519B /* LecturesCalendarTableViewController.m */; };
 		4B38C1A812CA607900E5C5D4 /* 1map.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B38C1A712CA607900E5C5D4 /* 1map.png */; };
-		4B38C1BA12CA609A00E5C5D4 /* iMisseditIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B38C1AD12CA609A00E5C5D4 /* iMisseditIcon.png */; };
 		4B38C1C012CA609A00E5C5D4 /* 145-persondot.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B38C1B312CA609A00E5C5D4 /* 145-persondot.png */; };
 		4B38C1C112CA609A00E5C5D4 /* 48-fork-and-knife.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B38C1B412CA609A00E5C5D4 /* 48-fork-and-knife.png */; };
 		4B38C1C212CA609A00E5C5D4 /* 40-inbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B38C1B512CA609A00E5C5D4 /* 40-inbox.png */; };
@@ -80,6 +79,7 @@
 		8E124B4012E880E4009CD610 /* CreateUserExistingScreenName.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E124B3F12E880E4009CD610 /* CreateUserExistingScreenName.m */; };
 		8E124B4312E88112009CD610 /* CreateUserExistingMail.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E124B4212E88112009CD610 /* CreateUserExistingMail.m */; };
 		8E124B4612E88140009CD610 /* CreateUserExistingMailScreenName.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E124B4512E88140009CD610 /* CreateUserExistingMailScreenName.m */; };
+		8E12F1901301D4500002DE3E /* DeleteAddFriend.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E12F18F1301D4500002DE3E /* DeleteAddFriend.m */; };
 		8E1D031312D8C7E7003F2AA2 /* ServerGetData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1D031212D8C7E7003F2AA2 /* ServerGetData.m */; };
 		8E78159612B8F69200DF4A8B /* ServerCreateUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E78159512B8F69200DF4A8B /* ServerCreateUser.m */; };
 		8E7DEC6A12DDFD13002C06BD /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8E7DEC6912DDFD13002C06BD /* Settings.bundle */; };
@@ -106,17 +106,18 @@
 		FA381CA512A0057A008E06D0 /* RegisterLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA381CA412A0057A008E06D0 /* RegisterLoginView.m */; };
 		FA381CAB12A00593008E06D0 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA381CAA12A00593008E06D0 /* LoginView.m */; };
 		FA381CB112A005D2008E06D0 /* RegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA381CB012A005D2008E06D0 /* RegisterView.m */; };
-		FA3862B212E87F6D00F4875D /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3862B112E87F6D00F4875D /* HelpViewController.m */; };
 		FA616EAF12B8BCD100E0E2C7 /* LecturesDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA616EAE12B8BCD100E0E2C7 /* LecturesDetailViewController.m */; };
 		FA616EDF12B8C17F00E0E2C7 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA616EDE12B8C17F00E0E2C7 /* EventKit.framework */; };
 		FA616F0512B8D0AB00E0E2C7 /* ToDoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA616F0412B8D0AB00E0E2C7 /* ToDoViewController.m */; };
 		FA6171D312B90A2300E0E2C7 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6171D212B90A2300E0E2C7 /* MapViewController.m */; };
 		FA6171EB12B90B1A00E0E2C7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6171EA12B90B1A00E0E2C7 /* MapKit.framework */; };
 		FA734F3112DE1A0500CC841A /* MensaDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA734F3012DE1A0500CC841A /* MensaDetailView.m */; };
+		FA788C1F1301CA6B00999397 /* MissedItDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA788C1E1301CA6B00999397 /* MissedItDetailViewController.m */; };
 		FA903E7012DD0C800079D0B3 /* startUp.png in Resources */ = {isa = PBXBuildFile; fileRef = FA903E6F12DD0C800079D0B3 /* startUp.png */; };
 		FA903FB112DD22FD0079D0B3 /* MensaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA903FB012DD22FD0079D0B3 /* MensaDetailViewController.m */; };
 		FA90401C12DD2B230079D0B3 /* LocationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA90401B12DD2B230079D0B3 /* LocationDetailViewController.m */; };
 		FA9239DA12D3943700A3048D /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9239D912D3943700A3048D /* LocationViewController.m */; };
+		FAB1DE7712EEFCF10020F478 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3862B112E87F6D00F4875D /* HelpViewController.m */; };
 		FACC502812D26D130007911F /* MapListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACC502712D26D130007911F /* MapListViewController.m */; };
 		FACF14AB12D7E4D20087B05C /* MapListDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = FACF14AA12D7E4D20087B05C /* MapListDetailView.m */; };
 		FACF14AE12D7E50F0087B05C /* MapListDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FACF14AD12D7E50F0087B05C /* MapListDetailViewController.m */; };
@@ -136,8 +137,7 @@
 		FAE3B50712E78FCD00215763 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE3B50612E78FCD00215763 /* CoreLocation.framework */; };
 		FAE3B54312E793D800215763 /* ButtonDark.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE3B54212E793D800215763 /* ButtonDark.png */; };
 		FAE3B5C412E79C6600215763 /* IMissedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE3B5C312E79C6600215763 /* IMissedViewController.m */; };
-		FAE3B62B12E7A44500215763 /* IMisseditDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE3B62A12E7A44500215763 /* IMisseditDetailView.m */; };
-		FAE3B62E12E7A5B100215763 /* IMisseditDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE3B62D12E7A5B100215763 /* IMisseditDetailViewController.m */; };
+		FAE8389612F1210C0027983C /* iMisseditIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE8389512F1210C0027983C /* iMisseditIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -155,7 +155,6 @@
 		4B2C630812DF32AD00D7519B /* LecturesCalendarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LecturesCalendarTableViewController.h; sourceTree = "<group>"; };
 		4B2C630912DF32AD00D7519B /* LecturesCalendarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LecturesCalendarTableViewController.m; sourceTree = "<group>"; };
 		4B38C1A712CA607900E5C5D4 /* 1map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1map.png; sourceTree = "<group>"; };
-		4B38C1AD12CA609A00E5C5D4 /* iMisseditIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iMisseditIcon.png; sourceTree = "<group>"; };
 		4B38C1B312CA609A00E5C5D4 /* 145-persondot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "145-persondot.png"; sourceTree = "<group>"; };
 		4B38C1B412CA609A00E5C5D4 /* 48-fork-and-knife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "48-fork-and-knife.png"; sourceTree = "<group>"; };
 		4B38C1B512CA609A00E5C5D4 /* 40-inbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "40-inbox.png"; sourceTree = "<group>"; };
@@ -221,6 +220,8 @@
 		8E124B4212E88112009CD610 /* CreateUserExistingMail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateUserExistingMail.m; sourceTree = "<group>"; };
 		8E124B4412E88140009CD610 /* CreateUserExistingMailScreenName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateUserExistingMailScreenName.h; sourceTree = "<group>"; };
 		8E124B4512E88140009CD610 /* CreateUserExistingMailScreenName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateUserExistingMailScreenName.m; sourceTree = "<group>"; };
+		8E12F18E1301D4500002DE3E /* DeleteAddFriend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeleteAddFriend.h; sourceTree = "<group>"; };
+		8E12F18F1301D4500002DE3E /* DeleteAddFriend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteAddFriend.m; sourceTree = "<group>"; };
 		8E1D030C12D8C7B6003F2AA2 /* DataPassProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataPassProtocol.h; sourceTree = "<group>"; };
 		8E1D031112D8C7E7003F2AA2 /* ServerGetData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerGetData.h; sourceTree = "<group>"; };
 		8E1D031212D8C7E7003F2AA2 /* ServerGetData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerGetData.m; sourceTree = "<group>"; };
@@ -284,6 +285,8 @@
 		FA6171EA12B90B1A00E0E2C7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FA734F2F12DE1A0500CC841A /* MensaDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaDetailView.h; sourceTree = "<group>"; };
 		FA734F3012DE1A0500CC841A /* MensaDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaDetailView.m; sourceTree = "<group>"; };
+		FA788C1D1301CA6B00999397 /* MissedItDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MissedItDetailViewController.h; sourceTree = "<group>"; };
+		FA788C1E1301CA6B00999397 /* MissedItDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MissedItDetailViewController.m; sourceTree = "<group>"; };
 		FA903E6F12DD0C800079D0B3 /* startUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startUp.png; sourceTree = "<group>"; };
 		FA903FAF12DD22FD0079D0B3 /* MensaDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MensaDetailViewController.h; sourceTree = "<group>"; };
 		FA903FB012DD22FD0079D0B3 /* MensaDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MensaDetailViewController.m; sourceTree = "<group>"; };
@@ -291,6 +294,7 @@
 		FA90401B12DD2B230079D0B3 /* LocationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDetailViewController.m; sourceTree = "<group>"; };
 		FA9239D812D3943700A3048D /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		FA9239D912D3943700A3048D /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		FAB72B2D12F06D38003CD8E1 /* UIAlertView_Extended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAlertView_Extended.h; sourceTree = "<group>"; };
 		FACC502612D26D130007911F /* MapListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapListViewController.h; sourceTree = "<group>"; };
 		FACC502712D26D130007911F /* MapListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapListViewController.m; sourceTree = "<group>"; };
 		FACF14A912D7E4D20087B05C /* MapListDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapListDetailView.h; sourceTree = "<group>"; };
@@ -318,10 +322,7 @@
 		FAE3B54212E793D800215763 /* ButtonDark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonDark.png; sourceTree = "<group>"; };
 		FAE3B5C212E79C6600215763 /* IMissedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMissedViewController.h; sourceTree = "<group>"; };
 		FAE3B5C312E79C6600215763 /* IMissedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMissedViewController.m; sourceTree = "<group>"; };
-		FAE3B62912E7A44500215763 /* IMisseditDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMisseditDetailView.h; sourceTree = "<group>"; };
-		FAE3B62A12E7A44500215763 /* IMisseditDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMisseditDetailView.m; sourceTree = "<group>"; };
-		FAE3B62C12E7A5B100215763 /* IMisseditDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMisseditDetailViewController.h; sourceTree = "<group>"; };
-		FAE3B62D12E7A5B100215763 /* IMisseditDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMisseditDetailViewController.m; sourceTree = "<group>"; };
+		FAE8389512F1210C0027983C /* iMisseditIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iMisseditIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -632,8 +633,8 @@
 			children = (
 				FAE3B5C212E79C6600215763 /* IMissedViewController.h */,
 				FAE3B5C312E79C6600215763 /* IMissedViewController.m */,
-				FAE3B62C12E7A5B100215763 /* IMisseditDetailViewController.h */,
-				FAE3B62D12E7A5B100215763 /* IMisseditDetailViewController.m */,
+				FA788C1D1301CA6B00999397 /* MissedItDetailViewController.h */,
+				FA788C1E1301CA6B00999397 /* MissedItDetailViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -641,8 +642,7 @@
 		4B38C1E812CA7DD000E5C5D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FAE3B62912E7A44500215763 /* IMisseditDetailView.h */,
-				FAE3B62A12E7A44500215763 /* IMisseditDetailView.m */,
+				FAB72B2D12F06D38003CD8E1 /* UIAlertView_Extended.h */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -716,6 +716,8 @@
 				8E90551C12E78D6700D170CB /* getFriends.m */,
 				8E90558212E7A41800D170CB /* ServeriMissedIt.h */,
 				8E90558312E7A41800D170CB /* ServeriMissedIt.m */,
+				8E12F18E1301D4500002DE3E /* DeleteAddFriend.h */,
+				8E12F18F1301D4500002DE3E /* DeleteAddFriend.m */,
 			);
 			name = "Server Access";
 			sourceTree = "<group>";
@@ -821,6 +823,7 @@
 		FAD1DB0712A0391800F782A0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				FAE8389512F1210C0027983C /* iMisseditIcon.png */,
 				4B58B2CF12E781270073A1FA /* incomplete.png */,
 				FAE3B54212E793D800215763 /* ButtonDark.png */,
 				4B4E17F512E778CC0096CE7E /* inprogress.png */,
@@ -843,7 +846,6 @@
 				FACF153112D7EF1C0087B05C /* personGreen.png */,
 				FACF153212D7EF1C0087B05C /* personGrey.png */,
 				FACF153312D7EF1C0087B05C /* personOrange.png */,
-				4B38C1AD12CA609A00E5C5D4 /* iMisseditIcon.png */,
 				4B38C1B312CA609A00E5C5D4 /* 145-persondot.png */,
 				4B38C1B412CA609A00E5C5D4 /* 48-fork-and-knife.png */,
 				4B38C1B512CA609A00E5C5D4 /* 40-inbox.png */,
@@ -957,7 +959,6 @@
 				FAD1DB0312A0390500F782A0 /* TUGuideLogo.png in Resources */,
 				FAD4AB3412A0DA1800817DCA /* icon.png in Resources */,
 				4B38C1A812CA607900E5C5D4 /* 1map.png in Resources */,
-				4B38C1BA12CA609A00E5C5D4 /* iMisseditIcon.png in Resources */,
 				4B38C1C012CA609A00E5C5D4 /* 145-persondot.png in Resources */,
 				4B38C1C112CA609A00E5C5D4 /* 48-fork-and-knife.png in Resources */,
 				4B38C1C212CA609A00E5C5D4 /* 40-inbox.png in Resources */,
@@ -986,6 +987,7 @@
 				4B4E17F612E778CC0096CE7E /* inprogress.png in Resources */,
 				4B58B2D012E781270073A1FA /* incomplete.png in Resources */,
 				FAE3B54312E793D800215763 /* ButtonDark.png in Resources */,
+				FAE8389612F1210C0027983C /* iMisseditIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1070,13 +1072,15 @@
 				8E90545E12E7716700D170CB /* FriendListViewController.m in Sources */,
 				8E90551D12E78D6700D170CB /* getFriends.m in Sources */,
 				FAE3B5C412E79C6600215763 /* IMissedViewController.m in Sources */,
-<<<<<<< HEAD
-				FAE3B62B12E7A44500215763 /* IMisseditDetailView.m in Sources */,
-				FAE3B62E12E7A5B100215763 /* IMisseditDetailViewController.m in Sources */,
-				FA3862B212E87F6D00F4875D /* HelpViewController.m in Sources */,
-=======
 				8E90558412E7A41800D170CB /* ServeriMissedIt.m in Sources */,
->>>>>>> 9bf3e34667e1cc6e177730b39aadfdd92b68cac6
+				FAB1DE7712EEFCF10020F478 /* HelpViewController.m in Sources */,
+<<<<<<< HEAD
+				FAB1DE7812EEFCF50020F478 /* IMisseditDetailView.m in Sources */,
+				FAB1DE7912EEFCF80020F478 /* IMisseditDetailViewController.m in Sources */,
+				8E12F1901301D4500002DE3E /* DeleteAddFriend.m in Sources */,
+=======
+				FA788C1F1301CA6B00999397 /* MissedItDetailViewController.m in Sources */,
+>>>>>>> 64676d9ab5b5618ed7960327613096245341955b
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

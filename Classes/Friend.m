@@ -19,6 +19,7 @@
 @synthesize title,subtitle;
 @synthesize screen_name;
 @synthesize last_login;
+@synthesize email;
 
 
 
@@ -35,6 +36,7 @@
 		self.last_login = [properties objectForKey:@"last_login"];
 		self.title = [properties objectForKey:@"screen_name"];
 		self.subtitle = [properties objectForKey:@"last_login"];
+		self.email = [properties objectForKey:@"email"];
 	}
 	return self;
 }

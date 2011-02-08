@@ -141,7 +141,7 @@ static UIImage *priority3Image = nil;
         CGFloat priorityX = frame.origin.x + imageView.frame.size.width + 8.0;
         frame = CGRectMake(priorityX, UPPER_ROW_TOP, prioritySize.width, prioritySize.height);
 		frame.origin.y = 15;
-        self.todoPriorityLabel.frame = frame;
+        //self.todoPriorityLabel.frame = frame;
     }
 }
 

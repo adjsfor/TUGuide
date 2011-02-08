@@ -1074,8 +1074,6 @@
 				FAE3B5C412E79C6600215763 /* IMissedViewController.m in Sources */,
 				8E90558412E7A41800D170CB /* ServeriMissedIt.m in Sources */,
 				FAB1DE7712EEFCF10020F478 /* HelpViewController.m in Sources */,
-				FAB1DE7812EEFCF50020F478 /* IMisseditDetailView.m in Sources */,
-				FAB1DE7912EEFCF80020F478 /* IMisseditDetailViewController.m in Sources */,
 				8E12F1901301D4500002DE3E /* DeleteAddFriend.m in Sources */,
 				FA788C1F1301CA6B00999397 /* MissedItDetailViewController.m in Sources */,
 			);

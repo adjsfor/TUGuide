@@ -101,16 +101,6 @@
 }
 
 
-NSArray *allSubviews(UIView *aView)
-{
-	NSArray *results = [aView subviews];
-	for (UIView *eachView in [aView subviews])
-	{
-		NSArray *riz = allSubviews(eachView);
-		if (riz) results = [results arrayByAddingObjectsFromArray:riz];
-	}
-	return results;
-}
 
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {

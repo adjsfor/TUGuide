@@ -57,16 +57,18 @@
 
 -(IBAction)segmentAction:(UISegmentedControl *)segmentPick
 {
+	FriendListViewController *flv = [[FriendListViewController alloc] initWithUser:[self me]];
 	NSLog(@"segment called %d", segmentPick.selectedSegmentIndex);
 	switch (segmentPick.selectedSegmentIndex) {
 		case 0:
 			break;
 		case 1:
-			[self.navigationController pushViewController:[[FriendListViewController alloc] initWithUser:me] animated:NO];
+			[self.navigationController pushViewController:flv animated:NO];
 			break;
 		default:
 			break;
 	}
+	//[flv release];
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.

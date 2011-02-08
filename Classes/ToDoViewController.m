@@ -20,6 +20,7 @@
 		[db createEditableCopyOfDatabaseIfNeeded];
 		[db initializeDatabase];
 		todoView = [[TodoDetailViewController alloc]init];
+		
 		todoView.delegate = self;
 	}
 	return self;

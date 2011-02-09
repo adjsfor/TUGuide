@@ -43,6 +43,7 @@
 		4BC6101F12DCF32D00A0BC84 /* TodoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC6101E12DCF32D00A0BC84 /* TodoDetailViewController.m */; };
 		4BC6137A12DE129500A0BC84 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC6137912DE129500A0BC84 /* EventKitUI.framework */; };
 		4BDD144412E5F0920010FE4A /* OrganizerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BDD144312E5F0920010FE4A /* OrganizerViewController.m */; };
+		4BDE9CE1130298D300122534 /* UserLocationUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BDE9CE0130298D300122534 /* UserLocationUpdate.m */; };
 		8E1248A212E868C1009CD610 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EAFF11B12A0058300C9BCA3 /* SenTestingKit.framework */; };
 		8E12497F12E868CC009CD610 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		8E12498012E868CC009CD610 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -203,6 +204,8 @@
 		4BC6137912DE129500A0BC84 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		4BDD144212E5F0920010FE4A /* OrganizerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrganizerViewController.h; sourceTree = "<group>"; };
 		4BDD144312E5F0920010FE4A /* OrganizerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrganizerViewController.m; sourceTree = "<group>"; };
+		4BDE9CDF130298D300122534 /* UserLocationUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLocationUpdate.h; sourceTree = "<group>"; };
+		4BDE9CE0130298D300122534 /* UserLocationUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLocationUpdate.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* TUGuide-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TUGuide-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		8E12489C12E8689E009CD610 /* Testing Bundle.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Testing Bundle.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E12489D12E8689E009CD610 /* Testing Bundle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Testing Bundle-Info.plist"; sourceTree = "<group>"; };
@@ -718,6 +721,8 @@
 				8E90558312E7A41800D170CB /* ServeriMissedIt.m */,
 				8E12F18E1301D4500002DE3E /* DeleteAddFriend.h */,
 				8E12F18F1301D4500002DE3E /* DeleteAddFriend.m */,
+				4BDE9CDF130298D300122534 /* UserLocationUpdate.h */,
+				4BDE9CE0130298D300122534 /* UserLocationUpdate.m */,
 			);
 			name = "Server Access";
 			sourceTree = "<group>";
@@ -1076,6 +1081,7 @@
 				FAB1DE7712EEFCF10020F478 /* HelpViewController.m in Sources */,
 				8E12F1901301D4500002DE3E /* DeleteAddFriend.m in Sources */,
 				FA788C1F1301CA6B00999397 /* MissedItDetailViewController.m in Sources */,
+				4BDE9CE1130298D300122534 /* UserLocationUpdate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,7 @@
 #import "Classroom.h"
 #import "Friend.h"
 #import <CoreLocation/CoreLocation.h>
+#import "UserLocationUpdate.h"
 #import "MessagePassProtocol.h"
 
 
@@ -23,8 +24,7 @@
 	NSMutableArray *mapAnnotations;
 	MapListClassViewController *classViewController;
 	NSMutableArray *friendsArray;
-	Classroom *classroom;
-	Building *building;
+	CLLocationManager *locationManager;
 	UISegmentedControl *segmentedControl;
 	UIButton *detailButton;
 	CLLocationCoordinate2D location;
@@ -36,8 +36,7 @@
 @property (nonatomic, retain) NSMutableArray *mapAnnotations;
 @property (nonatomic, retain) MapListClassViewController *classViewController;
 @property (nonatomic, retain) NSMutableArray *friendsArray;
-@property (nonatomic, retain) Classroom *classroom;
-@property (nonatomic, retain) Building *building;
+@property (nonatomic, retain) CLLocationManager *locationManager;
 @property (nonatomic, retain) UISegmentedControl *segmentedControl;
 @property (nonatomic, retain) UIButton *detailButton;
 @property (nonatomic, retain) User *me;

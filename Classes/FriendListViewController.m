@@ -19,7 +19,7 @@
 
 -(id) initWithUser:(User *)u
 {
-	self = [super initWithStyle:UITableViewStylePlain];
+	self = [super initWithStyle:UITableViewStyleGrouped];
 	//buildingsArray = [[NSMutableArray alloc] init];
 	me = u;
 	serverConnection = [[ getFriends alloc ]initWithUser:me];
@@ -38,7 +38,7 @@
 	if ([cmd isEqual:@"finished"]) {
 		friendsArray = [serverConnection friends];
 		[self.tableView reloadData];
-		[delegate2 passing:self command:@"finished" message:nil];
+		[delegate2 passing:self command:@"finished" message:@"update my location"];
 	}
 	if ([cmd isEqual:@"friendDeleted"]) {
 		XLog("%@",cmd);
@@ -196,7 +196,7 @@
 	if ([friendsArray objectAtIndex:[indexPath row]]!= nil) {
 		cell.textLabel.text = [[friendsArray objectAtIndex:[indexPath row]] screen_name ];
 		cell.detailTextLabel.text = (NSString *)[[friendsArray objectAtIndex:[indexPath row]] email];
-		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+		cell.accessoryType = UITableViewCellAccessoryNone;
 	}
     
     return cell;

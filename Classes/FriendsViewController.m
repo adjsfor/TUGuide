@@ -12,8 +12,8 @@
 
 @implementation FriendsViewController
 
-@synthesize mapView, detailButton;;
-@synthesize mapAnnotations, classViewController, friendsArray, classroom, building, segmentedControl,me,flv;
+@synthesize mapView, detailButton;
+@synthesize mapAnnotations, classViewController, friendsArray,  segmentedControl,me,flv,locationManager;
 
 
 -(id) initWithUser:(User *)u
@@ -26,6 +26,8 @@
 		UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:@"Friends" image:anImage tag:0];
 		self.tabBarItem = theItem;
 		[theItem release];
+		locationManager=[[CLLocationManager alloc] init];
+		locationManager.delegate=self;
 	}
 	
 	return self;
@@ -36,7 +38,10 @@
 		friendsArray = [flv.serverConnection friends];
 		[self.mapView removeAnnotations:self.mapView.annotations];  // remove any annotations that exist
 		[self.mapView addAnnotations:self.friendsArray];   //set annotations to the map 
+		[locationManager startUpdatingLocation];
+		//XLog("UPDATING LOCATION");
 	}
+	return YES;
 }
 
 + (CGFloat)annotationPadding;
@@ -56,6 +61,8 @@
 		UITabBarItem* theItem = [[UITabBarItem alloc] initWithTitle:@"Friends" image:anImage tag:0];
 		self.tabBarItem = theItem;
 		[theItem release];
+
+
 	}
 	
 	return self;
@@ -91,11 +98,9 @@
 
 	[self.view addSubview:mapView];
 	
-	CLLocationManager *locationManager=[[CLLocationManager alloc] init];
-	locationManager.delegate=self;
 	
-	[locationManager startUpdatingLocation];
-	
+		
+		 
 	
 	[self.mapView removeAnnotations:self.mapView.annotations];  // remove any annotations that exist
     [self.mapView addAnnotations:self.friendsArray];   //set annotations to the map 
@@ -231,6 +236,14 @@
 	span.longitudeDelta=.005;
 	region.span=span;
 	
+	UserLocationUpdate *ue = [[[UserLocationUpdate alloc]init]autorelease];
+	
+	NSString *lat = [[NSString alloc] initWithFormat:@"%g", newLocation.coordinate.latitude];
+	NSString *lon = [[NSString alloc] initWithFormat:@"%g", newLocation.coordinate.longitude];
+	XLog("%g ",newLocation.coordinate.longitude);
+	XLog("Received location update");
+	[ue sendMyGps:me.screenName andSessionId:me.sessionId  andCoordinatesLat:lat andCoordinatesLon:lon];
+	[locationManager stopUpdatingLocation];
 	[mapView setRegion:region animated:TRUE];
 	
 }
@@ -246,6 +259,7 @@
  */
 
 -(void)viewDidAppear:(BOOL)animated{
+	
 	segmentedControl.selectedSegmentIndex = 0;
 }
 

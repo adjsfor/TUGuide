@@ -339,6 +339,10 @@
 			4BDE9DFA1302B2AA00122534 /* PBXTextBookmark */ = 4BDE9DFA1302B2AA00122534 /* PBXTextBookmark */;
 			4BDE9DFB1302B2AA00122534 /* PBXTextBookmark */ = 4BDE9DFB1302B2AA00122534 /* PBXTextBookmark */;
 			4BDE9DFC1302B2AA00122534 /* PBXTextBookmark */ = 4BDE9DFC1302B2AA00122534 /* PBXTextBookmark */;
+			4BDE9E011302B5AC00122534 /* PBXTextBookmark */ = 4BDE9E011302B5AC00122534 /* PBXTextBookmark */;
+			4BDE9E021302B5AC00122534 /* PBXTextBookmark */ = 4BDE9E021302B5AC00122534 /* PBXTextBookmark */;
+			4BDE9E031302B5AC00122534 /* PBXTextBookmark */ = 4BDE9E031302B5AC00122534 /* PBXTextBookmark */;
+			4BDE9E041302B5AC00122534 /* PBXTextBookmark */ = 4BDE9E041302B5AC00122534 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 4BC70616129FE39D0086FBC8 /* Source Control */;
 		userBuildSettings = {
@@ -449,7 +453,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {918, 3952}}";
 			sepNavSelRange = "{1235, 0}";
-			sepNavVisRange = "{145, 1191}";
+			sepNavVisRange = "{145, 1219}";
 		};
 	};
 	4B4CF92212D7CB3200D1368F /* StubViewController.h */ = {
@@ -3056,6 +3060,46 @@
 		vrLen = 1191;
 		vrLoc = 145;
 	};
+	4BDE9E011302B5AC00122534 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */;
+		name = "FriendsViewController.m: 42";
+		rLen = 0;
+		rLoc = 1235;
+		rType = 0;
+		vrLen = 1219;
+		vrLoc = 145;
+	};
+	4BDE9E021302B5AC00122534 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FACF14A912D7E4D20087B05C /* MapListDetailView.h */;
+		name = "MapListDetailView.h: 27";
+		rLen = 0;
+		rLoc = 458;
+		rType = 0;
+		vrLen = 1046;
+		vrLoc = 0;
+	};
+	4BDE9E031302B5AC00122534 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA6171D112B90A2300E0E2C7 /* MapViewController.h */;
+		name = "MapViewController.h: 31";
+		rLen = 15;
+		rLoc = 795;
+		rType = 0;
+		vrLen = 1419;
+		vrLoc = 136;
+	};
+	4BDE9E041302B5AC00122534 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA6171D212B90A2300E0E2C7 /* MapViewController.m */;
+		name = "MapViewController.m: 234";
+		rLen = 0;
+		rLoc = 7650;
+		rType = 0;
+		vrLen = 1451;
+		vrLoc = 6226;
+	};
 	8D1107310486CEB800E47090 /* TUGuide-Info.plist */ = {
 		uiCtxt = {
 			sepNavWindowFrame = "{{15, 4}, {750, 774}}";
@@ -3419,16 +3463,16 @@
 	};
 	FA6171D112B90A2300E0E2C7 /* MapViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {918, 702}}";
+			sepNavIntBoundsRect = "{{0, 0}, {918, 715}}";
 			sepNavSelRange = "{795, 15}";
-			sepNavVisRange = "{160, 1365}";
+			sepNavVisRange = "{136, 1419}";
 		};
 	};
 	FA6171D212B90A2300E0E2C7 /* MapViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {978, 3640}}";
-			sepNavSelRange = "{1381, 15}";
-			sepNavVisRange = "{912, 971}";
+			sepNavIntBoundsRect = "{{0, 0}, {978, 3419}}";
+			sepNavSelRange = "{7650, 0}";
+			sepNavVisRange = "{6226, 1451}";
 			sepNavWindowFrame = "{{84, 152}, {750, 558}}";
 		};
 	};
@@ -3522,7 +3566,7 @@
 	};
 	FACF14A912D7E4D20087B05C /* MapListDetailView.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {918, 577}}";
+			sepNavIntBoundsRect = "{{0, 0}, {918, 552}}";
 			sepNavSelRange = "{458, 0}";
 			sepNavVisRange = "{0, 1046}";
 		};

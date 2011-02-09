@@ -285,9 +285,9 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>31</integer>
-									<integer>29</integer>
-									<integer>26</integer>
+									<integer>44</integer>
+									<integer>42</integer>
+									<integer>35</integer>
 									<integer>24</integer>
 									<integer>2</integer>
 									<integer>0</integer>
@@ -331,7 +331,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>FriendsViewController.m</string>
+								<string>MapViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -339,11 +339,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>FriendsViewController.m</string>
+										<string>MapViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>4BDE9DFC1302B2AA00122534</string>
+										<string>4BDE9E041302B5AC00122534</string>
 										<key>history</key>
 										<array>
 											<string>4B54C4F612A01A1C00091F5A</string>
@@ -493,9 +493,6 @@
 											<string>4BDE9D1913029CA700122534</string>
 											<string>4BDE9D1D13029CA700122534</string>
 											<string>4BDE9D881302A67100122534</string>
-											<string>4BDE9D8A1302A67100122534</string>
-											<string>4BDE9D8D1302A67100122534</string>
-											<string>4BDE9D8E1302A67100122534</string>
 											<string>4BDE9DA51302A6F800122534</string>
 											<string>4BDE9DB71302A8E800122534</string>
 											<string>4BDE9DBB1302AA0A00122534</string>
@@ -512,7 +509,10 @@
 											<string>4BDE9DF81302B2AA00122534</string>
 											<string>4BDE9DF91302B2AA00122534</string>
 											<string>4BDE9DFA1302B2AA00122534</string>
-											<string>4BDE9DFB1302B2AA00122534</string>
+											<string>4BDE9E011302B5AC00122534</string>
+											<string>4BDE9E021302B5AC00122534</string>
+											<string>4BDE9E031302B5AC00122534</string>
+											<string>4BDE9D8E1302A67100122534</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -710,7 +710,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>4BDE9DFD1302B2AA00122534</string>
+		<string>4BDE9E051302B5AC00122534</string>
 		<string>4BDE9D9C1302A67100122534</string>
 		<string>4BDE9D9D1302A67100122534</string>
 		<string>4BC70614129FE39C0086FBC8</string>
@@ -1051,8 +1051,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>

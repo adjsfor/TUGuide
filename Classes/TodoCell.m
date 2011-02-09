@@ -8,9 +8,9 @@
 
 #import "TodoCell.h"
 
-#define TODO_RED_COLOR		[UIColor colorWithRed:0.9020f green:0.7490f blue:0.7529f alpha:1.0f]
-#define TODO_YELLOW_COLOR	[UIColor colorWithRed:0.8980f green:0.8588f blue:0.7608f alpha:1.0f]
-#define TODO_GREEN_COLOR	[UIColor colorWithRed:0.6549f green:0.7961f blue:0.5647f alpha:1.0f]
+#define TODO_RED_COLOR		[UIColor colorWithRed:1.00f green:0.95f blue:0.96f alpha:5.2f]
+#define TODO_YELLOW_COLOR	[UIColor colorWithRed:0.98f green:1.0f blue:0.90f alpha:5.2f]
+#define TODO_GREEN_COLOR	[UIColor colorWithRed:0.91f green:1.0f blue:0.92f alpha:5.2f]
 
 static UIImage *priority1Image = nil;
 static UIImage *priority2Image = nil;

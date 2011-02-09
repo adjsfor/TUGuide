@@ -38,5 +38,6 @@
 - (void) updatePriority:(id) sender;
 - (void) updateText:(id) sender;
 - (void)leanBack:(id) sender;
+- (void) updatePriorityState:(id)sender;
 
 @end

@@ -39,6 +39,7 @@
 		[self.mapView removeAnnotations:self.mapView.annotations];  // remove any annotations that exist
 		[self.mapView addAnnotations:self.friendsArray];   //set annotations to the map 
 		[locationManager startUpdatingLocation];
+		locationManager.desiredAccuracy = kCLLocationAccuracyBest;
 		//XLog("UPDATING LOCATION");
 	}
 	return YES;

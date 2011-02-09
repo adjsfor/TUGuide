@@ -43,10 +43,10 @@
 			4BDE9C6E130285AE00122534 /* LecturesDetailViewController.m:59 */,
 			4BDE9C8C1302881800122534 /* LecturesDetailViewController.m:71 */,
 			4BDE9D4C1302A2B200122534 /* FriendsViewController.m:36 */,
-			4BDE9D4E1302A2B500122534 /* FriendsViewController.m:57 */,
+			4BDE9D4E1302A2B500122534 /* FriendsViewController.m:58 */,
 			4BDE9D501302A2B800122534 /* FriendsViewController.m:19 */,
-			4BDE9D521302A2C500122534 /* FriendsViewController.m:90 */,
-			4BDE9D541302A2CC00122534 /* FriendsViewController.m:226 */,
+			4BDE9D521302A2C500122534 /* FriendsViewController.m:91 */,
+			4BDE9D541302A2CC00122534 /* FriendsViewController.m:227 */,
 		);
 		codeSenseManager = 4BC70617129FE39D0086FBC8 /* Code sense */;
 		executables = (
@@ -325,6 +325,20 @@
 			4BDE9DCB1302AB6500122534 /* PBXTextBookmark */ = 4BDE9DCB1302AB6500122534 /* PBXTextBookmark */;
 			4BDE9DD01302ABA300122534 /* PBXTextBookmark */ = 4BDE9DD01302ABA300122534 /* PBXTextBookmark */;
 			4BDE9DD61302AC5400122534 /* PBXTextBookmark */ = 4BDE9DD61302AC5400122534 /* PBXTextBookmark */;
+			4BDE9DEF1302B2AA00122534 /* PBXTextBookmark */ = 4BDE9DEF1302B2AA00122534 /* PBXTextBookmark */;
+			4BDE9DF01302B2AA00122534 /* PBXTextBookmark */ = 4BDE9DF01302B2AA00122534 /* PBXTextBookmark */;
+			4BDE9DF11302B2AA00122534 /* PBXTextBookmark */ = 4BDE9DF11302B2AA00122534 /* PBXTextBookmark */;
+			4BDE9DF21302B2AA00122534 /* PBXTextBookmark */ = 4BDE9DF21302B2AA00122534 /* PBXTextBookmark */;
+			4BDE9DF31302B2AA00122534 /* PBXTextBookmark */ = 4BDE9DF31302B2AA00122534 /* PBXTextBookmark */;
+			4BDE9DF41302B2AA00122534 /* PBXTextBookmark */ = 4BDE9DF41302B2AA00122534 /* PBXTextBookmark */;
+			4BDE9DF51302B2AA00122534 /* PBXTextBookmark */ = 4BDE9DF51302B2AA00122534 /* PBXTextBookmark */;
+			4BDE9DF61302B2AA00122534 /* PBXTextBookmark */ = 4BDE9DF61302B2AA00122534 /* PBXTextBookmark */;
+			4BDE9DF71302B2AA00122534 /* PBXTextBookmark */ = 4BDE9DF71302B2AA00122534 /* PBXTextBookmark */;
+			4BDE9DF81302B2AA00122534 /* PBXTextBookmark */ = 4BDE9DF81302B2AA00122534 /* PBXTextBookmark */;
+			4BDE9DF91302B2AA00122534 /* PBXTextBookmark */ = 4BDE9DF91302B2AA00122534 /* PBXTextBookmark */;
+			4BDE9DFA1302B2AA00122534 /* PBXTextBookmark */ = 4BDE9DFA1302B2AA00122534 /* PBXTextBookmark */;
+			4BDE9DFB1302B2AA00122534 /* PBXTextBookmark */ = 4BDE9DFB1302B2AA00122534 /* PBXTextBookmark */;
+			4BDE9DFC1302B2AA00122534 /* PBXTextBookmark */ = 4BDE9DFC1302B2AA00122534 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 4BC70616129FE39D0086FBC8 /* Source Control */;
 		userBuildSettings = {
@@ -433,9 +447,9 @@
 	};
 	4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {918, 3978}}";
-			sepNavSelRange = "{1179, 0}";
-			sepNavVisRange = "{143, 1114}";
+			sepNavIntBoundsRect = "{{0, 0}, {918, 3952}}";
+			sepNavSelRange = "{1235, 0}";
+			sepNavVisRange = "{145, 1191}";
 		};
 	};
 	4B4CF92212D7CB3200D1368F /* StubViewController.h */ = {
@@ -1163,9 +1177,9 @@
 	};
 	4BA6454012A13F5400B03B82 /* Course.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {918, 611}}";
+			sepNavIntBoundsRect = "{{0, 0}, {918, 585}}";
 			sepNavSelRange = "{309, 0}";
-			sepNavVisRange = "{0, 596}";
+			sepNavVisRange = "{0, 672}";
 		};
 	};
 	4BA645BC12A154B600B03B82 /* Building.h */ = {
@@ -2479,7 +2493,7 @@
 		comments = "'MyCLController' undeclared (first use in this function)";
 		fRef = 4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */;
 		rLen = 0;
-		rLoc = 41;
+		rLoc = 42;
 		rType = 1;
 	};
 	4BDE9D2313029CA700122534 /* PBXTextBookmark */ = {
@@ -2487,7 +2501,7 @@
 		fRef = 4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */;
 		name = "FriendsViewController.m: 41";
 		rLen = 0;
-		rLoc = 1175;
+		rLoc = 1236;
 		rType = 0;
 		vrLen = 1230;
 		vrLoc = 629;
@@ -2510,7 +2524,7 @@
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
-	4BDE9D4E1302A2B500122534 /* FriendsViewController.m:57 */ = {
+	4BDE9D4E1302A2B500122534 /* FriendsViewController.m:58 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -2522,7 +2536,7 @@
 		functionName = "-initView";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 57;
+		lineNumber = 58;
 		location = TUGuide;
 		modificationTime = 318940287.13395;
 		originalNumberOfMultipleMatches = 1;
@@ -2546,7 +2560,7 @@
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
-	4BDE9D521302A2C500122534 /* FriendsViewController.m:90 */ = {
+	4BDE9D521302A2C500122534 /* FriendsViewController.m:91 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -2558,13 +2572,13 @@
 		functionName = "-viewDidLoad";
 		hitCount = 1;
 		ignoreCount = 0;
-		lineNumber = 90;
+		lineNumber = 91;
 		location = TUGuide;
 		modificationTime = 318940315.211192;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
-	4BDE9D541302A2CC00122534 /* FriendsViewController.m:226 */ = {
+	4BDE9D541302A2CC00122534 /* FriendsViewController.m:227 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -2576,7 +2590,7 @@
 		functionName = "-locationManager:didUpdateToLocation:fromLocation:";
 		hitCount = 1;
 		ignoreCount = 0;
-		lineNumber = 226;
+		lineNumber = 227;
 		location = TUGuide;
 		modificationTime = 318940337.093064;
 		originalNumberOfMultipleMatches = 1;
@@ -2667,7 +2681,7 @@
 		fRef = 4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */;
 		name = "FriendsViewController.m: 41";
 		rLen = 0;
-		rLoc = 1174;
+		rLoc = 1235;
 		rType = 0;
 		vrLen = 1347;
 		vrLoc = 6938;
@@ -2677,7 +2691,7 @@
 		fRef = 4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */;
 		name = "FriendsViewController.m: 239";
 		rLen = 443;
-		rLoc = 7480;
+		rLoc = 7541;
 		rType = 0;
 		vrLen = 1421;
 		vrLoc = 7062;
@@ -2687,7 +2701,7 @@
 		fRef = 4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */;
 		name = "FriendsViewController.m: 239";
 		rLen = 443;
-		rLoc = 7480;
+		rLoc = 7541;
 		rType = 0;
 		vrLen = 1306;
 		vrLoc = 7203;
@@ -2747,7 +2761,7 @@
 		fRef = 4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */;
 		name = "FriendsViewController.m: 246";
 		rLen = 0;
-		rLoc = 7962;
+		rLoc = 8023;
 		rType = 0;
 		vrLen = 1371;
 		vrLoc = 7203;
@@ -2757,7 +2771,7 @@
 		fRef = 4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */;
 		name = "FriendsViewController.m: 245";
 		rLen = 103;
-		rLoc = 7820;
+		rLoc = 7881;
 		rType = 0;
 		vrLen = 1417;
 		vrLoc = 7062;
@@ -2767,7 +2781,7 @@
 		fRef = 4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */;
 		name = "FriendsViewController.m: 243";
 		rLen = 0;
-		rLoc = 7748;
+		rLoc = 7809;
 		rType = 0;
 		vrLen = 1272;
 		vrLoc = 7056;
@@ -2777,7 +2791,7 @@
 		fRef = 4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */;
 		name = "FriendsViewController.m: 243";
 		rLen = 0;
-		rLoc = 7782;
+		rLoc = 7843;
 		rType = 0;
 		vrLen = 1291;
 		vrLoc = 7061;
@@ -2787,7 +2801,7 @@
 		fRef = 4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */;
 		name = "FriendsViewController.m: 243";
 		rLen = 0;
-		rLoc = 7747;
+		rLoc = 7808;
 		rType = 0;
 		vrLen = 1281;
 		vrLoc = 7024;
@@ -2797,7 +2811,7 @@
 		fRef = 4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */;
 		name = "FriendsViewController.m: 239";
 		rLen = 0;
-		rLoc = 7551;
+		rLoc = 7612;
 		rType = 0;
 		vrLen = 1296;
 		vrLoc = 7056;
@@ -2807,7 +2821,7 @@
 		fRef = 4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */;
 		name = "FriendsViewController.m: 239";
 		rLen = 0;
-		rLoc = 7551;
+		rLoc = 7612;
 		rType = 0;
 		vrLen = 1296;
 		vrLoc = 7056;
@@ -2867,7 +2881,7 @@
 		fRef = 4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */;
 		name = "FriendsViewController.m: 42";
 		rLen = 0;
-		rLoc = 1179;
+		rLoc = 1240;
 		rType = 0;
 		vrLen = 975;
 		vrLoc = 624;
@@ -2877,7 +2891,7 @@
 		fRef = 4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */;
 		name = "FriendsViewController.m: 42";
 		rLen = 0;
-		rLoc = 1179;
+		rLoc = 1240;
 		rType = 0;
 		vrLen = 1177;
 		vrLoc = 47;
@@ -2887,7 +2901,7 @@
 		fRef = 4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */;
 		name = "FriendsViewController.m: 42";
 		rLen = 0;
-		rLoc = 1179;
+		rLoc = 1240;
 		rType = 0;
 		vrLen = 1139;
 		vrLoc = 86;
@@ -2897,10 +2911,150 @@
 		fRef = 4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */;
 		name = "FriendsViewController.m: 42";
 		rLen = 0;
-		rLoc = 1179;
+		rLoc = 1240;
 		rType = 0;
 		vrLen = 1114;
 		vrLoc = 143;
+	};
+	4BDE9DEF1302B2AA00122534 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8E90558312E7A41800D170CB /* ServeriMissedIt.m */;
+		name = "ServeriMissedIt.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1462;
+		vrLoc = 3589;
+	};
+	4BDE9DF01302B2AA00122534 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8E12F18E1301D4500002DE3E /* DeleteAddFriend.h */;
+		name = "DeleteAddFriend.h: 9";
+		rLen = 65;
+		rLoc = 135;
+		rType = 0;
+		vrLen = 1253;
+		vrLoc = 40;
+	};
+	4BDE9DF11302B2AA00122534 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8E12F18F1301D4500002DE3E /* DeleteAddFriend.m */;
+		name = "DeleteAddFriend.m: 14";
+		rLen = 3849;
+		rLoc = 198;
+		rType = 0;
+		vrLen = 1522;
+		vrLoc = 25;
+	};
+	4BDE9DF21302B2AA00122534 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8E90551C12E78D6700D170CB /* getFriends.m */;
+		name = "getFriends.m: 115";
+		rLen = 2;
+		rLoc = 3733;
+		rType = 0;
+		vrLen = 1205;
+		vrLoc = 2898;
+	};
+	4BDE9DF31302B2AA00122534 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4BA6454012A13F5400B03B82 /* Course.m */;
+		name = "Course.m: 25";
+		rLen = 0;
+		rLoc = 309;
+		rType = 0;
+		vrLen = 672;
+		vrLoc = 0;
+	};
+	4BDE9DF41302B2AA00122534 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8E8D59DA12A14B820096E52C /* Friend.h */;
+		name = "Friend.h: 10";
+		rLen = 0;
+		rLoc = 170;
+		rType = 0;
+		vrLen = 1031;
+		vrLoc = 0;
+	};
+	4BDE9DF51302B2AA00122534 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8E8D59DB12A14B820096E52C /* Friend.m */;
+		name = "Friend.m: 38";
+		rLen = 10;
+		rLoc = 1031;
+		rType = 0;
+		vrLen = 1197;
+		vrLoc = 122;
+	};
+	4BDE9DF61302B2AA00122534 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA90401A12DD2B230079D0B3 /* LocationDetailViewController.h */;
+		name = "LocationDetailViewController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 393;
+		vrLoc = 0;
+	};
+	4BDE9DF71302B2AA00122534 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FACC502612D26D130007911F /* MapListViewController.h */;
+		name = "MapListViewController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 824;
+		vrLoc = 0;
+	};
+	4BDE9DF81302B2AA00122534 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FA37B09812DDA62F0057AA9B /* MapListClassViewController.h */;
+		name = "MapListClassViewController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 645;
+		vrLoc = 0;
+	};
+	4BDE9DF91302B2AA00122534 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FACF14AD12D7E50F0087B05C /* MapListDetailViewController.m */;
+		name = "MapListDetailViewController.m: 57";
+		rLen = 0;
+		rLoc = 1521;
+		rType = 0;
+		vrLen = 1001;
+		vrLoc = 1117;
+	};
+	4BDE9DFA1302B2AA00122534 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8E90545C12E7716700D170CB /* FriendListViewController.h */;
+		name = "FriendListViewController.h: 15";
+		rLen = 0;
+		rLoc = 332;
+		rType = 0;
+		vrLen = 1413;
+		vrLoc = 0;
+	};
+	4BDE9DFB1302B2AA00122534 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */;
+		name = "FriendsViewController.m: 107";
+		rLen = 0;
+		rLoc = 2679;
+		rType = 0;
+		vrLen = 1347;
+		vrLoc = 2323;
+	};
+	4BDE9DFC1302B2AA00122534 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 4B4CF91F12D7CA9000D1368F /* FriendsViewController.m */;
+		name = "FriendsViewController.m: 42";
+		rLen = 0;
+		rLoc = 1235;
+		rType = 0;
+		vrLen = 1191;
+		vrLoc = 145;
 	};
 	8D1107310486CEB800E47090 /* TUGuide-Info.plist */ = {
 		uiCtxt = {
@@ -2914,14 +3068,14 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {918, 611}}";
 			sepNavSelRange = "{135, 65}";
-			sepNavVisRange = "{40, 1258}";
+			sepNavVisRange = "{40, 1253}";
 		};
 	};
 	8E12F18F1301D4500002DE3E /* DeleteAddFriend.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1125, 1443}}";
 			sepNavSelRange = "{198, 3849}";
-			sepNavVisRange = "{0, 1547}";
+			sepNavVisRange = "{25, 1522}";
 		};
 	};
 	8E1D030C12D8C7B6003F2AA2 /* DataPassProtocol.h */ = {
@@ -2997,16 +3151,16 @@
 	};
 	8E8D59DA12A14B820096E52C /* Friend.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {918, 554}}";
-			sepNavSelRange = "{343, 55}";
+			sepNavIntBoundsRect = "{{0, 0}, {918, 529}}";
+			sepNavSelRange = "{170, 0}";
 			sepNavVisRange = "{0, 1031}";
 		};
 	};
 	8E8D59DB12A14B820096E52C /* Friend.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {918, 806}}";
-			sepNavSelRange = "{1052, 5}";
-			sepNavVisRange = "{325, 1196}";
+			sepNavSelRange = "{1031, 10}";
+			sepNavVisRange = "{122, 1197}";
 		};
 	};
 	8E8D59DD12A14C900096E52C /* Lecture.h */ = {
@@ -3069,7 +3223,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {918, 585}}";
 			sepNavSelRange = "{332, 0}";
-			sepNavVisRange = "{34, 1379}";
+			sepNavVisRange = "{0, 1413}";
 		};
 	};
 	8E90545D12E7716700D170CB /* FriendListViewController.m */ = {
@@ -3092,7 +3246,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1125, 1768}}";
 			sepNavSelRange = "{3733, 2}";
-			sepNavVisRange = "{1299, 1604}";
+			sepNavVisRange = "{2898, 1205}";
 		};
 	};
 	8E90558212E7A41800D170CB /* ServeriMissedIt.h */ = {
@@ -3106,7 +3260,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1125, 1833}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{3589, 1465}";
+			sepNavVisRange = "{3589, 1462}";
 		};
 	};
 	8EAFF11812A0057300C9BCA3 /* LogicTests.h */ = {
@@ -3139,7 +3293,7 @@
 	};
 	FA37B09812DDA62F0057AA9B /* MapListClassViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {918, 554}}";
+			sepNavIntBoundsRect = "{{0, 0}, {918, 529}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 645}";
 		};
@@ -3317,7 +3471,7 @@
 	};
 	FA90401A12DD2B230079D0B3 /* LocationDetailViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {918, 554}}";
+			sepNavIntBoundsRect = "{{0, 0}, {918, 529}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 393}";
 		};
@@ -3353,7 +3507,7 @@
 	};
 	FACC502612D26D130007911F /* MapListViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {918, 577}}";
+			sepNavIntBoundsRect = "{{0, 0}, {918, 529}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 824}";
 		};
@@ -3391,7 +3545,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1139, 1079}}";
 			sepNavSelRange = "{1521, 0}";
-			sepNavVisRange = "{232, 1202}";
+			sepNavVisRange = "{1117, 1001}";
 			sepNavWindowFrame = "{{15, 4}, {750, 774}}";
 		};
 	};

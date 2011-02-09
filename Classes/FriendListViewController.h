@@ -25,6 +25,7 @@
 	DeleteAddFriend *serverCon;
 	NSString *selected_temp;
 	int add_del; // add 1 // del 0
+	id <MessagePassProtocol> delegate2;
 }
 
 @property (nonatomic, retain) NSMutableArray *friendsArray;
@@ -34,6 +35,7 @@
 @property (nonatomic, retain) User * me;
 @property (nonatomic, retain) DeleteAddFriend *serverCon;
 @property (nonatomic, retain) NSString *selected_temp;
+@property (nonatomic,assign) id <MessagePassProtocol> delegate2;
 
 - (IBAction)segmentAction:(UISegmentedControl *)segmentPick;
 - (id) initWithUser:(User *)u;

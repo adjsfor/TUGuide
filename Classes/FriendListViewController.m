@@ -12,7 +12,7 @@
 @implementation FriendListViewController
 
 
-@synthesize friendsArray, friend, classViewController,serverConnection,me,serverCon,selected_temp;
+@synthesize friendsArray, friend, classViewController,serverConnection,me,serverCon,selected_temp,delegate2;
 
 #pragma mark -
 #pragma mark Initialization
@@ -38,6 +38,7 @@
 	if ([cmd isEqual:@"finished"]) {
 		friendsArray = [serverConnection friends];
 		[self.tableView reloadData];
+		[delegate2 passing:self command:@"finished" message:nil];
 	}
 	if ([cmd isEqual:@"friendDeleted"]) {
 		XLog("%@",cmd);

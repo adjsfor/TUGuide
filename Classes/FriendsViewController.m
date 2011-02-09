@@ -13,7 +13,7 @@
 @implementation FriendsViewController
 
 @synthesize mapView, detailButton;;
-@synthesize mapAnnotations, classViewController, friendsArray, classroom, building, segmentedControl,me;
+@synthesize mapAnnotations, classViewController, friendsArray, classroom, building, segmentedControl,me,flv;
 
 
 -(id) initWithUser:(User *)u
@@ -31,7 +31,13 @@
 	return self;
 }
 
-
+-(BOOL)passing:(NSObject *)requestor command:(NSString *)cmd message:(NSString *)msg{
+	if ([cmd isEqual:@"finished"]) {
+		friendsArray = [flv.serverConnection friends];
+		[self.mapView removeAnnotations:self.mapView.annotations];  // remove any annotations that exist
+		[self.mapView addAnnotations:self.friendsArray];   //set annotations to the map 
+	}
+}
 
 + (CGFloat)annotationPadding;
 {
@@ -57,7 +63,8 @@
 
 -(IBAction)segmentAction:(UISegmentedControl *)segmentPick
 {
-	FriendListViewController *flv = [[FriendListViewController alloc] initWithUser:[self me]];
+	flv = [[FriendListViewController alloc] initWithUser:[self me]];
+	flv.delegate2 =self;
 	NSLog(@"segment called %d", segmentPick.selectedSegmentIndex);
 	switch (segmentPick.selectedSegmentIndex) {
 		case 0:

@@ -15,8 +15,10 @@
 #import "Classroom.h"
 #import "Friend.h"
 #import <CoreLocation/CoreLocation.h>
+#import "MessagePassProtocol.h"
 
-@interface FriendsViewController : UIViewController <MKMapViewDelegate,CLLocationManagerDelegate> {
+
+@interface FriendsViewController : UIViewController <MKMapViewDelegate,CLLocationManagerDelegate,MessagePassProtocol> {
 	MKMapView *mapView;
 	NSMutableArray *mapAnnotations;
 	MapListClassViewController *classViewController;
@@ -27,6 +29,7 @@
 	UIButton *detailButton;
 	CLLocationCoordinate2D location;
 	User *me;
+	FriendListViewController *flv;
 }
 
 @property (nonatomic, retain) MKMapView *mapView;
@@ -38,12 +41,12 @@
 @property (nonatomic, retain) UISegmentedControl *segmentedControl;
 @property (nonatomic, retain) UIButton *detailButton;
 @property (nonatomic, retain) User *me;
-
+@property (nonatomic, retain) FriendListViewController *flv;
 
 + (CGFloat)annotationPadding;
 + (CGFloat)calloutHeight;
 
 - (id)initView;
 - (IBAction)segmentAction:(UISegmentedControl *)segmentPick;
-
+-(BOOL)passing:(NSObject *)requestor command:(NSString *)cmd message:(NSString *)msg; 
 @end

@@ -64,9 +64,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	
-	if(indexPath.row < 2 || classroom == nil) {
+	if(indexPath.row < 2) {
 	return	[super tableView:tableView cellForRowAtIndexPath:indexPath];
 	}
+	
+
 	
 	// Add my cell Location , Classroom PDF , I missed it?
 	
@@ -84,8 +86,13 @@
 	// Get the event at the row selected and display it's title
 	//cell.textLabel.text = [[self.eventsList objectAtIndex:indexPath.row] title];
 	if(indexPath.row == 2){
-		cell.textLabel.text = @"Display classroom location";
-		cell.detailTextLabel.text = [classroom name];
+		if (classroom == nil) {
+			cell.textLabel.text = @"No classroom pdf";
+			cell.detailTextLabel.text = @"No classroom available";
+		}else {
+			cell.textLabel.text = @"Display classroom location";
+			cell.detailTextLabel.text = [classroom name];
+		}		
 	}
 
 	
@@ -97,6 +104,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	if (classroom == nil) {
+		return;
+	}
     LocationDetailViewController *detailViewController = [[LocationDetailViewController alloc] initWithClassroom:self.classroom];
 	detailViewController.title = classroom.name;
 	// ...
@@ -132,7 +142,10 @@
 
 - (void)viewWillAppear:(BOOL)animated{
 	XLog();
-	[[super tableView] deselectRowAtIndexPath:[[super tableView] indexPathForSelectedRow] animated:YES];
+	if (classroom!=nil) {
+		[[super tableView] deselectRowAtIndexPath:[[super tableView] indexPathForSelectedRow] animated:YES];
+	
+	}
 	//[tableView deselectRowAtIndexPath:super.tableView.indexPathForSelectedRow animated:YES];
 	[super viewWillAppear:animated];
 }

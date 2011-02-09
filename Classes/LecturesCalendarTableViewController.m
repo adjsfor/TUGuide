@@ -148,6 +148,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {	
 	// Upon selecting an event, create an EKEventViewController to display the event.
+
 	self.detailViewController = [[LecturesDetailViewController alloc] initWithClassrooms:self.classrooms];	
 	
 	detailViewController.event = [[self.eventsList objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
